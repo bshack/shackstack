@@ -2,7 +2,7 @@
   "name": "static",
   "directory": "./bower_components",
   "version": "0.1.0",
-  "homepage": "https://github.com/bshack/static",
+  "homepage": "https://github.com/bshack/shackstack",
   "authors": [
     "bshack <bill@shackelfordcreative.com>"
   ],
