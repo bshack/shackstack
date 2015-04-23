@@ -38,6 +38,8 @@ npm install (might need to sudo)
 
 ####install bower dependancies
 
+cd to your site directory (sites/default) and then run:
+
 bower install
 
 ##run the default project
