@@ -1,0 +1,17 @@
+_build/
+_bundles/
+_report/
+*.log
+.sass-cache
+sites/**/*.html
+sites/**/style/*.map
+sites/**/style/*.css
+sites/**/style/*.map
+bower_components/
+config/revision.json
+cordova/**/www/
+cordova/**/platforms/
+script/compiledTemplates/
+node_modules/
+validation-report.json
+validation-status.json
