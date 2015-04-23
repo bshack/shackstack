@@ -26,7 +26,7 @@ http://cordova.apache.org/#download
 
 ####clone project
 
-git clone https://github.com/bshack/static
+git clone https://github.com/bshack/shackstack
 
 ####install node modules
 
