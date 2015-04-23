@@ -1,6 +1,10 @@
-#get up and running
+#shackstack
 
-##Dependancies
+Useful for building static sites. Something else worth checking out: http://jekyllrb.com/
+
+##get up and running
+
+###Dependancies
 
 #### nodejs
 
