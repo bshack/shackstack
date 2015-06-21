@@ -120,7 +120,13 @@ module.exports = function(grunt) {
         },
         'compile-handlebars': {
             production: {
-                template: '<%= envData.path.site %>/*.handlebars',
+                files: [{
+                    expand: true,
+                    cwd: '<%= envData.path.site %>',
+                    src: '*.handlebars',
+                    dest: '<%= envData.path.build %>',
+                    ext: '.html'
+                }],
                 templateData: _.merge(
                     grunt.file.readJSON('config/environment.json'),
                     grunt.file.readJSON('config/revision.json'),
@@ -136,11 +142,16 @@ module.exports = function(grunt) {
                 partials: [
                     '<%= envData.path.site %>/views/*.handlebars',
                     '<%= envData.path.site %>/views/**/*.handlebars'
-                ],
-                output: '<%= envData.path.build %>/*.html'
+                ]
             },
             development: {
-                template: '<%= envData.path.site %>/*.handlebars',
+                files: [{
+                    expand: true,
+                    cwd: '<%= envData.path.site %>',
+                    src: '*.handlebars',
+                    dest: '<%= envData.path.build %>',
+                    ext: '.html'
+                }],
                 templateData: _.merge(
                     grunt.file.readJSON('config/environment.json'),
                     grunt.file.readJSON('config/revision.json'),
@@ -158,11 +169,16 @@ module.exports = function(grunt) {
                 partials: [
                     '<%= envData.path.site %>/views/*.handlebars',
                     '<%= envData.path.site %>/views/**/*.handlebars'
-                ],
-                output: '<%= envData.path.build %>/*.html'
+                ]
             },
             test: {
-                template: '<%= envData.path.site %>/*.handlebars',
+                files: [{
+                    expand: true,
+                    cwd: '<%= envData.path.site %>',
+                    src: '*.handlebars',
+                    dest: '<%= envData.path.build %>',
+                    ext: '.html'
+                }],
                 templateData: _.merge(
                     grunt.file.readJSON('config/environment.json'),
                     grunt.file.readJSON('config/revision.json'),
@@ -178,11 +194,16 @@ module.exports = function(grunt) {
                 partials: [
                     '<%= envData.path.site %>/views/*.handlebars',
                     '<%= envData.path.site %>/views/**/*.handlebars'
-                ],
-                output: '<%= envData.path.site %>/*.html'
+                ]
             },
             local: {
-                template: '<%= envData.path.site %>/*.handlebars',
+                files: [{
+                    expand: true,
+                    cwd: '<%= envData.path.site %>',
+                    src: '*.handlebars',
+                    dest: '<%= envData.path.site %>',
+                    ext: '.html'
+                }],
                 templateData: _.merge(
                     grunt.file.readJSON('config/environment.json'),
                     grunt.file.readJSON('config/revision.json'),
@@ -198,8 +219,7 @@ module.exports = function(grunt) {
                 partials: [
                     '<%= envData.path.site %>/views/*.handlebars',
                     '<%= envData.path.site %>/views/**/*.handlebars'
-                ],
-                output: '<%= envData.path.site %>/*.html'
+                ]
             }
         },
         cordovacli: {
