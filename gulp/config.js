@@ -176,7 +176,6 @@ module.exports = {
             destination: '/release/',
             copy: [
                 'app/sitemap.xml',
-                'app/crossdomain.xml',
                 'app/robots.txt',
                 'app/favicon.ico',
                 'app/web.config',
