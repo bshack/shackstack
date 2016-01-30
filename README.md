@@ -18,7 +18,7 @@ http://gulpjs.com
 
 ### Clone
 
-<pre>git clone https://github.com/bshack/shackstack</pre>
+<pre>git clone https://github.com/bshack/shackstack;</pre>
 
 ### Install Node Modules
 
@@ -73,6 +73,6 @@ These all run as dependencies of the watch and deploy tasks from above.
 
 This project uses npm shrinkwrap to freeze npm module versions for improved project stability. More information here: https://docs.npmjs.com/cli/shrinkwrap.
 
-## Bugs? Features Requests?
+## Bugs? Feature Requests?
 
 Pull request or log a ticket :)
