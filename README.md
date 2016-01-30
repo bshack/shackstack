@@ -4,49 +4,50 @@
 
 Scaffolding for developing and deploying static sites.
 
-##get up and running
+## Setup
 
-###Dependancies
+### Install Dependancies
 
-#### nodejs
+#### Nodejs
 
 http://nodejs.org
 
-#### gulp
+#### Gulp
 
 http://gulpjs.com
 
-##setup your project
-
-###clone project
+### Clone
 
 <pre>git clone https://github.com/bshack/shackstack</pre>
 
-###install node modules
+### Install Node Modules
 
 <pre>npm install; (might need to sudo)</pre>
 
-##where things are located
+## Locations
 
-###site source files
+### Source Files
 
-By default all the site source files are located in the 'app/' directory.
+Site source files used to build your site are located in the 'app/' directory.
 
-###stubbed out site json data files
+### Stubbed JSON Data
 
-Every server side generated html page is required to have matching .json file in 'service/' directory of your site. That is where you would stub out data that is used to populate the handlebars templates.
+Every generated html page is required to have matching .json file in 'service/' directory. This is where you stub out data that is to be used to populate the markup templates.
 
-###npm shrinkwrap
+### NPM Shrinkwrap
 
 This project uses npm shrinkwrap to freeze npm module versions for improved project stability. More information here: https://docs.npmjs.com/cli/shrinkwrap
 
-##gulp commands
+## Gulp Tasks
 
-###run the default project
+### Watch
 
 <pre>gulp watch;</pre>
 
-###build deployable site
+### Deploy
+
+This compiles and bundles everything into a deploy ready package outputed in the '_deploy/' directory.
+
 <pre>gulp deploy
     --version=(unique deploy version)
     --www=(www domain)
@@ -56,18 +57,22 @@ This project uses npm shrinkwrap to freeze npm module versions for improved proj
 
 The version argument is optional, if not specified it will set the version to an epoch timestamp.
 
-###write documentation
-
-<pre>gulp documentation;</pre>
-
-###build sprite from .svg images
-
-<pre>gulp sprite;</pre>
-
-###run unit tests
+### Unit Tests
 
 <pre>gulp unit;</pre>
 
-## bugs, features requests?
+### More
 
-Please log the bug/request and I will look at it, or better yet do a pull request :)
+These all run as dependencies of the watch and deploy tasks from above.
+
+<pre>gulp markup;</pre>
+<pre>gulp markupTemplate;</pre>
+<pre>gulp style;</pre>
+<pre>gulp script;</pre>
+<pre>gulp sprite;</pre>
+<pre>gulp accessibility;</pre>
+<pre>gulp documentation;</pre>
+
+## Bugs? Features Requests?
+
+Pull request or log a ticket :)
