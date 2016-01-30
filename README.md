@@ -34,10 +34,6 @@ Site source files used to build your site are located in the 'app/' directory.
 
 Every generated html page is required to have matching .json file in 'service/' directory. This is where you stub out data that is to be used to populate the markup templates.
 
-### NPM Shrinkwrap
-
-This project uses npm shrinkwrap to freeze npm module versions for improved project stability. More information here: https://docs.npmjs.com/cli/shrinkwrap
-
 ## Gulp Tasks
 
 ### Watch
@@ -72,6 +68,10 @@ These all run as dependencies of the watch and deploy tasks from above.
 <pre>gulp sprite;</pre>
 <pre>gulp accessibility;</pre>
 <pre>gulp documentation;</pre>
+
+## NPM Shrinkwrap
+
+This project uses npm shrinkwrap to freeze npm module versions for improved project stability. More information here: https://docs.npmjs.com/cli/shrinkwrap.
 
 ## Bugs? Features Requests?
 
