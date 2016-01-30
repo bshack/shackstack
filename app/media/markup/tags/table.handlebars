@@ -1,0 +1,46 @@
+<table{{#if this.class}} class="{{this.class}}"{{/if}}>
+    <caption>{{this.caption}}</caption>
+    {{#if this.head}}
+    <thead>
+        <tr>
+            {{#each this.head}}
+            {{#if this.text}}
+            <th scope="col">{{this.text}}</th>
+            {{else}}
+            <td></td>
+            {{/if}}
+            {{/each}}
+        </tr>
+    </thead>
+    {{/if}}
+    {{#if this.body}}
+    <tbody>
+        {{#each this.body}}
+        <tr>
+            {{#each this}}
+            {{#if this.isHead}}
+            <th scope="row">{{this.text}}</th>
+            {{else}}
+            <td>{{this.text}}</td>
+            {{/if}}
+            {{/each}}
+        </tr>
+        {{/each}}
+    </tbody>
+    {{/if}}
+    {{#if this.foot}}
+    <tfoot>
+        {{#each this.foot}}
+        <tr>
+            {{#each this}}
+            {{#if this.isHead}}
+            <th scope="row">{{this.text}}</th>
+            {{else}}
+            <td>{{this.text}}</td>
+            {{/if}}
+            {{/each}}
+        </tr>
+        {{/each}}
+    </tfoot>
+    {{/if}}
+</table>

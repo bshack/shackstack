@@ -1,0 +1,10 @@
+%scrolling-y {
+    overflow-x: none;
+    overflow-y: auto;
+    position: static;
+    width: 100%;
+}
+
+%scrolling-off {
+    overflow: hidden;
+}

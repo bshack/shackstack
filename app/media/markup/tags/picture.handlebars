@@ -1,0 +1,4 @@
+<picture{{#if this.id}} id="{{this.id}}"{{/if}}{{#if this.class}} class="{{this.class}}"{{/if}}{{#if this.accessible-title}} aria-label="{{this.accessible-title}}"{{/if}} alt="{{#if this.alt}}{{this.alt}}{{/if}}">
+    <source srcset="{{this.image}}" media="(max-width: 400px)">
+    <source srcset="{{this.image}}" media="(min-width: 401px)">
+</picture>

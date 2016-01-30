@@ -1,0 +1,125 @@
+// ## anchors
+
+%anchor-1 {
+
+    @extend %arial-1;
+
+    cursor: pointer;
+    margin: 0;
+    text-decoration: underline;
+
+}
+
+// ## buttons
+
+%button-1 {
+
+    @extend %arial-1;
+
+    background-color: $black-1;
+    border: rem-calc(1) solid $black-1;
+    color: $white-1;
+    cursor: pointer;
+    margin: 0;
+    padding: rem-calc(13.5);
+
+}
+
+// ## labels
+
+%label-1 {
+
+    @extend %arial-1;
+
+    margin: 0;
+
+}
+
+// ## lists
+
+%list-1 {
+
+    @extend %arial-1;
+
+    margin: 0;
+
+}
+
+// ## input checkboxes
+
+%input-checkbox-1 {
+    margin: 0;
+}
+
+// ## input radio buttons
+
+%input-radio-1 {
+    margin: 0;
+}
+
+// ## input text boxes
+
+%input-text-1 {
+
+    @extend %arial-1;
+
+    margin: 0;
+    min-height: rem-calc(45);
+
+}
+
+// ## textareas
+
+%textarea-1 {
+
+    @extend %arial-1;
+
+    margin: 0;
+    min-height: rem-calc(45);
+
+}
+
+// ## select menus
+
+%select-1 {
+
+    @extend %arial-1;
+
+    height: rem-calc(45);
+    margin: 0;
+
+}
+
+// ## tables
+
+%table-1 {
+
+    @extend %arial-1;
+
+    border: rem-calc(1) solid $black-1;
+    margin: 0;
+
+    thead {
+        background-color: $black-1;
+        color: $white-1;
+    }
+
+    tfoot {
+        background-color: $grey-1;
+        color: $black-1;
+    }
+
+    td,
+    th {
+        border: rem-calc(1) solid $black-1;
+        padding: rem-calc(10);
+    }
+
+}
+
+// ## images
+
+%image-1 {
+    border: 0;
+    margin: 0;
+}

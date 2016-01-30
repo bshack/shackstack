@@ -1,0 +1,8 @@
+{{#if this.id}}<select id="{{this.id}}"{{#if this.name}} name="{{this.name}}"{{/if}}{{#if this.class}} class="{{this.class}}"{{/if}}{{#if this.required}} required{{/if}}{{#if this.disabled}} disabled{{/if}}>
+    {{#if this.default}}
+    <option value="{{this.default.value}}">{{this.default.name}}</option>
+    {{/if}}
+    {{#each this.data}}
+    <option value="{{this.value}}"{{#if this.selected}} selected{{/if}}>{{this.name}}</option>
+    {{/each}}
+</select>{{/if}}

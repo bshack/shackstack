@@ -1,0 +1,29 @@
+// ## icons
+// sprite and this scss file are created by the gulp task 'sprite',
+// generated sprite is a 2x display dimensions
+
+// ### sprite
+
+%sprite {
+    background-image: url('../image/sprite.png');
+    background-repeat: no-repeat;
+    background-size: rem-calc(220) auto;
+    display: block;
+}
+
+{{#each layouts}}
+    {{#each layout.items}}
+// ### {{#if ../../opt.split}}{{cssesc ../../name}}-{{/if}}{{cssesc meta.name}}
+
+%{{#if ../../opt.split}}{{cssesc ../../name}}-{{/if}}{{cssesc meta.name}} {
+    
+    @extend %sprite;
+
+    background-position: rem-calc(-(({{baseDim x}} / 2) + 4)) rem-calc(-(({{baseDim y}} / 2) + 4));
+    height: rem-calc((({{baseDim height}} - 20) / 2) + 2);
+    width: rem-calc((({{baseDim width}} - 20) / 2) + 2);
+    
+}
+
+    {{/each}}
+{{/each}}

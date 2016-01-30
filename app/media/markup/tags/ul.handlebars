@@ -1,0 +1,11 @@
+<ul{{#if this.class}} class="{{this.class}}"{{/if}}>
+{{#each this.items}}
+    {{#if this.list}}
+    <li>{{this.name}}
+        {{> ul this.list}}
+    </li>
+    {{else}}
+    <li>{{this.text}}</li>
+    {{/if}}
+{{/each}}
+</ul>

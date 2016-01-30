@@ -1,0 +1,33 @@
+{
+  "title": "page title",
+  "meta": {
+      "description": "description here",
+      "keywords": "keywords, here",
+      "apple-mobile-web-app-title": "app title here"
+  },
+  "link": {
+      "apple-touch-icon-precomposed": "/apple-touch-icon.png",
+      "author": "https://plus.google.com/",
+      "favicon": "favicon.png"
+  },
+  "twitter": {
+      "card": "summary",
+      "url": "url here",
+      "title": "title here",
+      "description": "description here",
+      "image": "apple-touch-icon.png"
+  },
+  "og": {
+      "title": "title here",
+      "type": "website",
+      "url": "url here",
+      "image": "apple-touch-icon.png",
+      "site_name": "site here",
+      "description": "description here",
+      "locale": "en_US"
+  },
+  "fb": {
+      "admins": "admins here",
+      "app_id": "app id here"
+  }
+}

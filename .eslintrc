@@ -1,0 +1,13 @@
+env:
+    node: true
+
+"extends": "eslint:recommended"
+
+"globals":
+    "define": true
+    "window": true
+    "document": true
+    "describe": true
+    "it": true
+    "expect": true
+    "requirejs": true

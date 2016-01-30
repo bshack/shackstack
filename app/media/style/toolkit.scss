@@ -1,0 +1,112 @@
+@charset 'UTF-8';
+
+// ## import all dependacies
+
+@import '../../../node_modules/foundation-sites/scss/foundation';
+
+// ## import all dependacies
+
+@import 'base/all';
+
+h1,
+h2,
+h3,
+h4 {
+    text-transform: uppercase;
+}
+
+hr {
+    margin: rem-calc(60) 0;
+}
+
+main {
+
+    @extend %tabpanel-base-1;
+
+    > nav {
+
+        background-color: $black-1;
+        color: $white-1;
+        margin-bottom: rem-calc(30);
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        @media #{$medium-up} {
+
+            li {
+                float: left;
+            }
+
+        }
+
+        button {
+
+            border-bottom: rem-calc(1) solid $black-1;
+            border-top: rem-calc(1) solid $black-1;
+            line-height: rem-calc(45);
+            padding: 0 rem-calc(10);
+            text-transform: uppercase;
+            width: 100%;
+
+            @media #{$medium-up} {
+                border-left: rem-calc(1) solid $black-1;
+                border-right: rem-calc(1) solid $black-1;
+                width: auto;
+            }
+
+            &[aria-selected=true] {
+                background-color: $white-1;
+                color: $black-1;
+            }
+
+        }
+
+    }
+
+}
+
+.gherkin {
+    font-style: italic;
+}
+
+.swatch {
+
+    display: block;
+    height: rem-calc(150);
+    width: rem-calc(150);
+
+    &.black-1 {
+        background-color: $black-1;
+    }
+
+    &.grey-1 {
+        background-color: $grey-1;
+    }
+
+    &.white-1 {
+        background-color: $white-1;
+        border: rem-calc(1) solid $grey-1;
+        height: rem-calc(148);
+        width: rem-calc(148);
+    }
+
+}
+
+.grid {
+
+    overflow: auto;
+
+    .row {
+        background-color: $grey-1;
+    }
+
+    .columns {
+        border: rem-calc(2) $black-1 solid;
+        padding: rem-calc(10);
+    }
+
+}

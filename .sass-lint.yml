@@ -1,0 +1,14 @@
+# Linter Options
+options:
+    merge-default-rules: true
+
+# Rule Configuration
+rules:
+    force-attribute-nesting: 0
+    force-pseudo-nesting: 0
+    indentation:
+        - 2
+        - size: 4
+    nesting-depth:
+        - 1
+        - max-depth: 5

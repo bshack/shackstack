@@ -1,0 +1,15 @@
+_deploy/
+NetBoot/
+node_modules/
+bower_components/
+app/media/script/template/
+app/media/script/*.compiled.js
+app/media/style/*.css
+app/media/style/base/_sprite.scss
+app/media/image/sprite.png
+app/media/image/sprite/*.png
+app/*.html
+report/
+.sass-cache/
+.DS_Store
+npm-debug.log

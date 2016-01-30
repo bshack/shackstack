@@ -1,0 +1,53 @@
+# PUSH STATE FOR SINGLE PAGE APPLICATIONS
+#<ifModule mod_rewrite.c>
+#    Options +FollowSymLinks
+#    IndexIgnore */*
+#    RewriteEngine On
+#    RewriteCond %{REQUEST_FILENAME} !-f
+#    RewriteCond %{REQUEST_FILENAME} !-d
+#    RewriteRule (.*) index.html
+#</ifModule>
+
+# COMPRESSION
+<IfModule mod_deflate.c>
+    ## enable GZIP compression
+    SetOutputFilter DEFLATE
+    ## You can't compress what is already compressed
+    SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI \.(?:exe|t?gz|zip|bz2|sit|rar)$ no-gzip dont-vary
+    ## Make proxies work as they should.
+    <IfModule mod_headers.c>
+        Header append Vary User-Agent
+    </IfModule>
+</IfModule>
+
+# CACHING
+<IfModule mod_headers.c>
+    ## by default set cache 1 hour
+    Header set Cache-Control "max-age=3600, public"
+    <IfModule mod_setenvif.c>
+        ## if in the /release directory set cache to 2 years
+        SetEnvIf Request_URI "^/release" LONG_CACHE=1
+        Header set Cache-Control "max-age=63113904, public" env=LONG_CACHE
+        ## if in the /service directory disable cache and mark content as private
+        SetEnvIf Request_URI "^/service" NO_CACHE=1
+        Header set Cache-Control "max-age=0, private" env=NO_CACHE
+    </IfModule>
+</IfModule>
+
+# SECURITY
+<IfModule mod_headers.c>
+    ## tell browsers to respect the content type that is served up
+    Header set X-Content-Type-Options "nosniff"
+    ## this disables inline javascript which is how it protects against XSS injections
+    Header set X-XSS-Protection "1; mode=block"
+    ## don't allow content to be included in an iframe
+    Header set X-Frame-Options "deny"
+    ## make sure cookies are set on the secure domain when a site does a http to https redirect
+    ## enable this if the site is secure
+    #Header set Strict-Transport-Security "max-age=3600; includeSubDomains"
+    ###### CHANGE THIS!! ######
+    ## allow ajax requests across domains
+    Header set Access-Control-Allow-Origin "*"
+    #Header set Access-Control-Allow-Origin "//some.domain.com"
+</IfModule>
