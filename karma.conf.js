@@ -8,11 +8,11 @@ module.exports = function(karma) {
             'browserify'
         ],
         files: [{
-            pattern: 'media/script/service/*.js',
+            pattern: 'app/media/script/service/*.js',
             included: true
         },
         {
-            pattern: 'media/test/spec/*Spec.js',
+            pattern: 'app/media/test/spec/*Spec.js',
             included: true
 
         }],
@@ -21,11 +21,11 @@ module.exports = function(karma) {
             'coverage'
         ],
         preprocessors: {
-            'media/script/service/*.js': [
+            'app/media/script/service/*.js': [
                 'coverage',
                 'browserify'
             ],
-            'media/test/spec/*Spec.js': [
+            'app/media/test/spec/*Spec.js': [
                 'browserify'
             ]
         },
@@ -47,7 +47,7 @@ module.exports = function(karma) {
         },
         coverageReporter: {
             type: 'html',
-            dir: 'report/istanbul/',
+            dir: 'app/report/istanbul/',
             subdir: '.'
         },
         // If browser does not capture in given timeout [ms], kill it

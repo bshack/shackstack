@@ -104,7 +104,7 @@ module.exports = {
             // jshint config file
             jsHint: 'jshintrc.json',
             // karma test runner conig file
-            karma: __dirname + '/../app/karma.conf.js',
+            karma: __dirname + '/../karma.conf.js',
             // glob of all js files including gulp and application
             all: [
                 '*.js',
