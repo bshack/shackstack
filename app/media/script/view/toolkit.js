@@ -1,6 +1,7 @@
 (function() {
     'use strict';
     var Backbone = require('../backbonePackage');
+    var ModelEnvironment = require('../model/environment');
     var ViewModalOpen1 = require('./toolkit/modalOpen-1');
     var ViewTabpanel1 = require('./toolkit/tabpanel-1');
     var ViewAccessiblityAjax1 = require('./toolkit/accessiblityAjax-1');
@@ -25,11 +26,12 @@
             });
             // setup the accessible ajax view
             var viewAccessiblityAjax1 = new ViewAccessiblityAjax1();
+            var env = new ModelEnvironment();
             // on click get some example data and populate the container
             Backbone.$('#accessible-ajax-example-button').on('click', function() {
                 var $this = Backbone.$(this);
                 viewAccessiblityAjax1.request({
-                    url: 'service/toolkit.json',
+                    url: env.get('service') + 'service/toolkit.json',
                     success: function(data) {
                         // remove the previous container if present
                         Backbone.$('#accessible-ajax-example-content')

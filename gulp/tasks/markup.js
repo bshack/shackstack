@@ -30,10 +30,10 @@ gulp.task('markup', function() {
         cdn = yargs.cdn + config.path.release.destination + config.path.version;
     }
     if (yargs.service && yargs.service !== true) {
-        service = yargs.service;
+        service = yargs.service + '/';
     }
     if (yargs.www && yargs.www !== true) {
-        www = yargs.www;
+        www = yargs.www + '/';
     }
     //task
     return gulp.src(config.path.markup.source)
