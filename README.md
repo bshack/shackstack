@@ -10,7 +10,11 @@ http://www.billshackelford.com
 
 It was created by running the 'deploy' task with the following options:
 
-<pre>gulp deploy --www=//www.billshackelford.com --cdn=//cdn.billshackelford.com --service=//service.billshackelford.com --production=true;</pre>
+<pre>gulp deploy
+    --www=//www.billshackelford.com
+    --cdn=//cdn.billshackelford.com
+    --service=//service.billshackelford.com
+    --production=true;</pre>
 
 ## Setup
 
