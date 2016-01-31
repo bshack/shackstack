@@ -18,13 +18,14 @@ gulp.task('documentation', [
     'documentationBuild',
     'unit'
 ], function() {
+    'use strict';
     return;
 });
 
 // ## Gulp Documenation Task
 
 gulp.task('documentationBuild', function() {
-
+    'use strict';
     return gulp.src(config.path.script.gulp)
         //support for better error handling
         .pipe(plumber())
@@ -36,7 +37,7 @@ gulp.task('documentationBuild', function() {
 // ## Script Documenation Task
 
 gulp.task('documentationScript', function() {
-
+    'use strict';
     return gulp.src(config.path.script.source)
         //support for better error handling
         .pipe(plumber())
@@ -48,7 +49,7 @@ gulp.task('documentationScript', function() {
 // ## Style Documenation Task
 
 gulp.task('documentationStyle', function() {
-
+    'use strict';
     return gulp.src(config.path.style.source.scss)
         //support for better error handling
         .pipe(plumber())
@@ -60,7 +61,7 @@ gulp.task('documentationStyle', function() {
 // ## Script Complexity Documenation Task
 
 gulp.task('documentationScriptComplexity', function() {
-
+    'use strict';
     return gulp.src(config.path.script.source)
         //support for better error handling
         .pipe(plumber())

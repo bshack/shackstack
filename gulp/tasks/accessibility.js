@@ -12,6 +12,7 @@ var config = require('../config');
 // dependacy on markup task to have markup compiled
 
 gulp.task('accessibility', function() {
+    'use strict';
     return gulp.src(config.path.markup.destination)
         //support for better error handling
         .pipe(plumber())

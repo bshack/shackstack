@@ -14,6 +14,7 @@ var config = require('../config');
 // sprite task dependent on vectorToRaster task to generete .pngs from .svg source files
 
 gulp.task('sprite', ['vectorToRaster'], function() {
+    'use strict';
     //generate the sprite image and the scss styles
     return sprity.src({
         src: config.path.image.sprite.compliled,
@@ -36,6 +37,7 @@ gulp.task('sprite', ['vectorToRaster'], function() {
 // ## Vector to Raster Image Task
 
 gulp.task('vectorToRaster', function() {
+    'use strict';
     return gulp.src(config.path.image.sprite.source)
         //support for better error handling
         .pipe(plumber())

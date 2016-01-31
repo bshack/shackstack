@@ -18,12 +18,12 @@
                 //insert the message into the container
                 $speaker
                     .html(message);
-                    //wait a little bit to allow for the messages to be read completely from the container
-                    window.setTimeout(function() {
-                        //clean up the container
-                        $speaker
-                            .remove();
-                    }, 10000);
+                //wait a little bit to allow for the messages to be read completely from the container
+                window.setTimeout(function() {
+                    //clean up the container
+                    $speaker
+                        .remove();
+                }, 10000);
             }, 1500);
         }
     });

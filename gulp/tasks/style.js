@@ -14,6 +14,7 @@ var config = require('../config');
 // ## Style Task Complilation Logic
 
 var styleCompile = function() {
+    'use strict';
     return gulp.src(config.path.style.source.scss)
         //support for better error handling
         .pipe(plumber())

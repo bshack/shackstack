@@ -16,7 +16,7 @@ var config = require('../config');
 // make sure the code is all tidy
 
 gulp.task('scriptLint', function() {
-
+    'use strict';
     return gulp.src(config.path.script.all)
         //support for better error handling
         .pipe(plumber())
@@ -31,10 +31,11 @@ gulp.task('scriptLint', function() {
 // complile the modules together
 
 gulp.task('script', ['scriptLint'], function() {
+    'use strict';
     return browserify({
-            entries: config.path.script.compile.source,
-            debug: (config.path.isProduction ? false : true)
-        })
+        entries: config.path.script.compile.source,
+        debug: (config.path.isProduction ? false : true)
+    })
         .bundle()
         .pipe(source(config.path.script.compile.filename))
         .pipe(buffer())

@@ -19,6 +19,7 @@ var config = require('../config');
 // release task dependent on tasks to do code quality checks and build documentation
 
 gulp.task('deploy', function() {
+    'use strict';
     //runSequence support is only for gulp 3.x, 4.x natively support this functionalty
     return runSequence(
         ['cleanBuild'],
@@ -33,7 +34,7 @@ gulp.task('deploy', function() {
 // ## Copy Root Task
 // copy root dependency files to deploy directory
 gulp.task('copyRoot', function() {
-
+    'use strict';
     return gulp.src(config.path.release.copy)
         //support for better error handling
         .pipe(plumber())
@@ -44,7 +45,7 @@ gulp.task('copyRoot', function() {
 // ## Copy Report Task
 // copy report dependency files to deploy directory
 gulp.task('copyReport', function() {
-
+    'use strict';
     return gulp.src(config.path.report.source)
         //support for better error handling
         .pipe(plumber())
@@ -55,18 +56,19 @@ gulp.task('copyReport', function() {
 // ## Copy Fonts Task
 // copy Font dependency files to deploy directory
 gulp.task('copyFonts', function() {
-
+    'use strict';
     return gulp.src(config.path.font.source)
         //support for better error handling
         .pipe(plumber())
-        .pipe(gulp.dest(config.path.build + config.path.release.destination + config.path.version + config.path.font.destination));
+        .pipe(gulp.dest(config.path.build + config.path.release.destination + config.path.version +
+            config.path.font.destination));
 
 });
 
 // ## Minify Markup Task
 // minify and copy markup files to deploy directory
 gulp.task('minifyMarkup', function() {
-
+    'use strict';
     return gulp.src(config.path.markup.destination)
         //support for better error handling
         .pipe(plumber())
@@ -79,7 +81,7 @@ gulp.task('minifyMarkup', function() {
 // ## Copy Data Task
 // stubbed out data files over
 gulp.task('copyData', function() {
-
+    'use strict';
     return gulp.src(config.path.data.source)
         //support for better error handling
         .pipe(plumber())
@@ -90,7 +92,7 @@ gulp.task('copyData', function() {
 // ## Sitemap Task
 // generate sitemap.xml
 gulp.task('sitemap', function() {
-
+    'use strict';
     return gulp.src(config.path.markup.destination)
         .pipe(sitemap({
             siteUrl: config.path.www
@@ -102,21 +104,22 @@ gulp.task('sitemap', function() {
 // ## Minify Style Task
 // minify and copy style files to deploy diretory
 gulp.task('minifyStyle', function() {
-
+    'use strict';
     return gulp.src(config.path.style.source.css)
         //support for better error handling
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(cssnano({safe: true}))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(config.path.build + config.path.release.destination + config.path.version + config.path.style.destination.release));
+        .pipe(gulp.dest(config.path.build + config.path.release.destination + config.path.version +
+            config.path.style.destination.release));
 
 });
 
 // ## Minify Script Task
 // minify and copy script files to deploy directory
 gulp.task('minifyScript', function() {
-
+    'use strict';
     return gulp.src(config.path.script.release)
         //support for better error handling
         .pipe(plumber())
@@ -127,14 +130,15 @@ gulp.task('minifyScript', function() {
         .pipe(uglify())
         //write sourcemaps
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(config.path.build + config.path.release.destination + config.path.version + config.path.script.destination));
+        .pipe(gulp.dest(config.path.build + config.path.release.destination + config.path.version +
+            config.path.script.destination));
 
 });
 
 // ## Minify Image Task
 // minify and copy images to deploy directory
 gulp.task('minifyImage', function() {
-
+    'use strict';
     return gulp.src(config.path.image.source)
         //support for better error handling
         .pipe(plumber())
@@ -176,5 +180,6 @@ gulp.task('minifyImage', function() {
                 {transformsWithOnePath: true}
             ]
         }))
-        .pipe(gulp.dest(config.path.build + config.path.release.destination + config.path.version + config.path.image.destination));
+        .pipe(gulp.dest(config.path.build + config.path.release.destination + config.path.version +
+            config.path.image.destination));
 });

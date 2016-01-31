@@ -1,13 +1,50 @@
-env:
-    node: true
+{
+    "env":{
+        "node":true,
+        "browser":true,
+        "jasmine":true
+    },
+    "extends":"eslint:recommended",
+    "globals":{
 
-"extends": "eslint:recommended"
-
-"globals":
-    "define": true
-    "window": true
-    "document": true
-    "describe": true
-    "it": true
-    "expect": true
-    "requirejs": true
+    },
+    "rules":{
+        "curly":2,
+        "comma-dangle":[
+            2,
+            "never"
+        ],
+        "strict":[
+            2,
+            "function"
+        ],
+        "camelcase":[
+            2,
+            {
+                "properties":"always"
+            }
+        ],
+        "quotes":[
+            2,
+            "single"
+        ],
+        "no-multiple-empty-lines":2,
+        "space-before-function-paren":[
+            2,
+            "never"
+        ],
+        "indent":[
+            2,
+            4
+        ],
+        "max-len":[
+            2,
+            120,
+            4
+        ],
+        "max-params":[
+            2,
+            3
+        ]
+    }
+}

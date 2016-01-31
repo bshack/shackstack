@@ -11,6 +11,7 @@ var config = require('../config');
 
 // watch task dependent on tasks to make sure latest code changes are compiled
 gulp.task('watch', ['build'], function() {
+    'use strict';
     livereload.listen();
     //watch scss
     gulp.watch(

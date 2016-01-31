@@ -18,7 +18,7 @@ var config = require('../config');
 // ## Markup Task
 
 gulp.task('markup', function() {
-
+    'use strict';
     //switch for passing a cdn server url
     var cdn = '/' + config.path.root;
     //switch for passing a www server url
@@ -70,6 +70,7 @@ gulp.task('markup', function() {
 // ## markupTemplate Task
 
 gulp.task('markupTemplate', ['cleanTemplate'], function() {
+    'use strict';
     return gulp.src(config.path.markup.partials.watch)
         //support for better error handling
         .pipe(plumber())
@@ -82,11 +83,13 @@ gulp.task('markupTemplate', ['cleanTemplate'], function() {
             },
             header: function(file){
                 var templateName = this.getTemplateName(file);
-                return 'var Handlebars = require("handlebars");if (typeof Handlebars.templates === \'undefined\') {Handlebars.templates = {};}Handlebars.templates[\'' + templateName + '\'] = Handlebars.template(';
+                return 'var Handlebars = require("handlebars");if (typeof Handlebars.templates === \'undefined\') ' +
+                    '{Handlebars.templates = {};}Handlebars.templates[\'' + templateName + '\'] = Handlebars.template(';
             },
             footer: function(file){
                 var templateName = this.getTemplateName(file);
-                return ');Handlebars.registerPartial(\'' + templateName + '\', Handlebars.templates[\'' + templateName + '\']);module.exports = Handlebars.templates[\'' + templateName + '\'];';
+                return ');Handlebars.registerPartial(\'' + templateName + '\', Handlebars.templates[\'' + templateName +
+                    '\']);module.exports = Handlebars.templates[\'' + templateName + '\'];';
             }
         }))
         .pipe(gulp.dest(config.path.markup.partials.destination));

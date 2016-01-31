@@ -1,6 +1,5 @@
-'use strict';
-
 module.exports = function(karma) {
+    'use strict';
     karma.set({
         basePath: '',
         frameworks: [
