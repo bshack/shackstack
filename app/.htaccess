@@ -48,6 +48,6 @@
     #Header set Strict-Transport-Security "max-age=3600; includeSubDomains"
     ###### CHANGE THIS!! ######
     ## allow ajax requests across domains
-    Header set Access-Control-Allow-Origin "*"
     #Header set Access-Control-Allow-Origin "//some.domain.com"
+    #Header set Access-Control-Allow-Credentials "true"
 </IfModule>
