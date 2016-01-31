@@ -74,7 +74,7 @@ module.exports = {
         // ### markup
         markup: {
             // htmllint config file
-            htmlLint: 'htmllintrc.json',
+            htmlLint: '.htmllintrc',
             // glob of handlebars templates
             source: 'app/*.handlebars',
             // glob of generated html files
