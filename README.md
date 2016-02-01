@@ -6,11 +6,11 @@ Scaffolding for developing and deploying static sites.
 
 Example site it creates out of the box:
 
-http://www.billshackelford.com
+http://billshackelford.com
 
 It was created by running the 'deploy' task with the following options:
 
-<pre>gulp deploy --www=//www.billshackelford.com --cdn=//cdn.billshackelford.com --service=//service.billshackelford.com --production=true;</pre>
+<pre>gulp deploy --www=//billshackelford.com --cdn=//cdn.billshackelford.com --service=//service.billshackelford.com --production=true;</pre>
 
 ## Setup
 
