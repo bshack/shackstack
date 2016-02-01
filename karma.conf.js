@@ -21,8 +21,8 @@ module.exports = function(karma) {
         ],
         preprocessors: {
             'app/media/script/service/*.js': [
-                'coverage',
-                'browserify'
+                'browserify',
+                'coverage'
             ],
             'app/media/test/spec/*Spec.js': [
                 'browserify'
