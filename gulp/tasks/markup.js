@@ -66,13 +66,14 @@ gulp.task('markupTemplate', ['cleanTemplate'], function() {
             },
             header: function(file){
                 var templateName = this.getTemplateName(file);
-                return 'var Handlebars = require("handlebars");if (typeof Handlebars.templates === \'undefined\') ' +
+                return '(function() {\'use strict\';var Handlebars = require("handlebars");' +
+                    'if (typeof Handlebars.templates === \'undefined\') ' +
                     '{Handlebars.templates = {};}Handlebars.templates[\'' + templateName + '\'] = Handlebars.template(';
             },
             footer: function(file){
                 var templateName = this.getTemplateName(file);
                 return ');Handlebars.registerPartial(\'' + templateName + '\', Handlebars.templates[\'' + templateName +
-                    '\']);module.exports = Handlebars.templates[\'' + templateName + '\'];';
+                    '\']);module.exports = Handlebars.templates[\'' + templateName + '\'];})();';
             }
         }))
         .pipe(gulp.dest(config.path.markup.partials.destination));
