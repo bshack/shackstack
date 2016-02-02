@@ -130,6 +130,8 @@ module.exports = {
                 '*.js',
                 'gulp/tasks/*.js',
                 'gulp/*.js',
+                'grunt/tasks/*.js',
+                'gulp/options/.js',
                 'app/media/script/*.js',
                 'app/media/script/**/*.js',
                 'app/media/test/spec/*.js',
@@ -138,10 +140,13 @@ module.exports = {
                 '!app/media/script/*.compiled.js'
             ],
             // glob of only gulp js files for documentation task
+            // glob of only gulp js files for documentation task
             gulp: [
                 '*.js',
                 'gulp/tasks/*.js',
-                'gulp/*.js'
+                'gulp/*.js',
+                'grunt/tasks/*.js',
+                'gulp/options/.js'
             ],
             // glob of only application files for documentation task
             source: [
