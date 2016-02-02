@@ -19,21 +19,9 @@ var config = require('../config');
 
 gulp.task('markup', function() {
     'use strict';
-    //switch for passing a cdn server url
-    var cdn = '/' + config.path.root;
-    //switch for passing a www server url
-    var www = '/' + config.path.root;
-    //switch for passing a service url
-    var service = '/' + config.path.root;
     //test if cdn server and version defined
     if (yargs.cdn && yargs.cdn !== true) {
-        cdn = yargs.cdn + config.path.release.destination + config.path.version;
-    }
-    if (yargs.service && yargs.service !== true) {
-        service = yargs.service + '/';
-    }
-    if (yargs.www && yargs.www !== true) {
-        www = yargs.www + '/';
+        config.path.cdn = yargs.cdn + config.path.release.destination + config.path.version;
     }
     //task
     return gulp.src(config.path.markup.source)
@@ -47,9 +35,9 @@ gulp.task('markup', function() {
         }))
         //compile the handlebars templates to html
         .pipe(handlebarsToHTML({
-            cdn: cdn,
-            www: www,
-            service: service,
+            cdn: config.path.cdn,
+            www: config.path.www,
+            service: config.path.service,
             version: config.path.version,
             isProduction: config.path.isProduction
         }, {

@@ -24,9 +24,27 @@ if (yargs.version) {
 var www;
 //test if www is defined
 if (yargs.www) {
-    www = yargs.www;
+    www = yargs.www + '/';
 } else {
-    www = '';
+    www = '/app/';
+}
+
+//setting a cdn domain for build
+var cdn;
+//test if cdn is defined
+if (yargs.cdn) {
+    cdn = yargs.cdn;
+} else {
+    cdn = '/app/';
+}
+
+//setting a service domain for build
+var service;
+//test if www is defined
+if (yargs.service) {
+    service = yargs.service + '/';
+} else {
+    service = '/app/';
 }
 
 // ## paths
@@ -39,6 +57,8 @@ module.exports = {
         root: 'app/',
         version: version,
         www: www,
+        cdn: cdn,
+        service: service,
         // is this a production build?
         isProduction: isProduction,
         // ### image
