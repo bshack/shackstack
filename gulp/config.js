@@ -33,7 +33,7 @@ if (yargs.www) {
 var cdn;
 //test if cdn is defined
 if (yargs.cdn) {
-    cdn = yargs.cdn;
+    cdn = yargs.cdn + '/release/' + version;
 } else {
     cdn = '/app/';
 }
@@ -188,6 +188,7 @@ module.exports = {
         },
         // ### data
         data: {
+            directory: 'app/service',
             source: 'app/service/**',
             destination: 'service'
         },

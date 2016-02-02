@@ -7,7 +7,6 @@ var htmllint = require('gulp-htmllint');
 var rename = require('gulp-rename');
 var wrapper = require('gulp-wrapper');
 var plumber = require('gulp-plumber');
-var yargs = require('yargs').argv;
 var data = require('gulp-data');
 var livereload = require('gulp-livereload');
 
@@ -19,10 +18,6 @@ var config = require('../config');
 
 gulp.task('markup', function() {
     'use strict';
-    //test if cdn server and version defined
-    if (yargs.cdn && yargs.cdn !== true) {
-        config.path.cdn = yargs.cdn + config.path.release.destination + config.path.version;
-    }
     //task
     return gulp.src(config.path.markup.source)
         //support for better error handling
@@ -31,7 +26,7 @@ gulp.task('markup', function() {
             //used the file path of the html file to determine the associated .json data file
             var dataFile = file.path.split(config.path.root).pop().replace('.handlebars', '.json');
             //return the data
-            return require('../../' + config.path.root + 'service/' + dataFile);
+            return require('../../' + config.path.data.directory + '/' + dataFile);
         }))
         //compile the handlebars templates to html
         .pipe(handlebarsToHTML({
