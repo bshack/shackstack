@@ -24,9 +24,27 @@ if (yargs.version) {
 var www;
 //test if www is defined
 if (yargs.www) {
-    www = yargs.www;
+    www = yargs.www + '/';
 } else {
-    www = '';
+    www = '/app/';
+}
+
+//setting a cdn domain for build
+var cdn;
+//test if cdn is defined
+if (yargs.cdn) {
+    cdn = yargs.cdn + '/release/' + version;
+} else {
+    cdn = '/app/';
+}
+
+//setting a service domain for build
+var service;
+//test if www is defined
+if (yargs.service) {
+    service = yargs.service + '/';
+} else {
+    service = '/app/';
 }
 
 // ## paths
@@ -39,6 +57,8 @@ module.exports = {
         root: 'app/',
         version: version,
         www: www,
+        cdn: cdn,
+        service: service,
         // is this a production build?
         isProduction: isProduction,
         // ### image
@@ -110,6 +130,8 @@ module.exports = {
                 '*.js',
                 'gulp/tasks/*.js',
                 'gulp/*.js',
+                'grunt/tasks/*.js',
+                'gulp/options/.js',
                 'app/media/script/*.js',
                 'app/media/script/**/*.js',
                 'app/media/test/spec/*.js',
@@ -118,10 +140,13 @@ module.exports = {
                 '!app/media/script/*.compiled.js'
             ],
             // glob of only gulp js files for documentation task
+            // glob of only gulp js files for documentation task
             gulp: [
                 '*.js',
                 'gulp/tasks/*.js',
-                'gulp/*.js'
+                'gulp/*.js',
+                'grunt/tasks/*.js',
+                'gulp/options/.js'
             ],
             // glob of only application files for documentation task
             source: [
@@ -168,6 +193,7 @@ module.exports = {
         },
         // ### data
         data: {
+            directory: 'app/service',
             source: 'app/service/**',
             destination: 'service'
         },

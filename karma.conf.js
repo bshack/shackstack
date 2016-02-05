@@ -1,3 +1,4 @@
+var istanbul = require('browserify-istanbul');
 module.exports = function(karma) {
     'use strict';
     karma.set({
@@ -7,13 +8,10 @@ module.exports = function(karma) {
             'browserify'
         ],
         files: [{
-            pattern: 'app/media/script/service/*.js',
-            included: true
+            pattern: 'app/media/script/service/*.js'
         },
         {
-            pattern: 'app/media/test/spec/*Spec.js',
-            included: true
-
+            pattern: 'app/media/test/spec/*Spec.js'
         }],
         reporters: [
             'progress',
@@ -21,8 +19,7 @@ module.exports = function(karma) {
         ],
         preprocessors: {
             'app/media/script/service/*.js': [
-                'browserify',
-                'coverage'
+                'browserify'
             ],
             'app/media/test/spec/*Spec.js': [
                 'browserify'
@@ -36,12 +33,14 @@ module.exports = function(karma) {
         ],
         singleRun: false,
         autoWatch: false,
-        // browserify configuration
         browserify: {
             debug: true,
             transform: [
                 'brfs',
-                'browserify-shim'
+                'browserify-shim',
+                istanbul({
+                    ignore: ['**/node_modules/**']
+                })
             ]
         },
         coverageReporter: {
