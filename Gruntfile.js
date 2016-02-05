@@ -2,7 +2,7 @@ module.exports = function(grunt) {
     'use strict';
     // set up config object and pull in package.json
     var config = {
-        pkg: grunt.file.readJSON('package.json'),
+        pkg: grunt.file.readJSON('./package.json'),
         env: process.env
     };
     // load in all the task configs
@@ -23,5 +23,5 @@ module.exports = function(grunt) {
     // plull in all the grunt modules
     require('load-grunt-tasks')(grunt);
     // load in all the asks
-    grunt.loadTasks('grunt/tasks');
+    grunt.loadTasks('./grunt/tasks');
 };

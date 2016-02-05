@@ -3147,6 +3147,18 @@
         }
       }
     },
+    "grunt-svg2png": {
+      "version": "0.2.7",
+      "from": "grunt-svg2png@*",
+      "resolved": "https://registry.npmjs.org/grunt-svg2png/-/grunt-svg2png-0.2.7.tgz",
+      "dependencies": {
+        "phantomjs": {
+          "version": "1.9.19",
+          "from": "phantomjs@>=1.9.0 <1.10.0",
+          "resolved": "https://registry.npmjs.org/phantomjs/-/phantomjs-1.9.19.tgz"
+        }
+      }
+    },
     "gulp": {
       "version": "3.9.0",
       "from": "gulp@*",
