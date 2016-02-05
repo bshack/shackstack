@@ -65,7 +65,7 @@
     "gulp-uglify": "x.x.x",
     "gulp-watch": "x.x.x",
     "gulp-wrapper": "x.x.x",
-    "handlebars": "^3.x.x",
+    "handlebars": "x.x.x",
     "jasmine-core": "x.x.x",
     "jquery": "x.x.x",
     "jsdoc": "x.x.x",

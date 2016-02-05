@@ -75,7 +75,10 @@ gulp.task('markupTemplate', ['cleanTemplate'], function() {
         //support for better error handling
         .pipe(plumber())
         //compile the template to javascript
-        .pipe(handlebarsToJS())
+        .pipe(handlebarsToJS({
+            // Pass local handlebars version to keep everything on the same version
+            handlebars: require('handlebars')
+        }))
         //wrap in define module and register all templates as partials
         .pipe(wrapper({
             getTemplateName: function(file) {
