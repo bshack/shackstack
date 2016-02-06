@@ -7,9 +7,9 @@ var htmllint = require('gulp-htmllint');
 var rename = require('gulp-rename');
 var wrapper = require('gulp-wrapper');
 var plumber = require('gulp-plumber');
-var yargs = require('yargs').argv;
 var data = require('gulp-data');
 var livereload = require('gulp-livereload');
+var _ = require('lodash-node');
 
 // ## Environment Config
 
@@ -19,37 +19,23 @@ var config = require('../config');
 
 gulp.task('markup', function() {
     'use strict';
-    //switch for passing a cdn server url
-    var cdn = '/' + config.path.root;
-    //switch for passing a www server url
-    var www = '/' + config.path.root;
-    //switch for passing a service url
-    var service = '/' + config.path.root;
-    //test if cdn server and version defined
-    if (yargs.cdn && yargs.cdn !== true) {
-        cdn = yargs.cdn + config.path.release.destination + config.path.version;
-    }
-    if (yargs.service && yargs.service !== true) {
-        service = yargs.service + '/';
-    }
-    if (yargs.www && yargs.www !== true) {
-        www = yargs.www + '/';
-    }
     //task
     return gulp.src(config.path.markup.source)
         //support for better error handling
         .pipe(plumber())
         .pipe(data(function(file) {
             //used the file path of the html file to determine the associated .json data file
+            var globalDataFile = require('../../app/service/global.json');
             var dataFile = file.path.split(config.path.root).pop().replace('.handlebars', '.json');
+            dataFile = require('../../' + config.path.root + 'service/' + dataFile);
             //return the data
-            return require('../../' + config.path.root + 'service/' + dataFile);
+            return _.extend({}, dataFile, globalDataFile);
         }))
         //compile the handlebars templates to html
         .pipe(handlebarsToHTML({
-            cdn: cdn,
-            www: www,
-            service: service,
+            cdn: config.path.cdn,
+            www: config.path.www,
+            service: config.path.service,
             version: config.path.version,
             isProduction: config.path.isProduction
         }, {

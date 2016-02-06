@@ -7,7 +7,10 @@
             view: $html.attr('id') || '',
             www: $html.data('www'),
             cdn: $html.data('cdn'),
-            service: $html.data('service')
+            service: $html.data('service'),
+            metrics: {
+                'google-analytics-id': $html.data('google-analytics-id')
+            }
         }
     });
 })();

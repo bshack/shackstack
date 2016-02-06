@@ -2,21 +2,23 @@
   "name": "shackstack",
   "homepage": "https://github.com/bshack/shackstack",
   "version": "2.0.0",
-  "contributors": [      {
-    "name" : "Bill Shackelford",
-    "email" : "bshackelford@gmail.com",
-    "url" : "https://github.com/bshack"
-  }],
+  "contributors": [
+    {
+      "name": "Bill Shackelford",
+      "email": "bshackelford@gmail.com",
+      "url": "https://github.com/bshack"
+    }
+  ],
   "engines": {
-      "node" : "5.x.x"
+    "node": "5.x.x"
   },
   "description": "Scaffolding for developing and deploying static sites.",
   "main": "app/index.html",
   "keywords": [
-      "handlebars",
-      "backbone",
-      "gulp",
-      "foundation"
+    "handlebars",
+    "backbone",
+    "gulp",
+    "foundation"
   ],
   "scripts": {
     "test": "gulp deploy --www=//www.example.com --cdn=//cdn.example.com --service=//service.example.com --production=true;"
@@ -45,6 +47,7 @@
     "browserify-shim": "x.x.x",
     "eslint": "x.x.x",
     "fastclick": "x.x.x",
+    "fingerprintjs": "^0.5.3",
     "foundation-sites": "x.x.x",
     "gulp": "x.x.x",
     "gulp-accessibility": "x.x.x",
@@ -92,6 +95,7 @@
     "karma-jasmine": "x.x.x",
     "karma-phantomjs-launcher": "x.x.x",
     "karma-safari-launcher": "x.x.x",
+    "lodash-node": "^3.10.2",
     "lwip": "x.x.x",
     "path": "x.x.x",
     "phantomjs-prebuilt": "x.x.x",
