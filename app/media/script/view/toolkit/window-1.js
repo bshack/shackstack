@@ -3,11 +3,15 @@
     var Backbone = require('../../backbonePackage');
     module.exports = Backbone.View.extend({
         events: {
-            load: 'viewportSetEvent',
-            resize: 'viewportSetEvent',
-            orientationchange: 'viewportSetEvent',
-            scroll: 'viewportSetEvent',
+            load: 'viewportSet',
+            resize: 'viewportSet',
+            orientationchange: 'viewportSet',
+            scroll: 'viewportSet',
             keydown: 'keydownEvent'
+        },
+        // subscribe to pub/sub messaging
+        subscriptions: {
+            'window:viewport:refresh': 'viewportRefresh'
         },
         // this.viewport holds the current state of the window
         viewport: {
@@ -20,17 +24,17 @@
         keydownEvent: function(e) {
             //listen for excape key.. mostly used for modals
             if (e.keyCode === 27) {
-                Backbone.Messager.trigger('window:keydown:escape');
+                Backbone.Mediator.publish('window:keydown:escape');
             }
         },
         //force refresh for viewport cache
         viewportRefresh: function() {
             this.viewportSet(true);
         },
-        viewportSetEvent: function() {
-            this.viewportSet(false);
-        },
         viewportSet: function(clearCache) {
+            //this is mainly used to control
+            //placing the 'hidden' attribute for accessiblity
+            //where display: none; is not enough
             var _this = this;
             //set the viewport width, height, scroll position
             this.viewport.width = this.$el.width();
@@ -50,7 +54,7 @@
             ) {
                 this.viewport.view = 'desktop';
                 //message to other views the viewport has changed to desktop
-                Backbone.Messager.trigger('window:viewport:desktop', _this.viewport);
+                Backbone.Mediator.publish('window:viewport:desktop', _this.viewport);
             //mobile check
             } else if (
                 this.viewport.width < 640 &&
@@ -58,15 +62,17 @@
             ) {
                 this.viewport.view = 'mobile';
                 //message to other views the viewport has changed to mobile
-                Backbone.Messager.trigger('window:viewport:mobile', _this.viewport);
+                Backbone.Mediator.publish('window:viewport:mobile', _this.viewport);
             }
             //message to other views the viewport has been changed
-            Backbone.Messager.trigger('window:viewport:change', _this.viewport);
+            Backbone.Mediator.publish('window:viewport:change', _this.viewport);
         },
         initialize: function() {
-            Backbone.Messager.bind('window:viewport:refresh', this.viewportRefresh, this);
             //on init set viewport
-            this.viewportSet(false);
+            this.viewportSet();
+        },
+        render: function() {
+            return;
         }
     });
 })();

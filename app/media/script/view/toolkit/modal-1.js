@@ -2,11 +2,11 @@
     'use strict';
     var Backbone = require('../../backbonePackage');
     module.exports = Backbone.View.extend({
-        initialize: function() {
-            Backbone.Messager.bind('window:keydown:escape', this.closeModal, this);
-        },
         events: {
             'click [data-modal-close]': 'closeModalClick'
+        },
+        subscriptions: {
+            'window:keydown:escape': 'closeModal'
         },
         closeModalClick: function(e) {
             e.preventDefault();
@@ -25,6 +25,13 @@
             // focus on the element that originally opened the modal
             this.$opener
                 .focus();
+            //send click event to metrics
+            Backbone.Mediator.publish('metrics:event:send', {
+                hitType: 'event',
+                eventCategory: 'modal',
+                eventAction: 'close',
+                eventLabel: this.$opener.data('modal-open')
+            });
         }
     });
 })();

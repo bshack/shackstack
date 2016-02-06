@@ -119,10 +119,6 @@ module.exports = {
         },
         // ### script
         script: {
-            // jscs config file
-            jscs: '.jscsrc',
-            // jshint config file
-            jsHint: 'jshintrc.json',
             // karma test runner conig file
             karma: __dirname + '/../karma.conf.js',
             // glob of all js files including gulp and application

@@ -5,7 +5,7 @@
     var ViewModalOpen1 = require('./toolkit/modalOpen-1');
     var ViewTabpanel1 = require('./toolkit/tabpanel-1');
     var ViewAccessiblityAjax1 = require('./toolkit/accessiblityAjax-1');
-    var templateModalDemo = require('../template/modal/demo');
+    var templateModalDemo = require('../template/modal/modal-example-1');
     module.exports =  Backbone.View.extend({
         initialize: function() {
             // setup toolkit nav

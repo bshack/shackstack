@@ -20,16 +20,17 @@
                 m.parentNode.insertBefore(a, m)
             })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
             //set up google analytics
-            ga('create', env.get('metrics')['google-analytics-id'], 'auto');
+            window.ga('create', env.get('metrics')['google-analytics-id'], 'auto');
             //send the fingerprint id (94% accurate unique id with out cookie tracking)
-            ga('set', 'dimension1', new Fingerprint({canvas: true}).get());
-            // access ga from this from now on
-            this.ga = ga;
+            window.ga('set', 'dimension1', new Fingerprint({canvas: true}).get());
             /*eslint-enable */
             //send pageview event
             this.eventSend({
                 hitType: 'pageview'
             });
+        },
+        subscriptions: {
+            'metrics:event:send': 'eventSend'
         },
         eventSend: function(data) {
             // options
@@ -40,7 +41,7 @@
             //     eventLabel: 'cats.mp4',
             //     hitCallback: function() {}
             // }
-            this.ga('send', data);
+            window.ga('send', data);
         }
     });
 })();

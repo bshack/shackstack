@@ -2,6 +2,7 @@
     'use strict';
     var _ = require('underscore');
     var Backbone = require('backbone');
+    require('./backboneMediator');
     // don't use DELETE or PUT methods, make them POST methods
     Backbone.emulateHTTP = true;
     // send cookie data cross origin
