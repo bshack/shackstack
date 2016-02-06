@@ -10,6 +10,13 @@
         },
         //usage is the same as regular jquery ajax, adding some messaging on top
         request: function(params) {
+            //send click event to metrics
+            Backbone.Mediator.publish('metrics:event:send', {
+                hitType: 'event',
+                eventCategory: 'ajax',
+                eventAction: 'request',
+                eventLabel: params.url
+            });
             var _this = this;
             //message to screen readers that an ajax request is now pending
             _this.accessiblitySpeaker1.say('content is loading');
