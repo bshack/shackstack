@@ -103,7 +103,12 @@ module.exports = {
                 '!app/service/**'
             ],
             // glob of generated html files
-            destination: 'app/*.html',
+            destination: [
+                'app/**/*.html',
+                '!app/media/**',
+                '!app/report/**',
+                '!app/service/**'
+            ],
             partials: {
                 //glob of handlebars partials
                 source: [
