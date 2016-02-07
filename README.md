@@ -2,8 +2,6 @@
 
 [![Build Status](https://travis-ci.org/bshack/shackstack.svg?branch=master)](https://travis-ci.org/bshack/shackstack)
 
-Accessible scaffolding for developing and deploying static sites.
-
 Out of the box it creates a boilerplate site:
 
 http://billshackelford.com
