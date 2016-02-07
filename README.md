@@ -18,7 +18,7 @@ http://billshackelford.com/toolkit
 - Gulp
 - Handlebars
 - Jasmine
-- JQuery
+- jQuery
 - Karma
 
 ## Install Dependancies
@@ -64,8 +64,8 @@ This compiles and bundles everything into a deploy ready package outputed in the
     --service=(service domain)
     --production=(true|false - optional);</pre>
 
-'version' argument defaults to epoch timestamp
-'production' argument defaults 'false'
+-'version' argument defaults to epoch timestamp
+-'production' argument defaults 'false'
 
 The above site was created by running the 'deploy' task with the following options:
 
