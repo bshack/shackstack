@@ -96,7 +96,12 @@ module.exports = {
             // htmllint config file
             htmlLint: '.htmllintrc',
             // glob of handlebars templates
-            source: 'app/*.handlebars',
+            source: [
+                'app/**/*.handlebars',
+                '!app/media/**',
+                '!app/report/**',
+                '!app/service/**'
+            ],
             // glob of generated html files
             destination: 'app/*.html',
             partials: {

@@ -10,7 +10,7 @@
     require('foundation-sites');
     // speed up precieved click event performance
     fastclick(document.body);
-    // // initialize foundation
+    // initialize foundation
     $(document).foundation();
     // get the environment settings as an example
     var env = new ModelEnvironment();

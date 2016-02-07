@@ -8,7 +8,7 @@ app/media/style/*.css
 app/media/style/base/_sprite.scss
 app/media/image/sprite.png
 app/media/image/sprite/*.png
-app/*.html
+app/**/*.html
 report/
 .sass-cache/
 .DS_Store
