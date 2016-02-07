@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    var Backbone = require('../../backbonePackage');
+    var Backbone = require('../../backbone/package');
     var Fingerprint = require('fingerprintjs');
     var ModelEnvironment = require('../../model/environment');
     var env = new ModelEnvironment();

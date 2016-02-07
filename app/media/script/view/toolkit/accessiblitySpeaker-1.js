@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    var Backbone = require('../../backbonePackage');
+    var Backbone = require('../../backbone/package');
     var templateAccessibilitySpeaker1 = require('../../template/toolkit/accessibility-speaker-1');
     module.exports = Backbone.View.extend({
         template: function(data) {

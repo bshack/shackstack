@@ -1,8 +1,7 @@
 (function() {
     'use strict';
-    var _ = require('underscore');
     var Backbone = require('backbone');
-    require('./backboneMediator');
+    require('./mediator');
     // don't use DELETE or PUT methods, make them POST methods
     Backbone.emulateHTTP = true;
     // send cookie data cross origin
@@ -11,8 +10,6 @@
             withCredentials: true
         }
     });
-    // create an event bus
-    Backbone.Messager = _.extend({}, Backbone.Events);
-    // return our version of Backbone
+    // return the extended version of Backbone
     module.exports = Backbone;
 })();

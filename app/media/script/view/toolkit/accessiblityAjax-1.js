@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    var Backbone = require('../../backbonePackage');
+    var Backbone = require('../../backbone/package');
     var AccessiblitySpeaker1 = require('./accessiblitySpeaker-1');
     module.exports = Backbone.View.extend({
         initialize: function() {

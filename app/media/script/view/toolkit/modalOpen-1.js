@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    var Backbone = require('../../backbonePackage');
+    var Backbone = require('../../backbone/package');
     var ViewModal1 = require('./modal-1');
     var templateModal1 = require('../../template/toolkit/modal-1');
     module.exports = Backbone.View.extend({

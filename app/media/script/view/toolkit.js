@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    var Backbone = require('../backbonePackage');
+    var Backbone = require('../backbone/package');
     var ModelEnvironment = require('../model/environment');
     var ViewModalOpen1 = require('./toolkit/modalOpen-1');
     var ViewTabpanel1 = require('./toolkit/tabpanel-1');

@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    var Backbone = require('../../backbonePackage');
+    var Backbone = require('../../backbone/package');
     module.exports = Backbone.View.extend({
         events: {
             'click [data-modal-close]': 'closeModalClick'
