@@ -6,7 +6,7 @@
       "apple-mobile-web-app-title": "app title here"
   },
   "link": {
-      "apple-touch-icon-precomposed": "/apple-touch-icon.png",
+      "apple-touch-icon-precomposed": "apple-touch-icon.png",
       "author": "https://plus.google.com/",
       "favicon": "favicon.png"
   },
