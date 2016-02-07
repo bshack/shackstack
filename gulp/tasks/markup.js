@@ -24,18 +24,21 @@ gulp.task('markup', function() {
         //support for better error handling
         .pipe(plumber())
         .pipe(data(function(file) {
-            //used the file path of the html file to determine the associated .json data file
-            var globalDataFile = require('../../app/service/global.json');
             var dataFile = file.path.split(config.path.root).pop().replace('.handlebars', '.json');
             dataFile = require('../../' + config.path.root + 'service/' + dataFile);
             //return the data
-            return _.extend({}, dataFile, globalDataFile, {
-                cdn: config.path.cdn,
-                www: config.path.www,
-                service: config.path.service,
-                version: config.path.version,
-                isProduction: config.path.isProduction
-            });
+            return _.extend(
+                {},
+                require('../../app/service/default.json'),
+                dataFile,
+                {
+                    cdn: config.path.cdn,
+                    www: config.path.www,
+                    service: config.path.service,
+                    version: config.path.version,
+                    isProduction: config.path.isProduction
+                }
+            );
         }))
         //compile the handlebars templates to html
         .pipe(handlebarsToHTML({}, {

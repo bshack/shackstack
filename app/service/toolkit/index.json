@@ -1,111 +1,104 @@
 {
-   "title":"Toolkit",
-   "meta":{
-
-   },
-   "link":{
-      "apple-touch-icon-precomposed":"apple-touch-icon.png",
-      "favicon":"favicon.png"
-   },
-   "elements":{
-      "list-1":{
-         "items":[
-            {
-               "text":"list-1 item 1"
-            },
-            {
-               "text":"item 2"
-            },
-            {
-               "text":"item 3"
-            }
-         ]
-      },
-      "table-1":{
-         "caption":"caption",
-         "head":[
-            {
-               "text":""
-            },
-            {
-               "text":"column header 1"
-            },
-            {
-               "text":"column header 2"
-            },
-            {
-               "text":"column header 3"
-            }
-         ],
-         "body":[
-            [
-               {
-                  "text":"row header 1",
-                  "isHead":true
-               },
-               {
-                  "text":"content"
-               },
-               {
-                  "text":"content"
-               },
-               {
-                  "text":"content"
-               }
+    "title":"Toolkit",
+    "elements":{
+        "list-1":{
+            "items":[
+                {
+                    "text":"list-1 item 1"
+                },
+                {
+                    "text":"item 2"
+                },
+                {
+                    "text":"item 3"
+                }
+            ]
+        },
+        "table-1":{
+            "caption":"caption",
+            "head":[
+                {
+                    "text":""
+                },
+                {
+                    "text":"column header 1"
+                },
+                {
+                    "text":"column header 2"
+                },
+                {
+                    "text":"column header 3"
+                }
             ],
-            [
-               {
-                  "text":"row header 2",
-                  "isHead":true
-               },
-               {
-                  "text":"content"
-               },
-               {
-                  "text":"content"
-               },
-               {
-                  "text":"content"
-               }
+            "body":[
+                [
+                    {
+                        "text":"row header 1",
+                        "isHead":true
+                    },
+                    {
+                        "text":"content"
+                    },
+                    {
+                        "text":"content"
+                    },
+                    {
+                        "text":"content"
+                    }
+                ],
+                [
+                    {
+                        "text":"row header 2",
+                        "isHead":true
+                    },
+                    {
+                        "text":"content"
+                    },
+                    {
+                        "text":"content"
+                    },
+                    {
+                        "text":"content"
+                    }
+                ]
+            ],
+            "foot":[
+                [
+                    {
+                        "text":"row header 3",
+                        "isHead":true
+                    },
+                    {
+                        "text":"content"
+                    },
+                    {
+                        "text":"content"
+                    },
+                    {
+                        "text":"content"
+                    }
+                ]
             ]
-         ],
-         "foot":[
-            [
-               {
-                  "text":"row header 3",
-                  "isHead":true
-               },
-               {
-                  "text":"content"
-               },
-               {
-                  "text":"content"
-               },
-               {
-                  "text":"content"
-               }
+        },
+        "select-1":{
+            "data":[
+                {
+                    "value":"option-1",
+                    "name":"option 1",
+                    "selected":true
+                },
+                {
+                    "value":"option-2",
+                    "name":"option 2"
+                },
+                {
+                    "value":"option-3",
+                    "name":"option 3"
+                }
             ]
-         ]
-      },
-      "select-1":{
-         "data":[
-            {
-               "value":"option-1",
-               "name":"option 1",
-               "selected":true
-            },
-            {
-               "value":"option-2",
-               "name":"option 2"
-            },
-            {
-               "value":"option-3",
-               "name":"option 3"
-            }
-         ]
-      }
-   },
-   "components": {
-       "accessible-ajax" : "New content has been added to the page, now the screen reader will read it."
-   }
+        }
+    },
+    "components":{
+        "accessible-ajax":"New content has been added to the page, now the screen reader will read it."
+    }
 }
