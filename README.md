@@ -55,7 +55,7 @@ Define any data properties you want globally available in your pages in 'default
 
 ### Deploy
 
-This compiles and bundles everything into a deploy ready package outputted in the '_deploy' directory.
+This compiles and bundles everything into a deploy ready package outputted in the '\_deploy' directory.
 
 <pre>gulp deploy
     --version=(unique deploy version - optional)
@@ -64,7 +64,7 @@ This compiles and bundles everything into a deploy ready package outputted in th
     --service=(service domain)
     --production=(true|false - optional);</pre>
 
-The 'version' argument defaults to an epoch timestamp and the 'production' argument defaults 'false'.
+_The 'version' argument defaults to an epoch timestamp and the 'production' argument defaults to 'false'._
 
 The above site was created by running the 'deploy' task with the following arguments:
 
