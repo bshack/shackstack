@@ -29,16 +29,16 @@ gulp.task('markup', function() {
             var dataFile = file.path.split(config.path.root).pop().replace('.handlebars', '.json');
             dataFile = require('../../' + config.path.root + 'service/' + dataFile);
             //return the data
-            return _.extend({}, dataFile, globalDataFile);
+            return _.extend({}, dataFile, globalDataFile, {
+                cdn: config.path.cdn,
+                www: config.path.www,
+                service: config.path.service,
+                version: config.path.version,
+                isProduction: config.path.isProduction
+            });
         }))
         //compile the handlebars templates to html
-        .pipe(handlebarsToHTML({
-            cdn: config.path.cdn,
-            www: config.path.www,
-            service: config.path.service,
-            version: config.path.version,
-            isProduction: config.path.isProduction
-        }, {
+        .pipe(handlebarsToHTML({}, {
             batch: config.path.markup.partials.source
         }))
         //validate markup

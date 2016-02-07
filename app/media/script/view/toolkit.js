@@ -27,11 +27,11 @@
             // setup the accessible ajax view
             var viewAccessiblityAjax1 = new ViewAccessiblityAjax1();
             var env = new ModelEnvironment();
-            // on click get some example data and populate the container
+            // on click get some example data and populate the container.. TODO make this a self contained view
             Backbone.$('#accessible-ajax-example-button').on('click', function() {
                 var $this = Backbone.$(this);
                 viewAccessiblityAjax1.request({
-                    url: env.get('service') + 'service/toolkit.json',
+                    url: env.get('service') + 'service/toolkit/index.json',
                     success: function(data) {
                         // remove the previous container if present
                         Backbone.$('#accessible-ajax-example-content')
