@@ -12,7 +12,7 @@
   "engines": {
     "node": "5.x.x"
   },
-  "description": "Scaffolding for developing and deploying static sites.",
+  "description": "Accessible scaffolding for developing and deploying static sites.",
   "main": "app/index.html",
   "keywords": [
     "handlebars",

@@ -2,13 +2,17 @@
 
 [![Build Status](https://travis-ci.org/bshack/shackstack.svg?branch=master)](https://travis-ci.org/bshack/shackstack)
 
-Scaffolding for developing and deploying static sites.
+Accessible scaffolding for developing and deploying static sites.
 
-Example site it creates out of the box:
+Out of the box it creates a boilerplate site:
 
 http://billshackelford.com
 
-It was created by running the 'deploy' task with the following options:
+In addition it includes a customizable toolkit:
+
+http://billshackelford.com/toolkit
+
+The above site was created by running the 'deploy' task with the following options:
 
 <pre>gulp deploy
     --www=//billshackelford.com
@@ -16,23 +20,17 @@ It was created by running the 'deploy' task with the following options:
     --service=//service.billshackelford.com
     --production=true;</pre>
 
-## Setup
+## Install Dependancies
 
-### Install Dependancies
-
-#### Nodejs
+### Nodejs
 
 http://nodejs.org
 
-#### Gulp
+### Gulp
 
 http://gulpjs.com
 
-### Clone
-
-<pre>git clone https://github.com/bshack/shackstack;</pre>
-
-### Install Node Modules
+### Node Modules
 
 <pre>npm install; (might need to sudo)</pre>
 
