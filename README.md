@@ -10,13 +10,16 @@ In addition it includes a customizable toolkit:
 
 http://billshackelford.com/toolkit
 
-The above site was created by running the 'deploy' task with the following options:
+## Key Libraries Leveraged
 
-<pre>gulp deploy
-    --www=//billshackelford.com
-    --cdn=//cdn.billshackelford.com
-    --service=//service.billshackelford.com
-    --production=true;</pre>
+- BackboneJS
+- Browserify
+- Foundation
+- Gulp
+- Handlebars
+- Jasmine
+- JQuery
+- Karma
 
 ## Install Dependancies
 
@@ -55,13 +58,22 @@ Define any data properties you want globally available in your pages in 'default
 This compiles and bundles everything into a deploy ready package outputed in the '_deploy' directory.
 
 <pre>gulp deploy
-    --version=(unique deploy version)
+    --version=(unique deploy version - optional)
     --www=(www domain)
     --cdn=(cdn domain)
     --service=(service domain)
-    --production=(true|false);</pre>
+    --production=(true|false - optional);</pre>
 
-The version argument is optional, if not specified it will set the version to an epoch timestamp.
+'version' argument defaults to epoch timestamp
+'production' argument defaults 'false'
+
+The above site was created by running the 'deploy' task with the following options:
+
+<pre>gulp deploy
+    --www=//billshackelford.com
+    --cdn=//cdn.billshackelford.com
+    --service=//service.billshackelford.com
+    --production=true;</pre>
 
 ### Unit Tests
 
@@ -69,15 +81,15 @@ The version argument is optional, if not specified it will set the version to an
 
 ### More
 
-These all run as dependencies of the watch and deploy tasks from above.
+These all run as dependencies of the 'watch' and 'deploy' tasks.
 
-<pre>gulp markup;</pre>
-<pre>gulp markupTemplate;</pre>
-<pre>gulp style;</pre>
-<pre>gulp script;</pre>
-<pre>gulp sprite;</pre>
-<pre>gulp accessibility;</pre>
-<pre>gulp documentation;</pre>
+<pre>gulp markup;
+gulp markupTemplate;
+gulp style;
+gulp script;
+gulp sprite;
+gulp accessibility;
+gulp documentation;</pre>
 
 ## NPM Shrinkwrap
 
