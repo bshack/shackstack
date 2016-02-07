@@ -2,14 +2,31 @@
   "name": "shackstack",
   "homepage": "https://github.com/bshack/shackstack",
   "version": "2.0.0",
-  "description": "Scaffolding for developing and deploying static sites.",
+  "contributors": [
+    {
+      "name": "Bill Shackelford",
+      "email": "bshackelford@gmail.com",
+      "url": "https://github.com/bshack"
+    }
+  ],
+  "engines": {
+    "node": "5.x.x"
+  },
+  "description": "Accessible scaffolding for developing and deploying static sites.",
   "main": "app/index.html",
+  "keywords": [
+    "handlebars",
+    "backbone",
+    "gulp",
+    "foundation"
+  ],
   "scripts": {
     "test": "gulp deploy --www=//www.example.com --cdn=//cdn.example.com --service=//service.example.com --production=true;"
   },
   "author": "William Shackelford",
   "license": "MIT",
   "repository": "https://github.com/bshack/shackstack",
+  "bugs": "https://github.com/bshack/shackstack/issues",
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.js"
   },
@@ -26,9 +43,11 @@
     "backbone": "x.x.x",
     "brfs": "x.x.x",
     "browserify": "x.x.x",
+    "browserify-istanbul": "x.x.x",
     "browserify-shim": "x.x.x",
     "eslint": "x.x.x",
     "fastclick": "x.x.x",
+    "fingerprintjs": "x.x.x",
     "foundation-sites": "x.x.x",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
@@ -67,7 +86,7 @@
     "gulp-uglify": "x.x.x",
     "gulp-watch": "x.x.x",
     "gulp-wrapper": "x.x.x",
-    "handlebars": "^3.x.x",
+    "handlebars": "x.x.x",
     "jasmine-core": "x.x.x",
     "jquery": "x.x.x",
     "jsdoc": "x.x.x",
@@ -80,6 +99,7 @@
     "karma-phantomjs-launcher": "x.x.x",
     "karma-safari-launcher": "x.x.x",
     "load-grunt-tasks": "^3.4.0",
+    "lodash-node": "x.x.x",
     "lwip": "x.x.x",
     "path": "x.x.x",
     "phantomjs-prebuilt": "x.x.x",

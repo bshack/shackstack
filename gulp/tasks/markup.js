@@ -9,6 +9,7 @@ var wrapper = require('gulp-wrapper');
 var plumber = require('gulp-plumber');
 var data = require('gulp-data');
 var livereload = require('gulp-livereload');
+var _ = require('lodash-node');
 
 // ## Environment Config
 
@@ -23,19 +24,24 @@ gulp.task('markup', function() {
         //support for better error handling
         .pipe(plumber())
         .pipe(data(function(file) {
-            //used the file path of the html file to determine the associated .json data file
             var dataFile = file.path.split(config.path.root).pop().replace('.handlebars', '.json');
+            dataFile = require('../../' + config.path.root + 'service/' + dataFile);
             //return the data
-            return require('../../' + config.path.data.directory + '/' + dataFile);
+            return _.extend(
+                {},
+                require('../../app/service/default.json'),
+                dataFile,
+                {
+                    cdn: config.path.cdn,
+                    www: config.path.www,
+                    service: config.path.service,
+                    version: config.path.version,
+                    isProduction: config.path.isProduction
+                }
+            );
         }))
         //compile the handlebars templates to html
-        .pipe(handlebarsToHTML({
-            cdn: config.path.cdn,
-            www: config.path.www,
-            service: config.path.service,
-            version: config.path.version,
-            isProduction: config.path.isProduction
-        }, {
+        .pipe(handlebarsToHTML({}, {
             batch: config.path.markup.partials.source
         }))
         //validate markup
@@ -58,7 +64,10 @@ gulp.task('markupTemplate', ['cleanTemplate'], function() {
         //support for better error handling
         .pipe(plumber())
         //compile the template to javascript
-        .pipe(handlebarsToJS())
+        .pipe(handlebarsToJS({
+            // Pass local handlebars version to keep everything on the same version
+            handlebars: require('handlebars')
+        }))
         //wrap in define module and register all templates as partials
         .pipe(wrapper({
             getTemplateName: function(file) {
@@ -66,14 +75,13 @@ gulp.task('markupTemplate', ['cleanTemplate'], function() {
             },
             header: function(file){
                 var templateName = this.getTemplateName(file);
-                return '(function() {\'use strict\';var Handlebars = require("handlebars");' +
-                    'if (typeof Handlebars.templates === \'undefined\') ' +
+                return 'var Handlebars = require("handlebars");if (typeof Handlebars.templates === \'undefined\') ' +
                     '{Handlebars.templates = {};}Handlebars.templates[\'' + templateName + '\'] = Handlebars.template(';
             },
             footer: function(file){
                 var templateName = this.getTemplateName(file);
                 return ');Handlebars.registerPartial(\'' + templateName + '\', Handlebars.templates[\'' + templateName +
-                    '\']);module.exports = Handlebars.templates[\'' + templateName + '\'];})();';
+                    '\']);module.exports = Handlebars.templates[\'' + templateName + '\'];';
             }
         }))
         .pipe(gulp.dest(config.path.markup.partials.destination));

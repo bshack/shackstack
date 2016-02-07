@@ -2,37 +2,36 @@
 
 [![Build Status](https://travis-ci.org/bshack/shackstack.svg?branch=master)](https://travis-ci.org/bshack/shackstack)
 
-Scaffolding for developing and deploying static sites.
-
-Example site it creates out of the box:
+Out of the box it creates a boilerplate site:
 
 http://billshackelford.com
 
-It was created by running the 'deploy' task with the following options:
+In addition it includes a customizable toolkit:
 
-<pre>gulp deploy
-    --www=//billshackelford.com
-    --cdn=//cdn.billshackelford.com
-    --service=//service.billshackelford.com
-    --production=true;</pre>
+http://billshackelford.com/toolkit
 
-## Setup
+## Key Libraries Leveraged
 
-### Install Dependancies
+- BackboneJS
+- Browserify
+- Foundation
+- Gulp
+- Handlebars
+- Jasmine
+- jQuery
+- Karma
 
-#### Nodejs
+## Install Dependancies
+
+### Nodejs
 
 http://nodejs.org
 
-#### Gulp
+### Gulp
 
 http://gulpjs.com
 
-### Clone
-
-<pre>git clone https://github.com/bshack/shackstack;</pre>
-
-### Install Node Modules
+### Node Modules
 
 <pre>npm install; (might need to sudo)</pre>
 
@@ -46,6 +45,8 @@ Site source files used to build your site are located in the 'app/' directory.
 
 Every generated html page is required to have matching .json file in 'service/' directory. This is where you stub out data that is to be used to populate the markup templates.
 
+Define any data properties you want globally available in your pages in 'default.json'. Any properties defined in page specific .json files will override properties in 'default.json'.
+
 ## Gulp Tasks
 
 ### Watch
@@ -54,16 +55,24 @@ Every generated html page is required to have matching .json file in 'service/' 
 
 ### Deploy
 
-This compiles and bundles everything into a deploy ready package outputed in the '_deploy/' directory.
+This compiles and bundles everything into a deploy ready package outputted in the '\_deploy' directory.
 
 <pre>gulp deploy
-    --version=(unique deploy version)
+    --version=(unique deploy version - optional)
     --www=(www domain)
     --cdn=(cdn domain)
     --service=(service domain)
-    --production=(true|false);</pre>
+    --production=(true|false - optional);</pre>
 
-The version argument is optional, if not specified it will set the version to an epoch timestamp.
+_The 'version' argument defaults to an epoch timestamp and the 'production' argument defaults to 'false'._
+
+The above site was created by running the 'deploy' task with the following arguments:
+
+<pre>gulp deploy
+    --www=//billshackelford.com
+    --cdn=//cdn.billshackelford.com
+    --service=//service.billshackelford.com
+    --production=true;</pre>
 
 ### Unit Tests
 
@@ -71,15 +80,15 @@ The version argument is optional, if not specified it will set the version to an
 
 ### More
 
-These all run as dependencies of the watch and deploy tasks from above.
+These all run as dependencies of the 'watch' and 'deploy' tasks.
 
-<pre>gulp markup;</pre>
-<pre>gulp markupTemplate;</pre>
-<pre>gulp style;</pre>
-<pre>gulp script;</pre>
-<pre>gulp sprite;</pre>
-<pre>gulp accessibility;</pre>
-<pre>gulp documentation;</pre>
+<pre>gulp markup;
+gulp markupTemplate;
+gulp style;
+gulp script;
+gulp sprite;
+gulp accessibility;
+gulp documentation;</pre>
 
 ## NPM Shrinkwrap
 

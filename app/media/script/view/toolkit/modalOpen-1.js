@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    var Backbone = require('../../backbonePackage');
+    var Backbone = require('../../backbone/package');
     var ViewModal1 = require('./modal-1');
     var templateModal1 = require('../../template/toolkit/modal-1');
     module.exports = Backbone.View.extend({
@@ -25,6 +25,8 @@
         },
         render: function(e) {
             e.preventDefault();
+            // the opener
+            var $target = Backbone.$(e.target);
             // build the modal markup
             var $modal = this.template().html(this.templateInner());
             // bind the events
@@ -41,7 +43,14 @@
             //put focuse on the modal and cache the opening element
             $modal
                 .focus()
-                .data('opener', Backbone.$(e.target));
+                .data('opener', $target);
+            //send click event to metrics
+            Backbone.Mediator.publish('metrics:event:send', {
+                hitType: 'event',
+                eventCategory: 'modal',
+                eventAction: 'open',
+                eventLabel: $target.data('modal-open')
+            });
         }
     });
 })();

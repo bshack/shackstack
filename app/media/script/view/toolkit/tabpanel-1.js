@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    var Backbone = require('../../backbonePackage');
+    var Backbone = require('../../backbone/package');
     module.exports = Backbone.View.extend({
         events: {
             'click > [role=tablist] [role=tab]': 'tabClick',
@@ -9,6 +9,13 @@
         tabClick: function(e) {
             e.preventDefault();
             var $target = Backbone.$(e.target);
+            //send click event to metrics
+            Backbone.Mediator.publish('metrics:event:send', {
+                hitType: 'event',
+                eventCategory: 'tabpanel',
+                eventAction: 'click',
+                eventLabel: $target.text()
+            });
             this.$el
                 .find('> [role=tablist] [role=tab]')
                 .attr('aria-selected', false)
@@ -33,6 +40,13 @@
                     .click();
             } else if (e.which === 32) {
                 e.preventDefault();
+                //send click event to metrics
+                Backbone.Mediator.publish('metrics:event:send', {
+                    hitType: 'event',
+                    eventCategory: 'tabpanel',
+                    eventAction: 'spacebar',
+                    eventLabel: $target.text()
+                });
                 if ($target.attr('aria-selected') === true) {
                     this.$el.find('> [role=tablist]')
                         .find('[aria-selected=false]')

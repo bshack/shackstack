@@ -96,9 +96,19 @@ module.exports = {
             // htmllint config file
             htmlLint: '.htmllintrc',
             // glob of handlebars templates
-            source: 'app/*.handlebars',
+            source: [
+                'app/**/*.handlebars',
+                '!app/media/**',
+                '!app/report/**',
+                '!app/service/**'
+            ],
             // glob of generated html files
-            destination: 'app/*.html',
+            destination: [
+                'app/**/*.html',
+                '!app/media/**',
+                '!app/report/**',
+                '!app/service/**'
+            ],
             partials: {
                 //glob of handlebars partials
                 source: [
@@ -119,10 +129,6 @@ module.exports = {
         },
         // ### script
         script: {
-            // jscs config file
-            jscs: '.jscsrc',
-            // jshint config file
-            jsHint: 'jshintrc.json',
             // karma test runner conig file
             karma: __dirname + '/../karma.conf.js',
             // glob of all js files including gulp and application
