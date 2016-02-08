@@ -60,7 +60,7 @@ gulp.task('copyFonts', function() {
     return gulp.src(config.path.font.source)
         //support for better error handling
         .pipe(plumber())
-        .pipe(gulp.dest(config.path.build + config.path.release.destination + config.path.version +
+        .pipe(gulp.dest(config.path.build + config.path.release.destination + config.path.version + '/' +
             config.path.font.destination));
 
 });
@@ -111,7 +111,7 @@ gulp.task('minifyStyle', function() {
         .pipe(sourcemaps.init())
         .pipe(cssnano({safe: true}))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(config.path.build + config.path.release.destination + config.path.version +
+        .pipe(gulp.dest(config.path.build + config.path.release.destination + config.path.version + '/' +
             config.path.style.destination.release));
 
 });
@@ -130,7 +130,7 @@ gulp.task('minifyScript', function() {
         .pipe(uglify())
         //write sourcemaps
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(config.path.build + config.path.release.destination + config.path.version +
+        .pipe(gulp.dest(config.path.build + config.path.release.destination + config.path.version + '/' +
             config.path.script.destination));
 
 });
@@ -180,6 +180,6 @@ gulp.task('minifyImage', function() {
                 {transformsWithOnePath: true}
             ]
         }))
-        .pipe(gulp.dest(config.path.build + config.path.release.destination + config.path.version +
+        .pipe(gulp.dest(config.path.build + config.path.release.destination + config.path.version + '/' +
             config.path.image.destination));
 });

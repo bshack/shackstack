@@ -23,6 +23,8 @@
             window.ga('create', env.get('metrics')['google-analytics-id'], 'auto');
             //send the fingerprint id (94% accurate unique id with out cookie tracking)
             window.ga('set', 'dimension1', new Fingerprint({canvas: true}).get());
+            //send the release version id
+            window.ga('set', 'dimension2', env.get('version'));
             /*eslint-enable */
             //send pageview event
             this.eventSend({

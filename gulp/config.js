@@ -14,10 +14,10 @@ if (yargs.production) {
 // setting the build version
 var version;
 if (yargs.version) {
-    version = yargs.version + '/';
+    version = yargs.version;
 } else {
     //by default set the version to a timestamp
-    version = Math.floor(new Date() / 1000) + '/';
+    version = Math.floor(new Date() / 1000);
 }
 
 //setting a www domain for build
@@ -33,7 +33,7 @@ if (yargs.www) {
 var cdn;
 //test if cdn is defined
 if (yargs.cdn) {
-    cdn = yargs.cdn + '/release/' + version;
+    cdn = yargs.cdn + '/release/' + version + '/';
 } else {
     cdn = '/app/';
 }
