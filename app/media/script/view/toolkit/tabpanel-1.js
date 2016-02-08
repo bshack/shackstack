@@ -39,12 +39,8 @@
         },
         tabKeydown: function(e) {
             var $target = Backbone.$(e.target);
-            // if spacebar key hit just trigger a click
-            if (e.which === 32) {
-                $target
-                    .click();
             // if left arrow key
-            } else if (e.which === 37) {
+            if (e.which === 37) {
                 $target.parent('li').prev().find('button').focus().trigger('click');
             // if right arrow key
             } else if (e.which === 39) {
