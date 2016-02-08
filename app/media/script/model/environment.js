@@ -12,6 +12,8 @@
             cdn: $html.data('cdn'),
             // the service domain
             service: $html.data('service'),
+            // release version
+            version: $html.data('version'),
             // metric configs
             metrics: {
                 'google-analytics-id': $html.data('google-analytics-id')
