@@ -33,7 +33,7 @@
             'metrics:event:send': 'eventSend'
         },
         eventSend: function(data) {
-            // options
+            // possible options
             // {
             //     hitType: 'event',
             //     eventCategory: 'Video',

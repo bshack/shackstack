@@ -1,6 +1,7 @@
 (function() {
     'use strict';
     var Backbone = require('backbone');
+    // pull in the mediator
     require('./mediator');
     // don't use DELETE or PUT methods, make them POST methods
     Backbone.emulateHTTP = true;
