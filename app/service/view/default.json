@@ -32,7 +32,7 @@
     },
     "metrics":{
         "google-analytics":{
-            "id":"XX-XXXXXX-X"
+            "id":"UA-XXXXXX-X"
         }
     }
 }

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html id="toolkit" lang="en-us" dir="ltr" data-www="{{www}}" data-cdn="{{cdn}}" data-service="{{service}}" data-version="{{version}}" data-google-analytics-id="{{metrics.google-analytics.id}}">
+<html id="toolkit" lang="en-us" dir="ltr">
     {{> tags/head secondaryCSS='toolkit'}}
     <body>
 
-        <a class="accessibility-skip-to-element" href="#main">skip to content</a>
+        {{>tags/a id='skip-to-content' url='#main' class='accessibility-skip-to-element' title='skip to content'}}
 
         <header class="row">
             <div class="small-12 columns">
@@ -675,6 +675,7 @@
         </main>
         <footer>
         </footer>
+        {{> config/config}}
         {{> tags/script script='media/script/app.compiled.js'}}
     </body>
 </html>

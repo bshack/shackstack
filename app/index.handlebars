@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html id="index" lang="en-us" dir="ltr" data-www="{{www}}" data-cdn="{{cdn}}" data-service="{{service}}" data-version="{{version}}" data-google-analytics-id="{{metrics.google-analytics.id}}">
+<html id="index" lang="en-us" dir="ltr">
     {{> tags/head}}
     <body>
-        <a href="#main" class="accessibility-skip-to-element">skip to content</a>
+        {{>tags/a id='skip-to-content' url='#main' class='accessibility-skip-to-element' title='skip to content'}}
         <header>
         </header>
+        <nav>
+        </nav>
         <main id="main" tabindex="-1">
-            <a href="toolkit/">View Toolkit</a>
+            {{>tags/a id='toolkit' url='toolkit/' title='View Toolkit'}}
         </main>
         <footer>
         </footer>
+        {{> config/config}}
         {{> tags/script script='media/script/app.compiled.js'}}
     </body>
 </html>

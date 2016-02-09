@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html id="error-404" lang="en-us" dir="ltr" data-www="{{www}}" data-cdn="{{cdn}}" data-service="{{service}}" data-version="{{version}}" data-google-analytics-id="{{metrics.google-analytics.id}}">
+<html id="error-404" lang="en-us" dir="ltr">
     {{> tags/head}}
     <body>
-        <a href="#main" class="accessibility-skip-to-element">skip to content</a>
+        {{>tags/a id='skip-to-content' url='#main' class='accessibility-skip-to-element' title='skip to content'}}
         <header>
         </header>
+        <nav>
+        </nav>
         <main id="main" tabindex="-1">
             <h1>Page Not Found</h1>
             <p>Sorry, but the page you were trying to view does not exist.</p>
         </main>
         <footer>
         </footer>
+        {{> config/config}}
         {{> tags/script script='media/script/app.compiled.js'}}
     </body>
 </html>

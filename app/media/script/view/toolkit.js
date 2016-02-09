@@ -31,7 +31,7 @@
             Backbone.$('#accessible-ajax-example-button').on('click', function() {
                 var $this = Backbone.$(this);
                 viewAccessiblityAjax1.request({
-                    url: env.get('service') + 'service/toolkit/index.json',
+                    url: env.get('service') + 'service/view/toolkit/index.json',
                     success: function(data) {
                         // remove the previous container if present
                         Backbone.$('#accessible-ajax-example-content')
