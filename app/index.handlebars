@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="index" lang="en-us" dir="ltr" data-www="{{www}}" data-cdn="{{cdn}}" data-service="{{service}}" data-version="{{version}}" data-google-analytics-id="{{metrics.google-analytics.id}}">
+<html id="index" lang="en-us" dir="ltr">
     {{> tags/head}}
     <body>
         <a href="#main" class="accessibility-skip-to-element">skip to content</a>
@@ -10,6 +10,7 @@
         </main>
         <footer>
         </footer>
+        {{> config/config}}
         {{> tags/script script='media/script/app.compiled.js'}}
     </body>
 </html>

@@ -7,16 +7,16 @@
             // the page we are on
             view: $html.attr('id') || '',
             // the domain for www root
-            www: $html.data('www'),
+            www: window.env.www,
             // the cdn domain
-            cdn: $html.data('cdn'),
+            cdn: window.env.cdn,
             // the service domain
-            service: $html.data('service'),
+            service: window.env.service,
             // release version
-            version: $html.data('version'),
+            version: window.env.version,
             // metric configs
             metrics: {
-                'google-analytics-id': $html.data('google-analytics-id')
+                'google-analytics-id': window.env['google-analytics-id']
             }
         }
     });
