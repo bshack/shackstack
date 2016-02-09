@@ -73,7 +73,10 @@ gulp.task('minifyMarkup', function() {
         //support for better error handling
         .pipe(plumber())
         //minify
-        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(htmlmin({
+            collapseWhitespace: true,
+            minifyJS: true
+        }))
         .pipe(gulp.dest(config.path.build));
 
 });
