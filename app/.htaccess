@@ -40,14 +40,15 @@
     ## tell browsers to respect the content type that is served up
     Header set X-Content-Type-Options "nosniff"
     ## this disables inline javascript which is how it protects against XSS injections
+    #Header set Content-Security-Policy-Report-Only "default-src 'self'"
+    ## for ie XSS to be turned on, if XSS attack detected don't load the page
     Header set X-XSS-Protection "1; mode=block"
     ## don't allow content to be included in an iframe
     Header set X-Frame-Options "deny"
     ## make sure cookies are set on the secure domain when a site does a http to https redirect
     ## enable this if the site is secure
     #Header set Strict-Transport-Security "max-age=3600; includeSubDomains"
-    ###### CHANGE THIS!! ######
     ## allow ajax requests across domains
-    #Header set Access-Control-Allow-Origin "//some.domain.com"
+    #Header set Access-Control-Allow-Origin "//domain.com"
     #Header set Access-Control-Allow-Credentials "true"
 </IfModule>
