@@ -43,7 +43,7 @@ Site source files used to build your site are located in the 'app/' directory.
 
 ### Stubbed JSON Data
 
-Every generated html page is required to have matching .json file in 'service/' directory. This is where you stub out data that is to be used to populate the markup templates.
+Every generated html page is required to have matching .json file in 'service/view/' directory. This is where you stub out data that is to be used to populate the markup templates.
 
 Define any data properties you want globally available in your pages in 'default.json'. Any properties defined in page specific .json files will override properties in 'default.json'.
 

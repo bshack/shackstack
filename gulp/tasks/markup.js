@@ -25,11 +25,11 @@ gulp.task('markup', function() {
         .pipe(plumber())
         .pipe(data(function(file) {
             var dataFile = file.path.split(config.path.root).pop().replace('.handlebars', '.json');
-            dataFile = require('../../' + config.path.root + 'service/' + dataFile);
+            dataFile = require('../../' + config.path.root + 'service/view/' + dataFile);
             //return the data
             return _.extend(
                 {},
-                require('../../app/service/default.json'),
+                require('../../app/service/view/default.json'),
                 dataFile,
                 {
                     cdn: config.path.cdn,
