@@ -7,7 +7,8 @@
             resize: 'viewportSet',
             orientationchange: 'viewportSet',
             scroll: 'viewportSet',
-            keydown: 'keydownEvent'
+            keydown: 'keydownEvent',
+            error: 'errorEvent'
         },
         // subscribe to pub/sub messaging
         subscriptions: {
@@ -20,6 +21,15 @@
             scrollTop: false,
             view: false,
             orientation: false
+        },
+        errorEvent: function(message, url, line) {
+            //report back script errors to metrics
+            Backbone.Mediator.publish('metrics:event:send', {
+                hitType: 'event',
+                eventCategory: 'error',
+                eventAction: 'script',
+                eventLabel: (message || 'no message') + ' - ' + (url || 'no url') + ' - ' + (line || 'no line')
+            });
         },
         keydownEvent: function(e) {
             //listen for excape key.. mostly used for modals
