@@ -9,9 +9,6 @@
             "url":"https://github.com/bshack"
         }
     ],
-    "files":[
-        "generators/app"
-    ],
     "engines":{
         "node":">=5.0",
         "npm":">=3.0"
