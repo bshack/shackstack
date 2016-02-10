@@ -22,6 +22,7 @@
         "foundation",
         "gulp",
         "handlebars",
+        "lwip",
         "jasmine",
         "jquery",
         "karma",

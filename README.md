@@ -94,6 +94,10 @@ gulp documentation;</pre>
 
 This project uses npm shrinkwrap to freeze npm module versions for improved project stability. More information here: https://docs.npmjs.com/cli/shrinkwrap.
 
+## Yeoman Enabled
+
+Learn more about Yeoman here: http://yeoman.io
+
 ## Bugs? Feature Requests?
 
 Pull request or log a ticket :)
