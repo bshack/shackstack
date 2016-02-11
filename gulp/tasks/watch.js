@@ -31,8 +31,9 @@ gulp.task('watch', ['build'], function() {
     // watch handlebars partials
     gulp.watch(
         config.path.markup.partials.watch,
-        ['markupTemplate', 'markup']
+        ['script', 'markup']
     );
+    //image
     gulp.watch(
         config.path.image.sprite.source,
         ['styleAndSprite']

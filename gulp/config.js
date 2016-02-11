@@ -201,7 +201,9 @@ module.exports = {
         data: {
             directory: 'app/service',
             source: 'app/service/**',
-            destination: 'service'
+            destination: 'service',
+            pageDirectory: 'view/',
+            pageDefaultData: 'default.json'
         },
         // ### release
         release: {

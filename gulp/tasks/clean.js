@@ -8,9 +8,9 @@ var plumber = require('gulp-plumber');
 
 var config = require('../config');
 
-// ## cleanBuild Task
+// ## cleanDeploy Task
 
-gulp.task('cleanBuild', function() {
+gulp.task('cleanDeploy', function() {
     'use strict';
     return gulp.src(config.path.build, {read: false})
         //support for better error handling

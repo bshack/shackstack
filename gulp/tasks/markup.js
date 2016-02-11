@@ -16,6 +16,7 @@ var _ = require('lodash-node');
 var config = require('../config');
 
 // ## Markup Task
+// create .html files written to app root
 
 gulp.task('markup', function() {
     'use strict';
@@ -25,11 +26,12 @@ gulp.task('markup', function() {
         .pipe(plumber())
         .pipe(data(function(file) {
             var dataFile = file.path.split(config.path.root).pop().replace('.handlebars', '.json');
-            dataFile = require('../../' + config.path.root + 'service/view/' + dataFile);
+            dataFile = require('../../' + config.path.data.directory + '/' + config.path.data.pageDirectory + dataFile);
             //return the data
             return _.extend(
                 {},
-                require('../../app/service/view/default.json'),
+                require('../../' + config.path.data.directory + '/' + config.path.data.pageDirectory + '/' +
+                    config.path.data.pageDefaultData),
                 dataFile,
                 {
                     cdn: config.path.cdn,
@@ -57,6 +59,7 @@ gulp.task('markup', function() {
 });
 
 // ## markupTemplate Task
+// create precomiled .js templates
 
 gulp.task('markupTemplate', ['cleanTemplate'], function() {
     'use strict';
@@ -75,13 +78,19 @@ gulp.task('markupTemplate', ['cleanTemplate'], function() {
             },
             header: function(file){
                 var templateName = this.getTemplateName(file);
-                return 'var Handlebars = require("handlebars");if (typeof Handlebars.templates === \'undefined\') ' +
-                    '{Handlebars.templates = {};}Handlebars.templates[\'' + templateName + '\'] = Handlebars.template(';
+                return '(function() {' +
+                    'var Handlebars = require("handlebars");' +
+                    'if (typeof Handlebars.templates === \'undefined\') {' +
+                    'Handlebars.templates = {};'+
+                    '}' +
+                    'Handlebars.templates[\'' + templateName + '\'] = Handlebars.template(';
             },
             footer: function(file){
                 var templateName = this.getTemplateName(file);
-                return ');Handlebars.registerPartial(\'' + templateName + '\', Handlebars.templates[\'' + templateName +
-                    '\']);module.exports = Handlebars.templates[\'' + templateName + '\'];';
+                return ');' +
+                'Handlebars.registerPartial(\'' + templateName + '\', Handlebars.templates[\'' + templateName +'\']);' +
+                'module.exports = Handlebars.templates[\'' + templateName + '\'];' +
+                '})();';
             }
         }))
         .pipe(gulp.dest(config.path.markup.partials.destination));

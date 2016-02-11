@@ -22,12 +22,12 @@ gulp.task('deploy', function() {
     'use strict';
     //runSequence support is only for gulp 3.x, 4.x natively support this functionalty
     return runSequence(
-        ['cleanBuild'],
+        ['cleanDeploy'],
         ['sprite'],
-        ['markup', 'markupTemplate', 'style', 'script', 'documentation'],
+        ['markup', 'style', 'script', 'documentation'],
         ['accessibility'],
-        ['copyRoot', 'copyReport', 'copyFonts', 'minifyMarkup', 'copyData',
-            'minifyStyle', 'minifyScript', 'minifyImage', 'sitemap']
+        ['copyRoot', 'copyReport', 'copyFonts', 'minifyMarkup', 'copyData', 'minifyStyle', 'minifyScript',
+            'minifyImage', 'sitemap']
     );
 });
 
