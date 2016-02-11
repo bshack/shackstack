@@ -21,6 +21,26 @@ hr {
     margin: rem-calc(60) 0;
 }
 
+header {
+
+    a {
+        color: $black-1;
+        display: block;
+        font-size: rem-calc(30);
+        font-weight: 700;
+        margin: rem-calc(40) 0;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover,
+        &:focus {
+            color: $grey-2;
+        }
+
+    }
+
+}
+
 main {
 
     @extend %tabpanel-base-1;

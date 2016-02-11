@@ -7,7 +7,7 @@
 
         <header class="row">
             <div class="small-12 columns">
-                <h1>Toolkit</h1>
+                <a href="{{www}}/toolkit">Toolkit</a>
             </div>
         </header>
 
@@ -25,6 +25,9 @@
             </nav>
 
             <section id="panel-home" class="row" role="tabpanel" aria-labelledby="tab-home" aria-hidden="false">
+                <div class="medium-12 columns">
+                    <h1>Overview</h1>
+                </div>
                 <div class="medium-8 columns">
                     <h2>Browser Support</h2>
                     <p><em>All browser support is for the latest versions except where noted.</em></p>
@@ -86,9 +89,9 @@
             <section id="panel-grid" role="tabpanel" aria-labelledby="tab-grid" aria-hidden="true">
                 <div class="row">
                     <div class="small-12 columns">
-                        <h2>Grid</h2>
-                        <h3>Example Grids</h3>
-                        <h4>Small</h4>
+                        <h1>Grid</h1>
+                        <h2>Example Grids</h2>
+                        <h3>Small</h3>
                     </div>
                 </div>
                 <div class="grid">
@@ -160,7 +163,7 @@
                 </div>
                 <div class="row">
                     <div class="small-12 columns">
-                        <h4>Medium</h4>
+                        <h3>Medium</h3>
                     </div>
                 </div>
                 <div class="grid">
@@ -232,7 +235,7 @@
                 </div>
                 <div class="row">
                     <div class="small-12 columns">
-                        <h4>Large</h4>
+                        <h3>Large</h3>
                     </div>
                 </div>
                 <div class="grid">
@@ -306,15 +309,14 @@
 
             <section id="panel-colors" class="row" role="tabpanel" aria-labelledby="tab-colors" aria-hidden="true">
                 <div class="small-12 columns">
-                    <h2>Colors</h2>
-                    <h3>Source Code</h3>
+                    <h1>Colors</h1>
                     <p>style: <a href="{{www}}report/docco/style/base/_colors.html">_colors.scss</a></p>
                 </div>
                 <div class="small-12 columns">
-                    <h3>Blacks</h3>
+                    <h2>Blacks</h2>
                 </div>
                 <div class="medium-3 columns">
-                    <h4>black-1</h4>
+                    <h3>black-1</h3>
                     <p><span class="swatch black-1"></span></p>
                 </div>
                 <div class="medium-3 columns"></div>
@@ -322,30 +324,30 @@
                 <div class="medium-3 columns"></div>
                 <div class="small-12 columns">
                     <hr>
-                    <h3>Greys</h3>
+                    <h2>Greys</h2>
                 </div>
                 <div class="medium-3 columns">
-                    <h4>grey-1</h4>
+                    <h3>grey-1</h3>
                     <p><span class="swatch grey-1"></span></p>
                 </div>
                 <div class="medium-3 columns">
-                    <h4>grey-2</h4>
+                    <h3>grey-2</h3>
                     <p><span class="swatch grey-2"></span></p>
                 </div>
                 <div class="medium-3 columns">
-                    <h4>grey-3</h4>
+                    <h3>grey-3</h3>
                     <p><span class="swatch grey-3"></span></p>
                 </div>
                 <div class="medium-3 columns">
-                    <h4>grey-4</h4>
+                    <h3>grey-4</h3>
                     <p><span class="swatch grey-4"></span></p>
                 </div>
                 <div class="small-12 columns">
                     <hr>
-                    <h3>Whites</h3>
+                    <h2>Whites</h2>
                 </div>
                 <div class="medium-3 columns">
-                    <h4>white-1</h4>
+                    <h3>white-1</h3>
                     <p><span class="swatch white-1"></span></p>
                 </div>
                 <div class="medium-3 columns"></div>
@@ -355,7 +357,9 @@
 
             <section id="panel-text" class="row" role="tabpanel" aria-labelledby="tab-text" aria-hidden="true">
                 <div class="small-12 columns">
+                    <h1>Text</h1>
                     <h2>Headings</h2>
+                    <p>style: <a href="{{www}}report/docco/style/base/_text.html#headings">_text.scss</a></p>
                     <h3>heading-1</h3>
                     {{>toolkit/heading-1 tag='span' title='The Quick Brown Fox Jumps Over the Lazy Dog.'}}
                     <h3>heading-2</h3>
@@ -364,67 +368,72 @@
                     {{>toolkit/heading-3 tag='span' title='The Quick Brown Fox Jumps Over the Lazy Dog.'}}
                     <h3>heading-4</h3>
                     {{>toolkit/heading-4 tag='span' title='The Quick Brown Fox Jumps Over the Lazy Dog.'}}
-                    <h4>Source Code</h4>
-                    <p>style: <a href="{{www}}report/docco/style/base/_text.html#headings">_text.scss</a></p>
                     <hr>
                     <h2>Fonts</h2>
+                    <p>style: <a href="{{www}}report/docco/style/base/_text.html#fonts">_text.scss</a></p>
                     <h3>arial-1</h3>
                     <p><span class="arial-1">The Quick Brown Fox Jumps Over the Lazy Dog.</span></p>
                     <h3>open-sans-1</h3>
                     <p><span class="open-sans-1">The Quick Brown Fox Jumps Over the Lazy Dog.</span></p>
-                    <h4>Source Code</h4>
-                    <p>style: <a href="{{www}}report/docco/style/base/_text.html#fonts">_text.scss</a></p>
                 </div>
             </section>
 
             <section id="panel-elements" class="row" role="tabpanel" aria-labelledby="tab-elements" aria-hidden="true">
                 <div class="small-12 columns">
-                    <h2>Elements</h2>
+                    <h1>Elements</h1>
 
-                    <h3>Anchors</h3>
-                    <p>{{> toolkit/anchor-1 id='anchor-1' title='anchor-1' url='#'}}</p>
-                    <h4>Source Code</h4>
+                    <h2>Anchors</h2>
                     <p>style: <a href="{{www}}report/docco/style/base/_elements.html#anchors">_elements.scss</a></p>
-                    <h4>Accessibility</h4>
-                    <h5>Usage</h5>
+                    <h3>anchor-1</h3>
+                    <p>{{> toolkit/anchor-1 id='anchor-1' title='detailed information about this product' url='#'}}</p>
+                    <p>example of helper text only for screen readers:</p>
+                    <p>{{> toolkit/anchor-1 id='anchor-1-aria' title='click here' accessible-title='detailed information about this product' url='#'}}</p>
+                    <h3>Accessibility</h3>
+                    <h4>Usage</h4>
                     <p>Anchors should be used when a click takes the user to a new page or location on the current page.</p>
-                    <h5>Gherkin</h5>
+                    <p>The anchor should provide enough helper text to give the user an indication of the content they will be taken to.</p>
+                    <h4>Gherkin</h4>
                     <div class="gherkin">
                         <p>GIVEN I am a screen reader user<br>
                         WHEN I navigate to an anchor with the tab key<br>
                         THEN I hear the anchor text read aloud<br>
+                        AND the helper text provides an indication of the content of the linked to location<br>
                         AND I will hear element identified as an anchor<br>
                         AND I will see focus visual change</p>
                     </div>
 
                     <hr>
 
-                    <h3>Buttons</h3>
-                    <p>{{> toolkit/button-1 id='button-1' title='button-1'}}</p>
-                    <h4>Source Code</h4>
+                    <h2>Buttons</h2>
                     <p>style: <a href="{{www}}report/docco/style/base/_elements.html#buttons">_elements.scss</a></p>
-                    <h4>Accessibility</h4>
-                    <h5>Usage</h5>
+                    <h3>button-1</h3>
+                    <p>{{> toolkit/button-1 id='button-1' title='detailed information about this product'}}</p>
+                    <p>example of helper text only for screen readers:</p>
+                    <p>{{> toolkit/button-1 id='button-1-aria' title='click here' accessible-title='detailed information about this product' url='#'}}</p>
+                    <h3>Accessibility</h3>
+                    <h4>Usage</h4>
                     <p>Buttons should be used when a click changes the view by opening a modal or modifying the DOM and does not take the user to a new location.</p>
-                    <h5>Gherkin</h5>
+                    <p>The button should provide enough helper text to give the user an indication of the action that will be taken.</p>
+                    <h4>Gherkin</h4>
                     <div class="gherkin">
                         <p>GIVEN I am a screen reader user<br>
                         WHEN I navigate to a button with the tab key<br>
                         THEN I will hear the button label<br>
                         AND I will hear element identified as a button<br>
+                        AND the helper text provides an indication of the action of the action that will be taken<br>
                         AND I will see focus visual change<br>
                         AND I will hear a selected indicator if option is selected</p>
                     </div>
 
                     <hr>
 
-                    <h3>Labels</h3>
-                    <p>{{> toolkit/label-1 id='label-1' title='label-1' for='label-example-input'}}</p>
-                    <p>{{> toolkit/input-text-1 id='label-example-input' placeholder='placeholder' type='text'}}</p>
-                    <h4>Source Code</h4>
+                    <h2>Labels</h2>
                     <p>style: <a href="{{www}}report/docco/style/base/_elements.html#labels">_elements.scss</a></p>
-                    <h4>Accessibility</h4>
-                    <h5>Gherkin</h5>
+                    <h3>label-1</h3>
+                    <p>{{> toolkit/label-1 id='label-1' title='Name' for='label-example-input'}}</p>
+                    <p>{{> toolkit/input-text-1 id='label-example-input' placeholder='first and last name' type='text'}}</p>
+                    <h3>Accessibility</h3>
+                    <h4>Gherkin</h4>
                     <div class="gherkin">
                         <p>GIVEN I am a screen reader user<br>
                         WHEN I select a form element label using the keyboard<br>
@@ -438,12 +447,12 @@
 
                     <hr>
 
-                    <h3>Lists</h3>
-                    {{> toolkit/list-1 elements.list-1}}
-                    <h4>Source Code</h4>
+                    <h2>Lists</h2>
                     <p>style: <a href="{{www}}report/docco/style/base/_elements.html#lists">_elements.scss</a></p>
-                    <h4>Accessibility</h4>
-                    <h5>Gherkin</h5>
+                    <h3>list-1</h3>
+                    {{> toolkit/list-1 elements.list-1}}
+                    <h3>Accessibility</h3>
+                    <h4>Gherkin</h4>
                     <div class="gherkin">
                         <p>GIVEN I am a screen reader user<br>
                         WHEN I select the list using the keyboard<br>
@@ -463,13 +472,13 @@
 
                     <hr>
 
-                    <h3>Input Checkboxes</h3>
-                    <p>{{> toolkit/label-1 title='input-checkbox-1' for='input-checkbox-1-example'}}</p>
-                    <p>{{> toolkit/input-checkbox-1 id='input-checkbox-1-example' name='checkbox-example' checked=true}}</p>
-                    <h4>Source Code</h4>
+                    <h2>Input Checkboxes</h2>
                     <p>style: <a href="{{www}}report/docco/style/base/_elements.html#input-checkboxes">_elements.scss</a></p>
-                    <h4>Accessibility</h4>
-                    <h5>Gherkin</h5>
+                    <h3>input-checkbox-1</h3>
+                    <p>{{> toolkit/label-1 title='Opt me in' for='input-checkbox-1-example'}}</p>
+                    <p>{{> toolkit/input-checkbox-1 id='input-checkbox-1-example' name='checkbox-example' checked=true}}</p>
+                    <h3>Accessibility</h3>
+                    <h4>Gherkin</h4>
                     <div class="gherkin">
                         <p>GIVEN I am a screen reader user<br>
                         WHEN I navigate to a checkbox with the tab key<br>
@@ -488,16 +497,16 @@
 
                     <hr>
 
-                    <h3>Input Radio Buttons</h3>
-                    <p id="radio-group-label">Radio Group Label</p>
-                    <p>{{> toolkit/label-1 title='input-radio-1' for='input-radio-1-example-1'}}</p>
-                    <p>{{> toolkit/input-radio-1 id='input-radio-1-example-1' name='radio-example' checked=true  labelledby='radio-group-label'}}</p>
-                    <p>{{> toolkit/label-1 title='input-radio-1' for='input-radio-1-example-2'}}</p>
-                    <p>{{> toolkit/input-radio-1 id='input-radio-1-example-2' name='radio-example' labelledby='radio-group-label'}}</p>
-                    <h4>Source Code</h4>
+                    <h2>Input Radio Buttons</h2>
                     <p>style: <a href="{{www}}report/docco/style/base/_elements.html#input-radio-buttons">_elements.scss</a></p>
-                    <h4>Accessibility</h4>
-                    <h5>Gherkin</h5>
+                    <h3>input-radio-1</h3>
+                    <p id="radio-group-label">What color do you want?</p>
+                    <p>{{> toolkit/label-1 title='red' for='input-radio-1-example-1'}}</p>
+                    <p>{{> toolkit/input-radio-1 id='input-radio-1-example-1' name='radio-example' checked=true  labelledby='radio-group-label'}}</p>
+                    <p>{{> toolkit/label-1 title='blue' for='input-radio-1-example-2'}}</p>
+                    <p>{{> toolkit/input-radio-1 id='input-radio-1-example-2' name='radio-example' labelledby='radio-group-label'}}</p>
+                    <h3>Accessibility</h3>
+                    <h4>Gherkin</h4>
                     <div class="gherkin">
                         <p>GIVEN I am a screen reader user<br>
                         WHEN I navigate to a radio button with the tab key<br>
@@ -516,13 +525,13 @@
 
                     <hr>
 
-                    <h3>Input Text Boxes</h3>
-                    <p>{{> toolkit/label-1 title='input-text-1' for='input-text-1-example'}}</p>
-                    <p>{{> toolkit/input-text-1 id='input-text-1-example' placeholder='placeholder' type='text'}}</p>
-                    <h4>Source Code</h4>
+                    <h2>Input Text Boxes</h2>
                     <p>style: <a href="{{www}}report/docco/style/base/_elements.html#input-text-boxes">_elements.scss</a></p>
-                    <h4>Accessibility</h4>
-                    <h5>Gherkin</h5>
+                    <h3>input-text-1</h3>
+                    <p>{{> toolkit/label-1 title='Name' for='input-text-1-example'}}</p>
+                    <p>{{> toolkit/input-text-1 id='input-text-1-example' placeholder='first and last name' type='text'}}</p>
+                    <h3>Accessibility</h3>
+                    <h4>Gherkin</h4>
                     <div class="gherkin">
                         <p>GIVEN I am a screen reader user<br>
                         WHEN I navigate to a text input with the tab key<br>
@@ -536,13 +545,13 @@
 
                     <hr>
 
-                    <h3>Textareas</h3>
-                    <p>{{> toolkit/label-1 title='textarea-1' for='textarea-1-example'}}</p>
-                    <p>{{> toolkit/textarea-1 id='textarea-1-example' placeholder='placeholder'}}</p>
-                    <h4>Source Code</h4>
+                    <h2>Textareas</h2>
                     <p>style: <a href="{{www}}report/docco/style/base/_elements.html#textareas">_elements.scss</a></p>
-                    <h4>Accessibility</h4>
-                    <h5>Gherkin</h5>
+                    <h3>textarea-1</h3>
+                    <p>{{> toolkit/label-1 title='additonal comments:' for='textarea-1-example'}}</p>
+                    <p>{{> toolkit/textarea-1 id='textarea-1-example' placeholder='please be detailed'}}</p>
+                    <h3>Accessibility</h3>
+                    <h4>Gherkin</h4>
                     <div class="gherkin">
                         <p>GIVEN I am a screen reader user<br>
                         WHEN I navigate to a textarea with the tab key<br>
@@ -555,13 +564,13 @@
 
                     <hr>
 
-                    <h3>Select Menus</h3>
-                    <p>{{> toolkit/label-1 title='select-1' for='select-1-example'}}</p>
-                    <p>{{> toolkit/select-1 elements.select-1 id='select-1-example'}}</p>
-                    <h4>Source Code</h4>
+                    <h2>Select Menus</h2>
                     <p>style: <a href="{{www}}report/docco/style/base/_elements.html#select-menus">_elements.scss</a></p>
-                    <h4>Accessibility</h4>
-                    <h5>Gherkin</h5>
+                    <h3>select-1</h3>
+                    <p>{{> toolkit/label-1 title='what type of vehicle do you drive?' for='select-1-example'}}</p>
+                    <p>{{> toolkit/select-1 elements.select-1 id='select-1-example'}}</p>
+                    <h3>Accessibility</h3>
+                    <h4>Gherkin</h4>
                     <div class="gherkin">
                         <p>GIVEN I am a screen reader user<br>
                         WHEN I navigate to a dropdown menu with the tab key<br>
@@ -588,12 +597,12 @@
 
                     <hr>
 
-                    <h3>Tables</h3>
-                    {{> toolkit/table-1 elements.table-1}}
-                    <h4>Source Code</h4>
+                    <h2>Tables</h2>
                     <p>style: <a href="{{www}}report/docco/style/base/_elements.html#tables">_elements.scss</a></p>
-                    <h4>Accessibility</h4>
-                    <h5>Gherkin</h5>
+                    <h3>table-1</h3>
+                    {{> toolkit/table-1 elements.table-1}}
+                    <h3>Accessibility</h3>
+                    <h4>Gherkin</h4>
                     <div class="gherkin">
                         <p>GIVEN I am a screen reader user<br>
                         WHEN I navigate to a table with the tab key<br>
@@ -608,12 +617,12 @@
 
                     <hr>
 
-                    <h3>Images</h3>
-                    <p>{{> toolkit/image-1 image='media/image/html5-small' alt='image example alternative text'}}</p>
-                    <h4>Source Code</h4>
+                    <h2>Images</h2>
                     <p>style: <a href="{{www}}report/docco/style/base/_elements.html#images">_elements.scss</a></p>
-                    <h4>Accessibility</h4>
-                    <h5>Gherkin</h5>
+                    <h3>image-1</h3>
+                    <p>{{> toolkit/image-1 image='media/image/html5-small' alt='image example alternative text'}}</p>
+                    <h3>Accessibility</h3>
+                    <h4>Gherkin</h4>
                     <p>active/actionable images:</p>
                     <div class="gherkin">
                         <p>GIVEN I am a screen reader user<br>
@@ -644,15 +653,15 @@
 
             <section id="panel-components" class="row" role="tabpanel" aria-labelledby="tab-components" aria-hidden="true">
                 <div class="small-12 columns">
-                    <h2>Components</h2>
+                    <h1>Components</h1>
 
-                    <h3>Modals</h3>
-                    <p><button class="button-1" data-modal-open="modal-example-1">modal-1</button></p>
-                    <h4>Source Code</h4>
+                    <h2>Modals</h2>
                     <p>style: <a href="{{www}}report/docco/style/base/_components.html#modals">_components.scss</a></p>
                     <p>script: <a href="{{www}}report/docco/script/view/toolkit/modalOpen-1.html">modalOpen-1.js</a>, <a href="{{www}}report/docco/script/view/toolkit/modal-1.html">modal-1.js</a></p>
-                    <h4>Accessibility</h4>
-                    <h5>Gherkin</h5>
+                    <h3>modal-1</h3>
+                    <p><button class="button-1" data-modal-open="modal-example-1">view disclosures</button></p>
+                    <h3>Accessibility</h3>
+                    <h4>Gherkin</h4>
                     <div class="gherkin">
                         <p>GIVEN I am a screen reader user<br>
                         WHEN I activate a button to call a dialog (the control is NOT a link)<br>
@@ -667,28 +676,28 @@
 
                     <hr>
 
-                    <h3>Tab Panels</h3>
-                    <div class="tabpanel-1">
-                        <ul role="tablist">
-                            <li><button id="tab-1" role="tab" aria-controls="panel-1" aria-selected="true">tabpanel-1 tab 1</button></li>
-                            <li><button id="tab-2" role="tab" aria-controls="panel-2" aria-selected="false" tabindex="-1">tab 2</button></li>
-                            <li><button id="tab-3" role="tab" aria-controls="panel-3" aria-selected="false" tabindex="-1">tab 3</button></li>
-                        </ul>
-                        <div id="panel-1" aria-labelledby="tab-1" role="tabpanel" aria-hidden="false">
-                            <p>tab 1 content</p>
-                        </div>
-                        <div id="panel-2" aria-labelledby="tab-2" role="tabpanel" aria-hidden="true">
-                            <p>tab 2 content</p>
-                        </div>
-                        <div id="panel-3" aria-labelledby="tab-3" role="tabpanel" aria-hidden="true">
-                            <p>tab 3 content</p>
-                        </div>
-                    </div>
-                    <h4>Source Code</h4>
+                    <h2>Tab Panels</h2>
                     <p>style: <a href="{{www}}report/docco/style/base/_components.html#tabpanels">_components.scss</a></p>
                     <p>script: <a href="{{www}}report/docco/script/view/toolkit/tabpanel-1.html">tabpanel-1.js</a></p>
-                    <h4>Accessibility</h4>
-                    <h5>Gherkin</h5>
+                    <h3>tabpanel-1</h3>
+                    <div class="tabpanel-1">
+                        <ul role="tablist">
+                            <li><button id="tab-1" role="tab" aria-controls="panel-1" aria-selected="true">dashboard</button></li>
+                            <li><button id="tab-2" role="tab" aria-controls="panel-2" aria-selected="false" tabindex="-1">edit account</button></li>
+                            <li><button id="tab-3" role="tab" aria-controls="panel-3" aria-selected="false" tabindex="-1">my services</button></li>
+                        </ul>
+                        <div id="panel-1" aria-labelledby="tab-1" role="tabpanel" aria-hidden="false">
+                            <p>dashboard landing content</p>
+                        </div>
+                        <div id="panel-2" aria-labelledby="tab-2" role="tabpanel" aria-hidden="true">
+                            <p>edit account content</p>
+                        </div>
+                        <div id="panel-3" aria-labelledby="tab-3" role="tabpanel" aria-hidden="true">
+                            <p>my services content</p>
+                        </div>
+                    </div>
+                    <h3>Accessibility</h3>
+                    <h4>Gherkin</h4>
                     <div class="gherkin">
                         <p>GIVEN I am a screen reader user<br>
                         WHEN I navigate to a tabpanel widget with the tab key, the focus should land on the active tab.<br>
@@ -702,12 +711,14 @@
                         AND it says "selected." When I navigate with the arrow keys to other tabs, it says all of the above plus gives the accurate location (e.g. "tab 2 of 4").</p>
                     </div>
 
-                    <h3>Accessible Ajax</h3>
-                    <button id="accessible-ajax-example-button" class="button-1">click to load asynchronous content</button>
-                    <h4>Source Code</h4>
+                    <hr>
+
+                    <h2>Accessible Ajax</h2>
                     <p>script: <a href="{{www}}report/docco/script/view/toolkit/accessiblityAjax-1.html">accessiblityAjax-1.js</a>, <a href="{{www}}report/docco/script/view/toolkit/accessiblitySpeaker-1.html">accessiblitySpeaker-1.js</a></p>
-                    <h4>Accessibility</h4>
-                    <h5>Gherkin</h5>
+                    <h3>accessiblity-ajax-1</h3>
+                    <button id="accessible-ajax-example-button" class="button-1">click to load asynchronous content</button>
+                    <h3>Accessibility</h3>
+                    <h4>Gherkin</h4>
                     <div class="gherkin">
                         <p>GIVEN I am a screen reader user<br>
                         WHEN I click a button with that executes an ajax request<br>

@@ -4,78 +4,78 @@
         "list-1":{
             "items":[
                 {
-                    "text":"list-1 item 1"
+                    "text":"eggs"
                 },
                 {
-                    "text":"item 2"
+                    "text":"milk"
                 },
                 {
-                    "text":"item 3"
+                    "text":"flour"
                 }
             ]
         },
         "table-1":{
-            "caption":"caption",
+            "caption":"percent of people in the group",
             "head":[
                 {
                     "text":""
                 },
                 {
-                    "text":"column header 1"
+                    "text":"males"
                 },
                 {
-                    "text":"column header 2"
-                },
-                {
-                    "text":"column header 3"
+                    "text":"females"
                 }
             ],
             "body":[
                 [
                     {
-                        "text":"row header 1",
+                        "text":"decided",
                         "isHead":true
                     },
                     {
-                        "text":"content"
+                        "text":"50%"
                     },
                     {
-                        "text":"content"
-                    },
-                    {
-                        "text":"content"
+                        "text":"25%"
                     }
                 ],
                 [
                     {
-                        "text":"row header 2",
+                        "text":"undecided",
                         "isHead":true
                     },
                     {
-                        "text":"content"
+                        "text":"25%"
                     },
                     {
-                        "text":"content"
+                        "text":"50%"
+                    }
+                ],
+                [
+                    {
+                        "text":"did not respond",
+                        "isHead":true
                     },
                     {
-                        "text":"content"
+                        "text":"25%"
+                    },
+                    {
+                        "text":"25%"
                     }
                 ]
             ],
             "foot":[
                 [
                     {
-                        "text":"row header 3",
+                        "text":"totals",
                         "isHead":true
                     },
                     {
-                        "text":"content"
+                        "text":"100%"
                     },
                     {
-                        "text":"content"
-                    },
-                    {
-                        "text":"content"
+                        "text":"100%"
                     }
                 ]
             ]
@@ -83,17 +83,21 @@
         "select-1":{
             "data":[
                 {
-                    "value":"option-1",
-                    "name":"option 1",
+                    "value":"",
+                    "name":"choose",
                     "selected":true
                 },
                 {
+                    "value":"option-1",
+                    "name":"car"
+                },
+                {
                     "value":"option-2",
-                    "name":"option 2"
+                    "name":"truck"
                 },
                 {
                     "value":"option-3",
-                    "name":"option 3"
+                    "name":"suv"
                 }
             ]
         }
