@@ -87,6 +87,18 @@ main {
         background-color: $grey-1;
     }
 
+    &.grey-2 {
+        background-color: $grey-2;
+    }
+
+    &.grey-3 {
+        background-color: $grey-3;
+    }
+
+    &.grey-4 {
+        background-color: $grey-4;
+    }
+
     &.white-1 {
         background-color: $white-1;
         border: rem-calc(1) solid $grey-1;

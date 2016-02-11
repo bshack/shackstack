@@ -184,6 +184,22 @@ main:focus {
 
 // ### standard text treatments
 
+.heading-1 {
+    @extend %heading-1;
+}
+
+.heading-2 {
+    @extend %heading-2;
+}
+
+.heading-3 {
+    @extend %heading-3;
+}
+
+.heading-4 {
+    @extend %heading-4;
+}
+
 .arial-1 {
     @extend %arial-1;
 }
