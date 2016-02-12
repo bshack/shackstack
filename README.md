@@ -37,7 +37,7 @@ http://gulpjs.com
 npm install;
 ```
 
-(might need to 'sudo')
+_(might need to 'sudo')_
 
 ## Locations
 
