@@ -41,61 +41,55 @@ header {
 
 }
 
-main {
+nav {
 
-    @extend %tabpanel-base-1;
+    background-color: $black-1;
+    color: $white-1;
+    margin-bottom: rem-calc(30);
 
-    > nav {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-        background-color: $black-1;
+    @media #{$medium-up} {
+
+        li {
+            float: left;
+        }
+
+    }
+
+    a {
+
+        border-bottom: rem-calc(1) solid $black-1;
+        border-top: rem-calc(1) solid $black-1;
         color: $white-1;
-        margin-bottom: rem-calc(30);
+        display: block;
+        line-height: rem-calc(45);
+        padding: 0 rem-calc(10);
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 100%;
 
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
+        &.selected,
+        &:hover,
+        &:focus {
+            background-color: $white-1;
+            color: $black-1;
         }
 
         @media #{$medium-up} {
-
-            li {
-                float: left;
-            }
-
+            border-left: rem-calc(1) solid $black-1;
+            border-right: rem-calc(1) solid $black-1;
+            width: auto;
         }
 
-        a {
-
-            border-bottom: rem-calc(1) solid $black-1;
-            border-top: rem-calc(1) solid $black-1;
-            color: $white-1;
-            display: block;
-            line-height: rem-calc(45);
-            padding: 0 rem-calc(10);
-            text-align: center;
-            text-decoration: none;
-            text-transform: uppercase;
-            width: 100%;
-
-            &.selected,
-            &:hover,
-            &:focus {
-                background-color: $white-1;
-                color: $black-1;
-            }
-
-            @media #{$medium-up} {
-                border-left: rem-calc(1) solid $black-1;
-                border-right: rem-calc(1) solid $black-1;
-                width: auto;
-            }
-
-            &[aria-selected=true] {
-                background-color: $white-1;
-                color: $black-1;
-            }
-
+        &[aria-selected=true] {
+            background-color: $white-1;
+            color: $black-1;
         }
 
     }
