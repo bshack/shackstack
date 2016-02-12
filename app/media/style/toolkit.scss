@@ -124,8 +124,8 @@ main {
     &.white-1 {
         background-color: $white-1;
         border: rem-calc(1) solid $grey-1;
-        height: rem-calc(148);
-        width: rem-calc(148);
+        height: rem-calc(123);
+        max-width: rem-calc(123);
     }
 
 }
