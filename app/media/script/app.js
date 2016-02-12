@@ -23,7 +23,7 @@
         el: $window
     });
     // if on toolkit page init the view
-    if (env.get('view') === 'toolkit') {
+    if (env.get('view').lastIndexOf('toolkit', 0) === 0) {
         new ViewToolkit();
     }
 })();

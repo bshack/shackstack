@@ -8,10 +8,6 @@
     var templateModalDemo = require('../template/modal/modal-example-1');
     module.exports =  Backbone.View.extend({
         initialize: function() {
-            // setup toolkit nav
-            new ViewTabpanel1({
-                el: Backbone.$('main')
-            });
             // setup example tabpanel
             new ViewTabpanel1({
                 el: Backbone.$('.tabpanel-1')
