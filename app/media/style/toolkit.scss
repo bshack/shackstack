@@ -65,14 +65,25 @@ main {
 
         }
 
-        button {
+        a {
 
             border-bottom: rem-calc(1) solid $black-1;
             border-top: rem-calc(1) solid $black-1;
+            color: $white-1;
+            display: block;
             line-height: rem-calc(45);
             padding: 0 rem-calc(10);
+            text-align: center;
+            text-decoration: none;
             text-transform: uppercase;
             width: 100%;
+
+            &.selected,
+            &:hover,
+            &:focus {
+                background-color: $white-1;
+                color: $black-1;
+            }
 
             @media #{$medium-up} {
                 border-left: rem-calc(1) solid $black-1;

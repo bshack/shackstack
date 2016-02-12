@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html id="toolkit" lang="en-us" dir="ltr">
+    {{> tags/head secondaryCSS='toolkit'}}
+    <body>
+
+        {{>tags/a id='skip-to-content' url='#main' class='accessibility-skip-to-element' title='skip to content'}}
+
+        <header class="row">
+            <div class="small-12 columns">
+                <a href="{{www}}/toolkit">Toolkit</a>
+            </div>
+        </header>
+
+        <main id="main" tabindex="-1">
+
+            <nav class="row collapse">
+                <ul class="small-12 columns">
+                    <li><a href="{{www}}/toolkit">Home</a></li>
+                    <li><a href="{{www}}/toolkit/grid.html">Grid</a></li>
+                    <li><a href="{{www}}/toolkit/colors.html">Colors</a></li>
+                    <li><a class="selected" href="{{www}}/toolkit/text.html">Text</a></li>
+                    <li><a href="{{www}}/toolkit/elements.html">Elements</a></li>
+                    <li><a href="{{www}}/toolkit/components.html">Components</a></li>
+                </ul>
+            </nav>
+
+            <section class="row">
+                <div class="small-12 columns">
+                    <h1>Text</h1>
+                    <h2>Headings</h2>
+                    <p>style: <a href="{{www}}report/docco/style/base/_text.html#headings">_text.scss</a></p>
+                    <h3>heading-1</h3>
+                    {{>toolkit/heading-1 tag='span' title='The Quick Brown Fox Jumps Over the Lazy Dog.'}}
+                    <h3>heading-2</h3>
+                    {{>toolkit/heading-2 tag='span' title='The Quick Brown Fox Jumps Over the Lazy Dog.'}}
+                    <h3>heading-3</h3>
+                    {{>toolkit/heading-3 tag='span' title='The Quick Brown Fox Jumps Over the Lazy Dog.'}}
+                    <h3>heading-4</h3>
+                    {{>toolkit/heading-4 tag='span' title='The Quick Brown Fox Jumps Over the Lazy Dog.'}}
+                    <hr>
+                    <h2>Fonts</h2>
+                    <p>style: <a href="{{www}}report/docco/style/base/_text.html#fonts">_text.scss</a></p>
+                    <h3>arial-1</h3>
+                    <p><span class="arial-1">The Quick Brown Fox Jumps Over the Lazy Dog.</span></p>
+                    <h3>open-sans-1</h3>
+                    <p><span class="open-sans-1">The Quick Brown Fox Jumps Over the Lazy Dog.</span></p>
+                </div>
+            </section>
+
+        </main>
+        <footer>
+        </footer>
+        {{> config/config}}
+        {{> tags/script script='media/script/app.compiled.js'}}
+    </body>
+</html>
