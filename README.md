@@ -33,7 +33,9 @@ http://gulpjs.com
 
 ### Node Modules
 
-`npm install;`
+```
+npm install;
+```
 
 (might need to 'sudo')
 
@@ -53,44 +55,54 @@ Define any data properties you want globally available in your pages in 'default
 
 ### Watch
 
-`gulp watch;`
+```
+gulp watch;
+```
 
 ### Deploy
 
 This compiles and bundles everything into a deploy ready package outputted in the '\_deploy' directory.
 
-`gulp deploy
+```
+gulp deploy
     --version=(unique deploy version - optional)
     --www=(www domain)
     --cdn=(cdn domain)
     --service=(service domain)
-    --production=(true|false - optional);`
+    --production=(true|false - optional);
+```
 
 _The 'version' argument defaults to an epoch timestamp and the 'production' argument defaults to 'false'._
 
 The above site was created by running the 'deploy' task with the following arguments:
 
-`gulp deploy
+```
+gulp deploy
     --www=//billshackelford.com
     --cdn=//cdn.billshackelford.com
     --service=//service.billshackelford.com
-    --production=true;`
+    --production=true;
+```
 
 ### Unit Tests
 
-`gulp unit;`
+```
+gulp unit;
+```
 
 ### More
 
 These all run as dependencies of the 'watch' and 'deploy' tasks.
 
-`gulp markup;
+```
+gulp markup;
 gulp markupTemplate;
 gulp style;
 gulp script;
 gulp sprite;
 gulp accessibility;
-gulp documentation;`
+gulp documentation;
+```
 
 ## NPM Shrinkwrap
 
@@ -100,11 +112,15 @@ This project uses npm shrinkwrap to freeze npm module versions for improved proj
 
 Install as a node module:
 
-`npm install generator-shackstack -g;`
+```
+npm install generator-shackstack -g;
+```
 
 Then in an empty directory:
 
-`yo shackstack;`
+```
+yo shackstack;
+```
 
 Learn more about Yeoman here: http://yeoman.io
 
