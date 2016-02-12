@@ -94,7 +94,15 @@ gulp documentation;</pre>
 
 This project uses npm shrinkwrap to freeze npm module versions for improved project stability. More information here: https://docs.npmjs.com/cli/shrinkwrap.
 
-## Yeoman Enabled
+## Using it with Yeoman
+
+Install as a node module:
+
+<pre>npm install generator-shackstack -g;</pre>
+
+Then in an empty directory:
+
+<pre>yo shackstack;</pre>
 
 Learn more about Yeoman here: http://yeoman.io
 
