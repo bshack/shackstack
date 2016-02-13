@@ -1,3 +1,0 @@
-(function() {var Handlebars = require("handlebars");if (typeof Handlebars.templates === 'undefined') {Handlebars.templates = {};}Handlebars.templates['toolkit/modal-1'] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<section data-modal class=\"modal-1 row\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"modal-title\" aria-describedby=\"modal-description\"></section>\n";
-},"useData":true});Handlebars.registerPartial('toolkit/modal-1', Handlebars.templates['toolkit/modal-1']);module.exports = Handlebars.templates['toolkit/modal-1'];})();
