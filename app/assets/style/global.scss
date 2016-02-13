@@ -163,7 +163,7 @@
 // ## global styles
 
 body {
-    @extend arial-1;
+    @extend %arial-1;
 }
 
 main:focus {
