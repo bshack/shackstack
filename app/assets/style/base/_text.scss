@@ -1,5 +1,6 @@
 // ## Define Text Styles
-// All text styles must be html element agnostic. For example Heading-1 looks the same when applied to an h1 or h4.
+// All text styles must be html element agnostic.
+// For example a '%heading-1' looks the same when applied to an h1, h4 or a span element.
 
 // ### Headings
 
@@ -83,5 +84,5 @@
     @extend %font-base-1;
 
     font-family: 'open_sansregular', sans-serif;
-    
+
 }

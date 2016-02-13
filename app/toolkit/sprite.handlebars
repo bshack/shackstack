@@ -3,7 +3,7 @@
     {{> tags/head secondaryCSS='toolkit'}}
     <body>
 
-        {{>tags/a id='skip-to-content' url='#main' class='accessibility-skip-to-element' title='skip to content'}}
+        {{>toolkit/accessibility-skip-to-element-1 id='skip-to-content' url='#main' title='skip to content'}}
 
         <header>
             <div class="row">
@@ -20,7 +20,7 @@
                     <li><a href="{{www}}toolkit/grid.html">Grid</a></li>
                     <li><a href="{{www}}toolkit/colors.html">Colors</a></li>
                     <li><a href="{{www}}toolkit/text.html">Text</a></li>
-                    <li><a class="selected" href="{{www}}toolkit/sprite.html">sprite</a></li>
+                    <li><a class="selected" href="{{www}}toolkit/sprite.html">Sprite</a></li>
                     <li><a href="{{www}}toolkit/elements.html">Elements</a></li>
                     <li><a href="{{www}}toolkit/components.html">Components</a></li>
                 </ul>
@@ -28,7 +28,6 @@
         </nav>
 
         <main id="main" tabindex="-1">
-
             <section class="row">
                 <div class="small-12 columns">
                     <h1>Sprite</h1>
@@ -43,22 +42,24 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><span class="css3" aria-label="CSS 3 logo"></span></td>
-                                <td>%css3</td>
+                                <td><span class="graphic-css3">css3 graphic</span></td>
+                                <td>%graphic-css3</td>
                             </tr>
                             <tr>
-                                <td><span class="html5" aria-label="HTML 5 logo"></span></td>
-                                <td>%html5</td>
+                                <td><span class="graphic-html5">html5 graphic</span></td>
+                                <td>%graphic-html5</td>
                             </tr>
                         </tbody>
                     <table>
                 </div>
             </section>
-
         </main>
+
         <footer>
         </footer>
+
         {{> config/config}}
         {{> tags/script script='assets/script/app.compiled.js'}}
+
     </body>
 </html>
