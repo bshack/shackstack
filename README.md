@@ -37,8 +37,6 @@ http://gulpjs.com
 npm install;
 ```
 
-_(might need to 'sudo')_
-
 ## Locations
 
 ### Source Files
