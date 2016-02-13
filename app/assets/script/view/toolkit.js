@@ -39,7 +39,7 @@
                             .attr('id', 'accessible-ajax-example-content')
                             .attr('tabindex', '-1')
                             // pull some text form a json object
-                            .html(data.components['accessible-ajax'])
+                            .html(data['accessible-ajax-1'])
                             .focus();
                     }
                 });

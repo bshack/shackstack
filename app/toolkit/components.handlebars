@@ -32,6 +32,47 @@
                 <div class="small-12 columns">
                     <h1>Components</h1>
 
+                    <h2>Forms</h2>
+                    <h3>form-1</h3>
+
+                    <form class="form-1">
+
+                        <fieldset class="fieldset-1">
+
+                            <legend class="legend-1">Tell us about your vehicle</legend>
+
+                            <p>{{> toolkit/label-1 title='What is the make of the vehicle?' for='input-text-1-example'}}</p>
+                            <p>{{> toolkit/input-text-1 id='input-text-1-example' placeholder='i.e. Buick' type='text'}}</p>
+
+                            <p>{{> toolkit/label-1 title='what type of vehicle is it?' for='select-1-example'}}</p>
+                            <p>{{> toolkit/select-1 select-1 id='select-1-example'}}</p>
+
+                            <p id="radio-group-label">Do you own or lease the vehicle?</p>
+                            <p>{{> toolkit/label-1 title='own' for='input-radio-1-example-1'}}</p>
+                            <p>{{> toolkit/input-radio-1 id='input-radio-1-example-1' name='radio-example' checked=true  labelledby='radio-group-label'}}</p>
+                            <p>{{> toolkit/label-1 title='lease' for='input-radio-1-example-2'}}</p>
+                            <p>{{> toolkit/input-radio-1 id='input-radio-1-example-2' name='radio-example' labelledby='radio-group-label'}}</p>
+
+                            <p>{{> toolkit/label-1 title='please provide any additonal comments:' for='textarea-1-example'}}</p>
+                            <p>{{> toolkit/textarea-1 id='textarea-1-example' placeholder='please be detailed'}}</p>
+
+                        </fieldset>
+
+                        <fieldset class="fieldset-1">
+
+                            <legend class="legend-1">Newsletter</legend>
+
+                            <p>{{> toolkit/label-1 title='Opt into our newsletter' for='input-checkbox-1-example'}}</p>
+                            <p>{{> toolkit/input-checkbox-1 id='input-checkbox-1-example' name='checkbox-example' checked=true}}</p>
+
+                        </fieldset>
+
+                        <p>{{> toolkit/button-1 id='button-1' type='submit' title='save your changes'}}</p>
+
+                    </form>
+
+                    <hr>
+
                     <h2>Modals</h2>
                     <p>style: <a href="{{www}}report/docco/style/base/_components.html#modals">_components.scss</a></p>
                     <p>script: <a href="{{www}}report/docco/script/view/toolkit/modalOpen-1.html">modalOpen-1.js</a>, <a href="{{www}}report/docco/script/view/toolkit/modal-1.html">modal-1.js</a></p>
@@ -59,9 +100,9 @@
                     <h3>tabpanel-1</h3>
                     <div class="tabpanel-1">
                         <ul role="tablist">
-                            <li><button id="tab-1" role="tab" aria-controls="panel-1" aria-selected="true">dashboard</button></li>
-                            <li><button id="tab-2" role="tab" aria-controls="panel-2" aria-selected="false" tabindex="-1">edit account</button></li>
-                            <li><button id="tab-3" role="tab" aria-controls="panel-3" aria-selected="false" tabindex="-1">my services</button></li>
+                            <li><a id="tab-1" role="tab" aria-controls="panel-1" aria-selected="true">dashboard</a></li>
+                            <li><a id="tab-2" role="tab" aria-controls="panel-2" aria-selected="false" tabindex="-1">edit account</a></li>
+                            <li><a id="tab-3" role="tab" aria-controls="panel-3" aria-selected="false" tabindex="-1">my services</a></li>
                         </ul>
                         <div id="panel-1" aria-labelledby="tab-1" role="tabpanel" aria-hidden="false">
                             <p>dashboard landing content</p>
