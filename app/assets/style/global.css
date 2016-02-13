@@ -1,0 +1,1439 @@
+/**
+ * Foundation for Sites by ZURB
+ * Version 6.1.2
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+   * 1. Set default font family to sans-serif.
+   * 2. Prevent iOS and IE text size adjust after device orientation change,
+   *    without disabling user zoom.
+   */
+/* line 219, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+html {
+    font-family: sans-serif;
+    /* 1 */
+    -ms-text-size-adjust: 100%;
+    /* 2 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */ }
+
+/**
+   * Remove default margin.
+   */
+/* line 229, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+body {
+    margin: 0; }
+
+/* HTML5 display definitions
+     ========================================================================== */
+/**
+   * Correct `block` display not defined for any HTML5 element in IE 8/9.
+   * Correct `block` display not defined for `details` or `summary` in IE 10/11
+   * and Firefox.
+   * Correct `block` display not defined for `main` in IE 11.
+   */
+/* line 243, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block; }
+
+/**
+   * 1. Correct `inline-block` display not defined in IE 8/9.
+   * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+   */
+/* line 264, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    /* 1 */
+    vertical-align: baseline;
+    /* 2 */ }
+
+/**
+   * Prevent modern browsers from displaying `audio` without controls.
+   * Remove excess height in iOS 5 devices.
+   */
+/* line 277, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+audio:not([controls]) {
+    display: none;
+    height: 0; }
+
+/**
+   * Address `[hidden]` styling not present in IE 8/9/10.
+   * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+   */
+/* line 287, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+[hidden],
+template {
+    display: none; }
+
+/* Links
+     ========================================================================== */
+/**
+   * Remove the gray background color from active links in IE 10.
+   */
+/* line 299, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+a {
+    background-color: transparent; }
+
+/**
+   * Improve readability of focused elements when they are also in an
+   * active/hover state.
+   */
+/* line 308, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+a:active,
+a:hover {
+    outline: 0; }
+
+/* Text-level semantics
+     ========================================================================== */
+/**
+   * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+   */
+/* line 320, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+abbr[title] {
+    border-bottom: 1px dotted; }
+
+/**
+   * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+   */
+/* line 328, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+b,
+strong {
+    font-weight: bold; }
+
+/**
+   * Address styling not present in Safari and Chrome.
+   */
+/* line 337, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+dfn {
+    font-style: italic; }
+
+/**
+   * Address variable `h1` font-size and margin within `section` and `article`
+   * contexts in Firefox 4+, Safari, and Chrome.
+   */
+/* line 346, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0; }
+
+/**
+   * Address styling not present in IE 8/9.
+   */
+/* line 355, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+mark {
+    background: #ff0;
+    color: #000; }
+
+/**
+   * Address inconsistent and variable font size in all browsers.
+   */
+/* line 364, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+small {
+    font-size: 80%; }
+
+/**
+   * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+   */
+/* line 372, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline; }
+
+/* line 380, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+sup {
+    top: -0.5em; }
+
+/* line 384, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+sub {
+    bottom: -0.25em; }
+
+/* Embedded content
+     ========================================================================== */
+/**
+   * Remove border when inside `a` element in IE 8/9/10.
+   */
+/* line 395, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+img {
+    border: 0; }
+
+/**
+   * Correct overflow not hidden in IE 9/10/11.
+   */
+/* line 403, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+svg:not(:root) {
+    overflow: hidden; }
+
+/* Grouping content
+     ========================================================================== */
+/**
+   * Address margin not present in IE 8/9 and Safari.
+   */
+/* line 414, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+figure {
+    margin: 1em 40px; }
+
+/**
+   * Address differences between Firefox and other browsers.
+   */
+/* line 422, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+hr {
+    box-sizing: content-box;
+    height: 0; }
+
+/**
+   * Contain overflow in all browsers.
+   */
+/* line 431, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+pre {
+    overflow: auto; }
+
+/**
+   * Address odd `em`-unit font size rendering in all browsers.
+   */
+/* line 439, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em; }
+
+/* Forms
+     ========================================================================== */
+/**
+   * Known limitation: by default, Chrome and Safari on OS X allow very limited
+   * styling of `select`, unless a `border` property is set.
+   */
+/**
+   * 1. Correct color not being inherited.
+   *    Known issue: affects color of disabled elements.
+   * 2. Correct font properties not being inherited.
+   * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+   */
+/* line 462, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    /* 1 */
+    font: inherit;
+    /* 2 */
+    margin: 0;
+    /* 3 */ }
+
+/**
+   * Address `overflow` set to `hidden` in IE 8/9/10/11.
+   */
+/* line 476, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+button {
+    overflow: visible; }
+
+/**
+   * Address inconsistent `text-transform` inheritance for `button` and `select`.
+   * All other form control elements do not inherit `text-transform` values.
+   * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+   * Correct `select` style inheritance in Firefox.
+   */
+/* line 487, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+button,
+select {
+    text-transform: none; }
+
+/**
+   * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+   *    and `video` controls.
+   * 2. Correct inability to style clickable `input` types in iOS.
+   * 3. Improve usability and consistency of cursor style between image-type
+   *    `input` and others.
+   */
+/* line 500, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    /* 2 */
+    cursor: pointer;
+    /* 3 */ }
+
+/**
+   * Re-set default cursor for disabled elements.
+   */
+/* line 512, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+button[disabled],
+html input[disabled] {
+    cursor: default; }
+
+/**
+   * Remove inner padding and border in Firefox 4+.
+   */
+/* line 521, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0; }
+
+/**
+   * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+   * the UA stylesheet.
+   */
+/* line 532, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+input {
+    line-height: normal; }
+
+/**
+   * It's recommended that you don't attempt to style these elements.
+   * Firefox's implementation doesn't respect box-sizing, padding, or width.
+   *
+   * 1. Address box sizing set to `content-box` in IE 8/9/10.
+   * 2. Remove excess padding in IE 8/9/10.
+   */
+/* line 544, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */ }
+
+/**
+   * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+   * `font-size` values of the `input`, it causes the cursor style of the
+   * decrement button to change from `default` to `text`.
+   */
+/* line 556, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto; }
+
+/**
+   * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+   * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+   */
+/* line 566, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+input[type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    box-sizing: content-box;
+    /* 2 */ }
+
+/**
+   * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+   * Safari (but not Chrome) clips the cancel button when the search input has
+   * padding (and `textfield` appearance).
+   */
+/* line 577, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; }
+
+/**
+   * Define consistent border, margin, and padding.
+   * [NOTE] We don't enable this ruleset in Foundation, because we want the <fieldset> element to have plain styling.
+   */
+/* fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+  } */
+/**
+   * 1. Correct `color` not being inherited in IE 8/9/10/11.
+   * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+   */
+/* line 598, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+legend {
+    border: 0;
+    /* 1 */
+    padding: 0;
+    /* 2 */ }
+
+/**
+   * Remove default vertical scrollbar in IE 8/9/10/11.
+   */
+/* line 607, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+textarea {
+    overflow: auto; }
+
+/**
+   * Don't inherit the `font-weight` (applied by a rule above).
+   * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+   */
+/* line 616, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+optgroup {
+    font-weight: bold; }
+
+/* Tables
+     ========================================================================== */
+/**
+   * Remove most spacing between table cells.
+   */
+/* line 627, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+
+/* line 632, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+td,
+th {
+    padding: 0; }
+
+/* line 119, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+.foundation-mq {
+    font-family: "small=0em&medium=40em&large=64em&xlarge=75em&xxlarge=90em"; }
+
+/* line 123, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+html {
+    font-size: 100%;
+    box-sizing: border-box; }
+
+/* line 129, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+*,
+*:before,
+*:after {
+    box-sizing: inherit; }
+
+/* line 136, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #0a0a0a;
+    background: #fefefe;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+
+/* line 151, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+img {
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+    display: inline-block;
+    vertical-align: middle; }
+
+/* line 163, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+textarea {
+    height: auto;
+    min-height: 50px;
+    border-radius: 0; }
+
+/* line 170, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+select {
+    width: 100%;
+    border-radius: 0; }
+
+/* line 180, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object,
+.mqa-display img,
+.mqa-display embed,
+.mqa-display object {
+    max-width: none !important; }
+
+/* line 188, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    line-height: 1; }
+
+/* line 199, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+.is-visible {
+    display: block !important; }
+
+/* line 203, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/_global.scss */
+.is-hidden {
+    display: none !important; }
+
+/* line 170, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.row {
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap; }
+    /* line 174, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .row .row {
+        margin-left: -0.625rem;
+        margin-right: -0.625rem; }
+        @media screen and (min-width: 40em) {
+            /* line 174, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+            .row .row {
+                margin-left: -0.9375rem;
+                margin-right: -0.9375rem; } }
+    /* line 179, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .row.expanded {
+        max-width: none; }
+    /* line 184, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .row.collapse > .column, .row.collapse > .columns {
+        padding-left: 0;
+        padding-right: 0; }
+
+/* line 189, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.column, .columns {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0px;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0px; }
+    @media screen and (min-width: 40em) {
+        /* line 189, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+        .column, .columns {
+            padding-left: 0.9375rem;
+            padding-right: 0.9375rem; } }
+
+/* line 195, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.column.row.row, .row.row.columns {
+    float: none; }
+    /* line 199, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .row .column.row.row, .row .row.row.columns {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0; }
+
+/* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-1 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 8.33333%;
+        -ms-flex: 0 0 8.33333%;
+            flex: 0 0 8.33333%;
+    max-width: 8.33333%; }
+
+/* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-offset-0 {
+    margin-left: 0%; }
+
+/* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-2 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 16.66667%;
+        -ms-flex: 0 0 16.66667%;
+            flex: 0 0 16.66667%;
+    max-width: 16.66667%; }
+
+/* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-offset-1 {
+    margin-left: 8.33333%; }
+
+/* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-3 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 25%;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+    max-width: 25%; }
+
+/* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-offset-2 {
+    margin-left: 16.66667%; }
+
+/* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-4 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 33.33333%;
+        -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
+    max-width: 33.33333%; }
+
+/* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-offset-3 {
+    margin-left: 25%; }
+
+/* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-5 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 41.66667%;
+        -ms-flex: 0 0 41.66667%;
+            flex: 0 0 41.66667%;
+    max-width: 41.66667%; }
+
+/* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-offset-4 {
+    margin-left: 33.33333%; }
+
+/* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-6 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%; }
+
+/* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-offset-5 {
+    margin-left: 41.66667%; }
+
+/* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-7 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 58.33333%;
+        -ms-flex: 0 0 58.33333%;
+            flex: 0 0 58.33333%;
+    max-width: 58.33333%; }
+
+/* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-offset-6 {
+    margin-left: 50%; }
+
+/* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-8 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 66.66667%;
+        -ms-flex: 0 0 66.66667%;
+            flex: 0 0 66.66667%;
+    max-width: 66.66667%; }
+
+/* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-offset-7 {
+    margin-left: 58.33333%; }
+
+/* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-9 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 75%;
+        -ms-flex: 0 0 75%;
+            flex: 0 0 75%;
+    max-width: 75%; }
+
+/* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-offset-8 {
+    margin-left: 66.66667%; }
+
+/* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-10 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 83.33333%;
+        -ms-flex: 0 0 83.33333%;
+            flex: 0 0 83.33333%;
+    max-width: 83.33333%; }
+
+/* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-offset-9 {
+    margin-left: 75%; }
+
+/* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-11 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 91.66667%;
+        -ms-flex: 0 0 91.66667%;
+            flex: 0 0 91.66667%;
+    max-width: 91.66667%; }
+
+/* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-offset-10 {
+    margin-left: 83.33333%; }
+
+/* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-12 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%; }
+
+/* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-offset-11 {
+    margin-left: 91.66667%; }
+
+/* line 225, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-order-1 {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1; }
+
+/* line 225, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-order-2 {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2; }
+
+/* line 225, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-order-3 {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3; }
+
+/* line 225, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-order-4 {
+    -webkit-box-ordinal-group: 5;
+    -webkit-order: 4;
+        -ms-flex-order: 4;
+            order: 4; }
+
+/* line 225, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-order-5 {
+    -webkit-box-ordinal-group: 6;
+    -webkit-order: 5;
+        -ms-flex-order: 5;
+            order: 5; }
+
+/* line 225, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-order-6 {
+    -webkit-box-ordinal-group: 7;
+    -webkit-order: 6;
+        -ms-flex-order: 6;
+            order: 6; }
+
+/* line 254, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-collapse > .column, .small-collapse > .columns {
+    padding-left: 0;
+    padding-right: 0; }
+
+/* line 266, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.small-uncollapse > .column, .small-uncollapse > .columns {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem; }
+
+@media screen and (min-width: 40em) {
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-1 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 8.33333%;
+            -ms-flex: 0 0 8.33333%;
+                flex: 0 0 8.33333%;
+        max-width: 8.33333%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-offset-0 {
+        margin-left: 0%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-2 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 16.66667%;
+            -ms-flex: 0 0 16.66667%;
+                flex: 0 0 16.66667%;
+        max-width: 16.66667%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-offset-1 {
+        margin-left: 8.33333%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-3 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 25%;
+            -ms-flex: 0 0 25%;
+                flex: 0 0 25%;
+        max-width: 25%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-offset-2 {
+        margin-left: 16.66667%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-4 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 33.33333%;
+            -ms-flex: 0 0 33.33333%;
+                flex: 0 0 33.33333%;
+        max-width: 33.33333%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-offset-3 {
+        margin-left: 25%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-5 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 41.66667%;
+            -ms-flex: 0 0 41.66667%;
+                flex: 0 0 41.66667%;
+        max-width: 41.66667%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-offset-4 {
+        margin-left: 33.33333%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-6 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 50%;
+            -ms-flex: 0 0 50%;
+                flex: 0 0 50%;
+        max-width: 50%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-offset-5 {
+        margin-left: 41.66667%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-7 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 58.33333%;
+            -ms-flex: 0 0 58.33333%;
+                flex: 0 0 58.33333%;
+        max-width: 58.33333%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-offset-6 {
+        margin-left: 50%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-8 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 66.66667%;
+            -ms-flex: 0 0 66.66667%;
+                flex: 0 0 66.66667%;
+        max-width: 66.66667%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-offset-7 {
+        margin-left: 58.33333%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-9 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 75%;
+            -ms-flex: 0 0 75%;
+                flex: 0 0 75%;
+        max-width: 75%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-offset-8 {
+        margin-left: 66.66667%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-10 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 83.33333%;
+            -ms-flex: 0 0 83.33333%;
+                flex: 0 0 83.33333%;
+        max-width: 83.33333%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-offset-9 {
+        margin-left: 75%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-11 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 91.66667%;
+            -ms-flex: 0 0 91.66667%;
+                flex: 0 0 91.66667%;
+        max-width: 91.66667%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-offset-10 {
+        margin-left: 83.33333%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-12 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 100%;
+            -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+        max-width: 100%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-offset-11 {
+        margin-left: 91.66667%; }
+    /* line 225, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-order-1 {
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+            -ms-flex-order: 1;
+                order: 1; }
+    /* line 225, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-order-2 {
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+            -ms-flex-order: 2;
+                order: 2; }
+    /* line 225, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-order-3 {
+        -webkit-box-ordinal-group: 4;
+        -webkit-order: 3;
+            -ms-flex-order: 3;
+                order: 3; }
+    /* line 225, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-order-4 {
+        -webkit-box-ordinal-group: 5;
+        -webkit-order: 4;
+            -ms-flex-order: 4;
+                order: 4; }
+    /* line 225, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-order-5 {
+        -webkit-box-ordinal-group: 6;
+        -webkit-order: 5;
+            -ms-flex-order: 5;
+                order: 5; }
+    /* line 225, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-order-6 {
+        -webkit-box-ordinal-group: 7;
+        -webkit-order: 6;
+            -ms-flex-order: 6;
+                order: 6; } }
+
+@media screen and (min-width: 40em) and (min-width: 40em) {
+    /* line 233, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-expand {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1 1 0px;
+            -ms-flex: 1 1 0px;
+                flex: 1 1 0px; } }
+
+/* line 241, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.row.medium-unstack .column, .row.medium-unstack .columns {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%; }
+    @media screen and (min-width: 40em) {
+        /* line 241, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+        .row.medium-unstack .column, .row.medium-unstack .columns {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1 1 0px;
+                -ms-flex: 1 1 0px;
+                    flex: 1 1 0px; } }
+
+@media screen and (min-width: 40em) {
+    /* line 254, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-collapse > .column, .medium-collapse > .columns {
+        padding-left: 0;
+        padding-right: 0; }
+    /* line 266, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .medium-uncollapse > .column, .medium-uncollapse > .columns {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
+
+@media screen and (min-width: 64em) {
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-1 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 8.33333%;
+            -ms-flex: 0 0 8.33333%;
+                flex: 0 0 8.33333%;
+        max-width: 8.33333%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-offset-0 {
+        margin-left: 0%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-2 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 16.66667%;
+            -ms-flex: 0 0 16.66667%;
+                flex: 0 0 16.66667%;
+        max-width: 16.66667%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-offset-1 {
+        margin-left: 8.33333%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-3 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 25%;
+            -ms-flex: 0 0 25%;
+                flex: 0 0 25%;
+        max-width: 25%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-offset-2 {
+        margin-left: 16.66667%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-4 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 33.33333%;
+            -ms-flex: 0 0 33.33333%;
+                flex: 0 0 33.33333%;
+        max-width: 33.33333%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-offset-3 {
+        margin-left: 25%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-5 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 41.66667%;
+            -ms-flex: 0 0 41.66667%;
+                flex: 0 0 41.66667%;
+        max-width: 41.66667%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-offset-4 {
+        margin-left: 33.33333%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-6 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 50%;
+            -ms-flex: 0 0 50%;
+                flex: 0 0 50%;
+        max-width: 50%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-offset-5 {
+        margin-left: 41.66667%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-7 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 58.33333%;
+            -ms-flex: 0 0 58.33333%;
+                flex: 0 0 58.33333%;
+        max-width: 58.33333%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-offset-6 {
+        margin-left: 50%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-8 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 66.66667%;
+            -ms-flex: 0 0 66.66667%;
+                flex: 0 0 66.66667%;
+        max-width: 66.66667%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-offset-7 {
+        margin-left: 58.33333%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-9 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 75%;
+            -ms-flex: 0 0 75%;
+                flex: 0 0 75%;
+        max-width: 75%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-offset-8 {
+        margin-left: 66.66667%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-10 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 83.33333%;
+            -ms-flex: 0 0 83.33333%;
+                flex: 0 0 83.33333%;
+        max-width: 83.33333%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-offset-9 {
+        margin-left: 75%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-11 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 91.66667%;
+            -ms-flex: 0 0 91.66667%;
+                flex: 0 0 91.66667%;
+        max-width: 91.66667%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-offset-10 {
+        margin-left: 83.33333%; }
+    /* line 210, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-12 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 100%;
+            -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+        max-width: 100%; }
+    /* line 218, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-offset-11 {
+        margin-left: 91.66667%; }
+    /* line 225, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-order-1 {
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+            -ms-flex-order: 1;
+                order: 1; }
+    /* line 225, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-order-2 {
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+            -ms-flex-order: 2;
+                order: 2; }
+    /* line 225, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-order-3 {
+        -webkit-box-ordinal-group: 4;
+        -webkit-order: 3;
+            -ms-flex-order: 3;
+                order: 3; }
+    /* line 225, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-order-4 {
+        -webkit-box-ordinal-group: 5;
+        -webkit-order: 4;
+            -ms-flex-order: 4;
+                order: 4; }
+    /* line 225, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-order-5 {
+        -webkit-box-ordinal-group: 6;
+        -webkit-order: 5;
+            -ms-flex-order: 5;
+                order: 5; }
+    /* line 225, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-order-6 {
+        -webkit-box-ordinal-group: 7;
+        -webkit-order: 6;
+            -ms-flex-order: 6;
+                order: 6; } }
+
+@media screen and (min-width: 64em) and (min-width: 64em) {
+    /* line 233, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-expand {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1 1 0px;
+            -ms-flex: 1 1 0px;
+                flex: 1 1 0px; } }
+
+/* line 241, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.row.large-unstack .column, .row.large-unstack .columns {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%; }
+    @media screen and (min-width: 64em) {
+        /* line 241, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+        .row.large-unstack .column, .row.large-unstack .columns {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1 1 0px;
+                -ms-flex: 1 1 0px;
+                    flex: 1 1 0px; } }
+
+@media screen and (min-width: 64em) {
+    /* line 254, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-collapse > .column, .large-collapse > .columns {
+        padding-left: 0;
+        padding-right: 0; }
+    /* line 266, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+    .large-uncollapse > .column, .large-uncollapse > .columns {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
+
+/* line 271, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.shrink {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    max-width: 100%; }
+
+/* line 278, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.row.align-right {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+
+/* line 278, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.row.align-center {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+/* line 278, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.row.align-justify {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+
+/* line 278, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.row.align-spaced {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+
+/* line 285, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.row.align-top {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+                -ms-grid-row-align: flex-start;
+            align-items: flex-start; }
+
+/* line 289, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.column.align-top, .align-top.columns {
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start; }
+
+/* line 285, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.row.align-bottom {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+                -ms-grid-row-align: flex-end;
+            align-items: flex-end; }
+
+/* line 289, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.column.align-bottom, .align-bottom.columns {
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end; }
+
+/* line 285, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.row.align-middle {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center; }
+
+/* line 289, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.column.align-middle, .align-middle.columns {
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center; }
+
+/* line 285, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.row.align-stretch {
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+                -ms-grid-row-align: stretch;
+            align-items: stretch; }
+
+/* line 289, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
+.column.align-stretch, .align-stretch.columns {
+    -webkit-align-self: stretch;
+        -ms-flex-item-align: stretch;
+            align-self: stretch; }
+
+@font-face {
+    font-family: 'open_sansbold';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/open-sans/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../font/open-sans/opensans-bold-webfont.woff2") format("woff2"), url("../font/open-sans/opensans-bold-webfont.woff") format("woff"), url("../font/open-sans/opensans-bold-webfont.ttf") format("truetype"), url("../font/open-sans/opensans-bold-webfont.svg#open_sansbold") format("svg"); }
+
+@font-face {
+    font-family: 'open_sansbold_italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/open-sans/opensans-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../font/open-sans/opensans-bolditalic-webfont.woff2") format("woff2"), url("../font/open-sans/opensans-bolditalic-webfont.woff") format("woff"), url("../font/open-sans/opensans-bolditalic-webfont.ttf") format("truetype"), url("../font/open-sans/opensans-bolditalic-webfont.svg#open_sansbold_italic") format("svg"); }
+
+@font-face {
+    font-family: 'open_sansextrabold';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/open-sans/opensans-extrabold-webfont.eot?#iefix") format("embedded-opentype"), url("../font/open-sans/opensans-extrabold-webfont.woff2") format("woff2"), url("../font/open-sans/opensans-extrabold-webfont.woff") format("woff"), url("../font/open-sans/opensans-extrabold-webfont.ttf") format("truetype"), url("../font/open-sans/opensans-extrabold-webfont.svg#open_sansextrabold") format("svg"); }
+
+@font-face {
+    font-family: 'open_sansextrabold_italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/open-sans/opensans-extrabolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../font/open-sans/opensans-extrabolditalic-webfont.woff2") format("woff2"), url("../font/open-sans/opensans-extrabolditalic-webfont.woff") format("woff"), url("../font/open-sans/opensans-extrabolditalic-webfont.ttf") format("truetype"), url("../font/open-sans/opensans-extrabolditalic-webfont.svg#open_sansextrabold_italic") format("svg"); }
+
+@font-face {
+    font-family: 'open_sansitalic';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/open-sans/opensans-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../font/open-sans/opensans-italic-webfont.woff2") format("woff2"), url("../font/open-sans/opensans-italic-webfont.woff") format("woff"), url("../font/open-sans/opensans-italic-webfont.ttf") format("truetype"), url("../font/open-sans/opensans-italic-webfont.svg#open_sansitalic") format("svg"); }
+
+@font-face {
+    font-family: 'open_sanslight';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/open-sans/opensans-light-webfont.eot?#iefix") format("embedded-opentype"), url("../font/open-sans/opensans-light-webfont.woff2") format("woff2"), url("../font/open-sans/opensans-light-webfont.woff") format("woff"), url("../font/open-sans/opensans-light-webfont.ttf") format("truetype"), url("../font/open-sans/opensans-light-webfont.svg#open_sanslight") format("svg"); }
+
+@font-face {
+    font-family: 'open_sanslight_italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/open-sans/opensans-lightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../font/open-sans/opensans-lightitalic-webfont.woff2") format("woff2"), url("../font/open-sans/opensans-lightitalic-webfont.woff") format("woff"), url("../font/open-sans/opensans-lightitalic-webfont.ttf") format("truetype"), url("../font/open-sans/opensans-lightitalic-webfont.svg#open_sanslight_italic") format("svg"); }
+
+@font-face {
+    font-family: 'open_sansregular';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/open-sans/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../font/open-sans/opensans-regular-webfont.woff2") format("woff2"), url("../font/open-sans/opensans-regular-webfont.woff") format("woff"), url("../font/open-sans/opensans-regular-webfont.ttf") format("truetype"), url("../font/open-sans/opensans-regular-webfont.svg#open_sansregular") format("svg"); }
+
+@font-face {
+    font-family: 'open_sanssemibold';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/open-sans/opensans-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../font/open-sans/opensans-semibold-webfont.woff2") format("woff2"), url("../font/open-sans/opensans-semibold-webfont.woff") format("woff"), url("../font/open-sans/opensans-semibold-webfont.ttf") format("truetype"), url("../font/open-sans/opensans-semibold-webfont.svg#open_sanssemibold") format("svg"); }
+
+@font-face {
+    font-family: 'open_sanssemibold_italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../font/open-sans/opensans-semibolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../font/open-sans/opensans-semibolditalic-webfont.woff2") format("woff2"), url("../font/open-sans/opensans-semibolditalic-webfont.woff") format("woff"), url("../font/open-sans/opensans-semibolditalic-webfont.ttf") format("truetype"), url("../font/open-sans/opensans-semibolditalic-webfont.svg#open_sanssemibold_italic") format("svg"); }
+
+/* line 8, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_text.scss */
+.heading-1, .heading-2, .heading-3, .heading-4 {
+    display: block;
+    font-weight: 700;
+    margin: 0; }
+
+/* line 20, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_text.scss */
+.heading-1 {
+    color: #000;
+    font-size: 1.5rem; }
+
+/* line 31, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_text.scss */
+.heading-2 {
+    color: #000;
+    font-size: 1.25rem; }
+
+/* line 42, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_text.scss */
+.heading-3 {
+    color: #666;
+    font-size: 1.125rem; }
+
+/* line 53, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_text.scss */
+.heading-4 {
+    color: #666;
+    font-size: 1rem; }
+
+/* line 64, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_text.scss */
+.anchor-1, .button-1, .label-1, .input-text-1, .textarea-1, .select-1, .table-1, .modal-1, .tabpanel-1, .tabpanel-1 > [role=tablist] > * > button, .arial-1, .heading-1, .heading-2, .heading-3, .heading-4, .open-sans-1 {
+    font-smoothing: antialiased;
+    font-weight: normal; }
+
+/* line 71, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_text.scss */
+.anchor-1, .button-1, .label-1, .input-text-1, .textarea-1, .select-1, .table-1, .modal-1, .tabpanel-1, .tabpanel-1 > [role=tablist] > * > button, .arial-1 {
+    font-family: 'Arial', sans-serif; }
+
+/* line 81, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_text.scss */
+.heading-1, .heading-2, .heading-3, .heading-4, .open-sans-1 {
+    font-family: 'open_sansregular', sans-serif; }
+
+/* line 8, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_utilities.scss */
+.scrolling-off {
+    overflow: hidden; }
+
+/* line 4, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_accessibility.scss */
+.accessibility-skip-to-element, .accessibility-hidden {
+    clip: rect(0 0 0 0);
+    left: -312.5rem;
+    overflow: hidden;
+    position: absolute; }
+
+/* line 20, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_accessibility.scss */
+.accessibility-skip-to-element:focus {
+    clip: auto;
+    left: auto;
+    overflow: visible;
+    position: static; }
+
+/* line 32, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_accessibility.scss */
+.accessibility-skip-to-element {
+    background-color: #fff;
+    color: #000;
+    display: block;
+    padding: 0.625rem;
+    text-align: center; }
+    /* line 42, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_accessibility.scss */
+    .accessibility-skip-to-element:hover, .accessibility-skip-to-element:focus {
+        text-decoration: underline; }
+
+/* line 3, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_elements.scss */
+.anchor-1 {
+    cursor: pointer;
+    margin: 0;
+    text-decoration: underline; }
+
+/* line 15, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_elements.scss */
+.button-1 {
+    background-color: #000;
+    border: 0.0625rem solid #000;
+    color: #fff;
+    cursor: pointer;
+    margin: 0;
+    padding: 0.84375rem; }
+
+/* line 30, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_elements.scss */
+.label-1 {
+    margin: 0; }
+
+/* line 50, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_elements.scss */
+.input-checkbox-1 {
+    margin: 0; }
+
+/* line 56, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_elements.scss */
+.input-radio-1 {
+    margin: 0; }
+
+/* line 62, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_elements.scss */
+.input-text-1 {
+    margin: 0;
+    min-height: 2.8125rem; }
+
+/* line 73, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_elements.scss */
+.textarea-1 {
+    margin: 0;
+    min-height: 2.8125rem; }
+
+/* line 84, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_elements.scss */
+.select-1 {
+    height: 2.8125rem;
+    margin: 0; }
+
+/* line 95, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_elements.scss */
+.table-1 {
+    border: 0.0625rem solid #000;
+    margin: 0; }
+    /* line 102, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_elements.scss */
+    .table-1 thead {
+        background-color: #000;
+        color: #fff; }
+    /* line 107, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_elements.scss */
+    .table-1 tfoot {
+        background-color: #e5e5e5;
+        color: #000; }
+    /* line 112, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_elements.scss */
+    .table-1 td, .table-1 th {
+        border: 0.0625rem solid #000;
+        padding: 0.625rem; }
+
+/* line 122, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_elements.scss */
+.image-1 {
+    border: 0;
+    margin: 0; }
+
+/* line 17, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_components.scss */
+.tabpanel-1 > [role=tablist] button {
+    cursor: pointer; }
+
+/* line 23, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_components.scss */
+.tabpanel-1 > [role=tabpanel][aria-hidden=true] {
+    display: none; }
+
+/* line 31, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_components.scss */
+.tabpanel-1 {
+    margin: 0; }
+    /* line 38, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_components.scss */
+    .tabpanel-1 > [role=tablist] {
+        margin: 0;
+        padding: 0; }
+        /* line 134, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/util/_mixins.scss */
+        .tabpanel-1 > [role=tablist]::before, .tabpanel-1 > [role=tablist]::after {
+            content: ' ';
+            display: table; }
+        /* line 140, /Users/williamshackelford/Sites/shackstack/node_modules/foundation-sites/scss/util/_mixins.scss */
+        .tabpanel-1 > [role=tablist]::after {
+            clear: both; }
+        /* line 45, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_components.scss */
+        .tabpanel-1 > [role=tablist] > * {
+            float: left;
+            list-style: none;
+            margin: 0 0.0625rem 0 0; }
+            /* line 51, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_components.scss */
+            .tabpanel-1 > [role=tablist] > * > button {
+                background-color: #fff;
+                border-bottom: 0.0625rem solid #fff;
+                border-left: 0.0625rem solid #000;
+                border-right: 0.0625rem solid #000;
+                border-top: 0.0625rem solid #000;
+                color: #000;
+                padding: 0.84375rem; }
+                /* line 63, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_components.scss */
+                .tabpanel-1 > [role=tablist] > * > button[aria-selected=false] {
+                    background-color: #000;
+                    border-bottom-color: #000;
+                    color: #fff; }
+    /* line 75, /Users/williamshackelford/Sites/shackstack/app/assets/style/base/_components.scss */
+    .tabpanel-1 > [role=tabpanel] {
+        border: 0.0625rem solid #000;
+        margin-top: -0.0625rem;
+        padding: 0.625rem; }
+
+/* line 165, stdin */
+main:focus {
+    outline: 0; }

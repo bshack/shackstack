@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    var utilities = require('../../../../app/media/script/service/utilities.js');
+    var utilities = require('../../../../app/assets/script/service/utilities.js');
     describe('Canary', function() {
         it('is sucessfully running', function() {
             expect(true).toBe(true);

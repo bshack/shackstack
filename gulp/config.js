@@ -65,16 +65,16 @@ module.exports = {
         image: {
             // glob of all image files and directories excluding icon source files
             source: [
-                'app/media/image/**',
-                '!app/media/image/sprite/**'
+                'app/assets/image/**',
+                '!app/assets/image/sprite/**'
             ],
             // location to save processed images by tasks
-            destination: 'media/image',
+            destination: 'assets/image',
             // #### sprite
             sprite: {
                 // glob of all svg images converted to png images
                 compliled: [
-                    'app/media/image/sprite/*.png'
+                    'app/assets/image/sprite/*.png'
                 ],
                 // where to save generated scss styles
                 scss: '_sprite.scss',
@@ -82,12 +82,12 @@ module.exports = {
                 template: 'gulp/views/sprite.handlebars',
                 // glob of all the source svg icons
                 source: [
-                    'app/media/image/sprite/**/*.svg'
+                    'app/assets/image/sprite/**/*.svg'
                 ],
                 // where to save the generated .png images
                 destination: {
-                    png: 'app/media/image/sprite',
-                    sprite: 'app/media/image'
+                    png: 'app/assets/image/sprite',
+                    sprite: 'app/assets/image'
                 }
             }
         },
@@ -98,34 +98,34 @@ module.exports = {
             // glob of handlebars templates
             source: [
                 'app/**/*.handlebars',
-                '!app/media/**',
+                '!app/assets/**',
                 '!app/report/**',
                 '!app/service/**'
             ],
             // glob of generated html files
             destination: [
                 'app/**/*.html',
-                '!app/media/**',
+                '!app/assets/**',
                 '!app/report/**',
                 '!app/service/**'
             ],
             partials: {
                 //glob of handlebars partials
                 source: [
-                    'app/media/markup'
+                    'app/assets/markup'
                 ],
                 // glob of handlebars partials, needed for watch task
-                watch: 'app/media/markup/**',
+                watch: 'app/assets/markup/**',
                 // where to save generated js templates
-                destination: 'app/media/script/template'
+                destination: 'app/assets/script/template'
             }
         },
         // ### font
         font: {
             // glob of fonts
-            source: 'app/media/font/**',
+            source: 'app/assets/font/**',
             // where to save fonts
-            destination: 'media/font'
+            destination: 'assets/font'
         },
         // ### script
         script: {
@@ -138,12 +138,12 @@ module.exports = {
                 'gulp/*.js',
                 'grunt/tasks/*.js',
                 'gulp/options/.js',
-                'app/media/script/*.js',
-                'app/media/script/**/*.js',
-                'app/media/test/spec/*.js',
-                'app/media/test/*.js',
-                '!app/media/script/template/**',
-                '!app/media/script/*.compiled.js'
+                'app/assets/script/*.js',
+                'app/assets/script/**/*.js',
+                'app/assets/test/spec/*.js',
+                'app/assets/test/*.js',
+                '!app/assets/script/template/**',
+                '!app/assets/script/*.compiled.js'
             ],
             // glob of only gulp js files for documentation task
             // glob of only gulp js files for documentation task
@@ -156,23 +156,23 @@ module.exports = {
             ],
             // glob of only application files for documentation task
             source: [
-                'app/media/script/*.js',
-                'app/media/script/**/*.js',
-                '!app/media/script/template/**',
-                '!app/media/script/*.compiled.js'
+                'app/assets/script/*.js',
+                'app/assets/script/**/*.js',
+                '!app/assets/script/template/**',
+                '!app/assets/script/*.compiled.js'
             ],
             // glob js files to be delployed duirng release
             release: [
-                'app/media/script/app.compiled.js'
+                'app/assets/script/app.compiled.js'
             ],
             // file to be compliled by browserify
             compile: {
-                source: 'app/media/script/app.js',
-                destination: 'app/media/script',
+                source: 'app/assets/script/app.js',
+                destination: 'app/assets/script',
                 filename: 'app.compiled.js'
             },
             // where to save script files in release task
-            destination: 'media/script'
+            destination: 'assets/script'
         },
         // ### style
         style: {
@@ -181,18 +181,18 @@ module.exports = {
             source: {
                 // glob of all scss files
                 scss: [
-                    'app/media/style/*.scss',
-                    'app/media/style/**/*.scss'
+                    'app/assets/style/*.scss',
+                    'app/assets/style/**/*.scss'
                 ],
                  // glob of all css files
                 css: [
-                    'app/media/style/*.css'
+                    'app/assets/style/*.css'
                 ]
             },
             // where to save style files
             destination: {
-                watch: 'app/media/style',
-                release: 'media/style'
+                watch: 'app/assets/style',
+                release: 'assets/style'
             }
         },
         // ### data
@@ -224,7 +224,7 @@ module.exports = {
                 // location of docco generated html files
                 source: 'app/report/docco',
                 // location of docco generated templates files
-                compiled: 'app/media/script/template/documentation',
+                compiled: 'app/assets/script/template/documentation',
                 // where to save gulp documentation
                 build: 'app/report/docco/build',
                 // where to script script documentation

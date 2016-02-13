@@ -1,0 +1,3 @@
+(function() {var Handlebars = require("handlebars");if (typeof Handlebars.templates === 'undefined') {Handlebars.templates = {};}Handlebars.templates['toolkit/accessibility-speaker-1'] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<div class=\"accessibility-hidden\" aria-live=\"polite\" aria-relevant=\"additions removals\" aria-atomic=\"true\"></div>\n";
+},"useData":true});Handlebars.registerPartial('toolkit/accessibility-speaker-1', Handlebars.templates['toolkit/accessibility-speaker-1']);module.exports = Handlebars.templates['toolkit/accessibility-speaker-1'];})();

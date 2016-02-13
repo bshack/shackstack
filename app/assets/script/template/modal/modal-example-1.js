@@ -1,0 +1,3 @@
+(function() {var Handlebars = require("handlebars");if (typeof Handlebars.templates === 'undefined') {Handlebars.templates = {};}Handlebars.templates['modal/modal-example-1'] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<div class=\"small-12 columns\">\n    <h1 id=\"modal-title\">disclosures</h1>\n    <h2 id=\"modal-description\">Legal disclosures you accept to continue</h2>\n    <p>disclosures content</p>\n    <button class=\"button-1\" data-modal-close>return to sign up page</button>\n</div>\n";
+},"useData":true});Handlebars.registerPartial('modal/modal-example-1', Handlebars.templates['modal/modal-example-1']);module.exports = Handlebars.templates['modal/modal-example-1'];})();
