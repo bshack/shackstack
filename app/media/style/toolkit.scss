@@ -157,3 +157,12 @@ nav {
     }
 
 }
+
+
+.css3 {
+    @extend %css3;
+}
+
+.html5 {
+    @extend %html5;
+}

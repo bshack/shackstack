@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html id="toolkit-colors" lang="en-us" dir="ltr">
+    {{> tags/head secondaryCSS='toolkit'}}
+    <body>
+
+        {{>tags/a id='skip-to-content' url='#main' class='accessibility-skip-to-element' title='skip to content'}}
+
+        <header>
+            <div class="row">
+                <div class="small-12 columns">
+                    <a href="{{www}}/toolkit">Toolkit</a>
+                </div>
+            </div>
+        </header>
+
+        <nav>
+            <div class="row collapse">
+                <ul class="small-12 columns">
+                    <li><a href="{{www}}toolkit">Home</a></li>
+                    <li><a href="{{www}}toolkit/grid.html">Grid</a></li>
+                    <li><a href="{{www}}toolkit/colors.html">Colors</a></li>
+                    <li><a href="{{www}}toolkit/text.html">Text</a></li>
+                    <li><a class="selected" href="{{www}}toolkit/sprite.html">sprite</a></li>
+                    <li><a href="{{www}}toolkit/elements.html">Elements</a></li>
+                    <li><a href="{{www}}toolkit/components.html">Components</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main id="main" tabindex="-1">
+
+            <section class="row">
+                <div class="small-12 columns">
+                    <h1>Sprite</h1>
+                    <p>style: <a href="{{www}}report/docco/style/base/_sprite.html">_sprite.scss</a></p>
+                    <table class="table-1">
+                        <caption>sprite contents</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">image</th>
+                                <th scope="col">scss</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="css3"></span></td>
+                                <td>%css3</td>
+                            </tr>
+                            <tr>
+                                <td><span class="html5"></span></td>
+                                <td>%html5</td>
+                            </tr>
+                        </tbody>
+                    <table>
+                </div>
+            </section>
+
+        </main>
+        <footer>
+        </footer>
+        {{> config/config}}
+        {{> tags/script script='media/script/app.compiled.js'}}
+    </body>
+</html>

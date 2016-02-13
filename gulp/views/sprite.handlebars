@@ -1,28 +1,33 @@
-// ## icons
+// ## graphics
 // sprite and this scss file are created by the gulp task 'sprite',
 // generated sprite is a 2x display dimensions
+// docs: https://www.npmjs.com/package/sprity
 
-// ### sprite
+// ### icon
 
-%sprite {
-    background-image: url('../image/sprite.png');
+{{#each layouts}}
+{{#each sprites}}
+%{{../../indicator}}{{cssesc ../classname}} {
+    background-image: url('{{escimage url}}');
     background-repeat: no-repeat;
-    background-size: rem-calc(220) auto;
+    background-size: rem-calc(({{baseWidth}} / 2 )) rem-calc(({{baseHeight}} / 2));
     display: block;
 }
+{{/each}}
+{{/each}}
 
 {{#each layouts}}
     {{#each layout.items}}
 // ### {{#if ../../opt.split}}{{cssesc ../../name}}-{{/if}}{{cssesc meta.name}}
 
 %{{#if ../../opt.split}}{{cssesc ../../name}}-{{/if}}{{cssesc meta.name}} {
-    
-    @extend %sprite;
+
+    @extend %icon;
 
     background-position: rem-calc(-(({{baseDim x}} / 2) + 4)) rem-calc(-(({{baseDim y}} / 2) + 4));
     height: rem-calc((({{baseDim height}} - 20) / 2) + 2);
     width: rem-calc((({{baseDim width}} - 20) / 2) + 2);
-    
+
 }
 
     {{/each}}
