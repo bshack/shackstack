@@ -42,28 +42,28 @@
                             <legend class="legend-1">Tell us about your vehicle</legend>
 
                             <p>{{> toolkit/label-1 title='What is the make of the vehicle?' for='input-text-1-example'}}</p>
-                            <p>{{> toolkit/input-text-1 id='input-text-1-example' placeholder='i.e. Buick' type='text'}}</p>
+                            <p>{{> toolkit/input-text-1 id='input-text-1-example' name='input-text-1-example' placeholder='i.e. Buick' type='text' required=true}}</p>
 
                             <p>{{> toolkit/label-1 title='what type of vehicle is it?' for='select-1-example'}}</p>
-                            <p>{{> toolkit/select-1 select-1 id='select-1-example'}}</p>
+                            <p>{{> toolkit/select-1 select-1 id='select-1-example' name='select-1-example' required=true}}</p>
 
                             <p id="radio-group-label">Do you own or lease the vehicle?</p>
                             <p>{{> toolkit/label-1 title='own' for='input-radio-1-example-1'}}</p>
-                            <p>{{> toolkit/input-radio-1 id='input-radio-1-example-1' name='radio-example' checked=true  labelledby='radio-group-label'}}</p>
+                            <p>{{> toolkit/input-radio-1 id='input-radio-1-example-1' name='radio-example' labelledby='radio-group-label'}}</p>
                             <p>{{> toolkit/label-1 title='lease' for='input-radio-1-example-2'}}</p>
                             <p>{{> toolkit/input-radio-1 id='input-radio-1-example-2' name='radio-example' labelledby='radio-group-label'}}</p>
 
                             <p>{{> toolkit/label-1 title='please provide any additonal comments:' for='textarea-1-example'}}</p>
-                            <p>{{> toolkit/textarea-1 id='textarea-1-example' placeholder='please be detailed'}}</p>
+                            <p>{{> toolkit/textarea-1 id='textarea-1-example' name='textarea-1-example' placeholder='please be detailed' required=true}}</p>
 
                         </fieldset>
 
                         <fieldset class="fieldset-1">
 
-                            <legend class="legend-1">Newsletter</legend>
+                            <legend class="legend-1">Agree to terms</legend>
 
-                            <p>{{> toolkit/label-1 title='Opt into our newsletter' for='input-checkbox-1-example'}}</p>
-                            <p>{{> toolkit/input-checkbox-1 id='input-checkbox-1-example' name='checkbox-example' checked=true}}</p>
+                            <p>{{> toolkit/label-1 title='I agree to terms and conditions.' for='input-checkbox-1-example'}}</p>
+                            <p>{{> toolkit/input-checkbox-1 id='input-checkbox-1-example' name='checkbox-example' checked=true required=true}}</p>
 
                         </fieldset>
 

@@ -96,6 +96,7 @@
     "handlebars": "x.x.x",
     "jasmine-core": "x.x.x",
     "jquery": "x.x.x",
+    "jquery-validation": "x.x.x",
     "jsdoc": "x.x.x",
     "karma": "x.x.x",
     "karma-browserify": "x.x.x",

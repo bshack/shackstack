@@ -234,6 +234,10 @@ main:focus {
     @extend %input-checkbox-1;
 }
 
+.input-error-1 {
+    @extend %input-error-1;
+}
+
 .input-radio-1 {
     @extend %input-radio-1;
 }

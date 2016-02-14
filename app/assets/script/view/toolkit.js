@@ -5,9 +5,14 @@
     var ViewModalOpen1 = require('./toolkit/modalOpen-1');
     var ViewTabpanel1 = require('./toolkit/tabpanel-1');
     var ViewAccessiblityAjax1 = require('./toolkit/accessiblityAjax-1');
+    var ViewForm1 = require('./toolkit/form-1');
     var templateModalDemo = require('../template/modal/modal-example-1');
     module.exports =  Backbone.View.extend({
         initialize: function() {
+            // setup example form
+            new ViewForm1({
+                el: Backbone.$('.form-1')
+            });
             // setup example tabpanel
             new ViewTabpanel1({
                 el: Backbone.$('.tabpanel-1')

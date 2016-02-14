@@ -51,6 +51,23 @@
     margin: 0;
 }
 
+// ## input errors
+
+%input-error-1 {
+
+    @extend %arial-1;
+
+    background-color: $red-1;
+    color: $white-1;
+    margin-top: rem-calc(5);
+    padding: rem-calc(10);
+
+    p {
+        margin: 0;
+    }
+
+}
+
 // ## input radio buttons
 
 %input-radio-1 {
@@ -63,8 +80,11 @@
 
     @extend %arial-1;
 
+
+    display: block;
     margin: 0;
     min-height: rem-calc(45);
+    width: 100%;
 
 }
 
@@ -74,8 +94,10 @@
 
     @extend %arial-1;
 
+    display: block;
     margin: 0;
     min-height: rem-calc(45);
+    width: 100%;
 
 }
 

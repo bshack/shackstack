@@ -1,6 +1,6 @@
 {
   "name": "generator-shackstack",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "dependencies": {
     "abbrev": {
       "version": "1.0.7",
@@ -4469,6 +4469,11 @@
       "version": "2.2.0",
       "from": "jquery@*",
       "resolved": "https://registry.npmjs.org/jquery/-/jquery-2.2.0.tgz"
+    },
+    "jquery-validation": {
+      "version": "1.14.0",
+      "from": "jquery-validation@latest",
+      "resolved": "https://registry.npmjs.org/jquery-validation/-/jquery-validation-1.14.0.tgz"
     },
     "js-base64": {
       "version": "2.1.9",
