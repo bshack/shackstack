@@ -1,4 +1,18 @@
 <picture{{#if this.id}} id="{{this.id}}"{{/if}}{{#if this.class}} class="{{this.class}}"{{/if}}{{#if this.accessible-title}} aria-label="{{this.accessible-title}}"{{/if}} alt="{{#if this.alt}}{{this.alt}}{{/if}}">
-    <source srcset="{{this.image}}" media="(max-width: 400px)">
-    <source srcset="{{this.image}}" media="(min-width: 401px)">
+    {{#if this.imageSmall}}
+    <source srcset="{{#unless this.external}}{{this.cdn}}{{/unless}}{{this.imageSmall}}" media="(min-width: 0rem)">
+    {{/if}}
+    {{#if this.imageMedium}}
+    <source srcset="{{#unless this.external}}{{this.cdn}}{{/unless}}{{this.imageMedium}}" media="(min-width: 40rem)">
+    {{/if}}
+    {{#if this.imageLarge}}
+    <source srcset="{{#unless this.external}}{{this.cdn}}{{/unless}}{{this.imageLarge}}" media="(min-width: 64rem)">
+    {{/if}}
+    {{#if this.imageXLarge}}
+    <source srcset="{{#unless this.external}}{{this.cdn}}{{/unless}}{{this.imageXLarge}}" media="(min-width: 75rem)">
+    {{/if}}
+    {{#if this.imageXXLarge}}
+    <source srcset="{{#unless this.external}}{{this.cdn}}{{/unless}}{{this.imageXXLarge}}" media="(min-width: 90rem)">
+    {{/if}}
+    {{> tags/img}}
 </picture>

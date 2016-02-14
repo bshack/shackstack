@@ -226,18 +226,6 @@ main:focus {
     @extend %fieldset-1;
 }
 
-.label-1 {
-    @extend %label-1;
-}
-
-.legend-1 {
-    @extend %legend-1;
-}
-
-.list-1 {
-    @extend %list-1;
-}
-
 .image-1 {
     @extend %image-1;
 }
@@ -256,6 +244,22 @@ main:focus {
 
 .input-text-1 {
     @extend %input-text-1;
+}
+
+.label-1 {
+    @extend %label-1;
+}
+
+.legend-1 {
+    @extend %legend-1;
+}
+
+.list-1 {
+    @extend %list-1;
+}
+
+.picture-1 {
+    @extend %picture-1;
 }
 
 .textarea-1 {
