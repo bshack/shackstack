@@ -1,15 +1,18 @@
 (function() {
     'use strict';
+    
     var Backbone = require('../../backbone/package');
     var templateInputError1 = require('../../template/toolkit/input-error-1');
     require('jquery-validation');
+
     module.exports = Backbone.View.extend({
         initialize: function(options) {
+            //save options
             this.options = options;
+            //cache this
             var _this = this;
-            // init validation plugin
-            this.$el.validate({
-                rules: (options.rules || {}),
+            //setup default validation settings
+            var validationDefaults =  {
                 //overide default error display plugin functionalty
                 showErrors: function(errorMap, errorList) {
                     //clean up error messages boxes
@@ -40,12 +43,17 @@
                             }));
                     });
                 }
-            });
+            };
+            // extend default settings with any new supplied settings
+            var validationSettings = Backbone.$.extend({}, validationDefaults, this.options);
+            // init validation plugin
+            this.$el.validate(validationSettings);
         },
         events: {
             'submit': 'submitEvent'
         },
         template: function(data) {
+            //return the error container template
             return Backbone.$(templateInputError1(data));
         },
         submitEvent: function(e) {
