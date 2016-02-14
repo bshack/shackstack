@@ -25,11 +25,29 @@
 
 }
 
+%fieldset-1 {
+
+    @extend %arial-1;
+
+    margin: 0;
+
+}
+
 // ## labels
 
 %label-1 {
 
     @extend %arial-1;
+
+    margin: 0;
+
+}
+
+// ## labels
+
+%legend-1 {
+
+    @extend %heading-2;
 
     margin: 0;
 
@@ -59,11 +77,12 @@
 
     background-color: $red-1;
     color: $white-1;
+    font-weight: 700;
     margin-top: rem-calc(5);
     padding: rem-calc(10);
 
-    p {
-        margin: 0;
+    strong {
+        font-weight: 700;
     }
 
 }

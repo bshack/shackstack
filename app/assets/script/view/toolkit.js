@@ -11,7 +11,10 @@
         initialize: function() {
             // setup example form
             new ViewForm1({
-                el: Backbone.$('.form-1')
+                el: Backbone.$('.form-1'),
+                isValid: function($form) {
+                    window.console.log('form is valid', $form);
+                }
             });
             // setup example tabpanel
             new ViewTabpanel1({
