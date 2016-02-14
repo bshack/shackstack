@@ -141,6 +141,10 @@ nav {
         max-width: rem-calc(123);
     }
 
+    &.red-1 {
+        background-color: $red-1;
+    }
+
 }
 
 .grid {

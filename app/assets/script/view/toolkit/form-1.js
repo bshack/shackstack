@@ -57,7 +57,7 @@
                     hitType: 'event',
                     eventCategory: 'form',
                     eventAction: 'submit',
-                    eventLabel: ''
+                    eventLabel: (this.$el.attr('id') || 'unknown')
                 });
                 // callback if form is valid
                 if (this.options.isValid) {
