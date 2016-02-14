@@ -270,7 +270,15 @@
                     <h2>Pictures</h2>
                     <p>style: <a href="{{www}}report/docco/style/base/_elements.html#images">_elements.scss</a></p>
                     <h3>picture-1</h3>
-                    <p>{{> toolkit/picture-1 image='assets/image/html5-small.png' imageSmall='assets/image/html5-small.png' alt='image example alternative text'}}</p>
+                    <p>{{> toolkit/picture-1
+                        imageFallback='assets/image/html5-fallback.png'
+                        imageSmall='assets/image/html5-small.png'
+                        imageMedium='assets/image/html5-medium.png'
+                        imageLarge='assets/image/html5-large.png'
+                        imageXLarge='assets/image/html5-xlarge.png'
+                        imageXXLarge='assets/image/html5-xxlarge.png'
+                        alt='image example alternative text'
+                    }}</p>
                     <h3>Accessibility</h3>
                     <h4>Gherkin</h4>
                     <p>active/actionable pictures:</p>

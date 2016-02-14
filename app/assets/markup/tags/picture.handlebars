@@ -1,18 +1,18 @@
 <picture{{#if this.id}} id="{{this.id}}"{{/if}}{{#if this.class}} class="{{this.class}}"{{/if}}{{#if this.accessible-title}} aria-label="{{this.accessible-title}}"{{/if}} alt="{{#if this.alt}}{{this.alt}}{{/if}}">
     {{#if this.imageSmall}}
-    <source srcset="{{#unless this.external}}{{this.cdn}}{{/unless}}{{this.imageSmall}}" media="(min-width: 0rem)">
+    <source media="(max-width: 39.999rem)" srcset="{{#unless this.external}}{{this.cdn}}{{/unless}}{{this.imageSmall}}">
     {{/if}}
     {{#if this.imageMedium}}
-    <source srcset="{{#unless this.external}}{{this.cdn}}{{/unless}}{{this.imageMedium}}" media="(min-width: 40rem)">
+    <source media="(max-width: 63.999rem)" srcset="{{#unless this.external}}{{this.cdn}}{{/unless}}{{this.imageMedium}}">
     {{/if}}
     {{#if this.imageLarge}}
-    <source srcset="{{#unless this.external}}{{this.cdn}}{{/unless}}{{this.imageLarge}}" media="(min-width: 64rem)">
+    <source media="(max-width: 74.999rem)" srcset="{{#unless this.external}}{{this.cdn}}{{/unless}}{{this.imageLarge}}">
     {{/if}}
     {{#if this.imageXLarge}}
-    <source srcset="{{#unless this.external}}{{this.cdn}}{{/unless}}{{this.imageXLarge}}" media="(min-width: 75rem)">
+    <source media="(max-width: 89.999rem)" srcset="{{#unless this.external}}{{this.cdn}}{{/unless}}{{this.imageXLarge}}">
     {{/if}}
     {{#if this.imageXXLarge}}
-    <source srcset="{{#unless this.external}}{{this.cdn}}{{/unless}}{{this.imageXXLarge}}" media="(min-width: 90rem)">
+    <source media="(min-width: 90rem)" srcset="{{#unless this.external}}{{this.cdn}}{{/unless}}{{this.imageXXLarge}}">
     {{/if}}
-    {{> tags/img}}
+    {{> tags/img image=this.imageFallback}}
 </picture>
