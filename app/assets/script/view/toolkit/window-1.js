@@ -23,6 +23,10 @@
             orientation: false
         },
         errorEvent: function(message, url, line) {
+            //sometimes message is an object
+            if (typeof message === 'object') {
+                message = 'no message (object)';
+            }
             //report back script errors to metrics
             Backbone.Mediator.publish('metrics:event:send', {
                 hitType: 'event',
