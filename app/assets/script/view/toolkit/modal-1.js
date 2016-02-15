@@ -22,6 +22,9 @@
             // remove the modal
             this.$el
                 .detach();
+            // scroll to previous position
+            Backbone.$(window)
+                .scrollTop(this.$el.data('windowScrollPosition'));
             // focus on the element that originally opened the modal
             this.$opener
                 .focus();

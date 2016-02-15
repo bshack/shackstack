@@ -25,6 +25,7 @@
         },
         render: function(e) {
             e.preventDefault();
+            var windowScrollPosition = Backbone.$(window).scrollTop();
             // the opener
             var $target = Backbone.$(e.target);
             // build the modal markup
@@ -33,6 +34,7 @@
             new ViewModal1({
                 el: $modal
             });
+
             //add to dom
             Backbone.$('body')
                 .prepend($modal);
@@ -40,10 +42,11 @@
             Backbone.$('body > *')
                 .not('script, [data-modal]')
                 .attr('hidden', 'hidden');
-            //put focuse on the modal and cache the opening element
+            //put focuse on the modal and cache the opening element and window position
             $modal
                 .focus()
-                .data('opener', $target);
+                .data('opener', $target)
+                .data('windowScrollPosition', windowScrollPosition);
             //send click event to metrics
             Backbone.Mediator.publish('metrics:event:send', {
                 hitType: 'event',
