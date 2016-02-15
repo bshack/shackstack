@@ -13,13 +13,16 @@
             this.closeModal();
         },
         closeModal: function() {
+            if (!Backbone.$('[data-modal]').size()) {
+                return;
+            }
             // cache the element that lauched the modal
             this.$opener = this.$el.data('opener');
             // show all the page content
             Backbone.$('body > *')
                 .not('script, [data-modal]')
                 .removeAttr('hidden');
-            // remove the modal
+            // remove it from the screen
             this.$el
                 .detach();
             // scroll to previous position
