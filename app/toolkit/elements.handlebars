@@ -28,283 +28,285 @@
         </nav>
 
         <main id="main" tabindex="-1">
-            <section class="row">
-                <div class="small-12 columns">
-                    <h1>Elements</h1>
+            <section>
+                <div class="row">
+                    <div class="small-12 columns">
+                        <h1>Elements</h1>
 
-                    <h2>Anchors</h2>
-                    <p>style: <a href="{{www}}report/docco/style/base/_elements.html#anchors">_elements.scss</a></p>
-                    <h3>anchor-1</h3>
-                    <p>{{> toolkit/anchor-1 id='anchor-1' title='detailed information about this product' url='#'}}</p>
-                    <p>example of helper text only for screen readers:</p>
-                    <p>{{> toolkit/anchor-1 id='anchor-1-aria' title='click here' accessible-title='detailed information about this product' url='#'}}</p>
-                    <h3>Accessibility</h3>
-                    <h4>Usage</h4>
-                    <p>Anchors should be used when a click takes the user to a new page or location on the current page.</p>
-                    <p>The anchor should provide enough helper text to give the user an indication of the content they will be taken to.</p>
-                    <h4>Gherkin</h4>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I navigate to an anchor with the tab key<br>
-                        THEN I hear the anchor text read aloud<br>
-                        AND the helper text provides an indication of the content of the linked to location<br>
-                        AND I will hear element identified as an anchor<br>
-                        AND I will see focus visual change</p>
-                    </div>
+                        <h2>Anchors</h2>
+                        <p>style: <a href="{{www}}report/docco/style/base/_elements.html#anchors">_elements.scss</a></p>
+                        <h3>anchor-1</h3>
+                        <p>{{> toolkit/anchor-1 id='anchor-1' title='detailed information about this product' url='#'}}</p>
+                        <p>example of helper text only for screen readers:</p>
+                        <p>{{> toolkit/anchor-1 id='anchor-1-aria' title='click here' accessible-title='detailed information about this product' url='#'}}</p>
+                        <h3>Accessibility</h3>
+                        <h4>Usage</h4>
+                        <p>Anchors should be used when a click takes the user to a new page or location on the current page.</p>
+                        <p>The anchor should provide enough helper text to give the user an indication of the content they will be taken to.</p>
+                        <h4>Gherkin</h4>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I navigate to an anchor with the tab key<br>
+                            THEN I hear the anchor text read aloud<br>
+                            AND the helper text provides an indication of the content of the linked to location<br>
+                            AND I will hear element identified as an anchor<br>
+                            AND I will see focus visual change</p>
+                        </div>
 
-                    <hr>
+                        <hr>
 
-                    <h2>Buttons</h2>
-                    <p>style: <a href="{{www}}report/docco/style/base/_elements.html#buttons">_elements.scss</a></p>
-                    <h3>button-1</h3>
-                    <p>{{> toolkit/button-1 id='button-1' title='detailed information about this product'}}</p>
-                    <p>example of helper text only for screen readers:</p>
-                    <p>{{> toolkit/button-1 id='button-1-aria' title='click here' accessible-title='detailed information about this product' url='#'}}</p>
-                    <h3>Accessibility</h3>
-                    <h4>Usage</h4>
-                    <p>Buttons should be used when a click changes the view by opening a modal or modifying the DOM and does not take the user to a new location.</p>
-                    <p>The button should provide enough helper text to give the user an indication of the action that will be taken.</p>
-                    <h4>Gherkin</h4>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I navigate to a button with the tab key<br>
-                        THEN I will hear the button label<br>
-                        AND I will hear element identified as a button<br>
-                        AND the helper text provides an indication of the action of the action that will be taken<br>
-                        AND I will see focus visual change<br>
-                        AND I will hear a selected indicator if option is selected</p>
-                    </div>
+                        <h2>Buttons</h2>
+                        <p>style: <a href="{{www}}report/docco/style/base/_elements.html#buttons">_elements.scss</a></p>
+                        <h3>button-1</h3>
+                        <p>{{> toolkit/button-1 id='button-1' title='detailed information about this product'}}</p>
+                        <p>example of helper text only for screen readers:</p>
+                        <p>{{> toolkit/button-1 id='button-1-aria' title='click here' accessible-title='detailed information about this product' url='#'}}</p>
+                        <h3>Accessibility</h3>
+                        <h4>Usage</h4>
+                        <p>Buttons should be used when a click changes the view by opening a modal or modifying the DOM and does not take the user to a new location.</p>
+                        <p>The button should provide enough helper text to give the user an indication of the action that will be taken.</p>
+                        <h4>Gherkin</h4>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I navigate to a button with the tab key<br>
+                            THEN I will hear the button label<br>
+                            AND I will hear element identified as a button<br>
+                            AND the helper text provides an indication of the action of the action that will be taken<br>
+                            AND I will see focus visual change<br>
+                            AND I will hear a selected indicator if option is selected</p>
+                        </div>
 
-                    <hr>
+                        <hr>
 
-                    <h2>Labels</h2>
-                    <p>style: <a href="{{www}}report/docco/style/base/_elements.html#labels">_elements.scss</a></p>
-                    <h3>label-1</h3>
-                    <p>{{> toolkit/label-1 id='label-1' title='Name' for='label-example-input'}}</p>
-                    <p>{{> toolkit/input-text-1 id='label-example-input' placeholder='first and last name' type='text'}}</p>
-                    <h3>Accessibility</h3>
-                    <h4>Gherkin</h4>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I select a form element label using the keyboard<br>
-                        THEN I will hear the label read aloud</p>
-                    </div>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I select a form element label using the keyboard<br>
-                        THEN I will hear the label read aloud</p>
-                    </div>
+                        <h2>Labels</h2>
+                        <p>style: <a href="{{www}}report/docco/style/base/_elements.html#labels">_elements.scss</a></p>
+                        <h3>label-1</h3>
+                        <p>{{> toolkit/label-1 id='label-1' title='Name' for='label-example-input'}}</p>
+                        <p>{{> toolkit/input-text-1 id='label-example-input' placeholder='first and last name' type='text'}}</p>
+                        <h3>Accessibility</h3>
+                        <h4>Gherkin</h4>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I select a form element label using the keyboard<br>
+                            THEN I will hear the label read aloud</p>
+                        </div>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I select a form element label using the keyboard<br>
+                            THEN I will hear the label read aloud</p>
+                        </div>
 
-                    <hr>
+                        <hr>
 
-                    <h2>Lists</h2>
-                    <p>style: <a href="{{www}}report/docco/style/base/_elements.html#lists">_elements.scss</a></p>
-                    <h3>list-1</h3>
-                    {{> toolkit/list-1 elements.list-1}}
-                    <h3>Accessibility</h3>
-                    <h4>Gherkin</h4>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I select the list using the keyboard<br>
-                        THEN I hear element identified as a list<br>
-                        AND I will hear the number of items in the list</p>
-                    </div>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN navigate the list with my keyboard arrow keys<br>
-                        THEN I will hear the next item read aloud</p>
-                    </div>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN navigate the past the last item in a list with the keyboard arrow key<br>
-                        THEN I will hear that I have come to the end of the list</p>
-                    </div>
+                        <h2>Lists</h2>
+                        <p>style: <a href="{{www}}report/docco/style/base/_elements.html#lists">_elements.scss</a></p>
+                        <h3>list-1</h3>
+                        {{> toolkit/list-1 elements.list-1}}
+                        <h3>Accessibility</h3>
+                        <h4>Gherkin</h4>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I select the list using the keyboard<br>
+                            THEN I hear element identified as a list<br>
+                            AND I will hear the number of items in the list</p>
+                        </div>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN navigate the list with my keyboard arrow keys<br>
+                            THEN I will hear the next item read aloud</p>
+                        </div>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN navigate the past the last item in a list with the keyboard arrow key<br>
+                            THEN I will hear that I have come to the end of the list</p>
+                        </div>
 
-                    <hr>
+                        <hr>
 
-                    <h2>Input Checkboxes</h2>
-                    <p>style: <a href="{{www}}report/docco/style/base/_elements.html#input-checkboxes">_elements.scss</a></p>
-                    <h3>input-checkbox-1</h3>
-                    <p>{{> toolkit/label-1 title='Opt me in' for='input-checkbox-1-example'}}</p>
-                    <p>{{> toolkit/input-checkbox-1 id='input-checkbox-1-example' name='checkbox-example' checked=true}}</p>
-                    <h3>Accessibility</h3>
-                    <h4>Gherkin</h4>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I navigate to a checkbox with the tab key<br>
-                        THEN I will hear the element identified as a checkbox<br>
-                        AND I will hear the label read aloud<br>
-                        AND I will here if it is selected<br>
-                        AND I will see focus visual change</p>
-                    </div>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I select a checkbox using the keyboard<br>
-                        THEN I will hear the element be selected<br>
-                        AND I will hear the label read aloud<br>
-                        AND I will here if it is selected</p>
-                    </div>
+                        <h2>Input Checkboxes</h2>
+                        <p>style: <a href="{{www}}report/docco/style/base/_elements.html#input-checkboxes">_elements.scss</a></p>
+                        <h3>input-checkbox-1</h3>
+                        <p>{{> toolkit/label-1 title='Opt me in' for='input-checkbox-1-example'}}</p>
+                        <p>{{> toolkit/input-checkbox-1 id='input-checkbox-1-example' name='checkbox-example' checked=true}}</p>
+                        <h3>Accessibility</h3>
+                        <h4>Gherkin</h4>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I navigate to a checkbox with the tab key<br>
+                            THEN I will hear the element identified as a checkbox<br>
+                            AND I will hear the label read aloud<br>
+                            AND I will here if it is selected<br>
+                            AND I will see focus visual change</p>
+                        </div>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I select a checkbox using the keyboard<br>
+                            THEN I will hear the element be selected<br>
+                            AND I will hear the label read aloud<br>
+                            AND I will here if it is selected</p>
+                        </div>
 
-                    <hr>
+                        <hr>
 
-                    <h2>Input Radio Buttons</h2>
-                    <p>style: <a href="{{www}}report/docco/style/base/_elements.html#input-radio-buttons">_elements.scss</a></p>
-                    <h3>input-radio-1</h3>
-                    <p id="radio-group-label">What color do you want?</p>
-                    <p>{{> toolkit/label-1 title='red' for='input-radio-1-example-1'}}</p>
-                    <p>{{> toolkit/input-radio-1 id='input-radio-1-example-1' name='radio-example' checked=true  labelledby='radio-group-label'}}</p>
-                    <p>{{> toolkit/label-1 title='blue' for='input-radio-1-example-2'}}</p>
-                    <p>{{> toolkit/input-radio-1 id='input-radio-1-example-2' name='radio-example' labelledby='radio-group-label'}}</p>
-                    <h3>Accessibility</h3>
-                    <h4>Gherkin</h4>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I navigate to a radio button with the tab key<br>
-                        THEN I will hear the element identified as a radio button<br>
-                        AND I will hear the label read aloud<br>
-                        AND I will here if it is selected<br>
-                        AND I will see focus visual change</p>
-                    </div>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I select a radio button using the keyboard<br>
-                        THEN I will hear the element be selected<br>
-                        AND I will hear the label read aloud<br>
-                        AND I will here if it is selected</p>
-                    </div>
+                        <h2>Input Radio Buttons</h2>
+                        <p>style: <a href="{{www}}report/docco/style/base/_elements.html#input-radio-buttons">_elements.scss</a></p>
+                        <h3>input-radio-1</h3>
+                        <p id="radio-group-label">What color do you want?</p>
+                        <p>{{> toolkit/label-1 title='red' for='input-radio-1-example-1'}}</p>
+                        <p>{{> toolkit/input-radio-1 id='input-radio-1-example-1' name='radio-example' checked=true  labelledby='radio-group-label'}}</p>
+                        <p>{{> toolkit/label-1 title='blue' for='input-radio-1-example-2'}}</p>
+                        <p>{{> toolkit/input-radio-1 id='input-radio-1-example-2' name='radio-example' labelledby='radio-group-label'}}</p>
+                        <h3>Accessibility</h3>
+                        <h4>Gherkin</h4>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I navigate to a radio button with the tab key<br>
+                            THEN I will hear the element identified as a radio button<br>
+                            AND I will hear the label read aloud<br>
+                            AND I will here if it is selected<br>
+                            AND I will see focus visual change</p>
+                        </div>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I select a radio button using the keyboard<br>
+                            THEN I will hear the element be selected<br>
+                            AND I will hear the label read aloud<br>
+                            AND I will here if it is selected</p>
+                        </div>
 
-                    <hr>
+                        <hr>
 
-                    <h2>Input Text Boxes</h2>
-                    <p>style: <a href="{{www}}report/docco/style/base/_elements.html#input-text-boxes">_elements.scss</a></p>
-                    <h3>input-text-1</h3>
-                    <p>{{> toolkit/label-1 title='Name' for='input-text-1-example'}}</p>
-                    <p>{{> toolkit/input-text-1 id='input-text-1-example' placeholder='first and last name' type='text'}}</p>
-                    <h3>Accessibility</h3>
-                    <h4>Gherkin</h4>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I navigate to a text input with the tab key<br>
-                        THEN I will hear the element identified as an input<br>
-                        AND I will hear the label read aloud<br>
-                        AND I will hear any defined value<br>
-                        AND I will hear any defined placeholder text<br>
-                        AND I will hear if the field is required<br>
-                        AND I will see focus visual change</p>
-                    </div>
+                        <h2>Input Text Boxes</h2>
+                        <p>style: <a href="{{www}}report/docco/style/base/_elements.html#input-text-boxes">_elements.scss</a></p>
+                        <h3>input-text-1</h3>
+                        <p>{{> toolkit/label-1 title='Name' for='input-text-1-example'}}</p>
+                        <p>{{> toolkit/input-text-1 id='input-text-1-example' placeholder='first and last name' type='text'}}</p>
+                        <h3>Accessibility</h3>
+                        <h4>Gherkin</h4>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I navigate to a text input with the tab key<br>
+                            THEN I will hear the element identified as an input<br>
+                            AND I will hear the label read aloud<br>
+                            AND I will hear any defined value<br>
+                            AND I will hear any defined placeholder text<br>
+                            AND I will hear if the field is required<br>
+                            AND I will see focus visual change</p>
+                        </div>
 
-                    <hr>
+                        <hr>
 
-                    <h2>Textareas</h2>
-                    <p>style: <a href="{{www}}report/docco/style/base/_elements.html#textareas">_elements.scss</a></p>
-                    <h3>textarea-1</h3>
-                    <p>{{> toolkit/label-1 title='additonal comments:' for='textarea-1-example'}}</p>
-                    <p>{{> toolkit/textarea-1 id='textarea-1-example' placeholder='please be detailed'}}</p>
-                    <h3>Accessibility</h3>
-                    <h4>Gherkin</h4>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I navigate to a textarea with the tab key<br>
-                        THEN I will hear the element identified as an input<br>
-                        AND I will hear the label read aloud<br>
-                        AND I will hear any defined value<br>
-                        AND I will hear if the field is required<br>
-                        AND I will see focus visual change</p>
-                    </div>
+                        <h2>Textareas</h2>
+                        <p>style: <a href="{{www}}report/docco/style/base/_elements.html#textareas">_elements.scss</a></p>
+                        <h3>textarea-1</h3>
+                        <p>{{> toolkit/label-1 title='additonal comments:' for='textarea-1-example'}}</p>
+                        <p>{{> toolkit/textarea-1 id='textarea-1-example' placeholder='please be detailed'}}</p>
+                        <h3>Accessibility</h3>
+                        <h4>Gherkin</h4>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I navigate to a textarea with the tab key<br>
+                            THEN I will hear the element identified as an input<br>
+                            AND I will hear the label read aloud<br>
+                            AND I will hear any defined value<br>
+                            AND I will hear if the field is required<br>
+                            AND I will see focus visual change</p>
+                        </div>
 
-                    <hr>
+                        <hr>
 
-                    <h2>Select Menus</h2>
-                    <p>style: <a href="{{www}}report/docco/style/base/_elements.html#select-menus">_elements.scss</a></p>
-                    <h3>select-1</h3>
-                    <p>{{> toolkit/label-1 title='what type of vehicle do you drive?' for='select-1-example'}}</p>
-                    <p>{{> toolkit/select-1 elements.select-1 id='select-1-example'}}</p>
-                    <h3>Accessibility</h3>
-                    <h4>Gherkin</h4>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I navigate to a dropdown menu with the tab key<br>
-                        THEN I will hear the element identified as an dropdown menu<br>
-                        AND I will hear the label read aloud<br>
-                        AND I will hear any defined value<br>
-                        AND I will hear any defined placeholder text<br>
-                        AND I will hear if the field is required<br>
-                        AND I will see focus visual change</p>
-                    </div>
-                    <div class="gherkin">
-                        <p>GIVEN I am a blind screen reader user<br>
-                        WHEN I open the dropdown menu with the spacebar key<br>
-                        THEN I will hear the number of options<br>
-                        AND I will hear selected option</p>
-                    </div>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I open the dropdown menu with the spacebar key<br>
-                        AND I navigate through the options<br>
-                        THEN I will hear the option label<br>
-                        AND I will hear a selected indicator if option is selected</p>
-                    </div>
+                        <h2>Select Menus</h2>
+                        <p>style: <a href="{{www}}report/docco/style/base/_elements.html#select-menus">_elements.scss</a></p>
+                        <h3>select-1</h3>
+                        <p>{{> toolkit/label-1 title='what type of vehicle do you drive?' for='select-1-example'}}</p>
+                        <p>{{> toolkit/select-1 elements.select-1 id='select-1-example'}}</p>
+                        <h3>Accessibility</h3>
+                        <h4>Gherkin</h4>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I navigate to a dropdown menu with the tab key<br>
+                            THEN I will hear the element identified as an dropdown menu<br>
+                            AND I will hear the label read aloud<br>
+                            AND I will hear any defined value<br>
+                            AND I will hear any defined placeholder text<br>
+                            AND I will hear if the field is required<br>
+                            AND I will see focus visual change</p>
+                        </div>
+                        <div class="gherkin">
+                            <p>GIVEN I am a blind screen reader user<br>
+                            WHEN I open the dropdown menu with the spacebar key<br>
+                            THEN I will hear the number of options<br>
+                            AND I will hear selected option</p>
+                        </div>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I open the dropdown menu with the spacebar key<br>
+                            AND I navigate through the options<br>
+                            THEN I will hear the option label<br>
+                            AND I will hear a selected indicator if option is selected</p>
+                        </div>
 
-                    <hr>
+                        <hr>
 
-                    <h2>Tables</h2>
-                    <p>style: <a href="{{www}}report/docco/style/base/_elements.html#tables">_elements.scss</a></p>
-                    <h3>table-1</h3>
-                    {{> toolkit/table-1 elements.table-1}}
-                    <h3>Accessibility</h3>
-                    <h4>Gherkin</h4>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I navigate to a table with the tab key<br>
-                        THEN I will hear table caption<br>
-                        AND I will hear the number of columns and number of rows</p>
-                    </div>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I navigate from cell to cell using Control + Alt + arrow keys<br>
-                        THEN I need to hear the table headers</p>
-                    </div>
+                        <h2>Tables</h2>
+                        <p>style: <a href="{{www}}report/docco/style/base/_elements.html#tables">_elements.scss</a></p>
+                        <h3>table-1</h3>
+                        {{> toolkit/table-1 elements.table-1}}
+                        <h3>Accessibility</h3>
+                        <h4>Gherkin</h4>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I navigate to a table with the tab key<br>
+                            THEN I will hear table caption<br>
+                            AND I will hear the number of columns and number of rows</p>
+                        </div>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I navigate from cell to cell using Control + Alt + arrow keys<br>
+                            THEN I need to hear the table headers</p>
+                        </div>
 
-                    <hr>
+                        <hr>
 
-                    <h2>Pictures</h2>
-                    <p>style: <a href="{{www}}report/docco/style/base/_elements.html#images">_elements.scss</a></p>
-                    <h3>picture-1</h3>
-                    <p>{{> toolkit/picture-1
-                        imageFallback='assets/image/demo/fallback.jpg'
-                        imageSmall='assets/image/demo/small.jpg'
-                        imageMedium='assets/image/demo/medium.jpg'
-                        imageLarge='assets/image/demo/large.jpg'
-                        imageXLarge='assets/image/demo/xlarge.jpg'
-                        imageXXLarge='assets/image/demo/xxlarge.jpg'
-                        alt='image example alternative text'
-                    }}</p>
-                    <h3>Accessibility</h3>
-                    <h4>Gherkin</h4>
-                    <p>active/actionable pictures:</p>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN a picture receives keyboard focus,<br>
-                        THEN I will hear the destination or function of that picture.</p>
-                    </div>
-                    <p>informative pictures:</p>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I come across a picture that presents useful information,<br>
-                        THEN I should hear a description that provides equivalent information.</p>
-                    </div>
-                    <p>decorative pictures:</p>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I come across a picture that is decorative or redundant,<br>
-                        THEN I should not hear anything for that picture.</p>
-                    </div>
-                    <p>complex pictures:</p>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I come across a picture that presents complex information,<br>
-                        THEN I should hear a detailed description of that picture,<br>
-                        or find a link to a page that presents more information about the picture.</p>
+                        <h2>Pictures</h2>
+                        <p>style: <a href="{{www}}report/docco/style/base/_elements.html#images">_elements.scss</a></p>
+                        <h3>picture-1</h3>
+                        <p>{{> toolkit/picture-1
+                            imageFallback='assets/image/demo/fallback.jpg'
+                            imageSmall='assets/image/demo/small.jpg'
+                            imageMedium='assets/image/demo/medium.jpg'
+                            imageLarge='assets/image/demo/large.jpg'
+                            imageXLarge='assets/image/demo/xlarge.jpg'
+                            imageXXLarge='assets/image/demo/xxlarge.jpg'
+                            alt='image example alternative text'
+                        }}</p>
+                        <h3>Accessibility</h3>
+                        <h4>Gherkin</h4>
+                        <p>active/actionable pictures:</p>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN a picture receives keyboard focus,<br>
+                            THEN I will hear the destination or function of that picture.</p>
+                        </div>
+                        <p>informative pictures:</p>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I come across a picture that presents useful information,<br>
+                            THEN I should hear a description that provides equivalent information.</p>
+                        </div>
+                        <p>decorative pictures:</p>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I come across a picture that is decorative or redundant,<br>
+                            THEN I should not hear anything for that picture.</p>
+                        </div>
+                        <p>complex pictures:</p>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I come across a picture that presents complex information,<br>
+                            THEN I should hear a detailed description of that picture,<br>
+                            or find a link to a page that presents more information about the picture.</p>
+                        </div>
                     </div>
                 </div>
             </section>

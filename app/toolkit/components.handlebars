@@ -28,133 +28,135 @@
         </nav>
 
         <main id="main" tabindex="-1">
-            <section class="row">
-                <div class="small-12 columns">
-                    <h1>Components</h1>
+            <section>
+                <div class="row">
+                    <div class="small-12 columns">
+                        <h1>Components</h1>
 
-                    <h2>Forms</h2>
-                    <p>script: <a href="{{www}}report/docco/script/view/toolkit/form-1.html">form-1.js</a></p>
-                    <h3>form-1</h3>
+                        <h2>Forms</h2>
+                        <p>script: <a href="{{www}}report/docco/script/view/toolkit/form-1.html">form-1.js</a></p>
+                        <h3>form-1</h3>
 
-                    <form class="form-1" id="form-1-example" name="form-1-example">
+                        <form class="form-1" id="form-1-example" name="form-1-example">
 
-                        <fieldset class="fieldset-1">
+                            <fieldset class="fieldset-1">
 
-                            <legend class="legend-1">Tell us about your vehicle</legend>
+                                <legend class="legend-1">Tell us about your vehicle</legend>
 
-                            <p>{{> toolkit/label-1 title='What is the make of the vehicle?' for='input-text-1-example'}}</p>
-                            <p>{{> toolkit/input-text-1 id='input-text-1-example' name='input-text-1-example' placeholder='i.e. Buick' type='text' required=true}}</p>
+                                <p>{{> toolkit/label-1 title='What is the make of the vehicle?' for='input-text-1-example'}}</p>
+                                <p>{{> toolkit/input-text-1 id='input-text-1-example' name='input-text-1-example' placeholder='i.e. Buick' type='text' required=true}}</p>
 
-                            <p>{{> toolkit/label-1 title='what type of vehicle is it?' for='select-1-example'}}</p>
-                            <p>{{> toolkit/select-1 select-1 id='select-1-example' name='select-1-example' required=true}}</p>
+                                <p>{{> toolkit/label-1 title='what type of vehicle is it?' for='select-1-example'}}</p>
+                                <p>{{> toolkit/select-1 select-1 id='select-1-example' name='select-1-example' required=true}}</p>
 
-                            <p id="radio-group-label">Do you own or lease the vehicle?</p>
-                            <p>{{> toolkit/label-1 title='own' for='input-radio-1-example-1'}}</p>
-                            <p>{{> toolkit/input-radio-1 id='input-radio-1-example-1' name='radio-example' labelledby='radio-group-label'}}</p>
-                            <p>{{> toolkit/label-1 title='lease' for='input-radio-1-example-2'}}</p>
-                            <p>{{> toolkit/input-radio-1 id='input-radio-1-example-2' name='radio-example' labelledby='radio-group-label'}}</p>
+                                <p id="radio-group-label">Do you own or lease the vehicle?</p>
+                                <p>{{> toolkit/label-1 title='own' for='input-radio-1-example-1'}}</p>
+                                <p>{{> toolkit/input-radio-1 id='input-radio-1-example-1' name='radio-example' labelledby='radio-group-label'}}</p>
+                                <p>{{> toolkit/label-1 title='lease' for='input-radio-1-example-2'}}</p>
+                                <p>{{> toolkit/input-radio-1 id='input-radio-1-example-2' name='radio-example' labelledby='radio-group-label'}}</p>
 
-                            <p>{{> toolkit/label-1 title='please provide any additonal comments:' for='textarea-1-example'}}</p>
-                            <p>{{> toolkit/textarea-1 id='textarea-1-example' name='textarea-1-example' placeholder='please be detailed' required=true}}</p>
+                                <p>{{> toolkit/label-1 title='please provide any additonal comments:' for='textarea-1-example'}}</p>
+                                <p>{{> toolkit/textarea-1 id='textarea-1-example' name='textarea-1-example' placeholder='please be detailed' required=true}}</p>
 
-                        </fieldset>
+                            </fieldset>
 
-                        <fieldset class="fieldset-1">
+                            <fieldset class="fieldset-1">
 
-                            <legend class="legend-1">Agree to terms</legend>
+                                <legend class="legend-1">Agree to terms</legend>
 
-                            <p>{{> toolkit/label-1 title='I agree to terms and conditions.' for='input-checkbox-1-example'}}</p>
-                            <p>{{> toolkit/input-checkbox-1 id='input-checkbox-1-example' name='checkbox-example' checked=true required=true}}</p>
+                                <p>{{> toolkit/label-1 title='I agree to terms and conditions.' for='input-checkbox-1-example'}}</p>
+                                <p>{{> toolkit/input-checkbox-1 id='input-checkbox-1-example' name='checkbox-example' checked=true required=true}}</p>
 
-                        </fieldset>
+                            </fieldset>
 
-                        <p>{{> toolkit/button-1 id='button-1' type='submit' title='save your changes'}}</p>
+                            <p>{{> toolkit/button-1 id='button-1' type='submit' title='save your changes'}}</p>
 
-                    </form>
-                    <h3>Accessibility</h3>
-                    <h4>Gherkin</h4>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I submit a form with validation errors<br>
-                        THEN I will be focused on the first form field in error state<br>
-                        THEN I will hear the label for that form field<br>
-                        THEN I will hear if the form field is required<br>
-                        THEN I will hear a description of how to fix the error.
-                        </p>
-                    </div>
-                    <hr>
-
-                    <h2>Modals</h2>
-                    <p>style: <a href="{{www}}report/docco/style/base/_components.html#modals">_components.scss</a></p>
-                    <p>script: <a href="{{www}}report/docco/script/view/toolkit/modalOpen-1.html">modalOpen-1.js</a>, <a href="{{www}}report/docco/script/view/toolkit/modal-1.html">modal-1.js</a></p>
-                    <h3>modal-1</h3>
-                    <p><button class="button-1" data-modal-open="modal-example-1">view disclosures</button></p>
-                    <h3>Accessibility</h3>
-                    <h4>Gherkin</h4>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I activate a button to call a dialog (the control is NOT a link)<br>
-                        THEN the keyboard focus goes to the active dialog<br>
-                        AND I hear the screen reader read the title of the dialog<br>
-                        (AND the button in default focus, if applicable)<br>
-                        AND I cannot escape the dialog with the tab key<br>
-                        AND I can escape the dialog with the escape key<br>
-                        AND WHEN I close the dialog, the focus goes back to the original button<br>
-                        (OR to the most appropriate place, if the button is not appropriate)</p>
-                    </div>
-
-                    <hr>
-
-                    <h2>Tab Panels</h2>
-                    <p>style: <a href="{{www}}report/docco/style/base/_components.html#tabpanels">_components.scss</a></p>
-                    <p>script: <a href="{{www}}report/docco/script/view/toolkit/tabpanel-1.html">tabpanel-1.js</a></p>
-                    <h3>tabpanel-1</h3>
-                    <div class="tabpanel-1">
-                        <ul role="tablist">
-                            <li><a id="tab-1" role="tab" aria-controls="panel-1" aria-selected="true">dashboard</a></li>
-                            <li><a id="tab-2" role="tab" aria-controls="panel-2" aria-selected="false" tabindex="-1">edit account</a></li>
-                            <li><a id="tab-3" role="tab" aria-controls="panel-3" aria-selected="false" tabindex="-1">my services</a></li>
-                        </ul>
-                        <div id="panel-1" aria-labelledby="tab-1" role="tabpanel" aria-hidden="false">
-                            <p>dashboard landing content</p>
+                        </form>
+                        <h3>Accessibility</h3>
+                        <h4>Gherkin</h4>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I submit a form with validation errors<br>
+                            THEN I will be focused on the first form field in error state<br>
+                            THEN I will hear the label for that form field<br>
+                            THEN I will hear if the form field is required<br>
+                            THEN I will hear a description of how to fix the error.
+                            </p>
                         </div>
-                        <div id="panel-2" aria-labelledby="tab-2" role="tabpanel" aria-hidden="true">
-                            <p>edit account content</p>
-                        </div>
-                        <div id="panel-3" aria-labelledby="tab-3" role="tabpanel" aria-hidden="true">
-                            <p>my services content</p>
-                        </div>
-                    </div>
-                    <h3>Accessibility</h3>
-                    <h4>Gherkin</h4>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I navigate to a tabpanel widget with the tab key, the focus should land on the active tab.<br>
-                        WHEN I hit tab again, the focus should go past the remaining tabs to the next focusable item (beyond the tablist).<br>
-                        IF I need to navigate within the tabs, when the keyboard focus is on the active tab, I can use the right arrow key to go forward through the tabs, or the left arrow key to go backward through tabs.</p>
-                    </div>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I land on the active tab using the tab key, the screen reader reads the label for the tab, it says "tab," it says how many tabs are in the group,<br>
-                        AND which tab it is (e.g. "tab 1 of 4")<br>
-                        AND it says "selected." When I navigate with the arrow keys to other tabs, it says all of the above plus gives the accurate location (e.g. "tab 2 of 4").</p>
-                    </div>
+                        <hr>
 
-                    <hr>
+                        <h2>Modals</h2>
+                        <p>style: <a href="{{www}}report/docco/style/base/_components.html#modals">_components.scss</a></p>
+                        <p>script: <a href="{{www}}report/docco/script/view/toolkit/modalOpen-1.html">modalOpen-1.js</a>, <a href="{{www}}report/docco/script/view/toolkit/modal-1.html">modal-1.js</a></p>
+                        <h3>modal-1</h3>
+                        <p><button class="button-1" data-modal-open="modal-example-1">view disclosures</button></p>
+                        <h3>Accessibility</h3>
+                        <h4>Gherkin</h4>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I activate a button to call a dialog (the control is NOT a link)<br>
+                            THEN the keyboard focus goes to the active dialog<br>
+                            AND I hear the screen reader read the title of the dialog<br>
+                            (AND the button in default focus, if applicable)<br>
+                            AND I cannot escape the dialog with the tab key<br>
+                            AND I can escape the dialog with the escape key<br>
+                            AND WHEN I close the dialog, the focus goes back to the original button<br>
+                            (OR to the most appropriate place, if the button is not appropriate)</p>
+                        </div>
 
-                    <h2>Accessible Ajax</h2>
-                    <p>script: <a href="{{www}}report/docco/script/view/toolkit/accessiblityAjax-1.html">accessiblityAjax-1.js</a>, <a href="{{www}}report/docco/script/view/toolkit/accessiblitySpeaker-1.html">accessiblitySpeaker-1.js</a></p>
-                    <h3>accessiblity-ajax-1</h3>
-                    <button id="accessible-ajax-example-button" class="button-1">click to load asynchronous content</button>
-                    <h3>Accessibility</h3>
-                    <h4>Gherkin</h4>
-                    <div class="gherkin">
-                        <p>GIVEN I am a screen reader user<br>
-                        WHEN I click a button with that executes an ajax request<br>
-                        THEN IF the request response is slow I will hear that content is loading before the request is complete<br>
-                        THEN I will hear a message that content has been loaded after the request is complete<br>
-                        AND I will see focus visual change<br>
-                        AND I will hear the new content added to the page</p>
+                        <hr>
+
+                        <h2>Tab Panels</h2>
+                        <p>style: <a href="{{www}}report/docco/style/base/_components.html#tabpanels">_components.scss</a></p>
+                        <p>script: <a href="{{www}}report/docco/script/view/toolkit/tabpanel-1.html">tabpanel-1.js</a></p>
+                        <h3>tabpanel-1</h3>
+                        <div class="tabpanel-1">
+                            <ul role="tablist">
+                                <li><a id="tab-1" role="tab" aria-controls="panel-1" aria-selected="true">dashboard</a></li>
+                                <li><a id="tab-2" role="tab" aria-controls="panel-2" aria-selected="false" tabindex="-1">edit account</a></li>
+                                <li><a id="tab-3" role="tab" aria-controls="panel-3" aria-selected="false" tabindex="-1">my services</a></li>
+                            </ul>
+                            <div id="panel-1" aria-labelledby="tab-1" role="tabpanel" aria-hidden="false">
+                                <p>dashboard landing content</p>
+                            </div>
+                            <div id="panel-2" aria-labelledby="tab-2" role="tabpanel" aria-hidden="true">
+                                <p>edit account content</p>
+                            </div>
+                            <div id="panel-3" aria-labelledby="tab-3" role="tabpanel" aria-hidden="true">
+                                <p>my services content</p>
+                            </div>
+                        </div>
+                        <h3>Accessibility</h3>
+                        <h4>Gherkin</h4>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I navigate to a tabpanel widget with the tab key, the focus should land on the active tab.<br>
+                            WHEN I hit tab again, the focus should go past the remaining tabs to the next focusable item (beyond the tablist).<br>
+                            IF I need to navigate within the tabs, when the keyboard focus is on the active tab, I can use the right arrow key to go forward through the tabs, or the left arrow key to go backward through tabs.</p>
+                        </div>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I land on the active tab using the tab key, the screen reader reads the label for the tab, it says "tab," it says how many tabs are in the group,<br>
+                            AND which tab it is (e.g. "tab 1 of 4")<br>
+                            AND it says "selected." When I navigate with the arrow keys to other tabs, it says all of the above plus gives the accurate location (e.g. "tab 2 of 4").</p>
+                        </div>
+
+                        <hr>
+
+                        <h2>Accessible Ajax</h2>
+                        <p>script: <a href="{{www}}report/docco/script/view/toolkit/accessiblityAjax-1.html">accessiblityAjax-1.js</a>, <a href="{{www}}report/docco/script/view/toolkit/accessiblitySpeaker-1.html">accessiblitySpeaker-1.js</a></p>
+                        <h3>accessiblity-ajax-1</h3>
+                        <button id="accessible-ajax-example-button" class="button-1">click to load asynchronous content</button>
+                        <h3>Accessibility</h3>
+                        <h4>Gherkin</h4>
+                        <div class="gherkin">
+                            <p>GIVEN I am a screen reader user<br>
+                            WHEN I click a button with that executes an ajax request<br>
+                            THEN IF the request response is slow I will hear that content is loading before the request is complete<br>
+                            THEN I will hear a message that content has been loaded after the request is complete<br>
+                            AND I will see focus visual change<br>
+                            AND I will hear the new content added to the page</p>
+                        </div>
                     </div>
                 </div>
             </section>

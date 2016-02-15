@@ -104,7 +104,10 @@ nav {
 
     display: block;
     height: rem-calc(125);
-    max-width: rem-calc(125);
+
+    @include breakpoint(medium up) {
+        max-width: rem-calc(125);
+    }
 
     &.black-1 {
         background-color: $black-1;
@@ -138,7 +141,10 @@ nav {
         background-color: $white-1;
         border: rem-calc(1) solid $grey-1;
         height: rem-calc(123);
-        max-width: rem-calc(123);
+        @include breakpoint(medium up) {
+            max-width: rem-calc(123);
+        }
+
     }
 
     &.red-1 {
