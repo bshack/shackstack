@@ -37,6 +37,14 @@ http://gulpjs.com
 npm install;
 ```
 
+### Text Editor Config
+
+Install the correct plugin for your text editor here:
+
+http://editorconfig.org
+
+This will normalize things like what tab characters to use and avoid linting errors. 
+
 ## Locations
 
 ### Source Files
