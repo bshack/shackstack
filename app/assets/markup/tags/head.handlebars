@@ -1,0 +1,70 @@
+<head>
+    <title>{{title}}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{#if meta.description}}
+    <meta name="description" content="{{meta.description}}">
+    {{/if}}
+    {{#if meta.keywords}}
+    <meta name="keywords" content="{{meta.keywords}}">
+    {{/if}}
+    {{#if meta.apple-mobile-web-app-title}}
+    <meta name="apple-mobile-web-app-title" content="{{meta.apple-mobile-web-app-title}}">
+    {{/if}}
+    {{#if twitter.card}}
+    <meta name="twitter:card" content="{{twitter.card}}">
+    {{/if}}
+    {{#if twitter.url}}
+    <meta name="twitter:url" content="{{twitter.url}}">
+    {{/if}}
+    {{#if twitter.title}}
+    <meta name="twitter:title" content="{{twitter.title}}">
+    {{/if}}
+    {{#if twitter.description}}
+    <meta name="twitter:description" content="{{twitter.description}}">
+    {{/if}}
+    {{#if twitter.image}}
+    <meta name="twitter:image" content="{{cdn}}assets/image/{{twitter.image}}">
+    {{/if}}
+    {{#if og.title}}
+    <meta property="og:title" content="{{og.title}}">
+    {{/if}}
+    {{#if og.type}}
+    <meta property="og:type" content="{{og.type}}">
+    {{/if}}
+    {{#if og.url}}
+    <meta property="og:url" content="{{og.url}}">
+    {{/if}}
+    {{#if og.image}}
+    <meta property="og:image" content="{{cdn}}assets/image/{{og.image}}">
+    {{/if}}
+    {{#if og.site_name}}
+    <meta property="og:site_name" content="{{og.site_name}}">
+    {{/if}}
+    {{#if og.description}}
+    <meta property="og:description" content="{{og.site_name}}">
+    {{/if}}
+    {{#if og.locale}}
+    <meta property="og:locale" content="{{og.locale}}">
+    {{/if}}
+    {{#if fb.admins}}
+    <meta property="fb:admins" content="{{fb.admins}}">
+    {{/if}}
+    {{#if fb.app_id}}
+    <meta property="fb:app_id" content="{{fb.app_id}}">
+    {{/if}}
+    {{#if link.favicon}}
+    <link rel="icon" type="image/x-icon" href="{{cdn}}assets/image/{{link.favicon}}">
+    {{/if}}
+    {{#if link.apple-touch-icon-precomposed}}
+    <link rel="apple-touch-icon-precomposed" href="{{cdn}}assets/image/{{link.apple-touch-icon-precomposed}}">
+    {{/if}}
+    {{#if link.author}}
+    <link rel="author" href="{{link.author}}">
+    {{/if}}
+    <link rel="stylesheet" type="text/css" media="all" href="{{cdn}}assets/style/global.css">
+    {{#if secondaryCSS}}
+    <link rel="stylesheet" type="text/css" media="all" href="{{cdn}}assets/style/{{secondaryCSS}}.css">
+    {{/if}}
+</head>

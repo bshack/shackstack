@@ -1,0 +1,18 @@
+<picture{{#if this.id}} id="{{this.id}}"{{/if}}{{#if this.class}} class="{{this.class}}"{{/if}}{{#if this.accessible-title}} aria-label="{{this.accessible-title}}"{{/if}} alt="{{#if this.alt}}{{this.alt}}{{/if}}">
+    {{#if this.imageSmall}}
+    <source media="(max-width: 40rem)" srcset="{{#unless this.external}}{{this.cdn}}{{/unless}}{{this.imageSmall}}">
+    {{/if}}
+    {{#if this.imageMedium}}
+    <source media="(max-width: 64rem)" srcset="{{#unless this.external}}{{this.cdn}}{{/unless}}{{this.imageMedium}}">
+    {{/if}}
+    {{#if this.imageLarge}}
+    <source media="(max-width: 75rem)" srcset="{{#unless this.external}}{{this.cdn}}{{/unless}}{{this.imageLarge}}">
+    {{/if}}
+    {{#if this.imageXLarge}}
+    <source media="(max-width: 90rem)" srcset="{{#unless this.external}}{{this.cdn}}{{/unless}}{{this.imageXLarge}}">
+    {{/if}}
+    {{#if this.imageXXLarge}}
+    <source media="(min-width: 90.001rem)" srcset="{{#unless this.external}}{{this.cdn}}{{/unless}}{{this.imageXXLarge}}">
+    {{/if}}
+    {{> tags/img image=this.imageFallback}}
+</picture>

@@ -1,0 +1,88 @@
+// ## Define Text Styles
+// All text styles must be html element agnostic.
+// For example a '%heading-1' looks the same when applied to an h1, h4 or a span element.
+
+// ### Headings
+
+// #### heading-base-1
+
+%heading-base-1 {
+
+    @extend %open-sans-1;
+
+    display: block;
+    font-weight: 700;
+    margin: 0;
+
+}
+
+// #### heading-1
+
+%heading-1 {
+
+    @extend %heading-base-1;
+
+    color: $black-1;
+    font-size: rem-calc(24);
+
+}
+
+// #### heading-2
+
+%heading-2 {
+
+    @extend %heading-base-1;
+
+    color: $black-1;
+    font-size: rem-calc(20);
+
+}
+
+// #### heading-3
+
+%heading-3 {
+
+    @extend %heading-base-1;
+
+    color: $grey-2;
+    font-size: rem-calc(18);
+
+}
+
+// #### heading-4
+
+%heading-4 {
+
+    @extend %heading-base-1;
+
+    color: $grey-2;
+    font-size: rem-calc(16);
+
+}
+
+// ### Fonts
+
+%font-base-1 {
+    font-smoothing: antialiased;
+    font-weight: normal;
+}
+
+// #### arial-1
+
+%arial-1 {
+
+    @extend %font-base-1;
+
+    font-family: 'Arial', sans-serif;
+
+}
+
+// #### open-sans-1
+
+%open-sans-1 {
+
+    @extend %font-base-1;
+
+    font-family: 'open_sansregular', sans-serif;
+
+}

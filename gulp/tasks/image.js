@@ -11,7 +11,7 @@ var plumber = require('gulp-plumber');
 var config = require('../config');
 
 // ## Sprite to Style Task
-// sprite task dependent on vectorToRaster task to generete .pngs from .svg source files
+// creates a .png sprite from .png images found in the sprite directory
 
 gulp.task('sprite', ['vectorToRaster'], function() {
     'use strict';
@@ -22,6 +22,7 @@ gulp.task('sprite', ['vectorToRaster'], function() {
         margin: 10,
         processor: 'sass',
         'style-indent-size': 4,
+        cssPath: '../image',
         template: config.path.image.sprite.template
     })
     //if the file is a .png save it to the image directory
@@ -35,6 +36,7 @@ gulp.task('sprite', ['vectorToRaster'], function() {
 });
 
 // ## Vector to Raster Image Task
+// make the the sprite .svg source files to .png
 
 gulp.task('vectorToRaster', function() {
     'use strict';

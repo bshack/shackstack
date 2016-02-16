@@ -28,9 +28,9 @@ gulp.task('scriptLint', function() {
 });
 
 // ## Script Task
-// complile the modules together
+// complile the modules together, first it will lint the .js files and compile clientside templates for inclusion
 
-gulp.task('script', ['scriptLint'], function() {
+gulp.task('script', ['scriptLint', 'markupTemplate'], function() {
     'use strict';
     return browserify({
         entries: config.path.script.compile.source,

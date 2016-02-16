@@ -8,20 +8,20 @@ module.exports = function(karma) {
             'browserify'
         ],
         files: [{
-            pattern: 'app/media/script/service/*.js'
+            pattern: 'app/assets/script/service/*.js'
         },
         {
-            pattern: 'app/media/test/spec/*Spec.js'
+            pattern: 'app/assets/test/spec/*Spec.js'
         }],
         reporters: [
             'progress',
             'coverage'
         ],
         preprocessors: {
-            'app/media/script/service/*.js': [
+            'app/assets/script/service/*.js': [
                 'browserify'
             ],
-            'app/media/test/spec/*Spec.js': [
+            'app/assets/test/spec/*Spec.js': [
                 'browserify'
             ]
         },

@@ -10,7 +10,7 @@ gulp.task('build', function() {
     //runSequence support is only for gulp 3.x, 4.x natively support this functionalty
     return runSequence(
         ['sprite'],
-        ['markup', 'markupTemplate', 'style', 'script', 'documentation'],
+        ['markup', 'style', 'script', 'documentation'],
         ['accessibility']
     );
 });

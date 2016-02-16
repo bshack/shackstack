@@ -1,0 +1,25 @@
+{
+    "title":"Components - Toolkit",
+    "accessible-ajax-1":"New content has been added to the page, now the screen reader will read it.",
+    "select-1":{
+        "data":[
+            {
+                "value":"",
+                "name":"choose",
+                "selected":true
+            },
+            {
+                "value":"option-1",
+                "name":"car"
+            },
+            {
+                "value":"option-2",
+                "name":"truck"
+            },
+            {
+                "value":"option-3",
+                "name":"suv"
+            }
+        ]
+    }
+}

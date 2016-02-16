@@ -2,17 +2,27 @@
 <html id="index" lang="en-us" dir="ltr">
     {{> tags/head}}
     <body>
-        {{>tags/a id='skip-to-content' url='#main' class='accessibility-skip-to-element' title='skip to content'}}
+
+        {{>toolkit/accessibility-skip-to-element-1 id='skip-to-content' url='#main' title='skip to content'}}
+
         <header>
         </header>
+
         <nav>
         </nav>
-        <main id="main" tabindex="-1">
-            {{>tags/a id='toolkit' url='toolkit/' title='View Toolkit'}}
+
+        <main id="main" tabindex="-1" class="row">
+            <div class="small-12 columns">
+                <p>Build your site here.</p>
+                {{>tags/a id='toolkit' url='toolkit/' title='click to view your toolkit'}}
+            </div>
         </main>
+
         <footer>
         </footer>
+
         {{> config/config}}
-        {{> tags/script script='media/script/app.compiled.js'}}
+        {{> tags/script script='assets/script/app.compiled.js'}}
+        
     </body>
 </html>

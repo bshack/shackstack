@@ -1,0 +1,285 @@
+@charset 'UTF-8';
+
+// ## import foundation 6
+
+@import '../../../node_modules/foundation-sites/scss/foundation';
+
+// ## import foundation includes
+
+@include foundation-global-styles;
+// @include foundation-grid;
+@include foundation-flex-grid;
+// @include foundation-typography;
+// @include foundation-button;
+// @include foundation-forms;
+// @include foundation-visibility-classes;
+// @include foundation-float-classes;
+// @include foundation-accordion;
+// @include foundation-accordion-menu;
+// @include foundation-badge;
+// @include foundation-breadcrumbs;
+// @include foundation-button-group;
+// @include foundation-callout;
+// @include foundation-close-button;
+// @include foundation-drilldown-menu;
+// @include foundation-dropdown;
+// @include foundation-dropdown-menu;
+// @include foundation-flex-video;
+// @include foundation-label;
+// @include foundation-media-object;
+// @include foundation-menu;
+// @include foundation-off-canvas;
+// @include foundation-orbit;
+// @include foundation-pagination;
+// @include foundation-progress-bar;
+// @include foundation-slider;
+// @include foundation-sticky;
+// @include foundation-reveal;
+// @include foundation-switch;
+// @include foundation-table;
+// @include foundation-tabs;
+// @include foundation-thumbnail;
+// @include foundation-title-bar;
+// @include foundation-tooltip;
+// @include foundation-top-bar;
+
+// ## Define Custom Fonts
+
+// ### Open Sans
+
+@font-face {
+    font-family: 'open_sansbold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/open-sans/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/open-sans/opensans-bold-webfont.woff2') format('woff2'),
+    url('../font/open-sans/opensans-bold-webfont.woff') format('woff'),
+    url('../font/open-sans/opensans-bold-webfont.ttf') format('truetype'),
+    url('../font/open-sans/opensans-bold-webfont.svg#open_sansbold') format('svg');
+}
+
+@font-face {
+    font-family: 'open_sansbold_italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/open-sans/opensans-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/open-sans/opensans-bolditalic-webfont.woff2') format('woff2'),
+    url('../font/open-sans/opensans-bolditalic-webfont.woff') format('woff'),
+    url('../font/open-sans/opensans-bolditalic-webfont.ttf') format('truetype'),
+    url('../font/open-sans/opensans-bolditalic-webfont.svg#open_sansbold_italic') format('svg');
+}
+
+@font-face {
+    font-family: 'open_sansextrabold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/open-sans/opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/open-sans/opensans-extrabold-webfont.woff2') format('woff2'),
+    url('../font/open-sans/opensans-extrabold-webfont.woff') format('woff'),
+    url('../font/open-sans/opensans-extrabold-webfont.ttf') format('truetype'),
+    url('../font/open-sans/opensans-extrabold-webfont.svg#open_sansextrabold') format('svg');
+}
+
+@font-face {
+    font-family: 'open_sansextrabold_italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/open-sans/opensans-extrabolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/open-sans/opensans-extrabolditalic-webfont.woff2') format('woff2'),
+    url('../font/open-sans/opensans-extrabolditalic-webfont.woff') format('woff'),
+    url('../font/open-sans/opensans-extrabolditalic-webfont.ttf') format('truetype'),
+    url('../font/open-sans/opensans-extrabolditalic-webfont.svg#open_sansextrabold_italic') format('svg');
+}
+
+@font-face {
+    font-family: 'open_sansitalic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/open-sans/opensans-italic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/open-sans/opensans-italic-webfont.woff2') format('woff2'),
+    url('../font/open-sans/opensans-italic-webfont.woff') format('woff'),
+    url('../font/open-sans/opensans-italic-webfont.ttf') format('truetype'),
+    url('../font/open-sans/opensans-italic-webfont.svg#open_sansitalic') format('svg');
+}
+
+@font-face {
+    font-family: 'open_sanslight';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/open-sans/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/open-sans/opensans-light-webfont.woff2') format('woff2'),
+    url('../font/open-sans/opensans-light-webfont.woff') format('woff'),
+    url('../font/open-sans/opensans-light-webfont.ttf') format('truetype'),
+    url('../font/open-sans/opensans-light-webfont.svg#open_sanslight') format('svg');
+}
+
+@font-face {
+    font-family: 'open_sanslight_italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/open-sans/opensans-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/open-sans/opensans-lightitalic-webfont.woff2') format('woff2'),
+    url('../font/open-sans/opensans-lightitalic-webfont.woff') format('woff'),
+    url('../font/open-sans/opensans-lightitalic-webfont.ttf') format('truetype'),
+    url('../font/open-sans/opensans-lightitalic-webfont.svg#open_sanslight_italic') format('svg');
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/open-sans/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/open-sans/opensans-regular-webfont.woff2') format('woff2'),
+    url('../font/open-sans/opensans-regular-webfont.woff') format('woff'),
+    url('../font/open-sans/opensans-regular-webfont.ttf') format('truetype'),
+    url('../font/open-sans/opensans-regular-webfont.svg#open_sansregular') format('svg');
+}
+
+@font-face {
+    font-family: 'open_sanssemibold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/open-sans/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/open-sans/opensans-semibold-webfont.woff2') format('woff2'),
+    url('../font/open-sans/opensans-semibold-webfont.woff') format('woff'),
+    url('../font/open-sans/opensans-semibold-webfont.ttf') format('truetype'),
+    url('../font/open-sans/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
+}
+
+@font-face {
+    font-family: 'open_sanssemibold_italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/open-sans/opensans-semibolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/open-sans/opensans-semibolditalic-webfont.woff2') format('woff2'),
+    url('../font/open-sans/opensans-semibolditalic-webfont.woff') format('woff'),
+    url('../font/open-sans/opensans-semibolditalic-webfont.ttf') format('truetype'),
+    url('../font/open-sans/opensans-semibolditalic-webfont.svg#open_sanssemibold_italic') format('svg');
+}
+
+// ## custom includes
+@import 'base/all';
+
+// ## global styles
+
+body {
+    @extend %arial-1;
+}
+
+main:focus {
+    outline: 0;
+}
+
+// ### utility
+
+.scrolling-off {
+    @extend %scrolling-off;
+}
+
+// ### accessibility
+
+.accessibility-skip-to-element-1 {
+    @extend %accessibility-skip-to-element-1;
+}
+
+.accessibility-hidden {
+    @extend %accessibility-hidden;
+}
+
+// ### standard text treatments
+
+.heading-1 {
+    @extend %heading-1;
+}
+
+.heading-2 {
+    @extend %heading-2;
+}
+
+.heading-3 {
+    @extend %heading-3;
+}
+
+.heading-4 {
+    @extend %heading-4;
+}
+
+.arial-1 {
+    @extend %arial-1;
+}
+
+.open-sans-1 {
+    @extend %open-sans-1;
+}
+
+// ### standard elements
+
+.anchor-1 {
+    @extend %anchor-1;
+}
+
+.button-1 {
+    @extend %button-1;
+}
+
+.fieldset-1 {
+    @extend %fieldset-1;
+}
+
+.image-1 {
+    @extend %image-1;
+}
+
+.input-checkbox-1 {
+    @extend %input-checkbox-1;
+}
+
+.input-error-1 {
+    @extend %input-error-1;
+}
+
+.input-radio-1 {
+    @extend %input-radio-1;
+}
+
+.input-text-1 {
+    @extend %input-text-1;
+}
+
+.label-1 {
+    @extend %label-1;
+}
+
+.legend-1 {
+    @extend %legend-1;
+}
+
+.list-1 {
+    @extend %list-1;
+}
+
+.picture-1 {
+    @extend %picture-1;
+}
+
+.textarea-1 {
+    @extend %textarea-1;
+}
+
+.select-1 {
+    @extend %select-1;
+}
+
+.table-1 {
+    @extend %table-1;
+}
+
+// ### standard components
+
+.modal-1 {
+    @extend %modal-1;
+}
+
+.tabpanel-1 {
+    @extend %tabpanel-1;
+}

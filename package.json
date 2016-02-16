@@ -1,7 +1,7 @@
 {
-  "name": "shackstack",
+  "name": "generator-shackstack",
   "homepage": "https://github.com/bshack/shackstack",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "contributors": [
     {
       "name": "Bill Shackelford",
@@ -10,20 +10,29 @@
     }
   ],
   "engines": {
-    "node": "5.x.x"
+    "node": ">=5.0",
+    "npm": ">=3.0"
   },
   "description": "Accessible scaffolding for developing and deploying static sites.",
   "main": "app/index.html",
   "keywords": [
-    "handlebars",
+    "accessibility",
     "backbone",
+    "browserify",
+    "foundation",
     "gulp",
-    "foundation"
+    "handlebars",
+    "lwip",
+    "jasmine",
+    "jquery",
+    "karma",
+    "yeoman-generator",
+    "shackstack"
   ],
   "scripts": {
     "test": "gulp deploy --www=//www.example.com --cdn=//cdn.example.com --service=//service.example.com --production=true;"
   },
-  "author": "William Shackelford",
+  "author": "Bill Shackelford",
   "license": "MIT",
   "repository": "https://github.com/bshack/shackstack",
   "bugs": "https://github.com/bshack/shackstack/issues",
@@ -45,6 +54,7 @@
     "browserify": "x.x.x",
     "browserify-istanbul": "x.x.x",
     "browserify-shim": "x.x.x",
+    "chalk": "x.x.x",
     "eslint": "x.x.x",
     "fastclick": "x.x.x",
     "fingerprintjs": "x.x.x",
@@ -89,6 +99,7 @@
     "handlebars": "x.x.x",
     "jasmine-core": "x.x.x",
     "jquery": "x.x.x",
+    "jquery-validation": "x.x.x",
     "jsdoc": "x.x.x",
     "karma": "x.x.x",
     "karma-browserify": "x.x.x",
@@ -112,6 +123,8 @@
     "vinyl-buffer": "x.x.x",
     "vinyl-source-stream": "x.x.x",
     "watchify": "x.x.x",
-    "yargs": "x.x.x"
+    "yargs": "x.x.x",
+    "yeoman-generator": "x.x.x",
+    "yosay": "x.x.x"
   }
 }

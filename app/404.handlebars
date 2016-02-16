@@ -2,18 +2,25 @@
 <html id="error-404" lang="en-us" dir="ltr">
     {{> tags/head}}
     <body>
-        {{>tags/a id='skip-to-content' url='#main' class='accessibility-skip-to-element' title='skip to content'}}
+
+        {{>toolkit/accessibility-skip-to-element-1 id='skip-to-content' url='#main' title='skip to content'}}
+
         <header>
         </header>
+
         <nav>
         </nav>
+
         <main id="main" tabindex="-1">
-            <h1>Page Not Found</h1>
+            {{>toolkit/heading-1 tag='h1' title='Page Not Found'}}
             <p>Sorry, but the page you were trying to view does not exist.</p>
         </main>
+
         <footer>
         </footer>
+
         {{> config/config}}
-        {{> tags/script script='media/script/app.compiled.js'}}
+        {{> tags/script script='assets/script/app.compiled.js'}}
+        
     </body>
 </html>
