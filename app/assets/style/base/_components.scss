@@ -38,32 +38,27 @@
         margin: 0;
         padding: 0;
 
-        > * {
+        > [role=tab] {
 
+            @extend %arial-1;
+
+            background-color: $white-1;
+            border-bottom: rem-calc(1) solid $white-1;
+            border-left: rem-calc(1) solid $black-1;
+            border-right: rem-calc(1) solid $black-1;
+            border-top: rem-calc(1) solid $black-1;
+            color: $black-1;
+            display: block;
             float: left;
             list-style: none;
             margin: 0 rem-calc(1) 0 0;
+            padding: rem-calc(13.5);
+            text-decoration: none;
 
-            > [role=tab] {
-
-                @extend %arial-1;
-
-                background-color: $white-1;
-                border-bottom: rem-calc(1) solid $white-1;
-                border-left: rem-calc(1) solid $black-1;
-                border-right: rem-calc(1) solid $black-1;
-                border-top: rem-calc(1) solid $black-1;
-                color: $black-1;
-                display: block;
-                padding: rem-calc(13.5);
-                text-decoration: none;
-
-                &[aria-selected=false] {
-                    background-color: $black-1;
-                    border-bottom-color: $black-1;
-                    color: $white-1;
-                }
-
+            &[aria-selected=false] {
+                background-color: $black-1;
+                border-bottom-color: $black-1;
+                color: $white-1;
             }
 
         }

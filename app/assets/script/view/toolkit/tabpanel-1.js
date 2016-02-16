@@ -41,10 +41,14 @@
             var $target = Backbone.$(e.target);
             // if left arrow key
             if (e.which === 37) {
-                $target.parent('li').prev().find('button').focus().trigger('click');
+                $target.prev()
+                    .focus()
+                    .trigger('click');
             // if right arrow key
             } else if (e.which === 39) {
-                $target.parent('li').next().find('button').focus().trigger('click');
+                $target.next()
+                    .focus()
+                    .trigger('click');
             }
         }
     });
