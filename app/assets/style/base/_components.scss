@@ -60,6 +60,7 @@
                 color: $black-1;
                 display: block;
                 padding: rem-calc(13.5);
+                text-decoration: none;
 
                 &[aria-selected=false] {
                     background-color: $black-1;

@@ -25,7 +25,7 @@
             // select the tab click on
             $target
                 .attr('aria-selected', true)
-                .removeAttr('tabindex');
+                .attr('tabindex', 0);
             // deselect all the panels
             this.$el
                 .find('> [role=tabpanel]')
