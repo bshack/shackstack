@@ -96,6 +96,14 @@ gulp deploy
 gulp unit;
 ```
 
+### Build Tests
+
+Run this when you want to verify your changes will build properly on the CI server before pushing:
+
+```
+npm test;
+```
+
 ### More
 
 These all run as dependencies of the 'watch' and 'deploy' tasks.
