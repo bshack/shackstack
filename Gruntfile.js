@@ -20,8 +20,8 @@ module.exports = function(grunt) {
     grunt.util._.extend(config, loadConfig('./tasks/options/'));
     // initialize grunt config
     grunt.initConfig(config);
-    // plull in all the grunt modules
-    require('load-grunt-tasks')(grunt);
     // load in all the asks
     grunt.loadTasks('./grunt/tasks');
+    // plull in all the grunt modules
+    require('load-grunt-tasks')(grunt);
 };

@@ -3374,6 +3374,11 @@
         }
       }
     },
+    "grunt-sprity": {
+      "version": "1.0.0",
+      "from": "grunt-sprity@latest",
+      "resolved": "https://registry.npmjs.org/grunt-sprity/-/grunt-sprity-1.0.0.tgz"
+    },
     "grunt-svg2png": {
       "version": "0.2.7",
       "from": "grunt-svg2png@>=0.2.7 <0.3.0",
