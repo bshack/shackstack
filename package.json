@@ -1,7 +1,7 @@
 {
   "name": "generator-shackstack",
   "homepage": "https://github.com/bshack/shackstack",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "contributors": [
     {
       "name": "Bill Shackelford",
@@ -34,7 +34,9 @@
   },
   "author": "Bill Shackelford",
   "license": "MIT",
-  "repository": "https://github.com/bshack/shackstack",
+  "repository": {
+      "url": "git://github.com/bshack/shackstack.git"
+  },
   "bugs": "https://github.com/bshack/shackstack/issues",
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.js"

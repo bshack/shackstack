@@ -4,10 +4,12 @@
 
 @import '../../../node_modules/foundation-sites/scss/foundation';
 
-// ## import foundation includes
+// ## foundation includes
 
 @include foundation-global-styles;
+// use foundation-grid when you have to support old browsers
 // @include foundation-grid;
+// use foundation-flex-grid when you only support new browsers
 @include foundation-flex-grid;
 // @include foundation-typography;
 // @include foundation-button;
