@@ -41,7 +41,7 @@ npm install;
 
 Install the correct plugin for your text editor here:
 
-http://editorconfig.org
+http://editorconfig.org/#download
 
 This will normalize things like what tab characters to use and avoid linting errors. 
 
