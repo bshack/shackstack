@@ -22,8 +22,10 @@ gulp.task('sprite', ['vectorToRaster'], function() {
         margin: 10,
         processor: 'sass',
         'style-indent-size': 4,
-        cssPath: '../image',
-        template: config.path.image.sprite.template
+        cssPath: config.path.image.sprite.cssPath,
+        split: true,
+        template: config.path.image.sprite.template,
+        out: config.path.image.sprite.destination.sprite
     })
     //if the file is a .png save it to the image directory
     .pipe(gulpif(

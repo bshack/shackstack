@@ -16,7 +16,7 @@ gulp.task('accessibility', function() {
     return gulp.src(config.path.markup.destination)
         //support for better error handling
         .pipe(plumber())
-        //show only errors for AA spec
+        //show only errors for AAA spec
         .pipe(accessibility({
             accessibilityLevel: 'WCAG2AAA',
             reportLevels: {
