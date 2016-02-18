@@ -58,8 +58,7 @@ Any generated html page can have an associated JSON data file in 'service/view/'
 stub out any data to be used for populating the markup templates for that page. Follow the same directory and file structure as your
 pages.
 
-Define any data properties you want available for all your pages in 'default.json'. Any properties defined in page
-specific JSON files will override properties in 'default.json'.
+Define any data properties you want available for all your pages in 'default.json'. Any properties defined in page specific JSON files will override properties in 'default.json'.
 
 ## Gulp Tasks
 
@@ -67,6 +66,12 @@ specific JSON files will override properties in 'default.json'.
 
 ```
 gulp watch;
+```
+
+By default watch will also start up Browsersync. If you want to run watch without Browsersync you can do so with the sync argument:
+
+```
+gulp watch --sync=false;
 ```
 
 ### Deploy
