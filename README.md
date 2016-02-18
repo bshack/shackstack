@@ -43,7 +43,7 @@ Install the correct plugin for your text editor here:
 
 http://editorconfig.org/#download
 
-This will normalize things like what tab characters to use and avoid linting errors. 
+This will normalize things the tab character(s) used and will avoid linting errors.
 
 ## Locations
 
