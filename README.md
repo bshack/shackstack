@@ -68,7 +68,9 @@ Define any data properties you want available for all your pages in 'default.jso
 gulp watch;
 ```
 
-This will create a browsersync server and reload the window when you make code changes.
+This will create a Browsersync server and reload your browser window(s) when you make code changes.
+
+Learn more about Browsersync here: https://www.browsersync.io
 
 ### Deploy
 
@@ -141,7 +143,7 @@ Then in an empty directory:
 yo shackstack;
 ```
 
-Learn more about Yeoman here: http://yeoman.io
+Learn more about Yeoman here: https://yeoman.io
 
 ## Bugs? Feature Requests?
 
