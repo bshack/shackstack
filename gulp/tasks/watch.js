@@ -9,7 +9,7 @@ var config = require('../config');
 // ## Watch Task
 
 // watch task dependent on tasks to make sure latest code changes are compiled
-gulp.task('watch', ['build', 'browser-sync'], function() {
+gulp.task('watch', ['build', 'browsersync'], function() {
     'use strict';
 
     //watch scss

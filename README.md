@@ -14,6 +14,7 @@ http://billshackelford.com/toolkit
 
 - BackboneJS
 - Browserify
+- Browsersync
 - Foundation
 - Gulp
 - Handlebars
