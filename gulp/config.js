@@ -26,7 +26,7 @@ var www;
 if (yargs.www) {
     www = yargs.www + '/';
 } else {
-    www = '/app/';
+    www = '/';
 }
 
 //setting a cdn domain for build
@@ -35,7 +35,7 @@ var cdn;
 if (yargs.cdn) {
     cdn = yargs.cdn + '/release/' + version + '/';
 } else {
-    cdn = '/app/';
+    cdn = '/';
 }
 
 //setting a service domain for build
@@ -44,7 +44,7 @@ var service;
 if (yargs.service) {
     service = yargs.service + '/';
 } else {
-    service = '/app/';
+    service = '/';
 }
 
 // ## paths

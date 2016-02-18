@@ -53,6 +53,7 @@
   "dependencies": {
     "backbone": "x.x.x",
     "brfs": "x.x.x",
+    "browser-sync": "^2.11.1",
     "browserify": "x.x.x",
     "browserify-istanbul": "x.x.x",
     "browserify-shim": "x.x.x",
@@ -81,7 +82,6 @@
     "gulp-if": "x.x.x",
     "gulp-imagemin": "x.x.x",
     "gulp-karma": "x.x.x",
-    "gulp-livereload": "x.x.x",
     "gulp-plato": "x.x.x",
     "gulp-plumber": "x.x.x",
     "gulp-rename": "x.x.x",

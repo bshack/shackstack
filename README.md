@@ -14,6 +14,7 @@ http://billshackelford.com/toolkit
 
 - BackboneJS
 - Browserify
+- Browsersync
 - Foundation
 - Gulp
 - Handlebars
@@ -57,8 +58,7 @@ Any generated html page can have an associated JSON data file in 'service/view/'
 stub out any data to be used for populating the markup templates for that page. Follow the same directory and file structure as your
 pages.
 
-Define any data properties you want available for all your pages in 'default.json'. Any properties defined in page
-specific JSON files will override properties in 'default.json'.
+Define any data properties you want available for all your pages in 'default.json'. Any properties defined in page specific JSON files will override properties in 'default.json'.
 
 ## Gulp Tasks
 
@@ -67,6 +67,10 @@ specific JSON files will override properties in 'default.json'.
 ```
 gulp watch;
 ```
+
+This will create a Browsersync server and reload your browser window(s) when you make code changes.
+
+Learn more about Browsersync here: https://www.browsersync.io
 
 ### Deploy
 
@@ -139,7 +143,7 @@ Then in an empty directory:
 yo shackstack;
 ```
 
-Learn more about Yeoman here: http://yeoman.io
+Learn more about Yeoman here: https://yeoman.io
 
 ## Bugs? Feature Requests?
 

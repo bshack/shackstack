@@ -18,7 +18,7 @@ var config = require('../config');
 // ## Release Task
 // release task dependent on tasks to do code quality checks and build documentation
 
-gulp.task('deploy', function() {
+gulp.task('deploy', function(callback) {
     'use strict';
     //runSequence support is only for gulp 3.x, 4.x natively support this functionalty
     return runSequence(
@@ -27,7 +27,8 @@ gulp.task('deploy', function() {
         ['markup', 'style', 'script', 'documentation'],
         ['accessibility'],
         ['copyRoot', 'copyReport', 'copyFonts', 'minifyMarkup', 'copyData', 'minifyStyle', 'minifyScript',
-            'minifyImage', 'sitemap']
+            'minifyImage', 'sitemap'],
+        callback
     );
 });
 
