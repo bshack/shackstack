@@ -8,7 +8,6 @@ var rename = require('gulp-rename');
 var wrapper = require('gulp-wrapper');
 var plumber = require('gulp-plumber');
 var data = require('gulp-data');
-var livereload = require('gulp-livereload');
 var _ = require('lodash-node');
 
 // ## Environment Config
@@ -61,8 +60,7 @@ gulp.task('markup', function() {
         .pipe(rename(function(path) {
             path.extname = '.html';
         }))
-        .pipe(gulp.dest(config.path.root))
-        .pipe(livereload());
+        .pipe(gulp.dest(config.path.root));
 });
 
 // ## markupTemplate Task

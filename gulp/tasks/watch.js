@@ -1,7 +1,6 @@
 // ## Load Modules
 
 var gulp = require('gulp');
-var livereload = require('gulp-livereload');
 
 // ## Environment Config
 
@@ -10,9 +9,9 @@ var config = require('../config');
 // ## Watch Task
 
 // watch task dependent on tasks to make sure latest code changes are compiled
-gulp.task('watch', ['build'], function() {
+gulp.task('watch', ['build', 'browser-sync'], function() {
     'use strict';
-    livereload.listen();
+
     //watch scss
     gulp.watch(
         config.path.style.source.scss,

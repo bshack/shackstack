@@ -10,6 +10,7 @@
 
     },
     "rules":{
+        "no-console":1,
         "curly":2,
         "comma-dangle":[
             2,

@@ -6,7 +6,6 @@ var plumber = require('gulp-plumber');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
-var livereload = require('gulp-livereload');
 
 // ## Environment Config
 
@@ -39,7 +38,6 @@ gulp.task('script', ['scriptLint', 'markupTemplate'], function() {
         .bundle()
         .pipe(source(config.path.script.compile.filename))
         .pipe(buffer())
-        .pipe(gulp.dest(config.path.script.compile.destination))
-        .pipe(livereload());
+        .pipe(gulp.dest(config.path.script.compile.destination));
 
 });
