@@ -25,8 +25,15 @@ gulp.task('markup', function() {
         //support for better error handling
         .pipe(plumber())
         .pipe(data(function(file) {
-            var dataFile = file.path.split(config.path.root).pop().replace('.handlebars', '.json');
-            dataFile = require('../../' + config.path.data.directory + '/' + config.path.data.pageDirectory + dataFile);
+            var dataFile;
+            // page specific json files are optional
+            try {
+                dataFile = file.path.split(config.path.root).pop().replace('.handlebars', '.json');
+                dataFile = require('../../' + config.path.data.directory + '/' +
+                    config.path.data.pageDirectory + dataFile);
+            } catch(err) {
+                dataFile = {};
+            }
             //return the data
             return _.extend(
                 {},
