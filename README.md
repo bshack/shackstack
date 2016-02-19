@@ -68,11 +68,11 @@ Define any data properties you want available for all your pages in 'default.jso
 gulp watch;
 ```
 
-This will create a Browsersync server and reload your browser window(s) when you make code changes.
+This will create a Browsersync server and reload your browser window(s) as you make code changes.
 
 Learn more about Browsersync here: https://www.browsersync.io
 
-If you want to run watch without Browsersync running you can do so like this:
+If you want to run watch without Browsersync you can do so like this:
 
 ```
 gulp watch --sync=false;
