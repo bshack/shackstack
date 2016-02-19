@@ -10,7 +10,7 @@ In addition it includes a customizable toolkit:
 
 http://billshackelford.com/toolkit
 
-## Key Libraries Leveraged
+## Key Libraries
 
 - BackboneJS
 - Browserify
@@ -44,7 +44,7 @@ Install the correct plugin for your text editor here:
 
 http://editorconfig.org/#download
 
-This will normalize things like what tab character(s) to use and will avoid linting errors.
+This will normalize settings like what tab character(s) to use and will avoid linting errors.
 
 ## Locations
 
@@ -55,7 +55,7 @@ Site source files used to build your site are located in the 'app/' directory.
 ### Stubbed JSON Data
 
 Any generated html page can have an associated JSON data file in 'service/view/' directory. This is where you can
-stub out any data to be used for populating the markup templates for that page. Follow the same directory and file structure as your
+stub out data to be used for populating the markup templates for that page. Follow the same directory and file structure as your
 pages.
 
 Define any data properties you want available for all your pages in 'default.json'. Any properties defined in page specific JSON files will override properties in 'default.json'.
@@ -72,7 +72,7 @@ This will create a Browsersync server and reload your browser window(s) as you m
 
 Learn more about Browsersync here: https://www.browsersync.io
 
-If you want to run watch without Browsersync you can do so like this:
+If you want to run the 'watch' task without Browsersync you can do so like this:
 
 ```
 gulp watch --sync=false;
@@ -109,14 +109,6 @@ gulp deploy
 gulp unit;
 ```
 
-### Build Tests
-
-Run this when you want to verify your changes will build properly on the CI server before pushing:
-
-```
-npm test;
-```
-
 ### More
 
 These all run as dependencies of the 'watch' and 'deploy' tasks.
@@ -129,6 +121,14 @@ gulp script;
 gulp sprite;
 gulp accessibility;
 gulp documentation;
+```
+
+## Test If Your Project Will Build
+
+Run this when you want to verify your changes will build properly on the CI server before pushing:
+
+```
+npm test;
 ```
 
 ## NPM Shrinkwrap
