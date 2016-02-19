@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var sassLint = require('gulp-sass-lint');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
+var notify = require('gulp-notify');
 var plumber = require('gulp-plumber');
 
 // ## Environment Config
@@ -28,7 +29,8 @@ var styleCompile = function() {
         }).on('error', sass.logError))
         //add browser prefixes
         .pipe(autoprefixer())
-        .pipe(gulp.dest(config.path.style.destination.watch));
+        .pipe(gulp.dest(config.path.style.destination.watch))
+        .on('error', notify.onError('style: <%= error.message %>'));
 };
 
 // ## Style Task

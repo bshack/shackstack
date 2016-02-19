@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var eslint = require('gulp-eslint');
 var plumber = require('gulp-plumber');
 var browserify = require('browserify');
+var notify = require('gulp-notify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 
@@ -22,7 +23,8 @@ gulp.task('scriptLint', function() {
         //lint logic and code style
         .pipe(eslint())
         .pipe(eslint.format())
-        .pipe(eslint.failAfterError());
+        .pipe(eslint.failAfterError())
+        .on('error', notify.onError('scriptLint: <%= error.message %>'));
 
 });
 
@@ -38,6 +40,7 @@ gulp.task('script', ['scriptLint', 'markupTemplate'], function() {
         .bundle()
         .pipe(source(config.path.script.compile.filename))
         .pipe(buffer())
-        .pipe(gulp.dest(config.path.script.compile.destination));
+        .pipe(gulp.dest(config.path.script.compile.destination))
+        .on('error', notify.onError('script: <%= error.message %>'));
 
 });

@@ -3,6 +3,7 @@
 var gulp = require('gulp');
 var accessibility = require('gulp-accessibility');
 var plumber = require('gulp-plumber');
+var notify = require('gulp-notify');
 
 // ## Environment Config
 
@@ -25,6 +26,7 @@ gulp.task('accessibility', function() {
                 error: true,
                 verbose: true
             }
-        }));
+        }))
+        .on('error', notify.onError('accessibility: <%= error.message %>'));
 
 });

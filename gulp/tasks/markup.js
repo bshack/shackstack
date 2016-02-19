@@ -8,6 +8,7 @@ var rename = require('gulp-rename');
 var wrapper = require('gulp-wrapper');
 var plumber = require('gulp-plumber');
 var data = require('gulp-data');
+var notify = require('gulp-notify');
 var _ = require('lodash-node');
 
 
@@ -61,7 +62,8 @@ gulp.task('markup', function() {
         .pipe(rename(function(path) {
             path.extname = '.html';
         }))
-        .pipe(gulp.dest(config.path.root));
+        .pipe(gulp.dest(config.path.root))
+        .on('error', notify.onError('markup: <%= error.message %>'));
 });
 
 // ## markupTemplate Task
