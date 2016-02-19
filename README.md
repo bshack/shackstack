@@ -44,7 +44,7 @@ Install the correct plugin for your text editor here:
 
 http://editorconfig.org/#download
 
-This will normalize things the tab character(s) used and will avoid linting errors.
+This will normalize things like what tab character(s) to use and will avoid linting errors.
 
 ## Locations
 
@@ -71,6 +71,12 @@ gulp watch;
 This will create a Browsersync server and reload your browser window(s) when you make code changes.
 
 Learn more about Browsersync here: https://www.browsersync.io
+
+If you run watch without Browsersync running you can do so like this:
+
+```
+gulp watch --sync=false;
+```
 
 ### Deploy
 

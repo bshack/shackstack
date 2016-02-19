@@ -1,15 +1,30 @@
 // ## Load Modules
 
 var gulp = require('gulp');
+var yargs = require('yargs').argv;
 var browsersync = require('browser-sync').create();
-var reload = function() {
-    'use strict';
-    return browsersync.reload();
-};
 
 // ## Environment Config
 
 var config = require('../config');
+
+// ## Enable Sync
+
+var sync;
+if (yargs.sync !== 'false') {
+    sync = true;
+} else {
+    sync = false;
+}
+
+// ## Reload
+
+var reload = function() {
+    'use strict';
+    if (sync) {
+        return browsersync.reload();
+    }
+};
 
 // ## Watch Task
 
@@ -25,12 +40,15 @@ gulp.task('image-watch', ['styleAndSprite'], reload);
 gulp.task('watch', ['build'], function() {
     'use strict';
 
-    browsersync.init({
-        //proxy: 'localhost'
-        server: {
-            baseDir: config.path.root
-        }
-    });
+    if (sync) {
+        //start up Browsersync
+        browsersync.init({
+            //proxy: 'localhost'
+            server: {
+                baseDir: config.path.root
+            }
+        });
+    }
 
     //watch scss
     gulp.watch(
