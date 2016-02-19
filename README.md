@@ -72,7 +72,7 @@ This will create a Browsersync server and reload your browser window(s) when you
 
 Learn more about Browsersync here: https://www.browsersync.io
 
-If you run watch without Browsersync running you can do so like this:
+If you want to run watch without Browsersync running you can do so like this:
 
 ```
 gulp watch --sync=false;
