@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    
+
     var Backbone = require('../../backbone/package');
     var templateInputError1 = require('../../template/toolkit/input-error-1');
     require('jquery-validation');
