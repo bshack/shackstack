@@ -1,24 +1,14 @@
 (function() {
     'use strict';
-    var utilities = require('../../../../app/assets/script/service/utilities.js');
+    var share = require('../../../../app/assets/script/service/share.js');
     describe('Canary', function() {
         it('is sucessfully running', function() {
             expect(true).toBe(true);
         });
     });
-    describe('encoding html into entities', function() {
-        it('sucessfully formats the markup and text into entities', function() {
-            expect(utilities.htmlEncode('<&>')).toBe('&lt;&amp;&gt;');
-        });
-    });
-    describe('decoding entities into markup', function() {
-        it('sucessfully formats the entities into markup and text', function() {
-            expect(utilities.htmlDecode('&lt;&amp;&gt;')).toBe('<&>');
-        });
-    });
     describe('generating a Facebook share url', function() {
         it('sucessfully returns the expected url', function() {
-            expect(utilities.shareFacebook({
+            expect(share.shareFacebook({
                 url: 'http://example.com/directory/index.html?param-1=1&param-2=2'
             }))
             .toBe('https://www.facebook.com/sharer.php?u=' +
@@ -27,7 +17,7 @@
     });
     describe('generating a Twitter share url', function() {
         it('does not return anything if there are over 140 characters', function() {
-            expect(utilities.shareTwitter({
+            expect(share.shareTwitter({
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
                     'Nullam porta velit vel lacinia posuere. Curabitur sit amet sem eleifend sem aliquam posuere.'
             }))
@@ -36,7 +26,7 @@
     });
     describe('generating a Twitter share url', function() {
         it('sucessfully returns the expected url', function() {
-            expect(utilities.shareTwitter({
+            expect(share.shareTwitter({
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             }))
             .toBe('https://twitter.com/intent/tweet?text=' +
@@ -45,7 +35,7 @@
     });
     describe('generating a Google Plus share url', function() {
         it('sucessfully returns the expected url', function() {
-            expect(utilities.shareGooglePlus({
+            expect(share.shareGooglePlus({
                 url: 'http://example.com/directory/index.html?param-1=1&param-2=2'
             }))
             .toBe('https://plus.google.com/share?url=' +
@@ -54,7 +44,7 @@
     });
     describe('generating a LinkedIn share url', function() {
         it('sucessfully returns the expected url', function() {
-            expect(utilities.shareLinkedIn({
+            expect(share.shareLinkedIn({
                 url: 'http://example.com/directory/index.html?param-1=1&param-2=2'
             }))
             .toBe('https://www.linkedin.com/shareArticle?url=' +
@@ -63,7 +53,7 @@
     });
     describe('generating an email share url', function() {
         it('sucessfully returns the expected url', function() {
-            expect(utilities.shareEmail({
+            expect(share.shareEmail({
                 subject: 'Lorem ipsum dolor sit amet',
                 body: 'Nullam porta velit vel lacinia posuere. Curabitur sit amet sem eleifend sem aliquam posuere.'
             }))
