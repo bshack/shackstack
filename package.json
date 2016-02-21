@@ -53,7 +53,7 @@
   "dependencies": {
     "backbone": "x.x.x",
     "brfs": "x.x.x",
-    "browser-sync": "^2.11.1",
+    "browser-sync": "x.x.x",
     "browserify": "x.x.x",
     "browserify-istanbul": "x.x.x",
     "browserify-shim": "x.x.x",
