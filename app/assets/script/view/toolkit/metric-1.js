@@ -20,7 +20,7 @@
                 m.parentNode.insertBefore(a, m)
             })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
             //set up google analytics
-            window.ga('create', env.get('metrics')['google-analytics-id'], 'auto');
+            window.ga('create', env.get('googleAnalyticsId'), 'auto');
             //send the fingerprint id (94% accurate unique id with out cookie tracking)
             window.ga('set', 'dimension1', new Fingerprint({canvas: true}).get().toString());
             //send the release version id

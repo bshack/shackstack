@@ -15,9 +15,9 @@
             // release version
             version: window.env.version,
             // metric configs
-            metrics: {
-                'google-analytics-id': window.env['google-analytics-id']
-            }
+            googleAnalyticsId: window.env.googleAnalyticsId,
+            // facebook configs
+            fbAppId: window.env.fbAppId
         }
     });
 })();
