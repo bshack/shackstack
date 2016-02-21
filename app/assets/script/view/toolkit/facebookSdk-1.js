@@ -1,10 +1,9 @@
 (function() {
     'use strict';
     var Backbone = require('../../backbone/package');
-    var ModelEnvironment = require('../../model/environment');
-    var env = new ModelEnvironment();
     module.exports = Backbone.View.extend({
         initialize: function() {
+            var _this = this;
             var js, fjs = document.getElementsByTagName('script')[0];
             if (document.getElementById('facebook-jssdk')) {return;}
             js = document.createElement('script'); js.id = 'facebook-jssdk';
@@ -12,7 +11,7 @@
             fjs.parentNode.insertBefore(js, fjs);
             window.fbAsyncInit = function() {
                 window.FB.init({
-                    appId: env.get('fbAppId'),
+                    appId: _this.model.get('fbAppId'),
                     xfbml: true,
                     version: 'v2.5'
                 });

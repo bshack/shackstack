@@ -6,8 +6,8 @@
     var ViewToolkit = require('./view/toolkit');
     var ViewWindow1 = require('./view/toolkit/window-1');
     var ViewMetric1 = require('./view/toolkit/metric-1');
+    var ViewFacebookSdk1 = require('./view/toolkit/facebookSdk-1');
     var $window = $(window);
-    var ViewFacebookSdk1 = require('./view/toolkit/facebook-sdk-1');
     require('foundation-sites');
     // speed up precieved click event performance
     fastclick(document.body);
@@ -21,9 +21,12 @@
         el: $window
     });
     new ViewMetric1({
-        el: $window
+        el: $window,
+        model: env
     });
-    new ViewFacebookSdk1();
+    new ViewFacebookSdk1({
+        model: env
+    });
     // if on toolkit page init the view
     if (env.get('view').lastIndexOf('toolkit', 0) === 0) {
         new ViewToolkit();

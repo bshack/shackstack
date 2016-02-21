@@ -2,8 +2,6 @@
     'use strict';
     var Backbone = require('../../backbone/package');
     var Fingerprint = require('fingerprintjs');
-    var ModelEnvironment = require('../../model/environment');
-    var env = new ModelEnvironment();
     module.exports = Backbone.View.extend({
         initialize: function() {
             //google analytics tracking library
@@ -20,11 +18,11 @@
                 m.parentNode.insertBefore(a, m)
             })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
             //set up google analytics
-            window.ga('create', env.get('googleAnalyticsId'), 'auto');
+            window.ga('create', this.model.get('googleAnalyticsId'), 'auto');
             //send the fingerprint id (94% accurate unique id with out cookie tracking)
             window.ga('set', 'dimension1', new Fingerprint({canvas: true}).get().toString());
             //send the release version id
-            window.ga('set', 'dimension2', env.get('version'));
+            window.ga('set', 'dimension2', this.model.get('version'));
             /*eslint-enable */
             //send pageview event
             this.eventSend({
