@@ -58,7 +58,7 @@ Any generated html page can have an associated JSON data file in 'service/view/'
 stub out data to be used for populating the markup templates for that page. Follow the same directory and file structure as your
 pages.
 
-Define any data properties you want available for all your pages in 'default.json'. Any properties defined in page specific JSON files will override properties in 'default.json'.
+Define any data properties you want available for all your pages in 'global.json'. Any properties defined in page specific JSON files will override properties in 'global.json'.
 
 ## Gulp Tasks
 
