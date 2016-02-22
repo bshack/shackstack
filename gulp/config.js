@@ -169,9 +169,9 @@ module.exports = {
             ],
             // file to be compliled by browserify
             compile: {
-                source: 'app/assets/script/app.js',
+                source: 'app/assets/script/global.js',
                 destination: 'app/assets/script',
-                filename: 'app.compiled.js'
+                filename: 'global.compiled.js'
             },
             // where to save script files in release task
             destination: 'assets/script'
@@ -203,7 +203,7 @@ module.exports = {
             source: 'app/service/**',
             destination: 'service',
             pageDirectory: 'view/',
-            pageDefaultData: 'default.json'
+            pageDefaultData: 'global.json'
         },
         // ### release
         release: {
