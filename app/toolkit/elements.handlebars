@@ -41,16 +41,20 @@
                         <p>{{> toolkit/anchor-1 id='anchor-1-aria' title='click here' accessible-title='detailed information about this product' url='#'}}</p>
                         <h3>Accessibility</h3>
                         <h4>Usage</h4>
-                        <p>Anchors should be used when a click takes the user to a new page or location on the current page.</p>
-                        <p>The anchor should provide enough helper text to give the user an indication of the content they will be taken to.</p>
+                        <ul>
+                            <li>Anchors should be used when a click takes the user to a new page or location on the current page.</li>
+                            <li>The anchor should provide enough helper text to give the user an indication of the content they will be taken to.</li>
+                        </ul>
                         <h4>Gherkin</h4>
                         <div class="gherkin">
                             <p>GIVEN I am a screen reader user<br>
                             WHEN I navigate to an anchor with the tab key<br>
                             THEN I hear the anchor text read aloud<br>
-                            AND the helper text provides an indication of the content of the linked to location<br>
                             AND I will hear element identified as an anchor<br>
-                            AND I will see focus visual change</p>
+                            AND the helper text provides an indication of the content of the linked to location</p>
+                            <p>GIVEN I am a keyboard user<br>
+                            WHEN I navigate to an anchor with the tab key<br>
+                            THEN I will see focus visual change</p>
                         </div>
 
                         <hr>
@@ -63,17 +67,19 @@
                         <p>{{> toolkit/button-1 id='button-1-aria' title='click here' accessible-title='detailed information about this product' url='#'}}</p>
                         <h3>Accessibility</h3>
                         <h4>Usage</h4>
-                        <p>Buttons should be used when a click changes the view by opening a modal or modifying the DOM and does not take the user to a new location.</p>
-                        <p>The button should provide enough helper text to give the user an indication of the action that will be taken.</p>
+                        <ul>
+                            <li>Buttons should be used when a click changes the view by opening a modal or modifying the DOM and does not take the user to a new location.</li>
+                            <li>The button should provide enough helper text to give the user an indication of the action that will be taken.</li>
+                        </ul>
                         <h4>Gherkin</h4>
                         <div class="gherkin">
                             <p>GIVEN I am a screen reader user<br>
                             WHEN I navigate to a button with the tab key<br>
-                            THEN I will hear the button label<br>
-                            AND I will hear element identified as a button<br>
-                            AND the helper text provides an indication of the action of the action that will be taken<br>
-                            AND I will see focus visual change<br>
-                            AND I will hear a selected indicator if option is selected</p>
+                            THEN I will hear element identified as a button<br>
+                            AND the helper text provides an indication of the action that will be taken</p>
+                            <p>GIVEN I am a keyboard user<br>
+                            WHEN I navigate to a button with the tab key<br>
+                            THEN I will see focus visual change</p>
                         </div>
 
                         <hr>
@@ -85,11 +91,6 @@
                         <p>{{> toolkit/input-text-1 id='label-example-input' placeholder='first and last name' type='text'}}</p>
                         <h3>Accessibility</h3>
                         <h4>Gherkin</h4>
-                        <div class="gherkin">
-                            <p>GIVEN I am a screen reader user<br>
-                            WHEN I select a form element label using the keyboard<br>
-                            THEN I will hear the label read aloud</p>
-                        </div>
                         <div class="gherkin">
                             <p>GIVEN I am a screen reader user<br>
                             WHEN I select a form element label using the keyboard<br>
@@ -109,13 +110,9 @@
                             WHEN I select the list using the keyboard<br>
                             THEN I hear element identified as a list<br>
                             AND I will hear the number of items in the list</p>
-                        </div>
-                        <div class="gherkin">
                             <p>GIVEN I am a screen reader user<br>
                             WHEN navigate the list with my keyboard arrow keys<br>
                             THEN I will hear the next item read aloud</p>
-                        </div>
-                        <div class="gherkin">
                             <p>GIVEN I am a screen reader user<br>
                             WHEN navigate the past the last item in a list with the keyboard arrow key<br>
                             THEN I will hear that I have come to the end of the list</p>
@@ -135,15 +132,15 @@
                             WHEN I navigate to a checkbox with the tab key<br>
                             THEN I will hear the element identified as a checkbox<br>
                             AND I will hear the label read aloud<br>
-                            AND I will here if it is selected<br>
-                            AND I will see focus visual change</p>
-                        </div>
-                        <div class="gherkin">
+                            AND I will hear if it is selected</p>
                             <p>GIVEN I am a screen reader user<br>
                             WHEN I select a checkbox using the keyboard<br>
                             THEN I will hear the element be selected<br>
                             AND I will hear the label read aloud<br>
-                            AND I will here if it is selected</p>
+                            AND I will hear if it is selected</p>
+                            <p>GIVEN I am a keyboard user<br>
+                            WHEN I navigate to a checkbox with the tab key<br>
+                            THEN I will see focus visual change</p>
                         </div>
 
                         <hr>
@@ -163,15 +160,15 @@
                             WHEN I navigate to a radio button with the tab key<br>
                             THEN I will hear the element identified as a radio button<br>
                             AND I will hear the label read aloud<br>
-                            AND I will here if it is selected<br>
-                            AND I will see focus visual change</p>
-                        </div>
-                        <div class="gherkin">
+                            AND I will hear if it is selected</p>
                             <p>GIVEN I am a screen reader user<br>
                             WHEN I select a radio button using the keyboard<br>
                             THEN I will hear the element be selected<br>
                             AND I will hear the label read aloud<br>
-                            AND I will here if it is selected</p>
+                            AND I will hear if it is selected</p>
+                            <p>GIVEN I am a keyboard user<br>
+                            WHEN I navigate to a radio button with the tab key<br>
+                            THEN I will see focus visual change</p>
                         </div>
 
                         <hr>
@@ -190,8 +187,10 @@
                             AND I will hear the label read aloud<br>
                             AND I will hear any defined value<br>
                             AND I will hear any defined placeholder text<br>
-                            AND I will hear if the field is required<br>
-                            AND I will see focus visual change</p>
+                            AND I will hear if the field is required</p>
+                            <p>GIVEN I am a keyboard user<br>
+                            WHEN I navigate to a text input with the tab key<br>
+                            THEN I will see focus visual change</p>
                         </div>
 
                         <hr>
@@ -209,8 +208,11 @@
                             THEN I will hear the element identified as an input<br>
                             AND I will hear the label read aloud<br>
                             AND I will hear any defined value<br>
-                            AND I will hear if the field is required<br>
-                            AND I will see focus visual change</p>
+                            AND I will hear any defined placeholder text<br>
+                            AND I will hear if the field is required</p>
+                            <p>GIVEN I am a keyboard user<br>
+                            WHEN I navigate to a textarea with the tab key<br>
+                            THEN I will see focus visual change</p>
                         </div>
 
                         <hr>
@@ -229,21 +231,19 @@
                             AND I will hear the label read aloud<br>
                             AND I will hear any defined value<br>
                             AND I will hear any defined placeholder text<br>
-                            AND I will hear if the field is required<br>
-                            AND I will see focus visual change</p>
-                        </div>
-                        <div class="gherkin">
+                            AND I will hear if the field is required</p>
                             <p>GIVEN I am a blind screen reader user<br>
                             WHEN I open the dropdown menu with the spacebar key<br>
                             THEN I will hear the number of options<br>
                             AND I will hear selected option</p>
-                        </div>
-                        <div class="gherkin">
                             <p>GIVEN I am a screen reader user<br>
                             WHEN I open the dropdown menu with the spacebar key<br>
                             AND I navigate through the options<br>
                             THEN I will hear the option label<br>
                             AND I will hear a selected indicator if option is selected</p>
+                            <p>GIVEN I am a keyboard user<br>
+                            WHEN I navigate to a dropdown menu with the tab key<br>
+                            THEN I will see focus visual change</p>
                         </div>
 
                         <hr>
@@ -259,8 +259,6 @@
                             WHEN I navigate to a table with the tab key<br>
                             THEN I will hear table caption<br>
                             AND I will hear the number of columns and number of rows</p>
-                        </div>
-                        <div class="gherkin">
                             <p>GIVEN I am a screen reader user<br>
                             WHEN I navigate from cell to cell using Control + Alt + arrow keys<br>
                             THEN I need to hear the table headers</p>

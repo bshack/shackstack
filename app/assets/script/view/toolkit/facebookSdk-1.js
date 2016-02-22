@@ -16,6 +16,17 @@
                     version: 'v2.5'
                 });
             };
+        },
+        // fb share
+        share: function(params) {
+            window.FB.ui({
+                method: 'feed',
+                name: (params.name || null),
+                link: (params.link || null),
+                picture: (params.picture || null),
+                caption: (params.caption || null),
+                description: (params.description || null)
+            });
         }
     });
 })();
