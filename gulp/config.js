@@ -165,7 +165,7 @@ module.exports = {
             ],
             // glob js files to be delployed duirng release
             release: [
-                'app/assets/script/app.compiled.js'
+                'app/assets/script/global.compiled.js'
             ],
             // file to be compliled by browserify
             compile: {
