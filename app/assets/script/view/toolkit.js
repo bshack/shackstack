@@ -6,6 +6,7 @@
     var ViewTabpanel1 = require('./toolkit/tabpanel-1');
     var ViewAccessiblityAjax1 = require('./toolkit/accessiblityAjax-1');
     var ViewForm1 = require('./toolkit/form-1');
+    var ViewVideo1 = require('./toolkit/video-1');
     var templateModalDemo = require('../template/modal/modal-example-1');
     module.exports =  Backbone.View.extend({
         initialize: function() {
@@ -27,6 +28,11 @@
                 content: function(data) {
                     return Backbone.$(templateModalDemo(data));
                 }
+            });
+            //setup video player
+            new ViewVideo1({
+                el: Backbone.$('.video-1'),
+                videoId: 'fJmADQkhUeo'
             });
             // setup the accessible ajax view
             var viewAccessiblityAjax1 = new ViewAccessiblityAjax1();

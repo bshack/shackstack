@@ -26,7 +26,7 @@
 // @include foundation-drilldown-menu;
 // @include foundation-dropdown;
 // @include foundation-dropdown-menu;
-// @include foundation-flex-video;
+@include foundation-flex-video;
 // @include foundation-label;
 // @include foundation-media-object;
 // @include foundation-menu;
@@ -284,4 +284,8 @@ main:focus {
 
 .tabpanel-1 {
     @extend %tabpanel-1;
+}
+
+.video-1 {
+    @extend %video-1;
 }
