@@ -25,14 +25,14 @@
             // The API will call this function when the video player is ready.
             window.onPlayerReady = function(e) {
                 // broadcast video is ready
-                Backbone.Mediator.publish('video:ready', e);
+                Backbone.Mediator.publish('video-1:ready', e);
             }
             // The API calls this function when the player's state changes.
             // The function indicates that when playing a video (state=1),
             // the player should play for six seconds and then stop.
             window.onPlayerStateChange = function(e) {
                 // broadcast video state change
-                Backbone.Mediator.publish('video:stateChange', e);
+                Backbone.Mediator.publish('video-1:stateChange', e);
 
                 if (e.data === YT.PlayerState.PLAYING && !done) {
                     setTimeout(_this.eventStop, 6000);
