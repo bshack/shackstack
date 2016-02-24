@@ -3,7 +3,6 @@
     var Backbone = require('../../backbone/package');
     module.exports = Backbone.View.extend({
         initialize: function(options) {
-            /*eslint-disable */
             var _this = this;
             var done = false;
             //add an empty div that will be later replaced by the youtube player iframe
@@ -13,6 +12,7 @@
                 url: 'https://www.youtube.com/iframe_api',
                 dataType: 'script'
             });
+            /*eslint-disable */
             // This function creates an iframe (and YouTube player) after the API code downloads.
             window.onYouTubeIframeAPIReady = function() {
                 _this.player = new YT.Player(_this.$el.find('div').get(0), Backbone.$.extend({
@@ -61,6 +61,19 @@
         getVideoEmbedCode: function() {
             return this.player.getVideoEmbedCode();
         },
+        //Returns video title
+        getVideoTitle: function() {
+            return this.player.getVideoData().title;
+        },
+        //Returns video Author
+        getVideoAuthor: function() {
+            return this.player.getVideoData().author;
+        },
+        //Returns video ID YouTube.com
+        getVideoID: function() {
+            return this.player.getVideoData()['video_id'];
+        },
+        //returns video data object with multiple properties
         getVideoData: function() {
             return this.player.getVideoData();
         }
