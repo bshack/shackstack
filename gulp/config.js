@@ -221,21 +221,7 @@ module.exports = {
             // where to save code complexity report
             source: 'app/report/**',
             destination: 'report',
-            plato: 'app/report/plato',
-            docco: {
-                // location of docco generated html files
-                source: 'app/report/docco',
-                // location of docco generated templates files
-                compiled: 'app/assets/script/template/documentation',
-                // where to save gulp documentation
-                build: 'app/report/docco/build',
-                // where to script script documentation
-                script: 'app/report/docco/script',
-                // where to save style documentation
-                style: 'app/report/docco/style',
-                // where to save template documentation
-                template: 'app/report/docco/template'
-            }
+            plato: 'app/report/plato'
         }
     }
 };

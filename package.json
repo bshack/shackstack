@@ -74,7 +74,6 @@
     "gulp-data": "x.x.x",
     "gulp-debug": "x.x.x",
     "gulp-directory-map": "x.x.x",
-    "gulp-docco": "x.x.x",
     "gulp-eslint": "x.x.x",
     "gulp-handlebars": "x.x.x",
     "gulp-htmllint": "x.x.x",
