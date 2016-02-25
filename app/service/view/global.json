@@ -34,5 +34,6 @@
         "google-analytics":{
             "id":"UA-XXXXXX-X"
         }
-    }
+    },
+    "webRepo":"https://github.com/bshack/shackstack/blob/master/"
 }

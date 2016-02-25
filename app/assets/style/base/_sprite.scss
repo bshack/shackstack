@@ -1,0 +1,41 @@
+// ## sprite
+// sprite and this scss file are created by the gulp task 'sprite',
+// generated sprite is a 2x display dimensions
+
+// docs: https://www.npmjs.com/package/sprity
+
+// ### icon-global
+
+%icon-global {
+    background-image: url('../image/sprite-global.png');
+    background-repeat: no-repeat;
+    background-size: rem-calc((162 / 2 )) rem-calc((440 / 2));
+    display: block;
+    overflow: hidden;
+    text-indent: rem-calc(-2000);
+}
+
+// ### graphic-css3
+
+%graphic-css3 {
+
+    @extend %icon-global;
+
+    background-position: rem-calc(-((0 / 2) + 4)) rem-calc(-((0 / 2) + 4));
+    height: rem-calc(((220 - 20) / 2) + 2);
+    width: rem-calc(((162 - 20) / 2) + 2);
+
+}
+
+// ### graphic-html5
+
+%graphic-html5 {
+
+    @extend %icon-global;
+
+    background-position: rem-calc(-((0 / 2) + 4)) rem-calc(-((220 / 2) + 4));
+    height: rem-calc(((220 - 20) / 2) + 2);
+    width: rem-calc(((162 - 20) / 2) + 2);
+
+}
+

@@ -5,7 +5,6 @@ bower_components/
 app/assets/script/template/
 app/assets/script/*.compiled.js
 app/assets/style/*.css
-app/assets/style/base/_sprite.scss
 app/assets/image/sprite-*.png
 app/assets/image/sprite/**/*.png
 app/**/*.html
