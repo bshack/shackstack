@@ -1,13 +1,12 @@
 // ## accessibility hidden
-// hide off screen for sighted users and leave accessible for screen readers
+// hide elements off screen for sighted users and leave accessible for screen readers
 
 %accessibility-hidden {
-
     clip: rect(0 0 0 0);
     left: rem-calc(-5000);
     overflow: hidden;
     position: absolute;
-
+    text-indent: rem-calc(-5000);
 }
 
 // ## accessibility hidden

@@ -4,6 +4,50 @@
 
     @extend %arial-1;
 
+    height: 100%;
+    position: absolute;
+    width: 100%;
+
+    @media screen {
+        height: 100vh;
+    }
+
+    > .content {
+
+        height: 100%;
+        margin: 0 auto;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+
+        > div {
+
+            background: $white-1;
+            height: 100%;
+
+            @include breakpoint(medium up) {
+                height: auto;
+            }
+
+        }
+
+        @include breakpoint(medium up) {
+            height: auto;
+            margin-top: rem-calc(15);
+        }
+
+    }
+
+    > button {
+        background-color: $grey-1;
+        display: block;
+        height: 100%;
+        opacity: .9;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
 }
 
 // ## tabpanels

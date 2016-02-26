@@ -3,62 +3,66 @@
     {{> tags/head secondaryCSS='toolkit'}}
     <body itemscope itemtype="http://schema.org/WebPage">
 
-        {{>toolkit/accessibility-skip-to-element-1 id='skip-to-content' url='#main' title='skip to content'}}
+        <div id="wrapper">
 
-        <header>
-            <div class="row">
-                <div class="small-12 columns">
-                    <a href="{{www}}toolkit">Toolkit</a>
-                </div>
-            </div>
-        </header>
+            {{>toolkit/accessibility-skip-to-element-1 id='skip-to-content' url='#main' title='skip to content'}}
 
-        <nav>
-            <div class="row collapse">
-                <ul class="small-12 columns">
-                    <li><a href="{{www}}toolkit">Home</a></li>
-                    <li><a href="{{www}}toolkit/grid.html">Grid</a></li>
-                    <li><a href="{{www}}toolkit/colors.html">Colors</a></li>
-                    <li><a href="{{www}}toolkit/text.html">Text</a></li>
-                    <li><a class="selected" href="{{www}}toolkit/sprite.html">Sprite</a></li>
-                    <li><a href="{{www}}toolkit/elements.html">Elements</a></li>
-                    <li><a href="{{www}}toolkit/components.html">Components</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <main id="main" tabindex="-1">
-            <section>
+            <header>
                 <div class="row">
                     <div class="small-12 columns">
-                        <h1>Sprite</h1>
-                        <p>style: <a href="{{webRepo}}app/assets/style/base/_sprite.scss">_sprite.scss</a></p>
-                        <table class="table-1">
-                            <caption>sprite contents</caption>
-                            <thead>
-                                <tr>
-                                    <th scope="col">image</th>
-                                    <th scope="col">scss</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><span class="graphic-css3">css3 graphic</span></td>
-                                    <td>%graphic-css3</td>
-                                </tr>
-                                <tr>
-                                    <td><span class="graphic-html5">html5 graphic</span></td>
-                                    <td>%graphic-html5</td>
-                                </tr>
-                            </tbody>
-                        <table>
+                        <a href="{{www}}toolkit">Toolkit</a>
                     </div>
                 </div>
-            </section>
-        </main>
+            </header>
 
-        <footer>
-        </footer>
+            <nav>
+                <div class="row collapse">
+                    <ul class="small-12 columns">
+                        <li><a href="{{www}}toolkit">Home</a></li>
+                        <li><a href="{{www}}toolkit/grid.html">Grid</a></li>
+                        <li><a href="{{www}}toolkit/colors.html">Colors</a></li>
+                        <li><a href="{{www}}toolkit/text.html">Text</a></li>
+                        <li><a class="selected" href="{{www}}toolkit/sprite.html">Sprite</a></li>
+                        <li><a href="{{www}}toolkit/elements.html">Elements</a></li>
+                        <li><a href="{{www}}toolkit/components.html">Components</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main id="main" tabindex="-1">
+                <section>
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h1>Sprite</h1>
+                            <p>style: <a href="{{webRepo}}app/assets/style/base/_sprite.scss">_sprite.scss</a></p>
+                            <table class="table-1">
+                                <caption>sprite contents</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">image</th>
+                                        <th scope="col">scss</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="graphic-css3">css3 graphic</span></td>
+                                        <td>%graphic-css3</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="graphic-html5">html5 graphic</span></td>
+                                        <td>%graphic-html5</td>
+                                    </tr>
+                                </tbody>
+                            <table>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+            </footer>
+
+        </div>
 
         {{> config/config}}
         {{> tags/script script='assets/script/global.compiled.js'}}

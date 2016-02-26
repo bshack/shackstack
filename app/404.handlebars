@@ -3,21 +3,25 @@
     {{> tags/head}}
     <body itemscope itemtype="http://schema.org/WebPage">
 
-        {{>toolkit/accessibility-skip-to-element-1 id='skip-to-content' url='#main' title='skip to content'}}
+        <div id="wrapper">
 
-        <header>
-        </header>
+            {{>toolkit/accessibility-skip-to-element-1 id='skip-to-content' url='#main' title='skip to content'}}
 
-        <nav>
-        </nav>
+            <header>
+            </header>
 
-        <main id="main" tabindex="-1">
-            {{>toolkit/heading-1 tag='h1' title='Page Not Found'}}
-            <p>Sorry, but the page you were trying to view does not exist.</p>
-        </main>
+            <nav>
+            </nav>
 
-        <footer>
-        </footer>
+            <main id="main" tabindex="-1">
+                {{>toolkit/heading-1 tag='h1' title='Page Not Found'}}
+                <p>Sorry, but the page you were trying to view does not exist.</p>
+            </main>
+
+            <footer>
+            </footer>
+
+        </div>
 
         {{> config/config}}
         {{> tags/script script='assets/script/global.compiled.js'}}

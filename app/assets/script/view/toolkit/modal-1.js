@@ -3,7 +3,8 @@
     var Backbone = require('../../backbone/package');
     module.exports = Backbone.View.extend({
         events: {
-            'click [data-modal-close]': 'closeModalClick'
+            'click [data-modal-close]': 'closeModalClick',
+            'focus > button': 'keyboardTrapFocus'
         },
         subscriptions: {
             'window:keydown:escape': 'closeModal'
@@ -12,16 +13,18 @@
             e.preventDefault();
             this.closeModal();
         },
+        keyboardTrapFocus: function() {
+            this.$el.find('.content').focus();
+        },
         closeModal: function() {
             if (!Backbone.$('[data-modal]').size()) {
                 return;
             }
             // cache the element that lauched the modal
-            this.$opener = this.$el.data('opener');
-            // show all the page content
-            Backbone.$('body > *')
-                .not('script, [data-modal]')
-                .removeAttr('hidden');
+            this.$opener = this.$el.find('.content').data('opener');
+            // allow scrolling again
+            Backbone.$('body')
+                .removeClass('scrolling-off');
             // remove it from the screen
             this.$el
                 .detach();

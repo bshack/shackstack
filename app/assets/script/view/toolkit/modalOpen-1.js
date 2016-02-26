@@ -25,25 +25,28 @@
         },
         render: function(e) {
             e.preventDefault();
+            //cache current scroll position
             var windowScrollPosition = Backbone.$(window).scrollTop();
             // the opener
             var $target = Backbone.$(e.target);
             // build the modal markup
-            var $modal = this.template().html(this.templateInner());
+            var $modal = this.template();
+            // clean up the modal
+            $modal
+                .css('top', windowScrollPosition)
+                .find('.content')
+                .html(this.templateInner());
             // bind the events
             new ViewModal1({
                 el: $modal
             });
-
             //add to dom
             Backbone.$('body')
+                .addClass('scrolling-off')
                 .prepend($modal);
-            // hide page content
-            Backbone.$('body > *')
-                .not('script, [data-modal]')
-                .attr('hidden', 'hidden');
-            //put focuse on the modal and cache the opening element and window position
+            //put focus on the modal and cache the opening element and window position
             $modal
+                .find('.content')
                 .focus()
                 .data('opener', $target)
                 .data('windowScrollPosition', windowScrollPosition);
