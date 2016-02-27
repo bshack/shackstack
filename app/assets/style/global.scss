@@ -184,10 +184,6 @@ main:focus {
     @extend %accessibility-skip-to-element-1;
 }
 
-.accessibility-hidden {
-    @extend %accessibility-hidden;
-}
-
 // ### standard text treatments
 
 .heading-1 {

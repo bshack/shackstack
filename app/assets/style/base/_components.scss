@@ -39,6 +39,9 @@
     }
 
     > button {
+
+        @extend %accessibility-hidden-text;
+
         background-color: $grey-1;
         display: block;
         height: 100%;
