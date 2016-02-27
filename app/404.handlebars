@@ -5,19 +5,18 @@
 
         {{>toolkit/accessibility-skip-to-element-1 id='skip-to-content' url='#main' title='skip to content'}}
 
-        <header>
-        </header>
+        {{>toolkit/header-1}}
 
-        <nav>
-        </nav>
+        {{>toolkit/nav-1}}
 
         <main id="main" tabindex="-1">
-            {{>toolkit/heading-1 tag='h1' title='Page Not Found'}}
-            <p>Sorry, but the page you were trying to view does not exist.</p>
+            <div class="small-12 columns">
+                {{>toolkit/heading-1 tag='h1' title='Page Not Found'}}
+                <p>Sorry, but the page you were trying to view does not exist.</p>
+            </div>
         </main>
 
-        <footer>
-        </footer>
+        {{>toolkit/footer-1}}
 
         {{> config/config}}
         {{> tags/script script='assets/script/global.compiled.js'}}
