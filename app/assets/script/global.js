@@ -5,8 +5,8 @@
     var ModelEnvironment = require('./model/environment');
     var ViewToolkit = require('./view/toolkit');
     var ViewWindow1 = require('./view/toolkit/window-1');
-    var ViewMetric1 = require('./view/toolkit/metric-1');
-    var ViewFacebookSdk1 = require('./view/toolkit/facebookSdk-1');
+    var ViewGoogleAnalytics1 = require('./view/toolkit/google-analytics-1');
+    var ViewFacebook1 = require('./view/toolkit/facebook-1');
     var $window = $(window);
     require('foundation-sites');
     // speed up precieved click event performance
@@ -20,11 +20,11 @@
     new ViewWindow1({
         el: $window
     });
-    new ViewMetric1({
+    new ViewGoogleAnalytics1({
         el: $window,
         model: env
     });
-    new ViewFacebookSdk1({
+    new ViewFacebook1({
         model: env
     });
     // if on toolkit page init the view
