@@ -14,17 +14,17 @@
             this.closeModal();
         },
         keyboardTrapFocus: function() {
-            this.$el.find('.content').focus();
+            this.$el.find('.modal-1-content').focus();
         },
         closeModal: function() {
             if (!Backbone.$('[data-modal]').size()) {
                 return;
             }
             // cache the element that lauched the modal
-            this.$opener = this.$el.find('.content').data('opener');
+            this.$opener = this.$el.find('.modal-1-content').data('opener');
             // allow scrolling again
             Backbone.$('body')
-                .removeClass('scrolling-off');
+                .removeClass('modal-1-open');
             // remove it from the screen
             this.$el
                 .detach();

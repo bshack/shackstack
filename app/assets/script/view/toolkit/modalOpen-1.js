@@ -34,7 +34,7 @@
             // clean up the modal
             $modal
                 .css('top', windowScrollPosition)
-                .find('.content')
+                .find('.modal-1-content')
                 .html(this.templateInner());
             // bind the events
             new ViewModal1({
@@ -42,11 +42,11 @@
             });
             //add to dom
             Backbone.$('body')
-                .addClass('scrolling-off')
+                .addClass('modal-1-open')
                 .prepend($modal);
             //put focus on the modal and cache the opening element and window position
             $modal
-                .find('.content')
+                .find('.modal-1-content')
                 .focus()
                 .data('opener', $target)
                 .data('windowScrollPosition', windowScrollPosition);

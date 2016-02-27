@@ -278,6 +278,10 @@ main:focus {
     @extend %modal-1;
 }
 
+.modal-1-open {
+    @extend %modal-1-open;
+}
+
 .tabpanel-1 {
     @extend %tabpanel-1;
 }
