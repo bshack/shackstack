@@ -2,27 +2,27 @@
     'use strict';
     var Backbone = require('../../backbone/package');
     module.exports = Backbone.View.extend({
-        events: {
-            load: 'viewportSet',
-            resize: 'viewportSet',
-            orientationchange: 'viewportSet',
-            scroll: 'viewportSet',
-            keydown: 'keydownEvent',
-            error: 'errorEvent'
+        initialize: function() {
+            //on init set viewport
+            this.viewportSet();
         },
-        // subscribe to pub/sub messaging
-        subscriptions: {
-            'window:viewport:refresh': 'viewportRefresh'
+        events: {
+            load: 'eventLoad',
+            resize: 'eventResize',
+            orientationchange: 'eventOrientationChange',
+            scroll: 'eventScroll',
+            keydown: 'eventKeydown',
+            error: 'eventError'
         },
         // this.viewport holds the current state of the window
         viewport: {
             height: false,
             width: false,
             scrollTop: false,
-            view: false,
+            snappoint: false,
             orientation: false
         },
-        errorEvent: function(message, url, line) {
+        eventError: function(message, url, line) {
             //sometimes message is an object
             if (typeof message === 'object') {
                 message = 'no message (object)';
@@ -35,58 +35,45 @@
                 eventLabel: (message || 'no message') + ' - ' + (url || 'no url') + ' - ' + (line || 'no line')
             });
         },
-        keydownEvent: function(e) {
+        eventKeydown: function(e) {
             //listen for excape key.. mostly used for modals
             if (e.keyCode === 27) {
                 Backbone.Mediator.publish('window:keydown:escape');
             }
         },
-        //force refresh for viewport cache
-        viewportRefresh: function() {
-            this.viewportSet(true);
-        },
-        viewportSet: function(clearCache) {
-            //this is mainly used to control
-            //placing the 'hidden' attribute for accessiblity
-            //where display: none; is not enough
-            var _this = this;
+        viewportSet: function() {
             //set the viewport width, height, scroll position
             this.viewport.width = this.$el.width();
             this.viewport.height = this.$el.height();
             this.viewport.scrollTop = this.$el.scrollTop();
             //set orientation
-            if (this.$el.get(0).matchMedia('(orientation: landscape)').matches) {
+            if (this.el.matchMedia('(orientation: landscape)').matches) {
                 this.viewport.orientation = 'landscape';
             } else {
                 this.viewport.orientation = 'portrait';
             }
-            //check if the viewport has been set or if it has changed
-            //desktop check
-            if (
-                this.viewport.width >= 640 &&
-                (this.viewport.view === 'mobile' || !this.viewport.view || clearCache)
-            ) {
-                this.viewport.view = 'desktop';
-                //message to other views the viewport has changed to desktop
-                Backbone.Mediator.publish('window:viewport:desktop', _this.viewport);
-            //mobile check
-            } else if (
-                this.viewport.width < 640 &&
-                (this.viewport.view === 'desktop' || !this.viewport.view || clearCache)
-            ) {
-                this.viewport.view = 'mobile';
-                //message to other views the viewport has changed to mobile
-                Backbone.Mediator.publish('window:viewport:mobile', _this.viewport);
+            //check if the snappoint has been set or if it has changed
+            if (this.el.Foundation.MediaQuery.current !== this.viewport.snappoint || !this.viewport.snappoint) {
+                this.viewport.snappoint = this.el.Foundation.MediaQuery.current;
+                //message to other views the viewport has been changed
+                Backbone.Mediator.publish('window:snappoint:change', this.viewport);
             }
-            //message to other views the viewport has been changed
-            Backbone.Mediator.publish('window:viewport:change', _this.viewport);
         },
-        initialize: function() {
-            //on init set viewport
-            this.viewportSet();
+        eventResize: function(e) {
+            this.viewportSet(e);
+            Backbone.Mediator.publish('window:resize:change', this.viewport);
         },
-        render: function() {
-            return;
+        eventScroll: function(e) {
+            this.viewportSet(e);
+            Backbone.Mediator.publish('window:scroll:change', this.viewport);
+        },
+        eventLoad: function(e) {
+            this.viewportSet(e);
+            Backbone.Mediator.publish('window:load', this.viewport);
+        },
+        eventOrientationChange: function(e) {
+            this.viewportSet(e);
+            Backbone.Mediator.publish('window:orientation:change', this.viewport);
         }
     });
 })();
