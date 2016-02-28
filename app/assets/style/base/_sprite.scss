@@ -7,12 +7,21 @@
 // ### icon-global
 
 %icon-global {
+
+    // hide any text inside the sprite container from sighted users
+    @extend %accessibility-hidden-text;
+
     background-image: url('../image/sprite-global.png');
     background-repeat: no-repeat;
     background-size: rem-calc((162 / 2 )) rem-calc((440 / 2));
     display: block;
     overflow: hidden;
-    text-indent: rem-calc(-2000);
+
+    // hide any elements inside the sprite container from sighted users
+    > * {
+        @extend %accessibility-hidden;
+    }
+
 }
 
 // ### graphic-css3

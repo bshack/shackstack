@@ -2,24 +2,19 @@
 <html id="index" lang="en-us" dir="ltr">
     {{> tags/head}}
     <body itemscope itemtype="http://schema.org/WebPage">
-
         {{>toolkit/accessibility-skip-to-element-1 id='skip-to-content' url='#main' title='skip to content'}}
-
-        {{>toolkit/header-1}}
-
-        {{>toolkit/nav-1}}
-
-        <main id="main" tabindex="-1" class="row">
-            <div class="small-12 columns">
-                <p>Build your site here.</p>
-                {{>tags/a id='toolkit' url='toolkit/' title='click to view your toolkit'}}
-            </div>
-        </main>
-
-        {{>toolkit/footer-1}}
-
+        <div id="wrapper">
+            {{>toolkit/header-1}}
+            {{>toolkit/nav-1}}
+            <main id="main" tabindex="-1" class="row">
+                <div class="small-12 columns">
+                    <p>Build your site here.</p>
+                    {{>tags/a id='toolkit' url='toolkit/' title='click to view your toolkit'}}
+                </div>
+            </main>
+            {{>toolkit/footer-1}}
+        </div>
         {{> config/config}}
         {{> tags/script script='assets/script/global.compiled.js'}}
-
     </body>
 </html>

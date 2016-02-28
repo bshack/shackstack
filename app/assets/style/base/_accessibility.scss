@@ -1,13 +1,18 @@
 // ## accessibility hidden
-// hide off screen for sighted users and leave accessible for screen readers
+// hide elements off screen for sighted users and leave accessible for screen readers
 
-%accessibility-hidden {
+%accessibility-hidden-text {
+    text-indent: rem-calc(-5000);
+}
 
+// ## accessibility hidden
+// hide elements off screen for sighted users and leave accessible for screen readers
+
+%accessibility-hidden-element {
     clip: rect(0 0 0 0);
     left: rem-calc(-5000);
     overflow: hidden;
     position: absolute;
-
 }
 
 // ## accessibility hidden
@@ -15,7 +20,7 @@
 
 %accessibility-focus {
 
-    @extend %accessibility-hidden;
+    @extend %accessibility-hidden-element;
 
     &:focus {
         clip: auto;

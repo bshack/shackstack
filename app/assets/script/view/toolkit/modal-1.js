@@ -2,26 +2,45 @@
     'use strict';
     var Backbone = require('../../backbone/package');
     module.exports = Backbone.View.extend({
+        initialize: function() {
+            //ask window top publish its status
+            Backbone.Mediator.publish('window:poll');
+        },
         events: {
-            'click [data-modal-close]': 'closeModalClick'
+            'click [data-modal-close]': 'eventCloseModalClick',
+            'focus > button': 'eventKeyboardFocus'
         },
         subscriptions: {
-            'window:keydown:escape': 'closeModal'
+            'window:keydown:escape': 'eventCloseModal',
+            'window:snappoint:change': 'eventSnappointChange'
         },
-        closeModalClick: function(e) {
+        //watch snappoint and move modal around as it changes
+        eventSnappointChange: function(data) {
+            var scrollTop;
+            if (data.snappoint === 'small') {
+                scrollTop = 0;
+            } else {
+                scrollTop = this.$el.data('windowScrollPosition');
+            }
+            this.$el
+                .css('top', scrollTop);
+        },
+        eventCloseModalClick: function(e) {
             e.preventDefault();
-            this.closeModal();
+            this.eventCloseModal();
         },
-        closeModal: function() {
+        eventKeyboardFocus: function() {
+            this.$el.find('.modal-1-content').focus();
+        },
+        eventCloseModal: function() {
             if (!Backbone.$('[data-modal]').size()) {
                 return;
             }
             // cache the element that lauched the modal
-            this.$opener = this.$el.data('opener');
-            // show all the page content
-            Backbone.$('body > *')
-                .not('script, [data-modal]')
-                .removeAttr('hidden');
+            this.$opener = this.$el.find('.modal-1-content').data('opener');
+            // allow scrolling again
+            Backbone.$('body')
+                .removeClass('modal-1-open');
             // remove it from the screen
             this.$el
                 .detach();

@@ -3,58 +3,62 @@
     {{> tags/head secondaryCSS='toolkit'}}
     <body itemscope itemtype="http://schema.org/WebPage">
 
-        {{>toolkit/accessibility-skip-to-element-1 id='skip-to-content' url='#main' title='skip to content'}}
+        <div id="wrapper">
 
-        <header>
-            <div class="row">
-                <div class="small-12 columns">
-                    <a href="{{www}}toolkit">Toolkit</a>
-                </div>
-            </div>
-        </header>
+            {{>toolkit/accessibility-skip-to-element-1 id='skip-to-content' url='#main' title='skip to content'}}
 
-        <nav>
-            <div class="row collapse">
-                <ul class="small-12 columns">
-                    <li><a href="{{www}}toolkit">Home</a></li>
-                    <li><a href="{{www}}toolkit/grid.html">Grid</a></li>
-                    <li><a href="{{www}}toolkit/colors.html">Colors</a></li>
-                    <li><a class="selected" href="{{www}}toolkit/text.html">Text</a></li>
-                    <li><a href="{{www}}toolkit/sprite.html">Sprite</a></li>
-                    <li><a href="{{www}}toolkit/elements.html">Elements</a></li>
-                    <li><a href="{{www}}toolkit/components.html">Components</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <main id="main" tabindex="-1">
-            <section>
+            <header>
                 <div class="row">
                     <div class="small-12 columns">
-                        <h1>Text</h1>
-                        <h2>Fonts</h2>
-                        <p>style: <a href="{{webRepo}}app/assets/style/base/_text.scss">_text.scss</a></p>
-                        <h3>arial-1</h3>
-                        <p><span class="arial-1">The Quick Brown Fox Jumps Over the Lazy Dog.</span></p>
-                        <h3>open-sans-1</h3>
-                        <p><span class="open-sans-1">The Quick Brown Fox Jumps Over the Lazy Dog.</span></p>
-                        <hr>
-                        <h2>Headings</h2>
-                        <p>style: <a href="{{webRepo}}app/assets/style/base/_text.scss">_text.scss</a></p>
-                        <h3>heading-1</h3>
-                        {{>toolkit/heading-1 tag='span' title='The Quick Brown Fox Jumps Over the Lazy Dog.'}}
-                        <h3>heading-2</h3>
-                        {{>toolkit/heading-2 tag='span' title='The Quick Brown Fox Jumps Over the Lazy Dog.'}}
-                        <h3>heading-3</h3>
-                        {{>toolkit/heading-3 tag='span' title='The Quick Brown Fox Jumps Over the Lazy Dog.'}}
-                        <h3>heading-4</h3>
-                        {{>toolkit/heading-4 tag='span' title='The Quick Brown Fox Jumps Over the Lazy Dog.'}}
+                        <a href="{{www}}toolkit">Toolkit</a>
                     </div>
                 </div>
-            </section>
-        </main>
+            </header>
 
-        {{>toolkit/footer-1}}
+            <nav>
+                <div class="row collapse">
+                    <ul class="small-12 columns">
+                        <li><a href="{{www}}toolkit">Home</a></li>
+                        <li><a href="{{www}}toolkit/grid.html">Grid</a></li>
+                        <li><a href="{{www}}toolkit/colors.html">Colors</a></li>
+                        <li><a class="selected" href="{{www}}toolkit/text.html">Text</a></li>
+                        <li><a href="{{www}}toolkit/sprite.html">Sprite</a></li>
+                        <li><a href="{{www}}toolkit/elements.html">Elements</a></li>
+                        <li><a href="{{www}}toolkit/components.html">Components</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main id="main" tabindex="-1">
+                <section>
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h1>Text</h1>
+                            <h2>Fonts</h2>
+                            <p>style: <a href="{{webRepo}}app/assets/style/base/_text.scss">_text.scss</a></p>
+                            <h3>arial-1</h3>
+                            <p><span class="arial-1">The Quick Brown Fox Jumps Over the Lazy Dog.</span></p>
+                            <h3>open-sans-1</h3>
+                            <p><span class="open-sans-1">The Quick Brown Fox Jumps Over the Lazy Dog.</span></p>
+                            <hr>
+                            <h2>Headings</h2>
+                            <p>style: <a href="{{webRepo}}app/assets/style/base/_text.scss">_text.scss</a></p>
+                            <h3>heading-1</h3>
+                            {{>toolkit/heading-1 tag='span' title='The Quick Brown Fox Jumps Over the Lazy Dog.'}}
+                            <h3>heading-2</h3>
+                            {{>toolkit/heading-2 tag='span' title='The Quick Brown Fox Jumps Over the Lazy Dog.'}}
+                            <h3>heading-3</h3>
+                            {{>toolkit/heading-3 tag='span' title='The Quick Brown Fox Jumps Over the Lazy Dog.'}}
+                            <h3>heading-4</h3>
+                            {{>toolkit/heading-4 tag='span' title='The Quick Brown Fox Jumps Over the Lazy Dog.'}}
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            {{>toolkit/footer-1}}
+
+        </div>
 
         {{> config/config}}
         {{> tags/script script='assets/script/global.compiled.js'}}

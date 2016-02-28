@@ -2,24 +2,19 @@
 <html id="error-404" lang="en-us" dir="ltr">
     {{> tags/head}}
     <body itemscope itemtype="http://schema.org/WebPage">
-
         {{>toolkit/accessibility-skip-to-element-1 id='skip-to-content' url='#main' title='skip to content'}}
-
-        {{>toolkit/header-1}}
-
-        {{>toolkit/nav-1}}
-
-        <main id="main" tabindex="-1">
-            <div class="small-12 columns">
-                {{>toolkit/heading-1 tag='h1' title='Page Not Found'}}
-                <p>Sorry, but the page you were trying to view does not exist.</p>
-            </div>
-        </main>
-
-        {{>toolkit/footer-1}}
-
+        <div id="wrapper">
+            {{>toolkit/header-1}}
+            {{>toolkit/nav-1}}
+            <main id="main" tabindex="-1">
+                <div class="small-12 columns">
+                    {{>toolkit/heading-1 tag='h1' title='Page Not Found'}}
+                    <p>Sorry, but the page you were trying to view does not exist.</p>
+                </div>
+            </main>
+            {{>toolkit/footer-1}}
+        </div>
         {{> config/config}}
         {{> tags/script script='assets/script/global.compiled.js'}}
-
     </body>
 </html>

@@ -6,9 +6,17 @@
     module.exports = Backbone.View.extend({
         initialize: function(options) {
             this.content = (options.content || false);
+            //ask window top publish its status
+            Backbone.Mediator.publish('window:poll');
         },
         events: {
             'click': 'render'
+        },
+        subscriptions: {
+            'window:change': 'eventWindowWatcher'
+        },
+        eventWindowWatcher: function(data) {
+            this.parentViewport = data;
         },
         template: function(data) {
             // populate the wrapper modal template
@@ -25,25 +33,35 @@
         },
         render: function(e) {
             e.preventDefault();
-            var windowScrollPosition = Backbone.$(window).scrollTop();
+            //cache current scroll position
+            var windowScrollPosition = this.parentViewport.scrollTop;
             // the opener
             var $target = Backbone.$(e.target);
             // build the modal markup
-            var $modal = this.template().html(this.templateInner());
+            var $modal = this.template();
+            // check what viewport we are in and set the position correctly
+            var modalScrollPosition;
+            if (this.parentViewport.snappoint === 'small') {
+                modalScrollPosition = 0;
+            } else {
+                modalScrollPosition = windowScrollPosition;
+            }
+            // setup the modal
+            $modal
+                .css('top', modalScrollPosition)
+                .find('.modal-1-content')
+                .html(this.templateInner());
             // bind the events
             new ViewModal1({
                 el: $modal
             });
-
             //add to dom
             Backbone.$('body')
+                .addClass('modal-1-open')
                 .prepend($modal);
-            // hide page content
-            Backbone.$('body > *')
-                .not('script, [data-modal]')
-                .attr('hidden', 'hidden');
-            //put focuse on the modal and cache the opening element and window position
+            //put focus on the modal and cache the opening element and window position
             $modal
+                .find('.modal-1-content')
                 .focus()
                 .data('opener', $target)
                 .data('windowScrollPosition', windowScrollPosition);

@@ -3,114 +3,118 @@
     {{> tags/head secondaryCSS='toolkit'}}
     <body itemscope itemtype="http://schema.org/WebPage">
 
-        {{>toolkit/accessibility-skip-to-element-1 id='skip-to-content' url='#main' title='skip to content'}}
+        <div id="wrapper">
 
-        <header>
-            <div class="row">
-                <div class="small-12 columns">
-                    <a href="{{www}}toolkit">Toolkit</a>
-                </div>
-            </div>
-        </header>
+            {{>toolkit/accessibility-skip-to-element-1 id='skip-to-content' url='#main' title='skip to content'}}
 
-        <nav>
-            <div class="row collapse">
-                <ul class="small-12 columns">
-                    <li><a href="{{www}}toolkit">Home</a></li>
-                    <li><a href="{{www}}toolkit/grid.html">Grid</a></li>
-                    <li><a class="selected" href="{{www}}toolkit/colors.html">Colors</a></li>
-                    <li><a href="{{www}}toolkit/text.html">Text</a></li>
-                    <li><a href="{{www}}toolkit/sprite.html">Sprite</a></li>
-                    <li><a href="{{www}}toolkit/elements.html">Elements</a></li>
-                    <li><a href="{{www}}toolkit/components.html">Components</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <main id="main" tabindex="-1">
-            <section>
+            <header>
                 <div class="row">
                     <div class="small-12 columns">
-                        <h1>Colors</h1>
-                        <p>style: <a href="{{webRepo}}app/assets/style/base/_colors.scss">_colors.scss</a></p>
-                    </div>
-                    <div class="small-12 columns">
-                        <h2>Blacks</h2>
+                        <a href="{{www}}toolkit">Toolkit</a>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="small-12 medium-3 columns">
-                        <h3>black-1</h3>
-                        <p><span class="swatch black-1"></span></p>
-                    </div>
-                    <div class="small-12 medium-3 columns"></div>
-                    <div class="small-12 medium-3 columns"></div>
-                    <div class="small-12 medium-3 columns"></div>
-                </div>
-                <div class="row">
-                    <div class="small-12 columns">
-                        <hr>
-                        <h2>Greys</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="small-12 medium-4 large-2 columns">
-                        <h3>grey-1</h3>
-                        <p><span class="swatch grey-1"></span></p>
-                    </div>
-                    <div class="small-12 medium-4 large-2 columns">
-                        <h3>grey-2</h3>
-                        <p><span class="swatch grey-2"></span></p>
-                    </div>
-                    <div class="small-12 medium-4 large-2 columns">
-                        <h3>grey-3</h3>
-                        <p><span class="swatch grey-3"></span></p>
-                    </div>
-                    <div class="small-12 medium-4 large-2 columns">
-                        <h3>grey-4</h3>
-                        <p><span class="swatch grey-4"></span></p>
-                    </div>
-                    <div class="small-12 medium-4 large-2 columns">
-                        <h3>grey-5</h3>
-                        <p><span class="swatch grey-5"></span></p>
-                    </div>
-                    <div class="small-12 medium-4 large-2 columns">
-                        <h3>grey-6</h3>
-                        <p><span class="swatch grey-6"></span></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="small-12 columns">
-                        <hr>
-                        <h2>Whites</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="small-12 medium-3 columns">
-                        <h3>white-1</h3>
-                        <p><span class="swatch white-1"></span></p>
-                    </div>
-                    <div class="small-12 medium-3 columns"></div>
-                    <div class="small-12 medium-3 columns"></div>
-                    <div class="small-12 medium-3 columns"></div>
-                    <div class="small-12 small-12 columns">
-                        <hr>
-                        <h2>Reds</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="small-12 medium-3 columns">
-                        <h3>red-1</h3>
-                        <p><span class="swatch red-1"></span></p>
-                    </div>
-                    <div class="small-12 medium-3 columns"></div>
-                    <div class="small-12 medium-3 columns"></div>
-                    <div class="small-12 medium-3 columns"></div>
-                </div>
-            </section>
-        </main>
+            </header>
 
-        {{>toolkit/footer-1}}
+            <nav>
+                <div class="row collapse">
+                    <ul class="small-12 columns">
+                        <li><a href="{{www}}toolkit">Home</a></li>
+                        <li><a href="{{www}}toolkit/grid.html">Grid</a></li>
+                        <li><a class="selected" href="{{www}}toolkit/colors.html">Colors</a></li>
+                        <li><a href="{{www}}toolkit/text.html">Text</a></li>
+                        <li><a href="{{www}}toolkit/sprite.html">Sprite</a></li>
+                        <li><a href="{{www}}toolkit/elements.html">Elements</a></li>
+                        <li><a href="{{www}}toolkit/components.html">Components</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main id="main" tabindex="-1">
+                <section>
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h1>Colors</h1>
+                            <p>style: <a href="{{webRepo}}app/assets/style/base/_colors.scss">_colors.scss</a></p>
+                        </div>
+                        <div class="small-12 columns">
+                            <h2>Blacks</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-3 columns">
+                            <h3>black-1</h3>
+                            <p><span class="swatch black-1"></span></p>
+                        </div>
+                        <div class="small-12 medium-3 columns"></div>
+                        <div class="small-12 medium-3 columns"></div>
+                        <div class="small-12 medium-3 columns"></div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <hr>
+                            <h2>Greys</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-4 large-2 columns">
+                            <h3>grey-1</h3>
+                            <p><span class="swatch grey-1"></span></p>
+                        </div>
+                        <div class="small-12 medium-4 large-2 columns">
+                            <h3>grey-2</h3>
+                            <p><span class="swatch grey-2"></span></p>
+                        </div>
+                        <div class="small-12 medium-4 large-2 columns">
+                            <h3>grey-3</h3>
+                            <p><span class="swatch grey-3"></span></p>
+                        </div>
+                        <div class="small-12 medium-4 large-2 columns">
+                            <h3>grey-4</h3>
+                            <p><span class="swatch grey-4"></span></p>
+                        </div>
+                        <div class="small-12 medium-4 large-2 columns">
+                            <h3>grey-5</h3>
+                            <p><span class="swatch grey-5"></span></p>
+                        </div>
+                        <div class="small-12 medium-4 large-2 columns">
+                            <h3>grey-6</h3>
+                            <p><span class="swatch grey-6"></span></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <hr>
+                            <h2>Whites</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-3 columns">
+                            <h3>white-1</h3>
+                            <p><span class="swatch white-1"></span></p>
+                        </div>
+                        <div class="small-12 medium-3 columns"></div>
+                        <div class="small-12 medium-3 columns"></div>
+                        <div class="small-12 medium-3 columns"></div>
+                        <div class="small-12 small-12 columns">
+                            <hr>
+                            <h2>Reds</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-3 columns">
+                            <h3>red-1</h3>
+                            <p><span class="swatch red-1"></span></p>
+                        </div>
+                        <div class="small-12 medium-3 columns"></div>
+                        <div class="small-12 medium-3 columns"></div>
+                        <div class="small-12 medium-3 columns"></div>
+                    </div>
+                </section>
+            </main>
+
+            {{>toolkit/footer-1}}
+
+        </div>
 
         {{> config/config}}
         {{> tags/script script='assets/script/global.compiled.js'}}

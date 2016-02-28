@@ -9,12 +9,21 @@
 // ### {{../../indicator}}{{cssesc ../classname}}
 
 %{{../../indicator}}{{cssesc ../classname}} {
+
+    // hide any text inside the sprite container from sighted users
+    @extend %accessibility-hidden-text;
+
     background-image: url('{{escimage url}}');
     background-repeat: no-repeat;
     background-size: rem-calc(({{baseWidth}} / 2 )) rem-calc(({{baseHeight}} / 2));
     display: block;
     overflow: hidden;
-    text-indent: rem-calc(-2000);
+
+    // hide any elements inside the sprite container from sighted users
+    > * {
+        @extend %accessibility-hidden;
+    }
+
 }
 {{/each}}
 {{/each}}

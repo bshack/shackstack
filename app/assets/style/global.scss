@@ -184,10 +184,6 @@ main:focus {
     @extend %accessibility-skip-to-element-1;
 }
 
-.accessibility-hidden {
-    @extend %accessibility-hidden;
-}
-
 // ### standard text treatments
 
 .heading-1 {
@@ -280,6 +276,10 @@ main:focus {
 
 .modal-1 {
     @extend %modal-1;
+}
+
+.modal-1-open {
+    @extend %modal-1-open;
 }
 
 .tabpanel-1 {
