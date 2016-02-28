@@ -6,9 +6,17 @@
     module.exports = Backbone.View.extend({
         initialize: function(options) {
             this.content = (options.content || false);
+            //ask window top publish its status
+            Backbone.Mediator.publish('window:poll');
         },
         events: {
             'click': 'render'
+        },
+        subscriptions: {
+            'window:change': 'eventWindowWatcher'
+        },
+        eventWindowWatcher: function(data) {
+            this.parentViewport = data;
         },
         template: function(data) {
             // populate the wrapper modal template
@@ -26,14 +34,21 @@
         render: function(e) {
             e.preventDefault();
             //cache current scroll position
-            var windowScrollPosition = Backbone.$(window).scrollTop();
+            var windowScrollPosition = this.parentViewport.scrollTop;
             // the opener
             var $target = Backbone.$(e.target);
             // build the modal markup
             var $modal = this.template();
-            // clean up the modal
+            // check what viewport we are in and set the position correctly
+            var modalScrollPosition;
+            if (this.parentViewport.snappoint === 'small') {
+                modalScrollPosition = 0;
+            } else {
+                modalScrollPosition = windowScrollPosition;
+            }
+            // setup the modal
             $modal
-                .css('top', windowScrollPosition)
+                .css('top', modalScrollPosition)
                 .find('.modal-1-content')
                 .html(this.templateInner());
             // bind the events

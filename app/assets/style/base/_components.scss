@@ -12,7 +12,7 @@
         height: 100vh;
     }
 
-    > div {
+    > .modal-1-content {
 
         height: 100%;
         margin: 0 auto;
@@ -20,21 +20,12 @@
         width: 100%;
         z-index: 1;
 
-        > .modal-1-content {
-
-            background: $white-1;
-            height: 100%;
-
-            @include breakpoint(medium up) {
-                height: auto;
-                margin: rem-calc(15);
-                padding: rem-calc(15);
-            }
-
-        }
-
         @include breakpoint(medium up) {
             height: auto;
+        }
+
+        > * {
+            background-color: $white-1;
         }
 
     }

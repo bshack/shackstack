@@ -2,12 +2,28 @@
     'use strict';
     var Backbone = require('../../backbone/package');
     module.exports = Backbone.View.extend({
+        initialize: function() {
+            //ask window top publish its status
+            Backbone.Mediator.publish('window:poll');
+        },
         events: {
             'click [data-modal-close]': 'closeModalClick',
             'focus > button': 'keyboardTrapFocus'
         },
         subscriptions: {
-            'window:keydown:escape': 'closeModal'
+            'window:keydown:escape': 'closeModal',
+            'window:snappoint:change': 'eventSnappointChange'
+        },
+        //watch snappoint and move modal around as it changes
+        eventSnappointChange: function(data) {
+            var scrollTop;
+            if (data.snappoint === 'small') {
+                scrollTop = 0;
+            } else {
+                scrollTop = this.$el.data('windowScrollPosition');
+            }
+            this.$el
+                .css('top', scrollTop);
         },
         closeModalClick: function(e) {
             e.preventDefault();

@@ -5,6 +5,7 @@
         initialize: function() {
             //on init set viewport
             this.viewportSet();
+            Backbone.Mediator.publish('window:init', this.viewport);
         },
         events: {
             load: 'eventLoad',
@@ -13,6 +14,9 @@
             scroll: 'eventScroll',
             keydown: 'eventKeydown',
             error: 'eventError'
+        },
+        subscriptions: {
+            'window:poll': 'viewportSet'
         },
         // this.viewport holds the current state of the window
         viewport: {
@@ -58,6 +62,8 @@
                 //message to other views the viewport has been changed
                 Backbone.Mediator.publish('window:snappoint:change', this.viewport);
             }
+            //generic message if you want all events
+            Backbone.Mediator.publish('window:change', this.viewport);
         },
         eventResize: function(e) {
             this.viewportSet(e);
