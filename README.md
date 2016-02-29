@@ -21,6 +21,7 @@ http://billshackelford.com/toolkit
 - Jasmine
 - jQuery
 - Karma
+- SCSS
 
 ## Install Dependancies
 
