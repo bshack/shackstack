@@ -1,0 +1,26 @@
+.staggered-1 {
+
+    > div {
+
+        column-count: 1;
+        column-gap: 0;
+
+        > div {
+            border: rem-calc(2) solid $black-1;
+            column-break-inside: avoid;
+            display: inline-block;
+            padding: rem-calc(10);
+            width: 100%;
+        }
+
+        @include breakpoint(medium up) {
+            column-count: 3;
+        }
+
+        @include breakpoint(large up) {
+            column-count: 4;
+        }
+
+    }
+
+}
