@@ -184,6 +184,12 @@ main:focus {
     @extend %accessibility-skip-to-element-1;
 }
 
+// ### grids
+
+.staggered-1 {
+    @extend %staggered-1;
+}
+
 // ### standard text treatments
 
 .heading-1 {
