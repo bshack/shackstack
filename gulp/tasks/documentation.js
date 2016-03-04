@@ -11,8 +11,8 @@ var config = require('../config');
 // ## Documenation Task
 // documentation task compiles all docco generated documents into handlbars templates
 gulp.task('documentation', [
-    'documentationScriptComplexity',
-    'unit'
+    'documentationScriptComplexity'
+    //'unit'
 ], function() {
     'use strict';
     return;
