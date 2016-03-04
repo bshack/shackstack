@@ -25,6 +25,8 @@ http://billshackelford.com/toolkit
 
 ## Install Dependancies
 
+Verify you have the latest versions of each if you have previously installed them.
+
 ### Nodejs
 
 http://nodejs.org
