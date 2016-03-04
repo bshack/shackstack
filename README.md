@@ -31,6 +31,8 @@ Verify you have the latest versions of each if you have previously installed the
 
 http://nodejs.org
 
+The project requires 'stable'
+
 ### Gulp
 
 http://gulpjs.com
