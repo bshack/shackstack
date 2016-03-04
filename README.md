@@ -31,7 +31,7 @@ Verify you have the latest versions of each if you have previously installed the
 
 http://nodejs.org
 
-The project requires 'stable'
+_This project requires 'stable'_
 
 ### Gulp
 
