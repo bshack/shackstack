@@ -84,12 +84,7 @@ gulp watch --sync=false;
 This compiles and bundles everything into a deploy ready package outputted in the '\_deploy' directory.
 
 ```
-gulp deploy
-    --version=(unique deploy version - optional)
-    --www=(www domain)
-    --cdn=(cdn domain)
-    --service=(service domain)
-    --production=(true|false - optional);
+gulp deploy --version=(unique deploy version - optional) --www=(www domain) --cdn=(cdn domain) --service=(service domain) --production=(true|false - optional);
 ```
 
 _The 'version' argument defaults to an epoch timestamp and the 'production' argument defaults to 'false'._
@@ -97,11 +92,7 @@ _The 'version' argument defaults to an epoch timestamp and the 'production' argu
 The above site was created by running the 'deploy' task with the following arguments:
 
 ```
-gulp deploy
-    --www=//billshackelford.com
-    --cdn=//cdn.billshackelford.com
-    --service=//service.billshackelford.com
-    --production=true;
+gulp deploy --www=//billshackelford.com --cdn=//cdn.billshackelford.com --service=//service.billshackelford.com --production=true;
 ```
 
 ### Unit Tests
