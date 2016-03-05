@@ -25,13 +25,13 @@ http://billshackelford.com/toolkit
 
 ## Install Dependancies
 
-Verify you have the latest versions of each if you have previously installed them.
+IMPORTANT: Verify you have the latest versions of each of these if you have previously installed them.
 
 ### Nodejs
 
 http://nodejs.org
 
-_This project requires 'stable'_
+_This project works with 'LTS' or 'stable'_
 
 ### Gulp
 
