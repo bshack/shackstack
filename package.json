@@ -96,6 +96,7 @@
     "gulp-watch": "x.x.x",
     "gulp-wrapper": "x.x.x",
     "handlebars": "x.x.x",
+    "istanbul": "x.x.x",
     "jasmine-core": "x.x.x",
     "jquery": "x.x.x",
     "jquery-validation": "x.x.x",
