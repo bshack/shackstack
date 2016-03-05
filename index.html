@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Shackstack by bshack</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Shackstack</h1>
+        <p>Accessible scaffolding for developing and deploying static sites.</p>
+
+        <p class="view"><a href="https://github.com/bshack/shackstack">View the Project on GitHub <small>bshack/shackstack</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/bshack/shackstack/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/bshack/shackstack/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/bshack/shackstack">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="shackstack" class="anchor" href="#shackstack" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>shackstack</h1>
+
+<p><a href="https://travis-ci.org/bshack/shackstack"><img src="https://travis-ci.org/bshack/shackstack.svg?branch=master" alt="Build Status"></a></p>
+
+<p>Out of the box it creates a boilerplate site:</p>
+
+<p><a href="http://billshackelford.com">http://billshackelford.com</a></p>
+
+<p>In addition it includes a customizable toolkit:</p>
+
+<p><a href="http://billshackelford.com/toolkit">http://billshackelford.com/toolkit</a></p>
+
+<h2>
+<a id="key-libraries" class="anchor" href="#key-libraries" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Key Libraries</h2>
+
+<ul>
+<li>BackboneJS</li>
+<li>Browserify</li>
+<li>Browsersync</li>
+<li>Foundation</li>
+<li>Gulp</li>
+<li>Handlebars</li>
+<li>Jasmine</li>
+<li>jQuery</li>
+<li>Karma</li>
+<li>SCSS</li>
+</ul>
+
+<h2>
+<a id="install-dependancies" class="anchor" href="#install-dependancies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install Dependancies</h2>
+
+<p>IMPORTANT: Verify you have the latest versions of each of these if you have previously installed them.</p>
+
+<h3>
+<a id="nodejs" class="anchor" href="#nodejs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Nodejs</h3>
+
+<p><a href="http://nodejs.org">http://nodejs.org</a></p>
+
+<p><em>This project works with 'LTS' or 'stable'</em></p>
+
+<h3>
+<a id="gulp" class="anchor" href="#gulp" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Gulp</h3>
+
+<p><a href="http://gulpjs.com">http://gulpjs.com</a></p>
+
+<h3>
+<a id="python" class="anchor" href="#python" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Python</h3>
+
+<p>Windows users likely need to install Python, Mac users can skip this.</p>
+
+<p><a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></p>
+
+<h3>
+<a id="node-modules" class="anchor" href="#node-modules" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Node Modules</h3>
+
+<pre><code>npm install;
+</code></pre>
+
+<h3>
+<a id="text-editor-config" class="anchor" href="#text-editor-config" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text Editor Config</h3>
+
+<p>Install the correct plugin for your text editor here:</p>
+
+<p><a href="http://editorconfig.org/#download">http://editorconfig.org/#download</a></p>
+
+<p>This will normalize settings like what tab character(s) to use and will avoid linting errors.</p>
+
+<h2>
+<a id="locations" class="anchor" href="#locations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Locations</h2>
+
+<h3>
+<a id="source-files" class="anchor" href="#source-files" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Source Files</h3>
+
+<p>Site source files used to build your site are located in the 'app/' directory.</p>
+
+<h3>
+<a id="stubbed-json-data" class="anchor" href="#stubbed-json-data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Stubbed JSON Data</h3>
+
+<p>Any generated html page can have an associated JSON data file in 'service/view/' directory. This is where you can
+stub out data to be used for populating the markup templates for that page. Follow the same directory and file structure as your
+pages.</p>
+
+<p>Define any data properties you want available for all your pages in 'global.json'. Any properties defined in page specific JSON files will override properties in 'global.json'.</p>
+
+<h2>
+<a id="gulp-tasks" class="anchor" href="#gulp-tasks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Gulp Tasks</h2>
+
+<h3>
+<a id="watch" class="anchor" href="#watch" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Watch</h3>
+
+<pre><code>gulp watch;
+</code></pre>
+
+<p>This will create a Browsersync server and reload your browser window(s) as you make code changes.</p>
+
+<p>Learn more about Browsersync here: <a href="https://www.browsersync.io">https://www.browsersync.io</a></p>
+
+<p>If you want to run the 'watch' task without Browsersync you can do so like this:</p>
+
+<pre><code>gulp watch --sync=false;
+</code></pre>
+
+<h3>
+<a id="deploy" class="anchor" href="#deploy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Deploy</h3>
+
+<p>This compiles and bundles everything into a deploy ready package outputted in the '_deploy' directory.</p>
+
+<pre><code>gulp deploy --version=(unique deploy version - optional) --www=(www domain) --cdn=(cdn domain) --service=(service domain) --production=(true|false - optional);
+</code></pre>
+
+<p><em>The 'version' argument defaults to an epoch timestamp and the 'production' argument defaults to 'false'.</em></p>
+
+<p>The above site was created by running the 'deploy' task with the following arguments:</p>
+
+<pre><code>gulp deploy --www=//billshackelford.com --cdn=//cdn.billshackelford.com --service=//service.billshackelford.com --production=true;
+</code></pre>
+
+<h3>
+<a id="unit-tests" class="anchor" href="#unit-tests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Unit Tests</h3>
+
+<pre><code>gulp unit;
+</code></pre>
+
+<h3>
+<a id="more" class="anchor" href="#more" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>More</h3>
+
+<p>These all run as dependencies of the 'watch' and 'deploy' tasks.</p>
+
+<pre><code>gulp markup;
+gulp markupTemplate;
+gulp style;
+gulp script;
+gulp sprite;
+gulp accessibility;
+gulp documentation;
+</code></pre>
+
+<h2>
+<a id="test-if-your-project-will-build" class="anchor" href="#test-if-your-project-will-build" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test If Your Project Will Build</h2>
+
+<p>Run this when you want to verify your changes will build properly on the CI server before pushing:</p>
+
+<pre><code>npm test;
+</code></pre>
+
+<h2>
+<a id="npm-shrinkwrap" class="anchor" href="#npm-shrinkwrap" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>NPM Shrinkwrap</h2>
+
+<p>This project uses npm shrinkwrap to freeze npm module versions for improved project stability. More information here: <a href="https://docs.npmjs.com/cli/shrinkwrap">https://docs.npmjs.com/cli/shrinkwrap</a>.</p>
+
+<h2>
+<a id="using-it-with-yeoman" class="anchor" href="#using-it-with-yeoman" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using it with Yeoman</h2>
+
+<p>Install as a node module:</p>
+
+<pre><code>npm install generator-shackstack -g;
+</code></pre>
+
+<p>Then in an empty directory:</p>
+
+<pre><code>yo shackstack;
+</code></pre>
+
+<p>Learn more about Yeoman here: <a href="https://yeoman.io">https://yeoman.io</a></p>
+
+<h2>
+<a id="bugs-feature-requests" class="anchor" href="#bugs-feature-requests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bugs? Feature Requests?</h2>
+
+<p>Pull request or log a ticket :)</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/bshack">bshack</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-252187-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
