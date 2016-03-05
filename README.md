@@ -37,6 +37,12 @@ _This project works with 'LTS' or 'stable'_
 
 http://gulpjs.com
 
+### Python
+
+Windows users likely need to install Python, Mac users can skip this.
+
+https://www.python.org/downloads/
+
 ### Node Modules
 
 ```
