@@ -2,9 +2,9 @@
     'use strict';
     var Backbone = require('../backbone/package');
     var ModelEnvironment = require('../model/environment');
-    var ViewModalOpen1 = require('./toolkit/modalOpen-1');
+    var ViewModalOpen1 = require('./toolkit/modal-open-1');
     var ViewTabpanel1 = require('./toolkit/tabpanel-1');
-    var ViewAccessiblityAjax1 = require('./toolkit/accessiblityAjax-1');
+    var ViewAccessiblityAjax1 = require('./toolkit/accessiblity-ajax-1');
     var ViewForm1 = require('./toolkit/form-1');
     var ViewYouTube1 = require('./toolkit/youtube-1');
     var templateModalDemo = require('../template/modal/modal-example-1');
