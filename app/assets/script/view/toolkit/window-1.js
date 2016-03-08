@@ -5,13 +5,11 @@
         initialize: function() {
             //sometimes you need to add some buffer here when you notice scrollDirection is not consistant.
             this.pixelbuffer = 0;
-
             /*eslint-disable */
             // not 100% acurate but pretty good
             this.touch = (('ontouchstart' in this.el) ||
                 this.el.DocumentTouch && document instanceof DocumentTouch) ? true : false
             /*eslint-enable */
-
             //on init set viewport
             this.viewportSet();
             //message that window-1 is init
