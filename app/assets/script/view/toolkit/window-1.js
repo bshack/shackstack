@@ -3,9 +3,22 @@
     var Backbone = require('../../backbone/package');
     module.exports = Backbone.View.extend({
         initialize: function() {
+            //sometimes you need to add some buffer here when you notice scrollDirection is not consistant.
+            this.pixelbuffer = 0;
+
+            /*eslint-disable */
+            // not 100% acurate but pretty good
+            this.touch = (('ontouchstart' in this.el) ||
+                this.el.DocumentTouch && document instanceof DocumentTouch) ? true : false
+            /*eslint-enable */
+
             //on init set viewport
             this.viewportSet();
+            //message that window-1 is init
             Backbone.Mediator.publish('window:init', this.viewport);
+            if (this.viewport.touch) {
+                Backbone.$('html').attr('data-touch', true);
+            }
         },
         events: {
             load: 'eventLoad',
@@ -27,7 +40,8 @@
             scrollBottom: false,
             scrollDirection: false,
             snappoint: false,
-            orientation: false
+            orientation: false,
+            touch: false
         },
         eventError: function(message, url, line) {
             //sometimes message is an object
@@ -67,12 +81,10 @@
         viewportSet: function() {
             var snappointChange = false;
             var newScrollTop = this.$el.scrollTop();
-            //sometimes you need to add some buffer here when you notice scrollDirection is not consistant.
-            var pixelbuffer = 0;
             //check what direction the window is scrolling
-            if (newScrollTop + pixelbuffer > this.viewport.scrollTop) {
+            if (newScrollTop + this.pixelbuffer > this.viewport.scrollTop) {
                 this.viewport.scrollDirection = 'down';
-            } else if (newScrollTop + pixelbuffer < this.viewport.scrollTop) {
+            } else if (newScrollTop + this.pixelbuffer < this.viewport.scrollTop) {
                 this.viewport.scrollDirection = 'up';
             } else {
                 this.viewport.scrollDirection = 'none';
