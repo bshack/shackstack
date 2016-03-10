@@ -16,14 +16,16 @@
         },
         //watch snappoint and move modal around as it changes
         eventSnappointChange: function(data) {
-            var scrollTop;
+            var scrollTopPosition;
             if (data.snappoint === 'small') {
-                scrollTop = 0;
+                scrollTopPosition = 0;
             } else {
-                scrollTop = this.$el.data('windowScrollPosition');
+                scrollTopPosition = this.$el.find('.modal-1-content').data('windowScrollPosition');
             }
             this.$el
-                .css('top', scrollTop);
+                .css('top', scrollTopPosition);
+            Backbone.$(window)
+                .scrollTop(scrollTopPosition);
         },
         eventCloseModalClick: function(e) {
             e.preventDefault();
@@ -36,8 +38,7 @@
             if (!Backbone.$('[data-modal]').size()) {
                 return;
             }
-            // cache the element that lauched the modal
-            this.$opener = this.$el.find('.modal-1-content').data('opener');
+            var $data = this.$el.find('.modal-1-content').data();
             // allow scrolling again
             Backbone.$('body')
                 .removeClass('modal-1-open');
@@ -46,16 +47,16 @@
                 .detach();
             // scroll to previous position
             Backbone.$(window)
-                .scrollTop(this.$el.data('windowScrollPosition'));
+                .scrollTop($data.windowScrollPosition);
             // focus on the element that originally opened the modal
-            this.$opener
+            $data.opener
                 .focus();
             //send click event to metrics
             Backbone.Mediator.publish('metrics:event:send', {
                 hitType: 'event',
                 eventCategory: 'modal',
                 eventAction: 'close',
-                eventLabel: this.$opener.data('modal-open')
+                eventLabel: $data.opener.data('modal-open')
             });
         }
     });

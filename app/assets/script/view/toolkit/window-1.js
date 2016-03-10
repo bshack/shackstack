@@ -106,7 +106,6 @@
             }
             //generic message if you want all events
             Backbone.Mediator.publish('window:change', this.viewport);
-            window.console.log(this.viewport);
         }
     });
 })();
