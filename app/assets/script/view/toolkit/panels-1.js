@@ -4,7 +4,7 @@
     module.exports = Backbone.View.extend({
         initialize: function(options) {
             // get all the panels in the panel group
-            this.$panels = this.$el.find('> *');
+            this.$panels = this.$el.find('> section');
             //set up the options
             this.options = Backbone.$.extend(this.options, options);
         },
