@@ -3,13 +3,10 @@
     var Backbone = require('../../backbone/package');
     module.exports = Backbone.View.extend({
         initialize: function() {
+            //cache the body element for page height checking
+            this.$body = Backbone.$('body');
             //sometimes you need to add some buffer here when you notice scrollDirection is not consistant.
             this.pixelbuffer = 0;
-            /*eslint-disable */
-            // not 100% acurate but pretty good
-            this.touch = (('ontouchstart' in this.el) ||
-                this.el.DocumentTouch && document instanceof DocumentTouch) ? true : false
-            /*eslint-enable */
             //on init set viewport
             this.viewportSet();
             //message that window-1 is init
@@ -34,9 +31,9 @@
             scrollTop: false,
             scrollBottom: false,
             scrollDirection: false,
+            scrollPercent: false,
             snappoint: false,
-            orientation: false,
-            touch: false
+            orientation: false
         },
         eventError: function(message, url, line) {
             //sometimes message is an object
@@ -89,6 +86,8 @@
             this.viewport.height = this.$el.height();
             this.viewport.scrollTop = newScrollTop;
             this.viewport.scrollBottom = (this.viewport.scrollTop + this.viewport.height);
+            // percent of the page scrolled down
+            this.viewport.scrollPercent = (this.viewport.scrollTop / this.$body.height());
             //set orientation
             if (this.el.matchMedia('(orientation: landscape)').matches) {
                 this.viewport.orientation = 'landscape';
@@ -107,6 +106,7 @@
             }
             //generic message if you want all events
             Backbone.Mediator.publish('window:change', this.viewport);
+            window.console.log(this.viewport);
         }
     });
 })();

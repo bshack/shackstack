@@ -1,0 +1,29 @@
+%panels-1 {
+
+    > section {
+
+        @extend %heading-1;
+
+        background-color: $grey-4;
+        border-bottom: rem-calc(1) solid $black-1;
+        height: 100vh;
+        opacity: 0;
+        padding-top: 50vh;
+        text-align: center;
+
+        &.active {
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+
+        &.viewed {
+            opacity: 1;
+        }
+
+        &.last-child {
+            border: 0;
+        }
+
+    }
+
+}

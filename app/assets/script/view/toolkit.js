@@ -2,6 +2,7 @@
     'use strict';
     var Backbone = require('../backbone/package');
     var ModelEnvironment = require('../model/environment');
+    var ViewPanels1 = require('./toolkit/panels-1');
     var ViewModalOpen1 = require('./toolkit/modal-open-1');
     var ViewTabpanel1 = require('./toolkit/tabpanel-1');
     var ViewAccessiblityAjax1 = require('./toolkit/accessiblity-ajax-1');
@@ -10,6 +11,9 @@
     var templateModalDemo = require('../template/modal/modal-example-1');
     module.exports =  Backbone.View.extend({
         initialize: function() {
+            new ViewPanels1({
+                el: Backbone.$('.panels-1')
+            });
             // setup example form
             new ViewForm1({
                 el: Backbone.$('.form-1'),

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html id="toolkit-components" lang="en-us" dir="ltr">
+    {{> tags/head secondaryCSS='toolkit'}}
+    <body itemscope itemtype="http://schema.org/WebPage">
+
+        <div class="wrapper">
+
+            {{>toolkit/accessibility-skip-to-element-1 id='skip-to-content' url='#main' title='skip to content'}}
+
+            <header>
+                <div class="row">
+                    <div class="small-12 columns">
+                        <a href="{{www}}toolkit">Toolkit</a>
+                    </div>
+                </div>
+            </header>
+
+            <nav>
+                <div class="row collapse">
+                    <ul class="small-12 columns">
+                        <li><a href="{{www}}toolkit">Home</a></li>
+                        <li><a href="{{www}}toolkit/grid.html">Grid</a></li>
+                        <li><a class="selected" href="{{www}}toolkit/panels.html">Panels</a></li>
+                        <li><a href="{{www}}toolkit/colors.html">Colors</a></li>
+                        <li><a href="{{www}}toolkit/text.html">Text</a></li>
+                        <li><a href="{{www}}toolkit/sprite.html">Sprite</a></li>
+                        <li><a href="{{www}}toolkit/elements.html">Elements</a></li>
+                        <li><a href="{{www}}toolkit/components.html">Components</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main id="main" tabindex="-1" class="panels-1">
+                <div class="row">
+                    <div class="small-12 columns">
+                        <h1>Panels</h1>
+                        <h2>panels-1</h2>
+                    </div>
+                </div>
+                <section>
+                    panel 1
+                </section>
+                <section>
+                    panel 2
+                </section>
+                <section>
+                    panel 3
+                </section>
+                <section>
+                    panel 4
+                </section>
+                <section>
+                    panel 5
+                </section>
+                <section>
+                    panel 6
+                </section>
+            </main>
+
+            {{>toolkit/footer-1}}
+
+        </div>
+
+        {{> config/config}}
+        {{> tags/script script='assets/script/global.compiled.js'}}
+
+    </body>
+</html>
