@@ -14,9 +14,6 @@
             this.viewportSet();
             //message that window-1 is init
             Backbone.Mediator.publish('window:init', this.viewport);
-            if (this.viewport.touch) {
-                Backbone.$('html').attr('data-touch', true);
-            }
         },
         events: {
             load: 'eventLoad',
