@@ -6,7 +6,7 @@
             //cache the body element for page height checking
             this.$body = Backbone.$('body');
             //sometimes you need to add some buffer here when you notice scrollDirection is not consistant.
-            this.pixelbuffer = 0;
+            this.pixelBuffer = 0;
             //on init set viewport
             this.viewportSet();
             //message that window-1 is init
@@ -71,12 +71,13 @@
             Backbone.Mediator.publish('window:orientation:change', this.viewport);
         },
         viewportSet: function() {
-            var snappointChange = false;
+            //cache the new position
             var newScrollTop = this.$el.scrollTop();
+            var newScrollTopBuffered = (newScrollTop + this.pixelBuffer);
             //check what direction the window is scrolling
-            if (newScrollTop + this.pixelbuffer > this.viewport.scrollTop) {
+            if (newScrollTopBuffered > this.viewport.scrollTop) {
                 this.viewport.scrollDirection = 'down';
-            } else if (newScrollTop + this.pixelbuffer < this.viewport.scrollTop) {
+            } else if (newScrollTopBuffered < this.viewport.scrollTop) {
                 this.viewport.scrollDirection = 'up';
             } else {
                 this.viewport.scrollDirection = 'none';
@@ -97,11 +98,6 @@
             //check if the snappoint has been set or if it has changed
             if (this.el.Foundation.MediaQuery.current !== this.viewport.snappoint || !this.viewport.snappoint) {
                 this.viewport.snappoint = this.el.Foundation.MediaQuery.current;
-                snappointChange = true;
-            }
-            //publish the changes
-            //snappoint change
-            if (snappointChange) {
                 Backbone.Mediator.publish('window:snappoint:change', this.viewport);
             }
             //generic message if you want all events

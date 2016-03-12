@@ -24,12 +24,14 @@
             var $activeOld = this.$el.find('> .active');
             // the new active element that will repace the previous active element
             var $activeNew;
+            // the position if the panel when it should set it to active
+            var activePosition = data.scrollBottom - (data.height * this.options.bufferPercent);
             // loop over all the panels
             for (i = 0; i < this.$panels.length; i++) {
                 //the the current panel in the loop
                 $panel = Backbone.$(this.$panels[i]);
                 // check to see if it is in view
-                if ($panel.offset().top < data.scrollBottom - (data.height * this.options.bufferPercent)) {
+                if ($panel.offset().top < activePosition) {
                     // set the new active element
                     $activeNew = $panel;
                     // save the index for metrics later
