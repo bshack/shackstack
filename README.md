@@ -20,6 +20,7 @@ http://billshackelford.com/toolkit
 - Handlebars
 - Jasmine
 - jQuery
+- Modernizr
 - Karma
 - SCSS
 

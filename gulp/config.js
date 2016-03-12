@@ -133,6 +133,8 @@ module.exports = {
         script: {
             // karma test runner conig file
             karma: __dirname + '/../karma.conf.js',
+            // where to save out the modernizr built file
+            modernizr: 'node_modules/modernizr/modernizr.js',
             // glob of all js files including gulp and application
             all: [
                 '*.js',

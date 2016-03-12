@@ -9,6 +9,7 @@
     var ViewGoogleAnalytics1 = require('./view/toolkit/google-analytics-1');
     var ViewFacebook1 = require('./view/toolkit/facebook-1');
     var $window = $(window);
+    require('modernizr');
     require('foundation-sites');
     // speed up precieved click event performance
     fastclick(document.body);

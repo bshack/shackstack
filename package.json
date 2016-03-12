@@ -39,10 +39,12 @@
   },
   "bugs": "https://github.com/bshack/shackstack/issues",
   "browser": {
-    "jquery": "./node_modules/jquery/dist/jquery.js"
+    "jquery": "./node_modules/jquery/dist/jquery.js",
+    "modernizr": "./node_modules/modernizr/modernizr.js"
   },
   "browserify-shim": {
-    "jquery": "$"
+    "jquery": "$",
+    "modernizr": "Modernizr"
   },
   "browserify": {
     "transform": [
@@ -111,6 +113,7 @@
     "karma-safari-launcher": "x.x.x",
     "lodash-node": "x.x.x",
     "lwip": "x.x.x",
+    "modernizr": "x.x.x",
     "path": "x.x.x",
     "phantomjs-prebuilt": "x.x.x",
     "require-dir": "x.x.x",

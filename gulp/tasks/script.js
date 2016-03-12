@@ -7,6 +7,8 @@ var browserify = require('browserify');
 var notify = require('gulp-notify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
+var modernizr = require('modernizr');
+var fs = require('fs');
 
 // ## Environment Config
 
@@ -31,7 +33,7 @@ gulp.task('scriptLint', function() {
 // ## Script Task
 // complile the modules together, first it will lint the .js files and compile clientside templates for inclusion
 
-gulp.task('script', ['scriptLint', 'markupTemplate'], function() {
+gulp.task('script', ['scriptLint', 'markupTemplate', 'modernizr'], function() {
     'use strict';
     return browserify({
         entries: config.path.script.compile.source,
@@ -43,4 +45,21 @@ gulp.task('script', ['scriptLint', 'markupTemplate'], function() {
         .pipe(gulp.dest(config.path.script.compile.destination))
         .on('error', notify.onError('script: <%= error.message %>'));
 
+});
+
+// ## Modernizr Task
+// build modernizr for this project.
+// config example: https://github.com/Modernizr/Modernizr/blob/master/lib/config-all.json
+
+gulp.task('modernizr', function(callback) {
+    'use strict';
+    modernizr.build({
+        'feature-detects': [
+            'touchevents'
+        ]
+    }, function(file) {
+        fs.writeFile(config.path.script.modernizr, file, function() {
+            return callback();
+        });
+    });
 });
