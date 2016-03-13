@@ -1,26 +1,26 @@
-// ## accessibility hidden
-// hide elements off screen for sighted users and leave accessible for screen readers
+// ## accessibility hidden text
+// hide text off screen for sighted users and leave accessible for screen readers
 
-%accessibility-hidden-text {
+%accessibility-hidden-text-1 {
     text-indent: rem-calc(-5000);
 }
 
-// ## accessibility hidden
+// ## acessibility hidden element
 // hide elements off screen for sighted users and leave accessible for screen readers
 
-%accessibility-hidden-element {
+%accessibility-hidden-element-1 {
     clip: rect(0 0 0 0);
     left: rem-calc(-5000);
     overflow: hidden;
     position: absolute;
 }
 
-// ## accessibility hidden
+// ## accessibility focus
 // show elements on focus only
 
-%accessibility-focus {
+%accessibility-focus-1 {
 
-    @extend %accessibility-hidden-element;
+    @extend %accessibility-hidden-element-1;
 
     &:focus {
         clip: auto;
@@ -36,7 +36,7 @@
 
 %accessibility-skip-to-element-1 {
 
-    @extend %accessibility-focus;
+    @extend %accessibility-focus-1;
 
     background-color: $white-1;
     color: $black-1;

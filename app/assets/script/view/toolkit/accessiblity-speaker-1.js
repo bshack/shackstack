@@ -3,11 +3,17 @@
     var Backbone = require('../../backbone/package');
     var templateAccessibilitySpeaker1 = require('../../template/toolkit/accessibility-speaker-1');
     module.exports = Backbone.View.extend({
+        defaults: {
+            speakDelay: 1500,
+            cleanUpDelay: 10000
+        },
         template: function(data) {
             // populate the template
             return Backbone.$(templateAccessibilitySpeaker1(data));
         },
-        say: function(message) {
+        say: function(message, settings) {
+            settings = Backbone.$.extend({}, this.defaults, settings);
+            window.console.log(settings);
             //create an new container just for this message
             var $speaker = this.template();
             //add to the DOM
@@ -23,8 +29,8 @@
                     //clean up the container
                     $speaker
                         .remove();
-                }, 10000);
-            }, 1500);
+                }, settings.cleanUpDelay);
+            }, settings.speakDelay);
         }
     });
 })();

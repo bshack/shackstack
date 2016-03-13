@@ -9,7 +9,7 @@
 %icon-global {
 
     // hide any text inside the sprite container from sighted users
-    @extend %accessibility-hidden-text;
+    @extend %accessibility-hidden-text-1;
 
     background-image: url('../image/sprite-global.png');
     background-repeat: no-repeat;
@@ -19,7 +19,7 @@
 
     // hide any elements inside the sprite container from sighted users
     > * {
-        @extend %accessibility-hidden;
+        @extend %accessibility-hidden-element-1;
     }
 
 }
@@ -47,4 +47,3 @@
     width: rem-calc(((162 - 20) / 2) + 2);
 
 }
-

@@ -75,6 +75,11 @@ main:focus {
     @extend %accessibility-skip-to-element-1;
 }
 
+.accessibility-hidden-element-1 {
+    @extend %accessibility-hidden-element-1;
+}
+
+
 // ### grids
 
 .staggered-1 {

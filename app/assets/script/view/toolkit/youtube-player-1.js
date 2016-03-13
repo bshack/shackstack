@@ -25,7 +25,7 @@
             //only fire metrics for this video when there multiples on the page
             if (!this.metricsPlayLogged &&
                     e.target.getVideoData()['video_id'] === this.player.getVideoData()['video_id']) {
-                //just log one play per page load, sometimes play is triggered alot when network congestion is present
+                //just log one play per page load, sometimes play is triggered a lot when network congestion is present
                 this.metricsPlayLogged = true;
                 //log a panel view
                 Backbone.Mediator.publish('metrics:event:send', {
