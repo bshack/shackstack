@@ -1,8 +1,11 @@
+// TO EDIT THIS FILE you have to modify the source file that generates this scss file:
+// gulp/views/sprite.handlebars
+
 // ## sprite
 // sprite and this scss file are created by the gulp task 'sprite',
 // generated sprite is a 2x display dimensions
+// DOCS: https://www.npmjs.com/package/sprity
 
-// docs: https://www.npmjs.com/package/sprity
 
 // ### icon-global
 
@@ -47,3 +50,4 @@
     width: rem-calc(((162 - 20) / 2) + 2);
 
 }
+

@@ -1,8 +1,11 @@
+// TO EDIT THIS FILE (_sprite.scss) you have to modify the source file that generates this scss file:
+// gulp/views/sprite.handlebars
+
 // ## sprite
 // sprite and this scss file are created by the gulp task 'sprite',
 // generated sprite is a 2x display dimensions
+// DOCS: https://www.npmjs.com/package/sprity
 
-// docs: https://www.npmjs.com/package/sprity
 {{#each layouts}}
 {{#each sprites}}
 
@@ -11,7 +14,7 @@
 %{{../../indicator}}{{cssesc ../classname}} {
 
     // hide any text inside the sprite container from sighted users
-    @extend %accessibility-hidden-text;
+    @extend %accessibility-hidden-text-1;
 
     background-image: url('{{escimage url}}');
     background-repeat: no-repeat;
@@ -21,7 +24,7 @@
 
     // hide any elements inside the sprite container from sighted users
     > * {
-        @extend %accessibility-hidden;
+        @extend %accessibility-hidden-element-1;
     }
 
 }
