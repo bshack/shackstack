@@ -40,7 +40,7 @@ http://gulpjs.com
 
 ### Python
 
-Windows users likely need to install Python, Mac users can skip this.
+Mac OS X users can skip this.
 
 https://www.python.org/downloads/
 

@@ -31,9 +31,9 @@ gulp.task('scriptLint', function() {
 });
 
 // ## Script Task
-// complile the modules together, first it will lint the .js files and compile clientside templates for inclusion
+// complile the modules together, first lint .js files, then build modernizr and compile clientside templates
 
-gulp.task('script', ['scriptLint', 'markupTemplate', 'modernizr'], function() {
+gulp.task('script', ['scriptLint', 'markupTemplate', 'scriptModernizr'], function() {
     'use strict';
     return browserify({
         entries: config.path.script.compile.source,
@@ -47,11 +47,11 @@ gulp.task('script', ['scriptLint', 'markupTemplate', 'modernizr'], function() {
 
 });
 
-// ## Modernizr Task
+// ## Script Modernizr Task
 // build modernizr for this project.
 // config example: https://github.com/Modernizr/Modernizr/blob/master/lib/config-all.json
 
-gulp.task('modernizr', function(callback) {
+gulp.task('scriptModernizr', function(callback) {
     'use strict';
     modernizr.build({
         'feature-detects': [
