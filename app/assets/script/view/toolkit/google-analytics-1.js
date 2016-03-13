@@ -16,13 +16,13 @@
                 a.async = 1;
                 a.src = g;
                 m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            })(this.el, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
             //set up google analytics
-            window.ga('create', this.model.get('googleAnalyticsId'), 'auto');
+            this.el.ga('create', this.model.get('googleAnalyticsId'), 'auto');
             //send the fingerprint id (94% accurate unique id with out cookie tracking)
-            window.ga('set', 'dimension1', new Fingerprint({canvas: true}).get().toString());
+            this.el.ga('set', 'dimension1', new Fingerprint({canvas: true}).get().toString());
             //send the release version id
-            window.ga('set', 'dimension2', this.model.get('version'));
+            this.el.ga('set', 'dimension2', this.model.get('version'));
             /*eslint-enable */
             //send pageview event
             this.eventSend({
@@ -41,7 +41,7 @@
             //     eventLabel: 'cats.mp4',
             //     hitCallback: function() {}
             // }
-            window.ga('send', data);
+            this.el.ga('send', data);
         }
     });
 })();

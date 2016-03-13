@@ -30,6 +30,7 @@
         model: env
     });
     new ViewFacebook1({
+        el: $window,
         model: env
     });
     // if on toolkit page init the view
