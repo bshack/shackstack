@@ -13,7 +13,6 @@
         },
         say: function(message, settings) {
             settings = Backbone.$.extend({}, this.defaults, settings);
-            window.console.log(settings);
             //create an new container just for this message
             var $speaker = this.template();
             //add to the DOM
