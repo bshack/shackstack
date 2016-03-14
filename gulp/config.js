@@ -150,7 +150,6 @@ module.exports = {
                 '!app/assets/script/*.compiled.js'
             ],
             // glob of only gulp js files for documentation task
-            // glob of only gulp js files for documentation task
             gulp: [
                 '*.js',
                 'gulp/tasks/*.js',

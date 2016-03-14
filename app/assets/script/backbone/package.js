@@ -2,7 +2,7 @@
     'use strict';
     var Backbone = require('backbone');
     // pull in the mediator
-    require('./mediator');
+    require('backbone-mediator-chalbert');
     // don't use DELETE or PUT methods, make them POST methods
     Backbone.emulateHTTP = true;
     // send cookie data cross origin
@@ -12,5 +12,6 @@
         }
     });
     // return the extended version of Backbone
+    window.Backbone = Backbone;
     module.exports = Backbone;
 })();

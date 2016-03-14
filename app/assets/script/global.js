@@ -1,15 +1,19 @@
 (function() {
     'use strict';
+    //polyfills and feature detects
+    require('raf.js');
+    require('modernizr');
+    //dependencies
     var $ = require('jquery');
     var fastclick = require('fastclick');
     var ModelEnvironment = require('./model/environment');
     var ViewToolkit = require('./view/toolkit');
     var ViewWindow1 = require('./view/toolkit/window-1');
+    var ViewWindow2 = require('./view/toolkit/window-scroll-1');
     var ViewYouTubeApi1 = require('./view/toolkit/youtube-api-1');
     var ViewGoogleAnalytics1 = require('./view/toolkit/google-analytics-1');
     var ViewFacebook1 = require('./view/toolkit/facebook-1');
     var $window = $(window);
-    require('modernizr');
     require('foundation-sites');
     // speed up precieved click event performance
     fastclick(document.body);
@@ -20,6 +24,9 @@
     $window.get(0).console.log('Environment Paths:', env.attributes);
     // // set up the window events to be subscribed to
     new ViewWindow1({
+        el: $window
+    });
+    new ViewWindow2({
         el: $window
     });
     new ViewYouTubeApi1({

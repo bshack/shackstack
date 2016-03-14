@@ -12,6 +12,7 @@
             return Backbone.$(templateAccessibilitySpeaker1(data));
         },
         say: function(message, settings) {
+            //set the settings
             settings = Backbone.$.extend({}, this.defaults, settings);
             //create an new container just for this message
             var $speaker = this.template();

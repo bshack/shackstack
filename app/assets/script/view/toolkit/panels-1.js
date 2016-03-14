@@ -10,7 +10,7 @@
         },
         options: {
             // how far into view does the panel have to be to consider it active
-            bufferPercent: 0.5
+            bufferPercent: 0.01
         },
         subscriptions: {
             'window:change': 'eventWindowWatcher'
@@ -25,7 +25,12 @@
             // the new active element that will repace the previous active element
             var $activeNew;
             // the position if the panel when it should set it to active
-            var activePosition = data.scrollBottom - (data.height * this.options.bufferPercent);
+            var activePosition;
+            if (data.scrollDirection === 'down') {
+                activePosition = data.scrollBottom - (data.height * this.options.bufferPercent);
+            } else {
+                activePosition = data.scrollBottom - (data.height * (1 - this.options.bufferPercent));
+            }
             // loop over all the panels
             for (i = 0; i < this.$panels.length; i++) {
                 //the the current panel in the loop
@@ -47,6 +52,12 @@
                 // set the new state of the new active element
                 $activeNew
                     .addClass('active');
+                //scroll window to active element
+                Backbone.Mediator.publish('window:trigger:scroll:y', {
+                    scollToPosition: $activeNew,
+                    speed: 1,
+                    easing: 'bouncePast'
+                });
                 //on the first time this panel becomes active
                 if (!$activeNew.hasClass('viewed')) {
                     //message that panel changed

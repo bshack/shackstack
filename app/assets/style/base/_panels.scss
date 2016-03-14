@@ -8,19 +8,10 @@
         background-size: cover;
         color: $white-1;
         height: 100vh;
-        opacity: 0;
+        opacity: 1;
         padding-top: 50vh;
         text-align: center;
         text-transform: uppercase;
-
-        &.viewed {
-            opacity: .25;
-        }
-
-        &.active {
-            opacity: 1;
-            transition: opacity 1s ease-in-out;
-        }
 
         &.panel-1 {
             background-image: url('../image/demo/panel-1.jpg');
