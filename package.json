@@ -56,7 +56,7 @@
   "devDependencies": {},
   "dependencies": {
     "backbone": "x.x.x",
-    "backbone-mediator-chalbert": "x.x.x",
+    "backbone_mediator": "x.x.x",
     "brfs": "x.x.x",
     "browser-sync": "x.x.x",
     "browserify": "x.x.x",
