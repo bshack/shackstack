@@ -10,7 +10,8 @@
         },
         options: {
             // how far into view does the panel have to be to consider it active
-            bufferPercent: 0.01
+            bufferPercent: 0.05,
+            ease: true
         },
         subscriptions: {
             'window:change': 'eventWindowWatcher'
@@ -52,12 +53,14 @@
                 // set the new state of the new active element
                 $activeNew
                     .addClass('active');
-                //scroll window to active element
-                Backbone.Mediator.publish('window:trigger:scroll:y', {
-                    scollToPosition: $activeNew,
-                    speed: 1,
-                    easing: 'easeInOutQuint'
-                });
+                //scroll window to active element using easing
+                if (this.options.ease) {
+                    Backbone.Mediator.publish('window:trigger:scroll:y', {
+                        scollToPosition: $activeNew,
+                        speed: 1,
+                        easing: 'easeInOutQuint'
+                    });
+                }
                 //on the first time this panel becomes active
                 if (!$activeNew.hasClass('viewed')) {
                     //message that panel changed
