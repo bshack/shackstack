@@ -181,10 +181,17 @@
 
         > [role=tabpanel] {
 
-            padding: rem-calc(10);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .3s;
 
-            &[aria-hidden=true] {
-                display: none;
+            &[aria-hidden=false] {
+                max-height: rem-calc(1000);
+            }
+
+            > * {
+                margin-left: rem-calc(10);
+                margin-right: rem-calc(10);
             }
 
         }
