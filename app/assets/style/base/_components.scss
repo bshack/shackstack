@@ -161,7 +161,7 @@
 
             @extend %arial-1;
 
-            background-color: $white-1;
+            background-color: $grey-5;
             border-bottom: rem-calc(1) solid $black-1;
             color: $black-1;
             display: block;
@@ -183,7 +183,7 @@
 
             max-height: 0;
             overflow: hidden;
-            transition: max-height .3s;
+            transition: max-height .3s ease;
 
             &[aria-hidden=false] {
                 max-height: rem-calc(1000);
