@@ -21,9 +21,12 @@
                     window.console.log('form is valid', $form);
                 }
             });
-            // setup example tabpanel
+            // setup example tabpanels
             new ViewTabpanel1({
                 el: Backbone.$('.tabpanel-1')
+            });
+            new ViewTabpanel1({
+                el: Backbone.$('.tabpanel-2')
             });
             // setup example modal
             new ViewModalOpen1({

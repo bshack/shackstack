@@ -28,7 +28,7 @@
                 .attr('tabindex', 0);
             // deselect all the panels
             this.$el
-                .find('> [role=tabpanel]')
+                .find('[role=tabpanel]')
                 .attr('aria-hidden', true)
                 .attr('tabindex', -1);
             // select the panel associated with the tab clicked on
@@ -41,14 +41,26 @@
             var $target = Backbone.$(e.target);
             // if left arrow key
             if (e.which === 37) {
-                $target.prev()
-                    .focus()
-                    .trigger('click');
+                if ($target.prev('[role=tab]').size()) {
+                    $target.prev('[role=tab]')
+                        .focus()
+                        .trigger('click');
+                } else {
+                    $target.prev('[role=tabpanel]').prev('[role=tab]')
+                        .focus()
+                        .trigger('click');
+                }
             // if right arrow key
             } else if (e.which === 39) {
-                $target.next()
-                    .focus()
-                    .trigger('click');
+                if ($target.next('[role=tab]').size()) {
+                    $target.next('[role=tab]')
+                        .focus()
+                        .trigger('click');
+                } else {
+                    $target.next('[role=tabpanel]').next('[role=tab]')
+                        .focus()
+                        .trigger('click');
+                }
             }
         }
     });
