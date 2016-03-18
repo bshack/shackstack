@@ -53,14 +53,6 @@
                 // set the new state of the new active element
                 $activeNew
                     .addClass('active');
-                //scroll window to active element using easing
-                if (this.options.ease) {
-                    Backbone.Mediator.publish('window:trigger:scroll:y', {
-                        scollToPosition: $activeNew,
-                        speed: 1,
-                        easing: 'easeInOutQuint'
-                    });
-                }
                 //on the first time this panel becomes active
                 if (!$activeNew.hasClass('viewed')) {
                     //message that panel changed

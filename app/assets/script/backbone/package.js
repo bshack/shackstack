@@ -12,6 +12,5 @@
         }
     });
     // return the extended version of Backbone
-    window.Backbone = Backbone;
     module.exports = Backbone;
 })();
