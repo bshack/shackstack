@@ -10,7 +10,7 @@
         subscriptions: {
             'window:change': 'eventWindowWatcher'
         },
-        metricsLogState: {},
+        panelViewedState: {},
         eventWindowWatcher: function(data) {
             // this will hold all the panel states
             var panelStates = [];
@@ -40,9 +40,14 @@
                 panelMetricsName = 'panel - ' + (i + 1).toString();
                 // set to empty object
                 panelState = {};
+                // check if has been viewed
+                if (this.panelViewedState[i] === true) {
+                    panelState.hasBeenViewed = true;
+                } else {
+                    panelState.hasBeenViewed = false;
+                }
                 // if the panel is in complete or partial view
                 if (panelOffsetTop <= data.scrollBottom && panelOffsetTop + panelHeight >= data.scrollTop) {
-
                     //determine what percent it is in view
                     precentInView = ((data.scrollBottom - panelOffsetTop) / 2) / panelHeight;
                     //set a class that it is in view
@@ -58,19 +63,20 @@
                         panelState.percent = precentInView;
                     }
                     //check to see if the metric tag was logged
-                    if (!this.metricsLogState[panelMetricsName]) {
+                    if (!panelState.hasBeenViewed) {
                         Backbone.Mediator.publish('metrics:event:send', {
                             hitType: 'event',
                             eventCategory: 'panels',
                             eventAction: 'view',
                             eventLabel: panelMetricsName
                         });
-                        this.metricsLogState[panelMetricsName] = true;
+                        this.panelViewedState[i] = true;
                     }
 
                     // check it this is a scrollable panel
                     if ($panel.hasClass('panel-scrollable')) {
-
+                        //send if panel is scrollable
+                        panelState.scrollable = true;
                         // set to fixed once the top edge if above the window top
                         if (panelOffsetTop <= data.scrollTop && panelOffsetTop + panelHeight >= data.scrollBottom) {
                             $panel
@@ -87,6 +93,9 @@
                                 .removeClass('panel-scrollable-fixed panel-scrollable-bottom');
                         }
 
+                    } else {
+                        //send if panel is scrollable
+                        panelState.scrollable = false;
                     }
                 // the panel is not in view
                 } else {
@@ -96,6 +105,8 @@
                     //set in data that it is out of view
                     panelState.inView = false;
                 }
+                //send the element
+                panelState.$el = $panel;
                 panelStates.push(panelState);
             }
             //message out the current panel states
