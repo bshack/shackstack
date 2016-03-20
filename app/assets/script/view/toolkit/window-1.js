@@ -1,6 +1,7 @@
 (function() {
     'use strict';
     var Backbone = require('../../backbone/package');
+    require('foundation-sites');
     module.exports = Backbone.View.extend({
         initialize: function() {
             //cache the body element for page height checking

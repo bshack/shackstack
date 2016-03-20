@@ -1,6 +1,5 @@
 (function() {
     'use strict';
-
     var Backbone = require('../../backbone/package');
     module.exports = Backbone.View.extend({
         initialize: function() {
@@ -72,7 +71,6 @@
                         });
                         this.panelViewedState[i] = true;
                     }
-
                     // check it this is a scrollable panel
                     if ($panel.hasClass('panel-scrollable')) {
                         //send if panel is scrollable
