@@ -88,7 +88,7 @@
             this.viewport.scrollTop = newScrollTop;
             this.viewport.scrollBottom = (this.viewport.scrollTop + this.viewport.height);
             // percent of the page scrolled down
-            this.viewport.scrollPercent = (this.viewport.scrollTop / this.$body.height());
+            this.viewport.scrollPercent = (this.viewport.scrollBottom / this.$body.height());
             //set orientation
             if (this.el.matchMedia('(orientation: landscape)').matches) {
                 this.viewport.orientation = 'landscape';

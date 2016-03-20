@@ -1,43 +1,108 @@
-%panels-1 {
+%panel-base-1 {
 
+    @extend %heading-1;
+
+    backface-visibility: hidden;
+    height: 100vh;
     position: relative;
 
-    > section {
+    > .panel-content {
 
-        @extend %heading-1;
-
+        backface-visibility: hidden;
         background-position: center center;
         background-size: cover;
         color: $white-1;
         height: 100vh;
-        opacity: 1;
         padding-top: 50vh;
         position: relative;
         text-align: center;
         text-transform: uppercase;
+        transform: translate3d(0, 0, 0);
+
+    }
+
+}
+
+%panels-1 {
+
+    position: relative;
+
+    > .panel {
+
+        @extend %panel-base-1;
+
+        &.panel-scrollable {
+            height: 200vh;
+        }
+
+        &.panel-scrollable-bottom {
+
+            > .panel-content {
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                right: 0;
+            }
+
+        }
+
+        &.panel-scrollable-fixed {
+
+            > .panel-content {
+                left: 0;
+                position: fixed;
+                right: 0;
+                top: 0;
+            }
+
+        }
 
         &.panel-1 {
-            background-image: url('../image/demo/panel-1.jpg');
+
+            > .panel-content {
+                background-image: url('../image/demo/panel-1.jpg');
+            }
+
         }
 
         &.panel-2 {
-            background-image: url('../image/demo/panel-2.jpg');
+
+            > .panel-content {
+                background-image: url('../image/demo/panel-2.jpg');
+            }
+
         }
 
         &.panel-3 {
-            background-image: url('../image/demo/panel-3.jpg');
+
+            > .panel-content {
+                background-image: url('../image/demo/panel-3.jpg');
+            }
+
         }
 
         &.panel-4 {
-            background-image: url('../image/demo/panel-4.jpg');
+
+            > .panel-content {
+                background-image: url('../image/demo/panel-4.jpg');
+            }
+
         }
 
         &.panel-5 {
-            background-image: url('../image/demo/panel-5.jpg');
+
+            > .panel-content {
+                background-image: url('../image/demo/panel-5.jpg');
+            }
+
         }
 
         &.panel-6 {
-            background-image: url('../image/demo/panel-6.jpg');
+
+            > .panel-content {
+                background-image: url('../image/demo/panel-6.jpg');
+            }
+
         }
 
     }
