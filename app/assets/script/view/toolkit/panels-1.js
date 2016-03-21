@@ -108,8 +108,6 @@
                     //set in data that it is out of view
                     panelState.inView = false;
                 }
-                //send the element
-                panelState.$el = $panel;
                 panelStates.push(panelState);
             }
             //message out the current panel states

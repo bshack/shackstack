@@ -6,7 +6,7 @@
     var ModelEnvironment = require('./model/environment');
     var ViewToolkit = require('./view/toolkit');
     var ViewWindow1 = require('./view/toolkit/window-1');
-    var ViewWindow2 = require('./view/toolkit/window-scroll-to-1');
+    var ViewWindowScrollTo1 = require('./view/toolkit/window-scroll-to-1');
     var ViewYouTubeApi1 = require('./view/toolkit/youtube-api-1');
     var ViewGoogleAnalytics1 = require('./view/toolkit/google-analytics-1');
     var ViewFacebook1 = require('./view/toolkit/facebook-1');
@@ -23,7 +23,7 @@
     new ViewWindow1({
         el: $window
     });
-    new ViewWindow2({
+    new ViewWindowScrollTo1({
         el: $window
     });
     new ViewYouTubeApi1({

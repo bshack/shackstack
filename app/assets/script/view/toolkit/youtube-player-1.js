@@ -26,7 +26,6 @@
             Backbone.Mediator.publish('youtube-player-1:state:ready', e);
         },
         eventStateChanged: function(e) {
-            window.console.log(e, e.target);
             var done = false;
             // broadcast video state change
             Backbone.Mediator.publish('youtube-player-1:state:changed', e);

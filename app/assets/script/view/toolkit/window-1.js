@@ -91,7 +91,7 @@
             // percent of the page scrolled down
             this.viewport.scrollPercent = (this.viewport.scrollBottom / this.body.offsetHeight);
             //set orientation
-            if (this.el.matchMedia('(orientation: landscape)').matches) {
+            if (this.viewport.width > this.viewport.height) {
                 this.viewport.orientation = 'landscape';
             } else {
                 this.viewport.orientation = 'portrait';
