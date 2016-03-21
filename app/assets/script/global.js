@@ -1,8 +1,5 @@
 (function() {
     'use strict';
-    //polyfills and feature detects
-    require('raf.js');
-    require('modernizr');
     //dependencies
     var $ = require('jquery');
     var fastclick = require('fastclick');

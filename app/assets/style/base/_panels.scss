@@ -27,6 +27,18 @@
 
     position: relative;
 
+    &.panel-scrollable-disabled {
+
+        > .panel {
+
+            &.panel-scrollable {
+                height: 100vh;
+            }
+            
+        }
+
+    }
+
     > .panel {
 
         @extend %panel-base-1;

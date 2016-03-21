@@ -5,7 +5,7 @@
     module.exports = Backbone.View.extend({
         initialize: function() {
             //cache the body element for page height checking
-            this.$body = Backbone.$('body');
+            this.body = document.body;
             //sometimes you need to add some buffer here when you notice scrollDirection is not consistant.
             this.pixelBuffer = 0;
             //on init set viewport
@@ -73,7 +73,7 @@
         },
         viewportSet: function() {
             //cache the new position
-            var newScrollTop = this.$el.scrollTop();
+            var newScrollTop = this.body.scrollTop;
             var newScrollTopBuffered = (newScrollTop + this.pixelBuffer);
             //check what direction the window is scrolling
             if (newScrollTopBuffered > this.viewport.scrollTop) {
@@ -84,12 +84,12 @@
                 this.viewport.scrollDirection = 'none';
             }
             //set the viewport width, height, scroll position
-            this.viewport.width = this.$el.width();
-            this.viewport.height = this.$el.height();
+            this.viewport.width = this.el.innerWidth;
+            this.viewport.height = this.el.innerHeight;
             this.viewport.scrollTop = newScrollTop;
             this.viewport.scrollBottom = (this.viewport.scrollTop + this.viewport.height);
             // percent of the page scrolled down
-            this.viewport.scrollPercent = (this.viewport.scrollBottom / this.$body.height());
+            this.viewport.scrollPercent = (this.viewport.scrollBottom / this.body.offsetHeight);
             //set orientation
             if (this.el.matchMedia('(orientation: landscape)').matches) {
                 this.viewport.orientation = 'landscape';

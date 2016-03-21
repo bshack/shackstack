@@ -1,10 +1,15 @@
 (function() {
     'use strict';
     var Backbone = require('../../backbone/package');
+    var modernizr = require('modernizr');
     module.exports = Backbone.View.extend({
         initialize: function() {
             // get all the panels in the panel group
             this.$panels = this.$el.find('> .panel');
+            //disabled fixed panels
+            if (modernizr.touchevents) {
+                this.$el.addClass('panel-scrollable-disabled');
+            }
         },
         subscriptions: {
             'window:change': 'eventWindowWatcher'
@@ -72,7 +77,7 @@
                         this.panelViewedState[i] = true;
                     }
                     // check it this is a scrollable panel
-                    if ($panel.hasClass('panel-scrollable')) {
+                    if (!modernizr.touchevents && $panel.hasClass('panel-scrollable')) {
                         //send if panel is scrollable
                         panelState.scrollable = true;
                         // set to fixed once the top edge if above the window top
@@ -84,7 +89,7 @@
                         } else if (panelOffsetTop + panelHeight <= data.scrollBottom) {
                             $panel
                                 .removeClass('panel-scrollable-fixed')
-                                .addClass('panel-scrollable-bottom')
+                                .addClass('panel-scrollable-bottom');
                         // default state
                         } else {
                             $panel
