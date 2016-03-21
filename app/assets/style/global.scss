@@ -184,6 +184,10 @@ main:focus {
     @extend %modal-1-open;
 }
 
+.sticky-1 {
+    @extend %sticky-1;
+}
+
 .tabpanel-1 {
     @extend %tabpanel-1;
 }

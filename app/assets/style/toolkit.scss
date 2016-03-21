@@ -22,18 +22,60 @@ hr {
 
 header {
 
+    background-color: $black-1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    @media #{$medium-up} {
+        background-color: $white-1;
+        position: static;
+    }
+
+    > button {
+
+        @extend %graphic-menu;
+
+        position: absolute;
+
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: $grey-2;
+        }
+
+        @media #{$medium-up} {
+            display: none;
+        }
+
+    }
+
     a {
-        color: $black-1;
+        color: $white-1;
         display: block;
-        font-size: rem-calc(30);
+        font-size: rem-calc(18);
         font-weight: 700;
-        margin: rem-calc(40) 0;
+        line-height: rem-calc(52);
+        text-align: center;
         text-decoration: none;
         text-transform: uppercase;
 
         &:hover,
         &:focus {
-            color: $grey-2;
+            color: $grey-5;
+        }
+
+        @media #{$medium-up} {
+            color: $black-1;
+            font-size: rem-calc(30);
+            line-height: rem-calc(30);
+            margin: rem-calc(52) 0;
+
+            &:hover,
+            &:focus {
+                color: $grey-2;
+            }
+
         }
 
     }
@@ -45,29 +87,47 @@ nav {
     background-color: $black-1;
     color: $white-1;
     margin-bottom: rem-calc(30);
+    margin-top: rem-calc(50);
+    position: absolute;
+    width: 100%;
+
+    @media #{$medium-up} {
+        margin-bottom: 0;
+        margin-top: 0;
+        position: static;
+    }
 
     ul {
+
+        border-bottom: rem-calc(1) solid $white-1;
+        border-top: rem-calc(1) solid $white-1;
+        display: none;
         list-style: none;
         margin: 0;
         padding: 0;
-    }
 
-    @media #{$medium-up} {
+        @media #{$medium-up} {
 
-        li {
-            float: left;
+            border: 0;
+            display: flex;
+
+            li {
+                float: left;
+            }
+
         }
 
     }
 
     a {
 
+        background-color: $black-1;
         border-bottom: rem-calc(1) solid $black-1;
         border-top: rem-calc(1) solid $black-1;
         color: $white-1;
         display: block;
         line-height: rem-calc(45);
-        padding: 0 rem-calc(10);
+        padding: 0 rem-calc(15);
         text-align: center;
         text-decoration: none;
         text-transform: uppercase;
@@ -83,6 +143,14 @@ nav {
         @media #{$medium-up} {
             border-left: rem-calc(1) solid $black-1;
             border-right: rem-calc(1) solid $black-1;
+            font-size: rem-calc(13);
+            width: auto;
+        }
+
+        @media #{$large-up} {
+            border-left: rem-calc(1) solid $black-1;
+            border-right: rem-calc(1) solid $black-1;
+            font-size: rem-calc(16);
             width: auto;
         }
 
@@ -91,6 +159,16 @@ nav {
             color: $black-1;
         }
 
+    }
+
+}
+
+main {
+
+    padding-top: rem-calc(44);
+
+    @media #{$medium-up} {
+        margin-top: 0;
     }
 
 }

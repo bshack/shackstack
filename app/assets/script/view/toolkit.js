@@ -8,6 +8,7 @@
     var ViewAccessiblityAjax1 = require('./toolkit/accessiblity-ajax-1');
     var ViewForm1 = require('./toolkit/form-1');
     var ViewYouTube1 = require('./toolkit/youtube-player-1');
+    var ViewSticky1 = require('./toolkit/sticky-1');
     var templateModalDemo = require('../template/modal/modal-example-1');
     module.exports =  Backbone.View.extend({
         initialize: function() {
@@ -40,6 +41,9 @@
             new ViewYouTube1({
                 el: Backbone.$('.youtube-player-1'),
                 videoId: 'fJmADQkhUeo'
+            });
+            new ViewSticky1({
+                el: Backbone.$('.sticky-1')
             });
             // setup the accessible ajax view
             var viewAccessiblityAjax1 = new ViewAccessiblityAjax1();
