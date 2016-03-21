@@ -55,6 +55,8 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "babel-preset-es2015": "x.x.x",
+    "babelify": "x.x.x",
     "backbone": "x.x.x",
     "backbone_mediator": "x.x.x",
     "brfs": "x.x.x",
