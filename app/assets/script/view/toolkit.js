@@ -12,6 +12,8 @@
     const ViewSticky1 = require('./toolkit/sticky-1');
     const viewAccessiblityAjax1 = new ViewAccessiblityAjax1();
     const env = new ModelEnvironment();
+    const $menuToggle = Backbone.$('header button');
+    const $menu = Backbone.$('nav ul');
     module.exports =  Backbone.View.extend({
         initialize: function() {
             new ViewPanels1({
@@ -49,20 +51,25 @@
             });
         },
         events: {
-            'click header button': 'eventMenuOpen',
+            'click header button': 'eventMenuToggle',
             'click #accessible-ajax-example-button': 'eventAccessibleAjax'
         },
-        eventMenuOpen: function(e) {
-            const $menu = Backbone.$('nav ul');
+        subscriptions: {
+            'window:keydown:escape': 'eventMenuClose'
+        },
+        eventMenuClose: function() {
+            $menu
+                .removeClass('mobile-show-menu');
+            $menuToggle
+                .attr('aria-expanded', false);
+        },
+        eventMenuToggle: function() {
             if ($menu.hasClass('mobile-show-menu')) {
-                $menu
-                    .removeClass('mobile-show-menu');
-                Backbone.$(e.target)
-                    .attr('aria-expanded', false);
+                this.eventMenuClose();
             } else {
                 $menu
                     .addClass('mobile-show-menu');
-                Backbone.$(e.target)
+                $menuToggle
                     .attr('aria-expanded', true);
             }
         },
