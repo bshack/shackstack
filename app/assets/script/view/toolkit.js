@@ -10,6 +10,8 @@
     var ViewYouTube1 = require('./toolkit/youtube-player-1');
     var ViewSticky1 = require('./toolkit/sticky-1');
     var templateModalDemo = require('../template/modal/modal-example-1');
+    var viewAccessiblityAjax1 = new ViewAccessiblityAjax1();
+    var env = new ModelEnvironment();
     module.exports =  Backbone.View.extend({
         initialize: function() {
             new ViewPanels1({
@@ -45,31 +47,34 @@
             new ViewSticky1({
                 el: Backbone.$('.sticky-1')
             });
+        },
+        events: {
+            'click header button': 'eventMenuOpen',
+            'click #accessible-ajax-example-button': 'eventAccessibleAjax'
+        },
+        eventMenuOpen: function() {
+            Backbone.$('nav ul').toggleClass('mobile-show-menu');
+        },
+        eventAccessibleAjax: function(e) {
+            var $target = Backbone.$(e.target);
             // setup the accessible ajax view
-            var viewAccessiblityAjax1 = new ViewAccessiblityAjax1();
-            var env = new ModelEnvironment();
-            // on click get some example data and populate the container.. TODO make this a self contained view
-            Backbone.$('#accessible-ajax-example-button').on('click', function() {
-                var $this = Backbone.$(this);
-                viewAccessiblityAjax1.request({
-                    url: env.get('service') + 'service/view/toolkit/components.json',
-                    success: function(data) {
-                        // remove the previous container if present
-                        Backbone.$('#accessible-ajax-example-content')
-                            .remove();
-                        // add new container with content
-                        $this
-                            .after('<div/>')
-                            .next('div')
-                            .attr('id', 'accessible-ajax-example-content')
-                            .attr('tabindex', '-1')
-                            // pull some text form a json object
-                            .html(data['accessible-ajax-1'])
-                            .focus();
-                    }
-                });
+            viewAccessiblityAjax1.request({
+                url: env.get('service') + 'service/view/toolkit/components.json',
+                success: function(data) {
+                    // remove the previous container if present
+                    Backbone.$('#accessible-ajax-example-content')
+                        .remove();
+                    // add new container with content
+                    $target
+                        .after('<div/>')
+                        .next('div')
+                        .attr('id', 'accessible-ajax-example-content')
+                        .attr('tabindex', '-1')
+                        // pull some text form a json object
+                        .html(data['accessible-ajax-1'])
+                        .focus();
+                }
             });
-
         }
     });
 })();

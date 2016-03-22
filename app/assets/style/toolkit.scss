@@ -26,6 +26,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1;
 
     @media #{$medium-up} {
         background-color: $white-1;
@@ -105,6 +106,14 @@ nav {
         list-style: none;
         margin: 0;
         padding: 0;
+
+        @media #{$small-only} {
+
+            &.mobile-show-menu {
+                display: block;
+            }
+
+        }
 
         @media #{$medium-up} {
 

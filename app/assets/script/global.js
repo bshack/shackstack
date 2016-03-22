@@ -11,6 +11,7 @@
     var ViewGoogleAnalytics1 = require('./view/toolkit/google-analytics-1');
     var ViewFacebook1 = require('./view/toolkit/facebook-1');
     var $window = $(window);
+    var $body = $('body');
     require('foundation-sites');
     // speed up precieved click event performance
     fastclick(document.body);
@@ -39,6 +40,8 @@
     });
     // if on toolkit page init the view
     if (env.get('view').lastIndexOf('toolkit', 0) === 0) {
-        new ViewToolkit();
+        new ViewToolkit({
+            el: $body
+        });
     }
 })();
