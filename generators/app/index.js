@@ -7,12 +7,12 @@ const yosay = require('yosay');
 
 // ## Setup
 module.exports = yeoman.Base.extend({
-    prompting: () => {
+    prompting: function() {
         this.log(yosay(
             'Setting up ' + chalk.red('generator-shackstack') + ' generator.'
         ));
     },
-    writing: () => {
+    writing: function() {
         //copy over the site files
         this.fs.copy(
           this.templatePath('../../../app/**'),
@@ -34,7 +34,7 @@ module.exports = yeoman.Base.extend({
           this.destinationPath('./')
         );
     },
-    install: () => {
+    install: function() {
         this.installDependencies({
             bower: false,
             npm: true
