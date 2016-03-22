@@ -16,7 +16,7 @@
 
     background-image: url('../image/sprite-global.png');
     background-repeat: no-repeat;
-    background-size: rem-calc((162 / 2 )) rem-calc((440 / 2));
+    background-size: rem-calc((162 / 2 )) rem-calc((560 / 2));
     display: block;
     overflow: hidden;
 
@@ -27,13 +27,25 @@
 
 }
 
+// ### graphic-menu
+
+%graphic-menu {
+
+    @extend %icon-global;
+
+    background-position: rem-calc(-((0 / 2) + 4)) rem-calc(-((0 / 2) + 4));
+    height: rem-calc(((120 - 20) / 2) + 2);
+    width: rem-calc(((120 - 20) / 2) + 2);
+
+}
+
 // ### graphic-css3
 
 %graphic-css3 {
 
     @extend %icon-global;
 
-    background-position: rem-calc(-((0 / 2) + 4)) rem-calc(-((0 / 2) + 4));
+    background-position: rem-calc(-((0 / 2) + 4)) rem-calc(-((120 / 2) + 4));
     height: rem-calc(((220 - 20) / 2) + 2);
     width: rem-calc(((162 - 20) / 2) + 2);
 
@@ -45,7 +57,7 @@
 
     @extend %icon-global;
 
-    background-position: rem-calc(-((0 / 2) + 4)) rem-calc(-((220 / 2) + 4));
+    background-position: rem-calc(-((0 / 2) + 4)) rem-calc(-((340 / 2) + 4));
     height: rem-calc(((220 - 20) / 2) + 2);
     width: rem-calc(((162 - 20) / 2) + 2);
 

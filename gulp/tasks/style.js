@@ -1,19 +1,19 @@
 // ## Load Modules
 
-var gulp = require('gulp');
-var sassLint = require('gulp-sass-lint');
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var notify = require('gulp-notify');
-var plumber = require('gulp-plumber');
+const gulp = require('gulp');
+const sassLint = require('gulp-sass-lint');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const notify = require('gulp-notify');
+const plumber = require('gulp-plumber');
 
 // ## Environment Config
 
-var config = require('../config');
+const config = require('../config');
 
 // ## Style Task Complilation Logic
 
-var styleCompile = function() {
+const styleCompile = () => {
     'use strict';
     return gulp.src(config.path.style.source.scss)
         //support for better error handling

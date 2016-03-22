@@ -1,15 +1,15 @@
 // ## Load Modules
 
-var gulp = require('gulp');
-var KarmaServer = require('karma').Server;
+const gulp = require('gulp');
+const KarmaServer = require('karma').Server;
 
 // ## Environment Config
 
-var config = require('../config');
+const config = require('../config');
 
 // ## Unit Task
 
-gulp.task('unit', function(done) {
+gulp.task('unit', done => {
     'use strict';
     //run unit tests and write out coverage
     return new KarmaServer({
