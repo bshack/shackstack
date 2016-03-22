@@ -1,7 +1,7 @@
-(function() {
+(() => {
     'use strict';
-    var Backbone = require('../../backbone/package');
-    var templateAccessibilitySpeaker1 = require('../../template/toolkit/accessibility-speaker-1');
+    const Backbone = require('../../backbone/package');
+    const templateAccessibilitySpeaker1 = require('../../template/toolkit/accessibility-speaker-1');
     module.exports = Backbone.View.extend({
         defaults: {
             speakDelay: 1500,
@@ -12,10 +12,10 @@
             return Backbone.$(templateAccessibilitySpeaker1(data));
         },
         say: function(message, settings) {
+            //create an new container just for this message
+            const $speaker = this.template();
             //set the settings
             settings = Backbone.$.extend({}, this.defaults, settings);
-            //create an new container just for this message
-            var $speaker = this.template();
             //add to the DOM
             this.$el
                 .append($speaker);

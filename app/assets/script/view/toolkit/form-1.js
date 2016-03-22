@@ -1,8 +1,8 @@
-(function() {
+(() => {
     'use strict';
 
-    var Backbone = require('../../backbone/package');
-    var templateInputError1 = require('../../template/toolkit/input-error-1');
+    const Backbone = require('../../backbone/package');
+    const templateInputError1 = require('../../template/toolkit/input-error-1');
     require('jquery-validation');
 
     module.exports = Backbone.View.extend({
@@ -10,16 +10,16 @@
             //save options
             this.options = options;
             //cache this
-            var _this = this;
+            const _this = this;
             //setup default validation settings
-            var validationDefaults =  {
+            const validationDefaults =  {
                 //overide default error display plugin functionalty
                 showErrors: function(errorMap, errorList) {
                     //clean up error messages boxes
                     Backbone.$.each(_this.$el.find('.input-error-1'), function() {
-                        var $this = Backbone.$(this);
+                        const $this = Backbone.$(this);
                         // the the input for the error message
-                        var $inputFor = Backbone.$('[name=' + $this.data('for') + ']');
+                        const $inputFor = Backbone.$('[name=' + $this.data('for') + ']');
                         // if the input is valid then remove the error message container
                         if ($inputFor.size() && $inputFor.first().attr('aria-invalid') === 'false') {
                             $this
@@ -28,7 +28,7 @@
                     });
                     //loop over all elements in error
                     Backbone.$.each(errorList, function() {
-                        var $errorElement = Backbone.$(this.element);
+                        const $errorElement = Backbone.$(this.element);
                         //remove error message box if present already
                         Backbone.$('#' + $errorElement.attr('name') + '-error-message')
                             .remove();
@@ -45,7 +45,7 @@
                 }
             };
             // extend default settings with any new supplied settings
-            var validationSettings = Backbone.$.extend({}, validationDefaults, this.options);
+            const validationSettings = Backbone.$.extend({}, validationDefaults, this.options);
             // init validation plugin
             this.$el.validate(validationSettings);
         },

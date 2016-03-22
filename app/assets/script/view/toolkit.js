@@ -1,14 +1,14 @@
-(function() {
+(() => {
     'use strict';
-    var Backbone = require('../backbone/package');
-    var ModelEnvironment = require('../model/environment');
-    var ViewPanels1 = require('./toolkit/panels-1');
-    var ViewModalOpen1 = require('./toolkit/modal-open-1');
-    var ViewTabpanel1 = require('./toolkit/tabpanel-1');
-    var ViewAccessiblityAjax1 = require('./toolkit/accessiblity-ajax-1');
-    var ViewForm1 = require('./toolkit/form-1');
-    var ViewYouTube1 = require('./toolkit/youtube-player-1');
-    var templateModalDemo = require('../template/modal/modal-example-1');
+    const Backbone = require('../backbone/package');
+    const ModelEnvironment = require('../model/environment');
+    const ViewPanels1 = require('./toolkit/panels-1');
+    const ViewModalOpen1 = require('./toolkit/modal-open-1');
+    const ViewTabpanel1 = require('./toolkit/tabpanel-1');
+    const ViewAccessiblityAjax1 = require('./toolkit/accessiblity-ajax-1');
+    const ViewForm1 = require('./toolkit/form-1');
+    const ViewYouTube1 = require('./toolkit/youtube-player-1');
+    const templateModalDemo = require('../template/modal/modal-example-1');
     module.exports =  Backbone.View.extend({
         initialize: function() {
             new ViewPanels1({
@@ -42,11 +42,11 @@
                 videoId: 'fJmADQkhUeo'
             });
             // setup the accessible ajax view
-            var viewAccessiblityAjax1 = new ViewAccessiblityAjax1();
-            var env = new ModelEnvironment();
+            const viewAccessiblityAjax1 = new ViewAccessiblityAjax1();
+            const env = new ModelEnvironment();
             // on click get some example data and populate the container.. TODO make this a self contained view
             Backbone.$('#accessible-ajax-example-button').on('click', function() {
-                var $this = Backbone.$(this);
+                const $this = Backbone.$(this);
                 viewAccessiblityAjax1.request({
                     url: env.get('service') + 'service/view/toolkit/components.json',
                     success: function(data) {

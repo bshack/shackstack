@@ -1,7 +1,7 @@
-(function() {
+(() => {
     'use strict';
-    var Backbone = require('../../backbone/package');
-    var modernizr = require('modernizr');
+    const Backbone = require('../../backbone/package');
+    const modernizr = require('modernizr');
     module.exports = Backbone.View.extend({
         initialize: function() {
             // get all the panels in the panel group
@@ -17,21 +17,21 @@
         panelViewedState: {},
         eventWindowWatcher: function(data) {
             // this will hold all the panel states
-            var panelStates = [];
+            let panelStates = [];
             // this will hold one panel state
-            var panelState;
+            let panelState;
             // the index
-            var i;
+            let i;
             // the current panel in the loop
-            var $panel;
+            let $panel;
             // how far the top of the panel is from the page top
-            var panelOffsetTop;
+            let panelOffsetTop;
             // how tall the panel is
-            var panelHeight;
+            let panelHeight;
             // unique name for metrics logging
-            var panelMetricsName;
+            let panelMetricsName;
             // what percent of the panel is visible on screen
-            var precentInView;
+            let precentInView;
             // loop over all the panels
             for (i = 0; i < this.$panels.length; i++) {
                 //the the current panel in the loop

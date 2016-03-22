@@ -1,11 +1,11 @@
-(function() {
+(() => {
     'use strict';
-    var $ = require('jquery');
+    const $ = require('jquery');
     module.exports = {
-        htmlEncode: function(value) {
+        htmlEncode: (value) => {
             return $('<div/>').text(value).html();
         },
-        htmlDecode: function(value) {
+        htmlDecode: (value) => {
             return $('<div/>').html(value).text();
         }
     };
