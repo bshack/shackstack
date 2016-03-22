@@ -38,12 +38,12 @@ module.exports = function(karma) {
             transform: [
                 'brfs',
                 'browserify-shim',
-                istanbul({
-                    ignore: ['**/node_modules/**']
-                }),
                 ['babelify', {
                     'presets': ['es2015']
-                }]
+                }],
+                istanbul({
+                    ignore: ['**/node_modules/**']
+                })
             ]
         },
         coverageReporter: {
