@@ -52,8 +52,19 @@
             'click header button': 'eventMenuOpen',
             'click #accessible-ajax-example-button': 'eventAccessibleAjax'
         },
-        eventMenuOpen: function() {
-            Backbone.$('nav ul').toggleClass('mobile-show-menu');
+        eventMenuOpen: function(e) {
+            const $menu = Backbone.$('nav ul');
+            if ($menu.hasClass('mobile-show-menu')) {
+                $menu
+                    .removeClass('mobile-show-menu');
+                Backbone.$(e.target)
+                    .attr('aria-expanded', false);
+            } else {
+                $menu
+                    .addClass('mobile-show-menu');
+                Backbone.$(e.target)
+                    .attr('aria-expanded', true);
+            }
         },
         eventAccessibleAjax: function(e) {
             const $target = Backbone.$(e.target);
