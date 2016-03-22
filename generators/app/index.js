@@ -1,9 +1,9 @@
 'use strict';
 
 // ## Load Modules
-var yeoman = require('yeoman-generator');
-var chalk = require('chalk');
-var yosay = require('yosay');
+const yeoman = require('yeoman-generator');
+const chalk = require('chalk');
+const yosay = require('yosay');
 
 // ## Setup
 module.exports = yeoman.Base.extend({

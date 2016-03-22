@@ -1,7 +1,7 @@
 (function() {
     'use strict';
-    var Backbone = require('../../backbone/package');
-    var Fingerprint = require('fingerprintjs');
+    const Backbone = require('../../backbone/package');
+    const Fingerprint = require('fingerprintjs');
     module.exports = Backbone.View.extend({
         initialize: function() {
             //google analytics tracking library

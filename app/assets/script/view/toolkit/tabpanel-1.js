@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    var Backbone = require('../../backbone/package');
+    const Backbone = require('../../backbone/package');
     module.exports = Backbone.View.extend({
         events: {
             'click > [role=tablist] [role=tab]': 'tabClick',
@@ -9,7 +9,7 @@
         // for non screen reader users
         tabClick: function(e) {
             e.preventDefault();
-            var $target = Backbone.$(e.target);
+            const $target = Backbone.$(e.target);
             //send click event to metrics
             Backbone.Mediator.publish('metrics:event:send', {
                 hitType: 'event',
@@ -38,7 +38,7 @@
                 .removeAttr('tabindex');
         },
         tabKeydown: function(e) {
-            var $target = Backbone.$(e.target);
+            const $target = Backbone.$(e.target);
             // if left arrow key
             if (e.which === 37) {
                 if ($target.prev('[role=tab]').size()) {

@@ -1,8 +1,8 @@
 (function() {
     'use strict';
-    var Backbone = require('../../backbone/package');
-    var ViewModal1 = require('./modal-1');
-    var templateModal1 = require('../../template/toolkit/modal-1');
+    const Backbone = require('../../backbone/package');
+    const ViewModal1 = require('./modal-1');
+    const templateModal1 = require('../../template/toolkit/modal-1');
     module.exports = Backbone.View.extend({
         initialize: function(options) {
             this.content = (options.content || false);
@@ -34,13 +34,13 @@
         render: function(e) {
             e.preventDefault();
             //cache current scroll position
-            var windowScrollPosition = this.parentViewport.scrollTop;
+            const windowScrollPosition = this.parentViewport.scrollTop;
             // the opener
-            var $target = Backbone.$(e.target);
+            const $target = Backbone.$(e.target);
             // build the modal markup
-            var $modal = this.template();
+            const $modal = this.template();
             // check what viewport we are in and set the position correctly
-            var modalScrollPosition;
+            let modalScrollPosition;
             if (this.parentViewport.snappoint === 'small') {
                 modalScrollPosition = 0;
             } else {

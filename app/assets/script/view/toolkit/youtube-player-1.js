@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    var Backbone = require('../../backbone/package');
+    const Backbone = require('../../backbone/package');
     module.exports = Backbone.View.extend({
         initialize: function(options) {
             this.options = options;
@@ -11,7 +11,7 @@
             'youtube-api-1:state:ready': 'eventApiReady'
         },
         eventApiReady: function() {
-            var _this = this;
+            const _this = this;
             /*eslint-disable */
             this.player = new YT.Player(this.$el.find('div').get(0), Backbone.$.extend({
                 events: {
@@ -26,7 +26,7 @@
             Backbone.Mediator.publish('youtube-player-1:state:ready', e);
         },
         eventStateChanged: function(e) {
-            var done = false;
+            let done = false;
             // broadcast video state change
             Backbone.Mediator.publish('youtube-player-1:state:changed', e);
             // broadcast video unstarted

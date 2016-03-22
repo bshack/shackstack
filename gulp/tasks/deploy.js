@@ -1,24 +1,24 @@
 // ## Load Modules
 
-var gulp = require('gulp');
-var htmlmin = require('gulp-htmlmin');
-var sourcemaps = require('gulp-sourcemaps');
-var imagemin = require('gulp-imagemin');
-var stripDebug = require('gulp-strip-debug');
-var uglify = require('gulp-uglify');
-var plumber = require('gulp-plumber');
-var sitemap = require('gulp-sitemap');
-var runSequence = require('run-sequence');
-var cssnano = require('gulp-cssnano');
+const gulp = require('gulp');
+const htmlmin = require('gulp-htmlmin');
+const sourcemaps = require('gulp-sourcemaps');
+const imagemin = require('gulp-imagemin');
+const stripDebug = require('gulp-strip-debug');
+const uglify = require('gulp-uglify');
+const plumber = require('gulp-plumber');
+const sitemap = require('gulp-sitemap');
+const runSequence = require('run-sequence');
+const cssnano = require('gulp-cssnano');
 
 // ## Environment Config
 
-var config = require('../config');
+const config = require('../config');
 
 // ## Release Task
 // release task dependent on tasks to do code quality checks and build documentation
 
-gulp.task('deploy', function(callback) {
+gulp.task('deploy', callback => {
     'use strict';
     //runSequence support is only for gulp 3.x, 4.x natively support this functionalty
     return runSequence(
@@ -34,7 +34,7 @@ gulp.task('deploy', function(callback) {
 
 // ## Copy Root Task
 // copy root dependency files to deploy directory
-gulp.task('copyRoot', function() {
+gulp.task('copyRoot', () => {
     'use strict';
     return gulp.src(config.path.release.copy)
         //support for better error handling
@@ -45,7 +45,7 @@ gulp.task('copyRoot', function() {
 
 // ## Copy Report Task
 // copy report dependency files to deploy directory
-gulp.task('copyReport', function() {
+gulp.task('copyReport', () => {
     'use strict';
     return gulp.src(config.path.report.source)
         //support for better error handling
@@ -56,7 +56,7 @@ gulp.task('copyReport', function() {
 
 // ## Copy Fonts Task
 // copy Font dependency files to deploy directory
-gulp.task('copyFonts', function() {
+gulp.task('copyFonts', () => {
     'use strict';
     return gulp.src(config.path.font.source)
         //support for better error handling
@@ -68,7 +68,7 @@ gulp.task('copyFonts', function() {
 
 // ## Minify Markup Task
 // minify and copy markup files to deploy directory
-gulp.task('minifyMarkup', function() {
+gulp.task('minifyMarkup', () => {
     'use strict';
     return gulp.src(config.path.markup.destination)
         //support for better error handling
@@ -84,7 +84,7 @@ gulp.task('minifyMarkup', function() {
 
 // ## Copy Data Task
 // stubbed out data files over
-gulp.task('copyData', function() {
+gulp.task('copyData', () => {
     'use strict';
     return gulp.src(config.path.data.source)
         //support for better error handling
@@ -95,7 +95,7 @@ gulp.task('copyData', function() {
 
 // ## Sitemap Task
 // generate sitemap.xml
-gulp.task('sitemap', function() {
+gulp.task('sitemap', () => {
     'use strict';
     return gulp.src(config.path.markup.destination)
         .pipe(sitemap({
@@ -107,7 +107,7 @@ gulp.task('sitemap', function() {
 
 // ## Minify Style Task
 // minify and copy style files to deploy diretory
-gulp.task('minifyStyle', function() {
+gulp.task('minifyStyle', () => {
     'use strict';
     return gulp.src(config.path.style.source.css)
         //support for better error handling
@@ -122,7 +122,7 @@ gulp.task('minifyStyle', function() {
 
 // ## Minify Script Task
 // minify and copy script files to deploy directory
-gulp.task('minifyScript', function() {
+gulp.task('minifyScript', () => {
     'use strict';
     return gulp.src(config.path.script.release)
         //support for better error handling
@@ -141,7 +141,7 @@ gulp.task('minifyScript', function() {
 
 // ## Minify Image Task
 // minify and copy images to deploy directory
-gulp.task('minifyImage', function() {
+gulp.task('minifyImage', () => {
     'use strict';
     return gulp.src(config.path.image.source)
         //support for better error handling

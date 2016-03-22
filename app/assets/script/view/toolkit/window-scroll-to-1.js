@@ -1,7 +1,7 @@
 (function() {
     'use strict';
-    var Backbone = require('../../backbone/package');
-    var easingJS = require('easingjs');
+    const Backbone = require('../../backbone/package');
+    const easingJS = require('easingjs');
     //https://github.com/bshack/easingjs
     module.exports = Backbone.View.extend({
         initialize: function() {
@@ -21,9 +21,9 @@
         easingEquations: easingJS,
         tick: function(currentTime, time, settings) {
             currentTime += 1 / 60;
-            var _this = this;
-            var position = currentTime / time;
-            var t = this.easingEquations[settings.easing](position);
+            const _this = this;
+            const position = currentTime / time;
+            const t = this.easingEquations[settings.easing](position);
             if (position < 1) {
                 this.el.requestAnimationFrame(function() {
                     _this.tick(currentTime, time, settings);
@@ -42,7 +42,7 @@
                 settings.scollToPosition = Backbone.$(settings.scollToPosition).first().offset().top;
             }
             // min time .1, max time .8 seconds
-            var time = Math.max(
+            const time = Math.max(
                 0.1,
                 Math.min(Math.abs(this.viewport.scrollTop - settings.scollToPosition) / settings.speed, 0.8)
             );

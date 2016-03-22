@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    var Backbone = require('backbone');
+    const Backbone = require('backbone');
     // pull in the mediator
     require('backbone_mediator');
     // don't use DELETE or PUT methods, make them POST methods

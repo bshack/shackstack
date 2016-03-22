@@ -1,7 +1,7 @@
 (function() {
     'use strict';
-    var Backbone = require('../backbone/package');
-    var $html = Backbone.$('html');
+    const Backbone = require('../backbone/package');
+    const $html = Backbone.$('html');
     module.exports = Backbone.Model.extend({
         defaults: {
             // the page we are on

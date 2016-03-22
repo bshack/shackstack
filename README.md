@@ -12,6 +12,7 @@ http://billshackelford.com/toolkit
 
 ## Key Libraries
 
+- Babel
 - BackboneJS
 - Browserify
 - Browsersync

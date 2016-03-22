@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    var Backbone = require('../../backbone/package');
+    const Backbone = require('../../backbone/package');
     module.exports = Backbone.View.extend({
         initialize: function() {
             //ask window top publish its status
@@ -16,7 +16,7 @@
         },
         //watch snappoint and move modal around as it changes
         eventSnappointChange: function(data) {
-            var scrollTopPosition;
+            let scrollTopPosition;
             if (data.snappoint === 'small') {
                 scrollTopPosition = 0;
             } else {
@@ -38,7 +38,7 @@
             if (!Backbone.$('[data-modal]').size()) {
                 return;
             }
-            var $data = this.$el.find('.modal-1-content').data();
+            const $data = this.$el.find('.modal-1-content').data();
             // allow scrolling again
             Backbone.$('body')
                 .removeClass('modal-1-open');

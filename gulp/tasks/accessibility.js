@@ -1,18 +1,18 @@
 // ## Load Modules
 
-var gulp = require('gulp');
-var accessibility = require('gulp-accessibility');
-var plumber = require('gulp-plumber');
-var notify = require('gulp-notify');
+const gulp = require('gulp');
+const accessibility = require('gulp-accessibility');
+const plumber = require('gulp-plumber');
+const notify = require('gulp-notify');
 
 // ## Environment Config
 
-var config = require('../config');
+const config = require('../config');
 
 // ## Accessibility Task
 // dependacy on markup task to have markup compiled
 
-gulp.task('accessibility', function() {
+gulp.task('accessibility', () => {
     'use strict';
     return gulp.src(config.path.markup.destination)
         //support for better error handling

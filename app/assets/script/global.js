@@ -1,24 +1,24 @@
 (function() {
     'use strict';
     //dependencies
-    var $ = require('jquery');
-    var fastclick = require('fastclick');
-    var ModelEnvironment = require('./model/environment');
-    var ViewToolkit = require('./view/toolkit');
-    var ViewWindow1 = require('./view/toolkit/window-1');
-    var ViewWindowScrollTo1 = require('./view/toolkit/window-scroll-to-1');
-    var ViewYouTubeApi1 = require('./view/toolkit/youtube-api-1');
-    var ViewGoogleAnalytics1 = require('./view/toolkit/google-analytics-1');
-    var ViewFacebook1 = require('./view/toolkit/facebook-1');
-    var $window = $(window);
-    var $body = $('body');
+    const $ = require('jquery');
+    const fastclick = require('fastclick');
+    const ModelEnvironment = require('./model/environment');
+    const ViewToolkit = require('./view/toolkit');
+    const ViewWindow1 = require('./view/toolkit/window-1');
+    const ViewWindowScrollTo1 = require('./view/toolkit/window-scroll-to-1');
+    const ViewYouTubeApi1 = require('./view/toolkit/youtube-api-1');
+    const ViewGoogleAnalytics1 = require('./view/toolkit/google-analytics-1');
+    const ViewFacebook1 = require('./view/toolkit/facebook-1');
+    const $window = $(window);
+    const $body = $('body');
     require('foundation-sites');
     // speed up precieved click event performance
     fastclick(document.body);
     // initialize foundation
     $(document).foundation();
     // get the environment settings as an example
-    var env = new ModelEnvironment();
+    const env = new ModelEnvironment();
     $window.get(0).console.log('Environment Paths:', env.attributes);
     // // set up the window events to be subscribed to
     new ViewWindow1({

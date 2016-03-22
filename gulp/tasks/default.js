@@ -1,6 +1,6 @@
 // ## Load Modules
 
-var gulp = require('gulp');
+const gulp = require('gulp');
 
 // ## Default Task
 // this is just a proxy for watch

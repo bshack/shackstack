@@ -40,7 +40,10 @@ module.exports = function(karma) {
                 'browserify-shim',
                 istanbul({
                     ignore: ['**/node_modules/**']
-                })
+                }),
+                ['babelify', {
+                    'presets': ['es2015']
+                }]
             ]
         },
         coverageReporter: {

@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    var Backbone = require('../../backbone/package');
+    const Backbone = require('../../backbone/package');
     require('foundation-sites');
     module.exports = Backbone.View.extend({
         initialize: function() {
@@ -73,8 +73,8 @@
         },
         viewportSet: function() {
             //cache the new position
-            var newScrollTop = this.body.scrollTop;
-            var newScrollTopBuffered = (newScrollTop + this.pixelBuffer);
+            const newScrollTop = this.body.scrollTop;
+            const newScrollTopBuffered = (newScrollTop + this.pixelBuffer);
             //check what direction the window is scrolling
             if (newScrollTopBuffered > this.viewport.scrollTop) {
                 this.viewport.scrollDirection = 'down';

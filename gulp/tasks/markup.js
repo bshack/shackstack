@@ -1,32 +1,32 @@
 // ## Load Modules
 
-var gulp = require('gulp');
-var handlebarsToHTML = require('gulp-compile-handlebars');
-var handlebarsToJS = require('gulp-handlebars');
-var htmllint = require('gulp-htmllint');
-var rename = require('gulp-rename');
-var wrapper = require('gulp-wrapper');
-var plumber = require('gulp-plumber');
-var data = require('gulp-data');
-var notify = require('gulp-notify');
-var _ = require('lodash-node');
+const gulp = require('gulp');
+const handlebarsToHTML = require('gulp-compile-handlebars');
+const handlebarsToJS = require('gulp-handlebars');
+const htmllint = require('gulp-htmllint');
+const rename = require('gulp-rename');
+const wrapper = require('gulp-wrapper');
+const plumber = require('gulp-plumber');
+const data = require('gulp-data');
+const notify = require('gulp-notify');
+const _ = require('lodash-node');
 
 
 // ## Environment Config
 
-var config = require('../config');
+const config = require('../config');
 
 // ## Markup Task
 // create .html files written to app root
 
-gulp.task('markup', function() {
+gulp.task('markup', () => {
     'use strict';
     //task
     return gulp.src(config.path.markup.source)
         //support for better error handling
         .pipe(plumber())
         .pipe(data(function(file) {
-            var dataFile;
+            let dataFile;
             // page specific json files are optional
             try {
                 dataFile = file.path.split(config.path.root).pop().replace('.handlebars', '.json');
@@ -69,7 +69,7 @@ gulp.task('markup', function() {
 // ## markupTemplate Task
 // create precomiled .js templates
 
-gulp.task('markupTemplate', ['cleanTemplate'], function() {
+gulp.task('markupTemplate', ['cleanTemplate'], () => {
     'use strict';
     return gulp.src(config.path.markup.partials.watch)
         //support for better error handling
@@ -85,7 +85,7 @@ gulp.task('markupTemplate', ['cleanTemplate'], function() {
                 return file.path.split('markup/').pop().replace('.js', '');
             },
             header: function(file){
-                var templateName = this.getTemplateName(file);
+                let templateName = this.getTemplateName(file);
                 return '(function() {' +
                     'var Handlebars = require("handlebars");' +
                     'if (typeof Handlebars.templates === \'undefined\') {' +
@@ -94,7 +94,7 @@ gulp.task('markupTemplate', ['cleanTemplate'], function() {
                     'Handlebars.templates[\'' + templateName + '\'] = Handlebars.template(';
             },
             footer: function(file){
-                var templateName = this.getTemplateName(file);
+                let templateName = this.getTemplateName(file);
                 return ');' +
                 'Handlebars.registerPartial(\'' + templateName + '\', Handlebars.templates[\'' + templateName +'\']);' +
                 'module.exports = Handlebars.templates[\'' + templateName + '\'];' +

@@ -1,19 +1,19 @@
 // ## Load Modules
 
-var gulp = require('gulp');
-var sprity = require('sprity');
-var gulpif = require('gulp-if');
-var svg2png = require('gulp-svg2png');
-var plumber = require('gulp-plumber');
+const gulp = require('gulp');
+const sprity = require('sprity');
+const gulpif = require('gulp-if');
+const svg2png = require('gulp-svg2png');
+const plumber = require('gulp-plumber');
 
 // ## Environment Config
 
-var config = require('../config');
+const config = require('../config');
 
 // ## Sprite to Style Task
 // creates a .png sprite from .png images found in the sprite directory
 
-gulp.task('sprite', ['vectorToRaster'], function() {
+gulp.task('sprite', ['vectorToRaster'], () => {
     'use strict';
     //generate the sprite image and the scss styles
     return sprity.src({
@@ -40,7 +40,7 @@ gulp.task('sprite', ['vectorToRaster'], function() {
 // ## Vector to Raster Image Task
 // make the the sprite .svg source files to .png
 
-gulp.task('vectorToRaster', function() {
+gulp.task('vectorToRaster', () => {
     'use strict';
     return gulp.src(config.path.image.sprite.source)
         //support for better error handling

@@ -1,11 +1,11 @@
 (function() {
     'use strict';
-    var Backbone = require('../../backbone/package');
+    const Backbone = require('../../backbone/package');
     module.exports = Backbone.View.extend({
         initialize: function() {
-            var _this = this,
-                js,
+            const _this = this,
                 fjs = document.getElementsByTagName('script')[0];
+            let js;
             if (document.getElementById('facebook-jssdk')) {
                 return;
             }

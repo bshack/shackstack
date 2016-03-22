@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    var $ = require('jquery');
+    const $ = require('jquery');
     module.exports = {
         htmlEncode: function(value) {
             return $('<div/>').text(value).html();
