@@ -1,4 +1,4 @@
-(() => {
+(function() {
     'use strict';
     const Backbone = require('../../backbone/package');
     const ViewModal1 = require('./modal-1');

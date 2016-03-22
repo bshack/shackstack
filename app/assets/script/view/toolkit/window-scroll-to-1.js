@@ -1,4 +1,4 @@
-(() => {
+(function() {
     'use strict';
     const Backbone = require('../../backbone/package');
     const easingJS = require('easingjs');

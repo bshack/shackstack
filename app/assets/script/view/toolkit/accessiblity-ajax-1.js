@@ -1,4 +1,4 @@
-(() => {
+(function() {
     'use strict';
     const Backbone = require('../../backbone/package');
     const AccessiblitySpeaker1 = require('./accessiblity-speaker-1');

@@ -1,4 +1,4 @@
-(() => {
+(function() {
     'use strict';
     //dependencies
     const $ = require('jquery');

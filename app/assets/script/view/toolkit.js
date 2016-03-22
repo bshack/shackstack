@@ -1,4 +1,4 @@
-(() => {
+(function() {
     'use strict';
     const Backbone = require('../backbone/package');
     const ModelEnvironment = require('../model/environment');
