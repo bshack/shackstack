@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="toolkit-colors" lang="en-us" dir="ltr">
+<html id="toolkit-text" lang="en-us" dir="ltr">
     {{> tags/head secondaryCSS='toolkit'}}
     <body itemscope itemtype="http://schema.org/WebPage">
 
@@ -22,11 +22,11 @@
                         <div class="row collapse">
                             <ul class="small-12 columns">
                                 <li><a href="{{www}}toolkit">Home</a></li>
-                                <li><a href="{{www}}toolkit/grid.html">Grid</a></li>
+                                <li><a href="{{www}}toolkit/grids.html">Grids</a></li>
                                 <li><a href="{{www}}toolkit/panels.html">Panels</a></li>
                                 <li><a href="{{www}}toolkit/colors.html">Colors</a></li>
-                                <li><a href="{{www}}toolkit/text.html">Text</a></li>
-                                <li><a class="selected" href="{{www}}toolkit/sprite.html">Sprite</a></li>
+                                <li><a class="selected" href="{{www}}toolkit/type.html">Type</a></li>
+                                <li><a href="{{www}}toolkit/sprites.html">Sprites</a></li>
                                 <li><a href="{{www}}toolkit/elements.html">Elements</a></li>
                                 <li><a href="{{www}}toolkit/components.html">Components</a></li>
                             </ul>
@@ -39,27 +39,24 @@
                 <section>
                     <div class="row">
                         <div class="small-12 columns">
-                            <h1>Sprite</h1>
-                            <p>style: <a href="{{webRepo}}app/assets/style/base/_sprite.scss">_sprite.scss</a></p>
-                            <table class="table-1">
-                                <caption>sprite contents</caption>
-                                <thead>
-                                    <tr>
-                                        <th scope="col">image</th>
-                                        <th scope="col">scss</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><span class="graphic-css3">css3 graphic</span></td>
-                                        <td>%graphic-css3</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="graphic-html5">html5 graphic</span></td>
-                                        <td>%graphic-html5</td>
-                                    </tr>
-                                </tbody>
-                            <table>
+                            <h1>Type</h1>
+                            <h2>Fonts</h2>
+                            <p>style: <a href="{{webRepo}}app/assets/style/base/_text.scss">_text.scss</a></p>
+                            <h3>arial-1</h3>
+                            <p><span class="arial-1">The Quick Brown Fox Jumps Over the Lazy Dog.</span></p>
+                            <h3>open-sans-1</h3>
+                            <p><span class="open-sans-1">The Quick Brown Fox Jumps Over the Lazy Dog.</span></p>
+                            <hr>
+                            <h2>Headings</h2>
+                            <p>style: <a href="{{webRepo}}app/assets/style/base/_text.scss">_text.scss</a></p>
+                            <h3>heading-1</h3>
+                            {{>toolkit/heading-1 tag='span' title='The Quick Brown Fox Jumps Over the Lazy Dog.'}}
+                            <h3>heading-2</h3>
+                            {{>toolkit/heading-2 tag='span' title='The Quick Brown Fox Jumps Over the Lazy Dog.'}}
+                            <h3>heading-3</h3>
+                            {{>toolkit/heading-3 tag='span' title='The Quick Brown Fox Jumps Over the Lazy Dog.'}}
+                            <h3>heading-4</h3>
+                            {{>toolkit/heading-4 tag='span' title='The Quick Brown Fox Jumps Over the Lazy Dog.'}}
                         </div>
                     </div>
                 </section>
