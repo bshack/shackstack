@@ -36,11 +36,7 @@ gulp.task('scriptLint', () => {
 gulp.task('script', ['scriptLint', 'markupTemplate', 'scriptModernizr'], () => {
     'use strict';
     return browserify({
-        transform: [
-            ['babelify', {
-                'presets': ['es2015']
-            }]
-        ],
+        transform: ['babelify'],
         entries: config.path.script.compile.source,
         debug: (config.path.isProduction ? false : true)
     })

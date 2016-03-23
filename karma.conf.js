@@ -38,9 +38,7 @@ module.exports = function(karma) {
             transform: [
                 'brfs',
                 'browserify-shim',
-                ['babelify', {
-                    'presets': ['es2015']
-                }],
+                'babelify',
                 istanbul({
                     ignore: ['**/node_modules/**']
                 })

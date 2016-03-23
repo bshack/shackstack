@@ -13,7 +13,7 @@
     const viewAccessiblityAjax1 = new ViewAccessiblityAjax1();
     const env = new ModelEnvironment();
     const $menuToggle = Backbone.$('header button');
-    const $menu = Backbone.$('nav ul');
+    const $menu = Backbone.$('nav');
     module.exports =  Backbone.View.extend({
         initialize: function() {
             new ViewPanels1({
@@ -61,16 +61,18 @@
             $menu
                 .removeClass('mobile-show-menu');
             $menuToggle
-                .attr('aria-expanded', false);
+                .attr('aria-expanded', false)
+                .focus();
         },
         eventMenuToggle: function() {
             if ($menu.hasClass('mobile-show-menu')) {
                 this.eventMenuClose();
             } else {
-                $menu
-                    .addClass('mobile-show-menu');
                 $menuToggle
                     .attr('aria-expanded', true);
+                $menu
+                    .addClass('mobile-show-menu')
+                    .focus();
             }
         },
         eventAccessibleAjax: function(e) {
