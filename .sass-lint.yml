@@ -6,6 +6,7 @@ options:
 rules:
     force-attribute-nesting: 0
     force-pseudo-nesting: 0
+    property-sort-order: 2
     quotes: 2
     indentation:
         - 2
