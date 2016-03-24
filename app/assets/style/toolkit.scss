@@ -92,14 +92,17 @@ nav {
     color: $white-1;
     display: none;
     position: fixed;
-    top: rem-calc(50);
     width: 100%;
     z-index: 1;
 
     @media #{$small-only} {
 
         &.mobile-show-menu {
+            bottom: 0;
             display: block;
+            left: 0;
+            right: 0;
+            top: rem-calc(50);
         }
 
     }

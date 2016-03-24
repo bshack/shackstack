@@ -55,24 +55,35 @@
             'click #accessible-ajax-example-button': 'eventAccessibleAjax'
         },
         subscriptions: {
-            'window:keydown:escape': 'eventMenuClose'
+            'window:keydown:escape': 'eventMenuToggle'
         },
-        eventMenuClose: function() {
-            $menu
-                .removeClass('mobile-show-menu');
-            $menuToggle
-                .attr('aria-expanded', false)
-                .focus();
-        },
-        eventMenuToggle: function() {
+        eventMenuToggle: function(e) {
             if ($menu.hasClass('mobile-show-menu')) {
-                this.eventMenuClose();
-            } else {
+                $menu
+                    .removeClass('mobile-show-menu');
+                $menuToggle
+                    .attr('aria-expanded', false)
+                    .focus();
+                //send click event to metrics
+                Backbone.Mediator.publish('metrics:event:send', {
+                    hitType: 'event',
+                    eventCategory: 'menu',
+                    eventAction: 'close',
+                    eventLabel: 'main menu mobile'
+                });
+            } else if (e.target.tagName === 'BUTTON') {
                 $menuToggle
                     .attr('aria-expanded', true);
                 $menu
                     .addClass('mobile-show-menu')
                     .focus();
+                //send click event to metrics
+                Backbone.Mediator.publish('metrics:event:send', {
+                    hitType: 'event',
+                    eventCategory: 'menu',
+                    eventAction: 'open',
+                    eventLabel: 'main menu mobile'
+                });
             }
         },
         eventAccessibleAjax: function(e) {
