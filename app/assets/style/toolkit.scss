@@ -6,7 +6,7 @@
 
 // ## import all dependacies
 
-@import 'base/all';
+@import 'base/toolkit';
 
 // styles only for the toolkit section of the site.
 h1,
@@ -26,7 +26,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 5;
 
     @media #{$medium-up} {
         background-color: $white-1;
@@ -93,7 +93,7 @@ nav {
     display: none;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 5;
 
     @media #{$small-only} {
 

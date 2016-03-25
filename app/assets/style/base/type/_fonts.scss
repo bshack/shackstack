@@ -1,0 +1,26 @@
+// ## Fonts
+
+%font-base-1 {
+    font-smoothing: antialiased;
+    font-weight: normal;
+}
+
+// ### arial-1
+
+%arial-1 {
+
+    @extend %font-base-1;
+
+    font-family: 'Arial', sans-serif;
+
+}
+
+// ### open-sans-1
+
+%open-sans-1 {
+
+    @extend %font-base-1;
+
+    font-family: 'open_sansregular', sans-serif;
+
+}

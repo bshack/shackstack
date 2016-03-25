@@ -1,0 +1,15 @@
+// ### youtube-video-1
+
+%youtube-player-1 {
+
+    //include from foundation
+    //http://foundation.zurb.com/sites/docs/flex-video.html
+    @include flex-video;
+
+    &.widescreen {
+        padding-bottom: flex-video($flexvideo-ratio-widescreen);
+    }
+
+    margin: 0;
+
+}

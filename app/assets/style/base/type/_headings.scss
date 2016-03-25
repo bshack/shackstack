@@ -1,39 +1,9 @@
-// ## Define Text Styles
-
-// ### Fonts
-
-%font-base-1 {
-    font-smoothing: antialiased;
-    font-weight: normal;
-}
-
-// #### arial-1
-
-%arial-1 {
-
-    @extend %font-base-1;
-
-    font-family: 'Arial', sans-serif;
-
-}
-
-// #### open-sans-1
-
-%open-sans-1 {
-
-    @extend %font-base-1;
-
-    font-family: 'open_sansregular', sans-serif;
-
-}
-
-
 // All text styles must be html element agnostic.
 // For example a '%heading-1' looks the same when applied to an h1, h4 or a span element.
 
-// ### Headings
+// ## Headings
 
-// #### heading-base-1
+// ### heading-base-1
 
 %heading-base-1 {
 
@@ -45,7 +15,7 @@
 
 }
 
-// #### heading-1
+// ### heading-1
 
 %heading-1 {
 
@@ -56,7 +26,7 @@
 
 }
 
-// #### heading-2
+// ### heading-2
 
 %heading-2 {
 
@@ -67,7 +37,7 @@
 
 }
 
-// #### heading-3
+// ### heading-3
 
 %heading-3 {
 
@@ -78,7 +48,7 @@
 
 }
 
-// #### heading-4
+// ### heading-4
 
 %heading-4 {
 

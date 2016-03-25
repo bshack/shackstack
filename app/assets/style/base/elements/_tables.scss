@@ -1,0 +1,26 @@
+// ## tables
+
+%table-1 {
+
+    @extend %arial-1;
+
+    border: rem-calc(1) solid $black-1;
+    margin: 0;
+
+    thead {
+        background-color: $black-1;
+        color: $white-1;
+    }
+
+    tfoot {
+        background-color: $grey-5;
+        color: $black-1;
+    }
+
+    td,
+    th {
+        border: rem-calc(1) solid $black-1;
+        padding: rem-calc(10);
+    }
+
+}

@@ -81,9 +81,9 @@
                         'app/assets/image/sprite/**/*.png'
                     ],
                     // where to save generated scss styles
-                    scss: '_sprite.scss',
+                    scss: '_sprites.scss',
                     // template for the scss file format
-                    template: 'gulp/views/sprite.handlebars',
+                    template: 'gulp/views/sprites.handlebars',
                     // path output in css files pointing to where sprite files are
                     cssPath: '../image',
                     // glob of all the source svg icons

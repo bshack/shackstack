@@ -1,0 +1,15 @@
+// All text styles must be html element agnostic.
+// For example a '%heading-1' looks the same when applied to an h1, h4 or a span element.
+
+// ## Text
+
+// ## text-1
+
+%text-1 {
+
+    @extend %arial-1;
+
+    color: $black-1;
+    font-size: rem-calc(16);
+
+}

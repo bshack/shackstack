@@ -32,7 +32,7 @@ gulp.task('sprite', ['vectorToRaster'], () => {
         '*.png', gulp.dest(
             config.path.image.sprite.destination.sprite),
             // else it is the generated .scss file so save it to the style directory
-            gulp.dest(config.path.style.destination.watch + '/base'
+            gulp.dest(config.path.style.destination.watch + '/base/sprites'
         )
     ));
 });
