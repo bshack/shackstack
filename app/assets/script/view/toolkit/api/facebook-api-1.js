@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    const Backbone = require('../../backbone/package');
+    const Backbone = require('../../../backbone/package');
     module.exports = Backbone.View.extend({
         initialize: function() {
             const _this = this,
@@ -19,18 +19,9 @@
                     xfbml: true,
                     version: 'v2.5'
                 });
+                //message that the api is ready
+                Backbone.Mediator.publish('facebook-api-1:state:ready');
             };
-        },
-        // fb share
-        share: function(params) {
-            this.el.FB.ui({
-                method: 'feed',
-                name: (params.name || null),
-                link: (params.link || null),
-                picture: (params.picture || null),
-                caption: (params.caption || null),
-                description: (params.description || null)
-            });
         }
     });
 })();

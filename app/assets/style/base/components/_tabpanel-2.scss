@@ -1,0 +1,59 @@
+// ## tabpanel-2
+
+%tabpanel-2 {
+
+    @extend %tabpanel-base-1;
+    @extend %arial-1;
+
+    margin: 0;
+
+    [role=tablist] {
+
+        @include clearfix;
+
+        border: rem-calc(1) solid $black-1;
+        margin: 0;
+        padding: 0;
+
+        > [role=tab] {
+
+            @extend %arial-1;
+
+            background-color: $grey-5;
+            border-bottom: rem-calc(1) solid $black-1;
+            color: $black-1;
+            display: block;
+            list-style: none;
+            margin: 0 rem-calc(1) 0 0;
+            padding: rem-calc(13.5);
+            text-decoration: none;
+            width: 100%;
+
+            &[aria-selected=false] {
+                background-color: $black-1;
+                border: 0;
+                color: $white-1;
+            }
+
+        }
+
+        > [role=tabpanel] {
+
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .3s ease;
+
+            &[aria-hidden=false] {
+                max-height: rem-calc(1000);
+            }
+
+            > * {
+                margin-left: rem-calc(10);
+                margin-right: rem-calc(10);
+            }
+
+        }
+
+    }
+
+}

@@ -35,12 +35,14 @@
 
 // ## layouts
 
-@import 'layouts/grids';
+@import 'layouts/staggered-1';
 
 // ## components
 
-@import 'components/modals';
-@import 'components/panels';
-@import 'components/positioning';
-@import 'components/tabpanels';
-@import 'components/video-players';
+@import 'components/modal-1';
+@import 'components/panels-1';
+@import 'components/sticky-1';
+@import 'components/tabpanel-base-1';
+@import 'components/tabpanel-1';
+@import 'components/tabpanel-2';
+@import 'components/youtube-player-1';

@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    var Backbone = require('../../backbone/package');
+    var Backbone = require('../../../backbone/package');
     module.exports = Backbone.View.extend({
         subscriptions: {
             'window:change': 'eventWindowWatcher'

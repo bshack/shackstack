@@ -1,8 +1,8 @@
 (function() {
     'use strict';
-    const Backbone = require('../../backbone/package');
+    const Backbone = require('../../../backbone/package');
     const ViewModal1 = require('./modal-1');
-    const templateModal1 = require('../../template/toolkit/modal-1');
+    const templateModal1 = require('../../../template/toolkit/modal-1');
     module.exports = Backbone.View.extend({
         initialize: function(options) {
             this.content = (options.content || false);

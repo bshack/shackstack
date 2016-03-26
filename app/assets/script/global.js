@@ -4,12 +4,13 @@
     const $ = require('jquery');
     const fastclick = require('fastclick');
     const ModelEnvironment = require('./model/environment');
+    const ViewYouTubeApi1 = require('./view/toolkit/api/youtube-api-1');
+    const ViewGoogleAnalyticsApi1 = require('./view/toolkit/api/google-analytics-api-1');
+    const ViewFacebookApi1 = require('./view/toolkit/api/facebook-api-1');
     const ViewToolkit = require('./view/toolkit');
-    const ViewWindow1 = require('./view/toolkit/window-1');
-    const ViewWindowScrollTo1 = require('./view/toolkit/window-scroll-to-1');
-    const ViewYouTubeApi1 = require('./view/toolkit/youtube-api-1');
-    const ViewGoogleAnalytics1 = require('./view/toolkit/google-analytics-1');
-    const ViewFacebook1 = require('./view/toolkit/facebook-1');
+    const ViewWindow1 = require('./view/toolkit/utilities/window-1');
+    const ViewGoogleAnalyticsEvents1 = require('./view/toolkit/utilities/google-analytics-events-1');
+    const ViewWindowScrollTo1 = require('./view/toolkit/components/window-scroll-to-1');
     const $window = $(window);
     const $body = $('body');
     require('foundation-sites');
@@ -30,11 +31,14 @@
     new ViewYouTubeApi1({
         el: $window
     });
-    new ViewGoogleAnalytics1({
+    new ViewGoogleAnalyticsApi1({
         el: $window,
         model: env
     });
-    new ViewFacebook1({
+    new ViewGoogleAnalyticsEvents1({
+        el: $window
+    });
+    new ViewFacebookApi1({
         el: $window,
         model: env
     });

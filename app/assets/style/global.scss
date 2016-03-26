@@ -44,16 +44,12 @@
     @extend %heading-3;
 }
 
+.text-1 {
+    @extend %text-1;
+}
+
 .heading-4 {
     @extend %heading-4;
-}
-
-.arial-1 {
-    @extend %arial-1;
-}
-
-.open-sans-1 {
-    @extend %open-sans-1;
 }
 
 // ### standard elements

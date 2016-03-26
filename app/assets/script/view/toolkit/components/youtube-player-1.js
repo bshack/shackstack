@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    const Backbone = require('../../backbone/package');
+    const Backbone = require('../../../backbone/package');
     module.exports = Backbone.View.extend({
         initialize: function(options) {
             this.options = options;

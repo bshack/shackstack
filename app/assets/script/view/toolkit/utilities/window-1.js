@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    const Backbone = require('../../backbone/package');
+    const Backbone = require('../../../backbone/package');
     require('foundation-sites');
     module.exports = Backbone.View.extend({
         initialize: function() {

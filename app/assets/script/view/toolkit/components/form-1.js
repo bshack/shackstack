@@ -1,8 +1,8 @@
 (function() {
     'use strict';
 
-    const Backbone = require('../../backbone/package');
-    const templateInputError1 = require('../../template/toolkit/input-error-1');
+    const Backbone = require('../../../backbone/package');
+    const templateInputError1 = require('../../../template/toolkit/input-error-1');
     require('jquery-validation');
 
     module.exports = Backbone.View.extend({

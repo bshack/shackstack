@@ -1,0 +1,13 @@
+// ## tabpanel-base-1
+
+%tabpanel-base-1 {
+
+    > [role=tablist] [role=tab] {
+        cursor: pointer;
+    }
+
+    > [role=tabpanel][aria-hidden=true] {
+        display: none;
+    }
+
+}

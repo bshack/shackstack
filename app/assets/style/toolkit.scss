@@ -237,6 +237,13 @@ main {
 
 }
 
+.arial-1 {
+    @extend %arial-1;
+}
+
+.open-sans-1 {
+    @extend %open-sans-1;
+}
 
 .graphic-css3 {
     @extend %graphic-css3;

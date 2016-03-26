@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    const Backbone = require('../../backbone/package');
+    const Backbone = require('../../../backbone/package');
     const easingJS = require('easingjs');
     //https://github.com/bshack/easingjs
     module.exports = Backbone.View.extend({
