@@ -22,8 +22,7 @@
                         <div class="row collapse">
                             <ul class="small-12 columns">
                                 <li><a href="{{www}}toolkit">Home</a></li>
-                                <li><a href="{{www}}toolkit/grids.html">Grids</a></li>
-                                <li><a href="{{www}}toolkit/panels.html">Panels</a></li>
+                                <li><a href="{{www}}toolkit/layouts.html">Layouts</a></li>
                                 <li><a href="{{www}}toolkit/colors.html">Colors</a></li>
                                 <li><a href="{{www}}toolkit/type.html">Type</a></li>
                                 <li><a href="{{www}}toolkit/sprites.html">Sprites</a></li>
@@ -42,9 +41,19 @@
                             <h1>Components</h1>
 
                             <h2>Forms</h2>
-                            <p>script: <a href="{{webRepo}}app/assets/script/view/toolkit/components/form-1.js">form-1.js</a></p>
+                            <h3>Accessibility</h3>
+                            <h4>Gherkin</h4>
+                            <div class="gherkin">
+                                <p>GIVEN I am a screen reader user<br>
+                                WHEN I submit a form with validation errors<br>
+                                THEN I will be focused on the first form field in error state<br>
+                                THEN I will hear the label for that form field<br>
+                                THEN I will hear if the form field is required<br>
+                                THEN I will hear a description of how to fix the error.
+                                </p>
+                            </div>
                             <h3>form-1</h3>
-
+                            <p>script: <a href="{{webRepo}}app/assets/script/view/toolkit/components/form-1.js">form-1.js</a></p>
                             <form class="form-1" id="form-1-example" name="form-1-example">
 
                                 <fieldset class="fieldset-1">
@@ -80,24 +89,10 @@
                                 <p>{{> toolkit/button-1 id='button-1' type='submit' title='save your changes'}}</p>
 
                             </form>
-                            <h3>Accessibility</h3>
-                            <h4>Gherkin</h4>
-                            <div class="gherkin">
-                                <p>GIVEN I am a screen reader user<br>
-                                WHEN I submit a form with validation errors<br>
-                                THEN I will be focused on the first form field in error state<br>
-                                THEN I will hear the label for that form field<br>
-                                THEN I will hear if the form field is required<br>
-                                THEN I will hear a description of how to fix the error.
-                                </p>
-                            </div>
+
                             <hr>
 
                             <h2>Modals</h2>
-                            <p>style: <a href="{{webRepo}}app/assets/style/base/components/_modal-1.scss">_modal-1.scss</a></p>
-                            <p>script: <a href="{{webRepo}}app/assets/script/view/toolkit/components/modal-open-1.js">modal-open-1.js</a>, <a href="{{webRepo}}app/assets/script/view/toolkit/components/modal-1.js">modal-1.js</a></p>
-                            <h3>modal-1</h3>
-                            <p><button class="button-1" data-modal-open="modal-example-1">view disclosures</button></p>
                             <h3>Accessibility</h3>
                             <h4>Gherkin</h4>
                             <div class="gherkin">
@@ -111,10 +106,29 @@
                                 AND WHEN I close the dialog, the focus goes back to the original button<br>
                                 (OR to the most appropriate place, if the button is not appropriate)</p>
                             </div>
+                            <h3>modal-1</h3>
+                            <p>style: <a href="{{webRepo}}app/assets/style/base/components/_modal-1.scss">_modal-1.scss</a></p>
+                            <p>script: <a href="{{webRepo}}app/assets/script/view/toolkit/components/modal-open-1.js">modal-open-1.js</a>, <a href="{{webRepo}}app/assets/script/view/toolkit/components/modal-1.js">modal-1.js</a></p>
+                            <p><button class="button-1" data-modal-open="modal-example-1">view disclosures</button></p>
+
 
                             <hr>
 
                             <h2>Tab Panels</h2>
+                            <h3>Accessibility</h3>
+                            <h4>Gherkin</h4>
+                            <div class="gherkin">
+                                <p>GIVEN I am a screen reader user<br>
+                                WHEN I navigate to a tabpanel widget with the tab key, the focus should land on the active tab.<br>
+                                WHEN I hit tab again, the focus should go past the remaining tabs to the next focusable item (beyond the tablist).<br>
+                                IF I need to navigate within the tabs, when the keyboard focus is on the active tab, I can use the right arrow key to go forward through the tabs, or the left arrow key to go backward through tabs.</p>
+                            </div>
+                            <div class="gherkin">
+                                <p>GIVEN I am a screen reader user<br>
+                                WHEN I land on the active tab using the tab key, the screen reader reads the label for the tab, it says "tab," it says how many tabs are in the group,<br>
+                                AND which tab it is (e.g. "tab 1 of 4")<br>
+                                AND it says "selected." When I navigate with the arrow keys to other tabs, it says all of the above plus gives the accurate location (e.g. "tab 2 of 4").</p>
+                            </div>
                             <h3>tabpanel-1</h3>
                             <p>style: <a href="{{webRepo}}app/assets/style/base/components/_tabpanel-base-1.scss">_tabpanel-base-1.scss</a>, <a href="{{webRepo}}app/assets/style/base/components/_tabpanel-1.scss">_tabpanel-1.scss</a></p>
                             <p>script: <a href="{{webRepo}}app/assets/script/view/toolkit/components/tabpanel-1.js">tabpanel-1.js</a></p>
@@ -153,27 +167,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <h3>Accessibility</h3>
-                            <h4>Gherkin</h4>
-                            <div class="gherkin">
-                                <p>GIVEN I am a screen reader user<br>
-                                WHEN I navigate to a tabpanel widget with the tab key, the focus should land on the active tab.<br>
-                                WHEN I hit tab again, the focus should go past the remaining tabs to the next focusable item (beyond the tablist).<br>
-                                IF I need to navigate within the tabs, when the keyboard focus is on the active tab, I can use the right arrow key to go forward through the tabs, or the left arrow key to go backward through tabs.</p>
-                            </div>
-                            <div class="gherkin">
-                                <p>GIVEN I am a screen reader user<br>
-                                WHEN I land on the active tab using the tab key, the screen reader reads the label for the tab, it says "tab," it says how many tabs are in the group,<br>
-                                AND which tab it is (e.g. "tab 1 of 4")<br>
-                                AND it says "selected." When I navigate with the arrow keys to other tabs, it says all of the above plus gives the accurate location (e.g. "tab 2 of 4").</p>
-                            </div>
+
 
                             <hr>
 
                             <h2>Accessible Ajax</h2>
-                            <p>script: <a href="{{webRepo}}app/assets/script/view/toolkit/utilities/accessiblity-ajax-1.js">accessiblity-ajax-1.js</a>, <a href="{{webRepo}}app/assets/script/view/toolkit/utilities/accessiblity-speaker-1.js">accessiblity-speaker-1.js</a></p>
-                            <h3>accessiblity-ajax-1</h3>
-                            <button id="accessible-ajax-example-button" class="button-1">click to load asynchronous content</button>
                             <h3>Accessibility</h3>
                             <h4>Gherkin</h4>
                             <div class="gherkin">
@@ -184,13 +182,14 @@
                                 AND I will see focus visual change<br>
                                 AND I will hear the new content added to the page</p>
                             </div>
+                            <h3>accessiblity-ajax-1</h3>
+                            <p>script: <a href="{{webRepo}}app/assets/script/view/toolkit/utilities/accessiblity-ajax-1.js">accessiblity-ajax-1.js</a>, <a href="{{webRepo}}app/assets/script/view/toolkit/utilities/accessiblity-speaker-1.js">accessiblity-speaker-1.js</a></p>
+                            <button id="accessible-ajax-example-button" class="button-1">click to load asynchronous content</button>
+
 
                             <hr>
 
-                            <h2>Videos</h2>
-                            <p>script: <a href="{{webRepo}}app/assets/script/view/toolkit/api/youtube-api-1.js">youtube-api-1.js</a>, <a href="{{webRepo}}app/assets/script/view/toolkit/components/youtube-player-1.js">youtube-player-1.js</a></p>
-                            <h3>youtube-player-1</h3>
-                            {{> toolkit/youtube-player-1 widescreen=true}}
+                            <h2>Video Players</h2>
                             <h3>Accessibility</h3>
                             <h4>Gherkin</h4>
                             <div class="gherkin">
@@ -199,8 +198,52 @@
                                 THEN I will hear 'YouTube video player'<br>
                                 AND I will be able to navigate the iframe content</p>
                             </div>
+                            <h3>youtube-player-1</h3>
+                            <p>script: <a href="{{webRepo}}app/assets/script/view/toolkit/api/youtube-api-1.js">youtube-api-1.js</a>, <a href="{{webRepo}}app/assets/script/view/toolkit/components/youtube-player-1.js">youtube-player-1.js</a></p>
+                            {{> toolkit/youtube-player-1 widescreen=true}}
+
+
+                            <hr>
+
+                            <h2>Panels</h2>
+
+                            <h3>panels-1</h3>
+                            <p>style: <a href="{{webRepo}}app/assets/style/base/components/_panels-1.scss">_panels-1.scss</a></p>
+                            <p>script: <a href="{{webRepo}}app/assets/script/view/toolkit/components/panels-1.js">panels-1.js</a></p>
 
                         </div>
+                    </div>
+                    <div class="panels-1">
+                        <section class="panel panel-1 panel-scrollable">
+                            <div class="panel-content">
+                                panel 1
+                            </div>
+                        </section>
+                        <section class="panel panel-2">
+                            <div class="panel-content">
+                                panel 2
+                            </div>
+                        </section>
+                        <section class="panel panel-3">
+                            <div class="panel-content">
+                                panel 3
+                            </div>
+                        </section>
+                        <section class="panel panel-4">
+                            <div class="panel-content">
+                                panel 4
+                            </div>
+                        </section>
+                        <section class="panel panel-5">
+                            <div class="panel-content">
+                                panel 5
+                            </div>
+                        </section>
+                        <section class="panel panel-6">
+                            <div class="panel-content">
+                                panel 6
+                            </div>
+                        </section>
                     </div>
                 </section>
             </main>
