@@ -13,7 +13,20 @@ h4 {
 }
 
 h1 {
-    margin-bottom: rem-calc(60);
+    background-color: $grey-2;
+    color: $white-1;
+    margin: 0;
+    padding: rem-calc(40) 0;
+    text-align: center;
+}
+
+h2 {
+    margin: rem-calc(100) 0;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
 }
 
 hr {
@@ -71,7 +84,6 @@ header {
             font-size: rem-calc(30);
             line-height: rem-calc(30);
             margin: rem-calc(52) 0;
-            text-align: left;
 
             &:hover,
             &:focus {
@@ -169,17 +181,8 @@ nav {
 
 }
 
-main {
-
-    padding-top: rem-calc(44);
-
-    @media #{$medium-up} {
-        margin-top: 0;
-    }
-
-}
-
 .gherkin {
+    font-size: rem-calc(14);
     font-style: italic;
 }
 

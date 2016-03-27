@@ -36,11 +36,43 @@
 
             <main id="main" tabindex="-1">
                 <section>
+                    <h1>Components</h1>
                     <div class="row">
                         <div class="small-12 columns">
-                            <h1>Components</h1>
-
                             <h2>Forms</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-7 columns">
+                            <h3>form-1</h3>
+                            <form class="form-1" id="form-1-example" name="form-1-example">
+                                <fieldset class="fieldset-1">
+                                    <legend class="legend-1">Tell us about your vehicle</legend>
+                                    <p>{{> toolkit/label-1 title='What is the make of the vehicle?' for='input-text-1-example'}}</p>
+                                    <p>{{> toolkit/input-text-1 id='input-text-1-example' name='input-text-1-example' placeholder='i.e. Buick' type='text' required=true}}</p>
+                                    <p>{{> toolkit/label-1 title='what type of vehicle is it?' for='select-1-example'}}</p>
+                                    <p>{{> toolkit/select-1 select-1 id='select-1-example' name='select-1-example' required=true}}</p>
+                                    <p id="radio-group-label">Do you own or lease the vehicle?</p>
+                                    <p>{{> toolkit/label-1 title='own' for='input-radio-1-example-1'}}</p>
+                                    <p>{{> toolkit/input-radio-1 id='input-radio-1-example-1' name='radio-example' labelledby='radio-group-label'}}</p>
+                                    <p>{{> toolkit/label-1 title='lease' for='input-radio-1-example-2'}}</p>
+                                    <p>{{> toolkit/input-radio-1 id='input-radio-1-example-2' name='radio-example' labelledby='radio-group-label'}}</p>
+                                    <p>{{> toolkit/label-1 title='please provide any additonal comments:' for='textarea-1-example'}}</p>
+                                    <p>{{> toolkit/textarea-1 id='textarea-1-example' name='textarea-1-example' placeholder='please be detailed' required=true}}</p>
+                                </fieldset>
+                                <fieldset class="fieldset-1">
+                                    <legend class="legend-1">Agree to terms</legend>
+                                    <p>{{> toolkit/label-1 title='I agree to terms and conditions.' for='input-checkbox-1-example'}}</p>
+                                    <p>{{> toolkit/input-checkbox-1 id='input-checkbox-1-example' name='checkbox-example' checked=true required=true}}</p>
+                                </fieldset>
+                                <p>{{> toolkit/button-1 id='button-1' type='submit' title='save your changes'}}</p>
+                            </form>
+                            <h4>Source Code</h4>
+                            <ul class="list-1">
+                                <li>script: <a href="{{webRepo}}app/assets/script/view/toolkit/components/form-1.js">form-1.js</a></li>
+                            </ul>
+                        </div>
+                        <aside class="small-12 medium-5 columns">
                             <h3>Accessibility</h3>
                             <h4>Gherkin</h4>
                             <div class="gherkin">
@@ -52,47 +84,24 @@
                                 THEN I will hear a description of how to fix the error.
                                 </p>
                             </div>
-                            <h3>form-1</h3>
-                            <p>script: <a href="{{webRepo}}app/assets/script/view/toolkit/components/form-1.js">form-1.js</a></p>
-                            <form class="form-1" id="form-1-example" name="form-1-example">
-
-                                <fieldset class="fieldset-1">
-
-                                    <legend class="legend-1">Tell us about your vehicle</legend>
-
-                                    <p>{{> toolkit/label-1 title='What is the make of the vehicle?' for='input-text-1-example'}}</p>
-                                    <p>{{> toolkit/input-text-1 id='input-text-1-example' name='input-text-1-example' placeholder='i.e. Buick' type='text' required=true}}</p>
-
-                                    <p>{{> toolkit/label-1 title='what type of vehicle is it?' for='select-1-example'}}</p>
-                                    <p>{{> toolkit/select-1 select-1 id='select-1-example' name='select-1-example' required=true}}</p>
-
-                                    <p id="radio-group-label">Do you own or lease the vehicle?</p>
-                                    <p>{{> toolkit/label-1 title='own' for='input-radio-1-example-1'}}</p>
-                                    <p>{{> toolkit/input-radio-1 id='input-radio-1-example-1' name='radio-example' labelledby='radio-group-label'}}</p>
-                                    <p>{{> toolkit/label-1 title='lease' for='input-radio-1-example-2'}}</p>
-                                    <p>{{> toolkit/input-radio-1 id='input-radio-1-example-2' name='radio-example' labelledby='radio-group-label'}}</p>
-
-                                    <p>{{> toolkit/label-1 title='please provide any additonal comments:' for='textarea-1-example'}}</p>
-                                    <p>{{> toolkit/textarea-1 id='textarea-1-example' name='textarea-1-example' placeholder='please be detailed' required=true}}</p>
-
-                                </fieldset>
-
-                                <fieldset class="fieldset-1">
-
-                                    <legend class="legend-1">Agree to terms</legend>
-
-                                    <p>{{> toolkit/label-1 title='I agree to terms and conditions.' for='input-checkbox-1-example'}}</p>
-                                    <p>{{> toolkit/input-checkbox-1 id='input-checkbox-1-example' name='checkbox-example' checked=true required=true}}</p>
-
-                                </fieldset>
-
-                                <p>{{> toolkit/button-1 id='button-1' type='submit' title='save your changes'}}</p>
-
-                            </form>
-
-                            <hr>
-
+                        </aside>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
                             <h2>Modals</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-7 columns">
+                            <h3>modal-1</h3>
+                            <p><button class="button-1" data-modal-open="modal-example-1">view disclosures</button></p>
+                            <h4>Source Code</h4>
+                            <ul class="list-1">
+                                <li>style: <a href="{{webRepo}}app/assets/style/base/components/_modal-1.scss">_modal-1.scss</a></li>
+                                <li>script: <a href="{{webRepo}}app/assets/script/view/toolkit/components/modal-open-1.js">modal-open-1.js</a>, <a href="{{webRepo}}app/assets/script/view/toolkit/components/modal-1.js">modal-1.js</a></li>
+                            </ul>
+                        </div>
+                        <aside class="small-12 medium-5 columns">
                             <h3>Accessibility</h3>
                             <h4>Gherkin</h4>
                             <div class="gherkin">
@@ -106,32 +115,16 @@
                                 AND WHEN I close the dialog, the focus goes back to the original button<br>
                                 (OR to the most appropriate place, if the button is not appropriate)</p>
                             </div>
-                            <h3>modal-1</h3>
-                            <p>style: <a href="{{webRepo}}app/assets/style/base/components/_modal-1.scss">_modal-1.scss</a></p>
-                            <p>script: <a href="{{webRepo}}app/assets/script/view/toolkit/components/modal-open-1.js">modal-open-1.js</a>, <a href="{{webRepo}}app/assets/script/view/toolkit/components/modal-1.js">modal-1.js</a></p>
-                            <p><button class="button-1" data-modal-open="modal-example-1">view disclosures</button></p>
-
-
-                            <hr>
-
+                        </aside>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
                             <h2>Tab Panels</h2>
-                            <h3>Accessibility</h3>
-                            <h4>Gherkin</h4>
-                            <div class="gherkin">
-                                <p>GIVEN I am a screen reader user<br>
-                                WHEN I navigate to a tabpanel widget with the tab key, the focus should land on the active tab.<br>
-                                WHEN I hit tab again, the focus should go past the remaining tabs to the next focusable item (beyond the tablist).<br>
-                                IF I need to navigate within the tabs, when the keyboard focus is on the active tab, I can use the right arrow key to go forward through the tabs, or the left arrow key to go backward through tabs.</p>
-                            </div>
-                            <div class="gherkin">
-                                <p>GIVEN I am a screen reader user<br>
-                                WHEN I land on the active tab using the tab key, the screen reader reads the label for the tab, it says "tab," it says how many tabs are in the group,<br>
-                                AND which tab it is (e.g. "tab 1 of 4")<br>
-                                AND it says "selected." When I navigate with the arrow keys to other tabs, it says all of the above plus gives the accurate location (e.g. "tab 2 of 4").</p>
-                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-7 columns">
                             <h3>tabpanel-1</h3>
-                            <p>style: <a href="{{webRepo}}app/assets/style/base/components/_tabpanel-base-1.scss">_tabpanel-base-1.scss</a>, <a href="{{webRepo}}app/assets/style/base/components/_tabpanel-1.scss">_tabpanel-1.scss</a></p>
-                            <p>script: <a href="{{webRepo}}app/assets/script/view/toolkit/components/tabpanel-1.js">tabpanel-1.js</a></p>
                             <div class="tabpanel-1">
                                 <ul role="tablist">
                                     <li id="tab-1" role="tab" aria-controls="panel-1" aria-selected="true" tabindex="0">dashboard</a></li>
@@ -148,9 +141,12 @@
                                     <p>services content</p>
                                 </div>
                             </div>
+                            <h4>Source Code</h4>
+                            <ul class="list-1">
+                                <li>style: <a href="{{webRepo}}app/assets/style/base/components/_tabpanel-base-1.scss">_tabpanel-base-1.scss</a>, <a href="{{webRepo}}app/assets/style/base/components/_tabpanel-1.scss">_tabpanel-1.scss</a></li>
+                                <li>script: <a href="{{webRepo}}app/assets/script/view/toolkit/components/tabpanel-1.js">tabpanel-1.js</a></li>
+                            </ul>
                             <h3>tabpanel-2</h3>
-                            <p>style: <a href="{{webRepo}}app/assets/style/base/components/_tabpanel-base-1.scss">_tabpanel-base-1.scss</a>, <a href="{{webRepo}}app/assets/style/base/components/_tabpanel-2.scss">_tabpanel-2.scss</a></p>
-                            <p>script: <a href="{{webRepo}}app/assets/script/view/toolkit/components/tabpanel-1.js">tabpanel-1.js</a></p>
                             <div class="tabpanel-2">
                                 <div role="tablist">
                                     <a id="tab-4" role="tab" aria-controls="panel-4" aria-selected="true" tabindex="0">dashboard</a>
@@ -167,11 +163,44 @@
                                     </div>
                                 </div>
                             </div>
-
-
-                            <hr>
-
+                            <h4>Source Code</h4>
+                            <ul class="list-1">
+                                <li>style: <a href="{{webRepo}}app/assets/style/base/components/_tabpanel-base-1.scss">_tabpanel-base-1.scss</a>, <a href="{{webRepo}}app/assets/style/base/components/_tabpanel-2.scss">_tabpanel-2.scss</a></li>
+                                <li>script: <a href="{{webRepo}}app/assets/script/view/toolkit/components/tabpanel-1.js">tabpanel-1.js</a></li>
+                            </ul>
+                        </div>
+                        <aside class="small-12 medium-5 columns">
+                            <h3>Accessibility</h3>
+                            <h4>Gherkin</h4>
+                            <div class="gherkin">
+                                <p>GIVEN I am a screen reader user<br>
+                                WHEN I navigate to a tabpanel widget with the tab key, the focus should land on the active tab.<br>
+                                WHEN I hit tab again, the focus should go past the remaining tabs to the next focusable item (beyond the tablist).<br>
+                                IF I need to navigate within the tabs, when the keyboard focus is on the active tab, I can use the right arrow key to go forward through the tabs, or the left arrow key to go backward through tabs.</p>
+                            </div>
+                            <div class="gherkin">
+                                <p>GIVEN I am a screen reader user<br>
+                                WHEN I land on the active tab using the tab key, the screen reader reads the label for the tab, it says "tab," it says how many tabs are in the group,<br>
+                                AND which tab it is (e.g. "tab 1 of 4")<br>
+                                AND it says "selected." When I navigate with the arrow keys to other tabs, it says all of the above plus gives the accurate location (e.g. "tab 2 of 4").</p>
+                            </div>
+                        </aside>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
                             <h2>Accessible Ajax</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-7 columns">
+                            <h3>accessiblity-ajax-1</h3>
+                            <p><button id="accessible-ajax-example-button" class="button-1">click to load asynchronous content</button></p>
+                            <h4>Source Code</h4>
+                            <ul class="list-1">
+                                <li>script: <a href="{{webRepo}}app/assets/script/view/toolkit/utilities/accessiblity-ajax-1.js">accessiblity-ajax-1.js</a>, <a href="{{webRepo}}app/assets/script/view/toolkit/utilities/accessiblity-speaker-1.js">accessiblity-speaker-1.js</a></li>
+                            </ul>
+                        </div>
+                        <aside class="small-12 medium-5 columns">
                             <h3>Accessibility</h3>
                             <h4>Gherkin</h4>
                             <div class="gherkin">
@@ -182,14 +211,23 @@
                                 AND I will see focus visual change<br>
                                 AND I will hear the new content added to the page</p>
                             </div>
-                            <h3>accessiblity-ajax-1</h3>
-                            <p>script: <a href="{{webRepo}}app/assets/script/view/toolkit/utilities/accessiblity-ajax-1.js">accessiblity-ajax-1.js</a>, <a href="{{webRepo}}app/assets/script/view/toolkit/utilities/accessiblity-speaker-1.js">accessiblity-speaker-1.js</a></p>
-                            <button id="accessible-ajax-example-button" class="button-1">click to load asynchronous content</button>
-
-
-                            <hr>
-
+                        </aside>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
                             <h2>Video Players</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-7 columns">
+                            <h3>youtube-player-1</h3>
+                            {{> toolkit/youtube-player-1 widescreen=true}}
+                            <h4>Source Code</h4>
+                            <ul class="list-1">
+                                <li>script: <a href="{{webRepo}}app/assets/script/view/toolkit/api/youtube-api-1.js">youtube-api-1.js</a>, <a href="{{webRepo}}app/assets/script/view/toolkit/components/youtube-player-1.js">youtube-player-1.js</a></li>
+                            </ul>
+                        </div>
+                        <aside class="small-12 medium-5 columns">
                             <h3>Accessibility</h3>
                             <h4>Gherkin</h4>
                             <div class="gherkin">
@@ -198,19 +236,17 @@
                                 THEN I will hear 'YouTube video player'<br>
                                 AND I will be able to navigate the iframe content</p>
                             </div>
-                            <h3>youtube-player-1</h3>
-                            <p>script: <a href="{{webRepo}}app/assets/script/view/toolkit/api/youtube-api-1.js">youtube-api-1.js</a>, <a href="{{webRepo}}app/assets/script/view/toolkit/components/youtube-player-1.js">youtube-player-1.js</a></p>
-                            {{> toolkit/youtube-player-1 widescreen=true}}
-
-
-                            <hr>
-
+                        </aside>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
                             <h2>Panels</h2>
-
                             <h3>panels-1</h3>
-                            <p>style: <a href="{{webRepo}}app/assets/style/base/components/_panels-1.scss">_panels-1.scss</a></p>
-                            <p>script: <a href="{{webRepo}}app/assets/script/view/toolkit/components/panels-1.js">panels-1.js</a></p>
-
+                            <h4>Source Code</h4>
+                            <ul class="list-1">
+                                <li>style: <a href="{{webRepo}}app/assets/style/base/components/_panels-1.scss">_panels-1.scss</a></li>
+                                <li>script: <a href="{{webRepo}}app/assets/script/view/toolkit/components/panels-1.js">panels-1.js</a></li>
+                            </ul>
                         </div>
                     </div>
                     <div class="panels-1">

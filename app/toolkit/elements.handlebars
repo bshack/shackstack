@@ -36,14 +36,28 @@
 
             <main id="main" tabindex="-1">
                 <section>
+                    <h1>Elements</h1>
                     <div class="row">
                         <div class="small-12 columns">
-                            <h1>Elements</h1>
-
                             <h2>Anchors</h2>
-                            <h3>Accessibility</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-8 columns">
+                            <h3>anchor-1</h3>
+                            <p>{{> toolkit/anchor-1 id='anchor-1' title='detailed information about this product' url='#'}}</p>
+                            <p>example of helper text only for screen readers:</p>
+                            <p>{{> toolkit/anchor-1 id='anchor-1-aria' title='click here' accessible-title='detailed information about this product' url='#'}}</p>
+                            <h4>Source Code</h4>
+                            <ul class="list-1">
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/anchor-1.handlebars">anchor-1.handlebars</a></li>
+                                <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_anchors.scss">_anchors.scss</a></li>
+                            </ul>
+                        </div>
+                        <aside class="small-12 medium-4 columns">
+                            <h3>Accessibility with Anchors</h3>
                             <h4>Usage</h4>
-                            <ul>
+                            <ul class="list-1">
                                 <li>Anchors should be used when a click takes the user to a new page or location on the current page.</li>
                                 <li>The anchor should provide enough helper text to give the user an indication of the content they will be taken to.</li>
                             </ul>
@@ -58,19 +72,29 @@
                                 WHEN I navigate to an anchor with the tab key<br>
                                 THEN I will see focus visual change</p>
                             </div>
-                            <h3>anchor-1</h3>
-                            <p>markup: <a href="{{webRepo}}app/assets/markup/toolkit/anchor-1.handlebars">anchor-1.handlebars</a></p>
-                            <p>style: <a href="{{webRepo}}app/assets/style/base/elements/_anchors.scss">_anchors.scss</a></p>
-                            <p>{{> toolkit/anchor-1 id='anchor-1' title='detailed information about this product' url='#'}}</p>
-                            <p>example of helper text only for screen readers:</p>
-                            <p>{{> toolkit/anchor-1 id='anchor-1-aria' title='click here' accessible-title='detailed information about this product' url='#'}}</p>
-
-                            <hr>
-
+                        </aside>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
                             <h2>Buttons</h2>
-                            <h3>Accessibility</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-8 columns">
+                            <h3>button-1</h3>
+                            <p>{{> toolkit/button-1 id='button-1' title='detailed information about this product'}}</p>
+                            <p>example of helper text only for screen readers:</p>
+                            <p>{{> toolkit/button-1 id='button-1-aria' title='click here' accessible-title='detailed information about this product' url='#'}}</p>
+                            <h4>Source Code</h4>
+                            <ul class="list-1">
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/button-1.handlebars">button-1.handlebars</a></li>
+                                <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_buttons.scss">_buttons.scss</a></li>
+                            </ul>
+                        </div>
+                        <aside class="small-12 medium-4 columns">
+                            <h3>Accessibility with Buttons</h3>
                             <h4>Usage</h4>
-                            <ul>
+                            <ul class="list-1">
                                 <li>Buttons should be used when a click changes the view by opening a modal or modifying the DOM and does not take the user to a new location.</li>
                                 <li>The button should provide enough helper text to give the user an indication of the action that will be taken.</li>
                             </ul>
@@ -84,34 +108,51 @@
                                 WHEN I navigate to a button with the tab key<br>
                                 THEN I will see focus visual change</p>
                             </div>
-                            <h3>button-1</h3>
-                            <p>markup: <a href="{{webRepo}}app/assets/markup/toolkit/button-1.handlebars">button-1.handlebars</a></p>
-                            <p>style: <a href="{{webRepo}}app/assets/style/base/elements/_buttons.scss">_buttons.scss</a></p>
-                            <p>{{> toolkit/button-1 id='button-1' title='detailed information about this product'}}</p>
-                            <p>example of helper text only for screen readers:</p>
-                            <p>{{> toolkit/button-1 id='button-1-aria' title='click here' accessible-title='detailed information about this product' url='#'}}</p>
-
-                            <hr>
-
+                        </aside>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
                             <h2>Labels</h2>
-                            <h3>Accessibility</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-8 columns">
+                            <h3>label-1</h3>
+                            <p>{{> toolkit/label-1 id='label-1' title='Name' for='label-example-input'}}</p>
+                            <p>{{> toolkit/input-text-1 id='label-example-input' placeholder='first and last name' type='text'}}</p>
+                            <h4>Source Code</h4>
+                            <ul class="list-1">
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/label-1.handlebars">label-1.handlebars</a></li>
+                                <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_labels.scss">_labels.scss</a></li>
+                            </ul>
+                        </div>
+                        <aside class="small-12 medium-4 columns">
+                            <h3>Accessibility with Labels</h3>
                             <h4>Gherkin</h4>
                             <div class="gherkin">
                                 <p>GIVEN I am a screen reader user<br>
                                 WHEN I select a form element label using the keyboard<br>
                                 THEN I will hear the label read aloud</p>
                             </div>
-
-                            <h3>label-1</h3>
-                            <p>markup: <a href="{{webRepo}}app/assets/markup/toolkit/label-1.handlebars">label-1.handlebars</a></p>
-                            <p>style: <a href="{{webRepo}}app/assets/style/base/elements/_labels.scss">_labels.scss</a></p>
-                            <p>{{> toolkit/label-1 id='label-1' title='Name' for='label-example-input'}}</p>
-                            <p>{{> toolkit/input-text-1 id='label-example-input' placeholder='first and last name' type='text'}}</p>
-
-                            <hr>
-
+                        </aside>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
                             <h2>Lists</h2>
-                            <h3>Accessibility</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-8 columns">
+                            <h3>list-1</h3>
+                            {{> toolkit/list-1 elements.list-1}}
+                            <h4>Source Code</h4>
+                            <ul class="list-1">
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/list-1.handlebars">list-1.handlebars</a></li>
+                                <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_lists.scss">_lists.scss</a></li>
+                            </ul>
+                        </div>
+                        <aside class="small-12 medium-4 columns">
+                            <h3>Accessibility with Lists</h3>
                             <h4>Gherkin</h4>
                             <div class="gherkin">
                                 <p>GIVEN I am a screen reader user<br>
@@ -125,16 +166,26 @@
                                 WHEN navigate the past the last item in a list with the keyboard arrow key<br>
                                 THEN I will hear that I have come to the end of the list</p>
                             </div>
-                            <h3>list-1</h3>
-                            <p>markup: <a href="{{webRepo}}app/assets/markup/toolkit/list-1.handlebars">list-1.handlebars</a></p>
-                            <p>style: <a href="{{webRepo}}app/assets/style/base/elements/_lists.scss">_lists.scss</a></p>
-                            {{> toolkit/list-1 elements.list-1}}
-
-
-                            <hr>
-
+                        </aside>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
                             <h2>Input Checkboxes</h2>
-                            <h3>Accessibility</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-8 columns">
+                            <h3>input-checkbox-1</h3>
+                            <p>{{> toolkit/label-1 title='Opt me in' for='input-checkbox-1-example'}}</p>
+                            <p>{{> toolkit/input-checkbox-1 id='input-checkbox-1-example' name='checkbox-example' checked=true}}</p>
+                            <h4>Source Code</h4>
+                            <ul class="list-1">
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/input-checkbox-1.handlebars">input-checkbox-1.handlebars</a></li>
+                                <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_inputs.scss">_inputs.scss</a></li>
+                            </ul>
+                        </div>
+                        <aside class="small-12 medium-4 columns">
+                            <h3>Accessibility with Checkboxes</h3>
                             <h4>Gherkin</h4>
                             <div class="gherkin">
                                 <p>GIVEN I am a screen reader user<br>
@@ -151,17 +202,29 @@
                                 WHEN I navigate to a checkbox with the tab key<br>
                                 THEN I will see focus visual change</p>
                             </div>
-                            <h3>input-checkbox-1</h3>
-                            <p>markup: <a href="{{webRepo}}app/assets/markup/toolkit/input-checkbox-1.handlebars">input-checkbox-1.handlebars</a></p>
-                            <p>style: <a href="{{webRepo}}app/assets/style/base/elements/_inputs.scss">_inputs.scss</a></p>
-                            <p>{{> toolkit/label-1 title='Opt me in' for='input-checkbox-1-example'}}</p>
-                            <p>{{> toolkit/input-checkbox-1 id='input-checkbox-1-example' name='checkbox-example' checked=true}}</p>
-
-
-                            <hr>
-
+                        </aside>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
                             <h2>Input Radio Buttons</h2>
-                            <h3>Accessibility</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-8 columns">
+                            <h3>input-radio-1</h3>
+                            <p id="radio-group-label">What color do you want?</p>
+                            <p>{{> toolkit/label-1 title='red' for='input-radio-1-example-1'}}</p>
+                            <p>{{> toolkit/input-radio-1 id='input-radio-1-example-1' name='radio-example' checked=true  labelledby='radio-group-label'}}</p>
+                            <p>{{> toolkit/label-1 title='blue' for='input-radio-1-example-2'}}</p>
+                            <p>{{> toolkit/input-radio-1 id='input-radio-1-example-2' name='radio-example' labelledby='radio-group-label'}}</p>
+                            <h4>Source Code</h4>
+                            <ul class="list-1">
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/input-radio-1.handlebars">input-radio-1.handlebars</a></li>
+                                <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_inputs.scss">_inputs.scss</a></li>
+                            </ul>
+                        </div>
+                        <aside class="small-12 medium-4 columns">
+                            <h3>Accessibility with Radio Buttons</h3>
                             <h4>Gherkin</h4>
                             <div class="gherkin">
                                 <p>GIVEN I am a screen reader user<br>
@@ -178,43 +241,58 @@
                                 WHEN I navigate to a radio button with the tab key<br>
                                 THEN I will see focus visual change</p>
                             </div>
-                            <h3>input-radio-1</h3>
-                            <p>markup: <a href="{{webRepo}}app/assets/markup/toolkit/input-radio-1.handlebars">input-radio-1.handlebars</a></p>
-                            <p>style: <a href="{{webRepo}}app/assets/style/base/elements/_inputs.scss">_inputs.scss</a></p>
-                            <p id="radio-group-label">What color do you want?</p>
-                            <p>{{> toolkit/label-1 title='red' for='input-radio-1-example-1'}}</p>
-                            <p>{{> toolkit/input-radio-1 id='input-radio-1-example-1' name='radio-example' checked=true  labelledby='radio-group-label'}}</p>
-                            <p>{{> toolkit/label-1 title='blue' for='input-radio-1-example-2'}}</p>
-                            <p>{{> toolkit/input-radio-1 id='input-radio-1-example-2' name='radio-example' labelledby='radio-group-label'}}</p>
-
-
-                            <hr>
-
+                        </aside>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
                             <h2>Input Text Boxes</h2>
-                            <h3>Accessibility</h3>
-                            <h4>Gherkin</h4>
-                            <div class="gherkin">
-                                <p>GIVEN I am a screen reader user<br>
-                                WHEN I navigate to a text input with the tab key<br>
-                                THEN I will hear the element identified as an input<br>
-                                AND I will hear the label read aloud<br>
-                                AND I will hear any defined value<br>
-                                AND I will hear any defined placeholder text<br>
-                                AND I will hear if the field is required</p>
-                                <p>GIVEN I am a keyboard user<br>
-                                WHEN I navigate to a text input with the tab key<br>
-                                THEN I will see focus visual change</p>
-                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-8 columns">
                             <h3>input-text-1</h3>
-                            <p>markup: <a href="{{webRepo}}app/assets/markup/toolkit/input-text-1.handlebars">input-text-1.handlebars</a></p>
-                            <p>style: <a href="{{webRepo}}app/assets/style/base/elements/_inputs.scss">_inputs.scss</a></p>
                             <p>{{> toolkit/label-1 title='Name' for='input-text-1-example'}}</p>
                             <p>{{> toolkit/input-text-1 id='input-text-1-example' placeholder='first and last name' type='text'}}</p>
-
-
-                            <hr>
-
+                            <h4>Source Code</h4>
+                            <ul class="list-1">
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/input-text-1.handlebars">input-text-1.handlebars</a></li>
+                                <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_inputs.scss">_inputs.scss</a></li>
+                            </ul>
+                        </div>
+                        <aside class="small-12 medium-4 columns">
+                            <h3>Accessibility with Text Boxes</h3>
+                            <h4>Gherkin</h4>
+                            <div class="gherkin">
+                                <p>GIVEN I am a screen reader user<br>
+                                WHEN I navigate to a text input with the tab key<br>
+                                THEN I will hear the element identified as an input<br>
+                                AND I will hear the label read aloud<br>
+                                AND I will hear any defined value<br>
+                                AND I will hear any defined placeholder text<br>
+                                AND I will hear if the field is required</p>
+                                <p>GIVEN I am a keyboard user<br>
+                                WHEN I navigate to a text input with the tab key<br>
+                                THEN I will see focus visual change</p>
+                            </div>
+                        </aside>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
                             <h2>Textareas</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-8 columns">
+                            <h3>textarea-1</h3>
+                            <p>{{> toolkit/label-1 title='additonal comments:' for='textarea-1-example'}}</p>
+                            <p>{{> toolkit/textarea-1 id='textarea-1-example' placeholder='please be detailed'}}</p>
+                            <h4>Source Code</h4>
+                            <ul class="list-1">
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/textarea-1.handlebars">textarea-1.handlebars</a></li>
+                                <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_inputs.scss">_inputs.scss</a></li>
+                            </ul>
+                        </div>
+                        <aside class="small-12 medium-4 columns">
                             <h3>Accessibility</h3>
                             <h4>Gherkin</h4>
                             <div class="gherkin">
@@ -229,16 +307,25 @@
                                 WHEN I navigate to a textarea with the tab key<br>
                                 THEN I will see focus visual change</p>
                             </div>
-                            <h3>textarea-1</h3>
-                            <p>markup: <a href="{{webRepo}}app/assets/markup/toolkit/textarea-1.handlebars">textarea-1.handlebars</a></p>
-                            <p>style: <a href="{{webRepo}}app/assets/style/base/elements/_inputs.scss">_inputs.scss</a></p>
-                            <p>{{> toolkit/label-1 title='additonal comments:' for='textarea-1-example'}}</p>
-                            <p>{{> toolkit/textarea-1 id='textarea-1-example' placeholder='please be detailed'}}</p>
-
-
-                            <hr>
-
+                        </aside>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
                             <h2>Select Menus</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-8 columns">
+                            <h3>select-1</h3>
+                            <p>{{> toolkit/label-1 title='what type of vehicle do you drive?' for='select-1-example'}}</p>
+                            <p>{{> toolkit/select-1 elements.select-1 id='select-1-example'}}</p>
+                            <h4>Source Code</h4>
+                            <ul class="list-1">
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/select-1.handlebars">select-1.handlebars</a></li>
+                                <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_inputs.scss">_inputs.scss</a></li>
+                            </ul>
+                        </div>
+                        <aside class="small-12 medium-4 columns">
                             <h3>Accessibility</h3>
                             <h4>Gherkin</h4>
                             <div class="gherkin">
@@ -249,7 +336,7 @@
                                 AND I will hear any defined value<br>
                                 AND I will hear any defined placeholder text<br>
                                 AND I will hear if the field is required</p>
-                                <p>GIVEN I am a blind screen reader user<br>
+                                <p>GIVEN I am a screen reader user<br>
                                 WHEN I open the dropdown menu with the spacebar key<br>
                                 THEN I will hear the number of options<br>
                                 AND I will hear selected option</p>
@@ -262,16 +349,24 @@
                                 WHEN I navigate to a dropdown menu with the tab key<br>
                                 THEN I will see focus visual change</p>
                             </div>
-                            <h3>select-1</h3>
-                            <p>markup: <a href="{{webRepo}}app/assets/markup/toolkit/select-1.handlebars">select-1.handlebars</a></p>
-                            <p>style: <a href="{{webRepo}}app/assets/style/base/elements/_inputs.scss">_inputs.scss</a></p>
-                            <p>{{> toolkit/label-1 title='what type of vehicle do you drive?' for='select-1-example'}}</p>
-                            <p>{{> toolkit/select-1 elements.select-1 id='select-1-example'}}</p>
-
-
-                            <hr>
-
+                        </aside>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
                             <h2>Tables</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-8 columns">
+                            <h3>table-1</h3>
+                            {{> toolkit/table-1 elements.table-1}}
+                            <h4>Source Code</h4>
+                            <ul class="text-1">
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/table-1.handlebars">table-1.handlebars</a></li>
+                                <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_tables.scss">_tables.scss</a></li>
+                            </ul>
+                        </div>
+                        <aside class="small-12 medium-4 columns">
                             <h3>Accessibility</h3>
                             <h4>Gherkin</h4>
                             <div class="gherkin">
@@ -283,45 +378,16 @@
                                 WHEN I navigate from cell to cell using Control + Alt + arrow keys<br>
                                 THEN I need to hear the table headers</p>
                             </div>
-                            <h3>table-1</h3>
-                            <p>markup: <a href="{{webRepo}}app/assets/markup/toolkit/table-1.handlebars">table-1.handlebars</a></p>
-                            <p>style: <a href="{{webRepo}}app/assets/style/base/elements/_tables.scss">_tables.scss</a></p>
-                            {{> toolkit/table-1 elements.table-1}}
-
-
-                            <hr>
-
+                        </aside>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 columns">
                             <h2>Pictures</h2>
-                            <h3>Accessibility</h3>
-                            <h4>Gherkin</h4>
-                            <p>active/actionable pictures:</p>
-                            <div class="gherkin">
-                                <p>GIVEN I am a screen reader user<br>
-                                WHEN a picture receives keyboard focus,<br>
-                                THEN I will hear the destination or function of that picture.</p>
-                            </div>
-                            <p>informative pictures:</p>
-                            <div class="gherkin">
-                                <p>GIVEN I am a screen reader user<br>
-                                WHEN I come across a picture that presents useful information,<br>
-                                THEN I should hear a description that provides equivalent information.</p>
-                            </div>
-                            <p>decorative pictures:</p>
-                            <div class="gherkin">
-                                <p>GIVEN I am a screen reader user<br>
-                                WHEN I come across a picture that is decorative or redundant,<br>
-                                THEN I should not hear anything for that picture.</p>
-                            </div>
-                            <p>complex pictures:</p>
-                            <div class="gherkin">
-                                <p>GIVEN I am a screen reader user<br>
-                                WHEN I come across a picture that presents complex information,<br>
-                                THEN I should hear a detailed description of that picture,<br>
-                                or find a link to a page that presents more information about the picture.</p>
-                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-8 columns">
                             <h3>picture-1</h3>
-                            <p>markup: <a href="{{webRepo}}app/assets/markup/toolkit/picture-1.handlebars">picture-1.handlebars</a></p>
-                            <p>style: <a href="{{webRepo}}app/assets/style/base/elements/_images.scss">_images.scss</a></p>
                             <p>{{> toolkit/picture-1
                                 imageFallback='assets/image/demo/fallback.jpg'
                                 imageSmall='assets/image/demo/small.jpg'
@@ -331,8 +397,41 @@
                                 imageXXLarge='assets/image/demo/xxlarge.jpg'
                                 alt='image example alternative text'
                             }}</p>
-
+                            <h4>Source Code</h4>
+                            <ul class="list-1">
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/picture-1.handlebars">picture-1.handlebars</a></li>
+                                <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_images.scss">_images.scss</a></li>
+                            </ul>
                         </div>
+                        <aside class="small-12 medium-4 columns">
+                            <h3>Accessibility</h3>
+                            <h4>Gherkin</h4>
+                            <p><strong>active/actionable pictures:</strong></p>
+                            <div class="gherkin">
+                                <p>GIVEN I am a screen reader user<br>
+                                WHEN a picture receives keyboard focus,<br>
+                                THEN I will hear the destination or function of that picture.</p>
+                            </div>
+                            <p><strong>informative pictures:</strong></p>
+                            <div class="gherkin">
+                                <p>GIVEN I am a screen reader user<br>
+                                WHEN I come across a picture that presents useful information,<br>
+                                THEN I should hear a description that provides equivalent information.</p>
+                            </div>
+                            <p><strong>decorative pictures:</strong></p>
+                            <div class="gherkin">
+                                <p>GIVEN I am a screen reader user<br>
+                                WHEN I come across a picture that is decorative or redundant,<br>
+                                THEN I should not hear anything for that picture.</p>
+                            </div>
+                            <p><strong>complex pictures:</strong></p>
+                            <div class="gherkin">
+                                <p>GIVEN I am a screen reader user<br>
+                                WHEN I come across a picture that presents complex information,<br>
+                                THEN I should hear a detailed description of that picture,<br>
+                                or find a link to a page that presents more information about the picture.</p>
+                            </div>
+                        </aside>
                     </div>
                 </section>
             </main>
