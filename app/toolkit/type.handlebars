@@ -19,17 +19,13 @@
             <div class="sticky-1">
                 <div class="sticky-1-wrapper">
                     <nav tabindex="-1">
-                        <div class="row collapse">
-                            <ul class="small-12 columns">
-                                <li><a href="{{www}}toolkit">Home</a></li>
-                                <li><a href="{{www}}toolkit/layouts.html">Layouts</a></li>
-                                <li><a href="{{www}}toolkit/colors.html">Colors</a></li>
-                                <li><a class="selected" href="{{www}}toolkit/type.html">Type</a></li>
-                                <li><a href="{{www}}toolkit/sprites.html">Sprites</a></li>
-                                <li><a href="{{www}}toolkit/elements.html">Elements</a></li>
-                                <li><a href="{{www}}toolkit/components.html">Components</a></li>
-                            </ul>
-                        </div>
+                        <a href="{{www}}toolkit">Home</a>
+                        <a href="{{www}}toolkit/layouts.html">Layouts</a>
+                        <a href="{{www}}toolkit/colors.html">Colors</a>
+                        <a class="selected" href="{{www}}toolkit/type.html">Type</a>
+                        <a href="{{www}}toolkit/sprites.html">Sprites</a>
+                        <a href="{{www}}toolkit/elements.html">Elements</a>
+                        <a href="{{www}}toolkit/components.html">Components</a>
                     </nav>
                 </div>
             </div>
@@ -46,7 +42,11 @@
                             <h3>open-sans-1</h3>
                             <p>style: <a href="{{webRepo}}app/assets/style/base/type/_fonts.scss">_fonts.scss</a></p>
                             <p><span class="open-sans-1">The Quick Brown Fox Jumps Over the Lazy Dog.</span></p>
-                            <hr>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="small-12 columns">
                             <h2>Headings</h2>
                             <h3>heading-1</h3>
                             <p>markup: <a href="{{webRepo}}app/assets/markup/toolkit/heading-1.handlebars">heading-1.handlebars</a></p>
@@ -64,7 +64,11 @@
                             <p>markup: <a href="{{webRepo}}app/assets/markup/toolkit/heading-4.handlebars">heading-4.handlebars</a></p>
                             <p>style: <a href="{{webRepo}}app/assets/style/base/type/_headings.scss">_headings.scss</a></p>
                             {{>toolkit/heading-4 tag='span' title='The Quick Brown Fox Jumps Over the Lazy Dog.'}}
-                            <hr>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="small-12 columns">
                             <h2>Text</h2>
                             <h3>text-1</h3>
                             <p>markup: <a href="{{webRepo}}app/assets/markup/toolkit/text-1.handlebars">text-1.handlebars</a></p>
@@ -74,6 +78,8 @@
                     </div>
                 </section>
             </main>
+
+            <hr>
 
             {{>toolkit/footer-1}}
 

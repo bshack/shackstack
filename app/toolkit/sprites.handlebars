@@ -19,17 +19,13 @@
             <div class="sticky-1">
                 <div class="sticky-1-wrapper">
                     <nav tabindex="-1">
-                        <div class="row collapse">
-                            <ul class="small-12 columns">
-                                <li><a href="{{www}}toolkit">Home</a></li>
-                                <li><a href="{{www}}toolkit/layouts.html">Layouts</a></li>
-                                <li><a href="{{www}}toolkit/colors.html">Colors</a></li>
-                                <li><a href="{{www}}toolkit/type.html">Type</a></li>
-                                <li><a class="selected" href="{{www}}toolkit/sprites.html">Sprites</a></li>
-                                <li><a href="{{www}}toolkit/elements.html">Elements</a></li>
-                                <li><a href="{{www}}toolkit/components.html">Components</a></li>
-                            </ul>
-                        </div>
+                        <a href="{{www}}toolkit">Home</a>
+                        <a href="{{www}}toolkit/layouts.html">Layouts</a>
+                        <a href="{{www}}toolkit/colors.html">Colors</a>
+                        <a href="{{www}}toolkit/type.html">Type</a>
+                        <a class="selected" href="{{www}}toolkit/sprites.html">Sprites</a>
+                        <a href="{{www}}toolkit/elements.html">Elements</a>
+                        <a href="{{www}}toolkit/components.html">Components</a>
                     </nav>
                 </div>
             </div>
@@ -39,7 +35,6 @@
                     <h1>Sprites</h1>
                     <div class="row">
                         <div class="small-12 columns">
-                            <p>style: <a href="{{webRepo}}app/assets/style/base/sprites/_sprites.scss">_sprites.scss</a></p>
                             <table class="table-1">
                                 <caption>sprite contents</caption>
                                 <thead>
@@ -58,11 +53,21 @@
                                         <td>%graphic-html5</td>
                                     </tr>
                                 </tbody>
-                            <table>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="2">
+                                            <p><strong>Source Code</strong></p>
+                                            <p>style: <a href="{{webRepo}}app/assets/style/base/sprites/_sprites.scss">_sprites.scss</a></p>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
                         </div>
                     </div>
                 </section>
             </main>
+
+            <hr>
 
             {{>toolkit/footer-1}}
 

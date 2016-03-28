@@ -19,17 +19,13 @@
             <div class="sticky-1">
                 <div class="sticky-1-wrapper">
                     <nav tabindex="-1">
-                        <div class="row collapse">
-                            <ul class="small-12 columns">
-                                <li><a href="{{www}}toolkit">Home</a></li>
-                                <li><a href="{{www}}toolkit/layouts.html">Layouts</a></li>
-                                <li><a href="{{www}}toolkit/colors.html">Colors</a></li>
-                                <li><a href="{{www}}toolkit/type.html">Type</a></li>
-                                <li><a href="{{www}}toolkit/sprites.html">Sprites</a></li>
-                                <li><a class="selected" href="{{www}}toolkit/elements.html">Elements</a></li>
-                                <li><a href="{{www}}toolkit/components.html">Components</a></li>
-                            </ul>
-                        </div>
+                        <a href="{{www}}toolkit">Home</a>
+                        <a href="{{www}}toolkit/layouts.html">Layouts</a>
+                        <a href="{{www}}toolkit/colors.html">Colors</a>
+                        <a href="{{www}}toolkit/type.html">Type</a>
+                        <a href="{{www}}toolkit/sprites.html">Sprites</a>
+                        <a class="selected" href="{{www}}toolkit/elements.html">Elements</a>
+                        <a href="{{www}}toolkit/components.html">Components</a>
                     </nav>
                 </div>
             </div>
@@ -50,7 +46,7 @@
                             <p>{{> toolkit/anchor-1 id='anchor-1-aria' title='click here' accessible-title='detailed information about this product' url='#'}}</p>
                             <h4>Source Code</h4>
                             <ul class="list-1">
-                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/anchor-1.handlebars">anchor-1.handlebars</a></li>
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/anchor-1.handlebars">anchor-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/a.handlebars">a.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_anchors.scss">_anchors.scss</a></li>
                             </ul>
                         </div>
@@ -74,6 +70,7 @@
                             </div>
                         </aside>
                     </div>
+                    <hr>
                     <div class="row">
                         <div class="small-12 columns">
                             <h2>Buttons</h2>
@@ -87,7 +84,7 @@
                             <p>{{> toolkit/button-1 id='button-1-aria' title='click here' accessible-title='detailed information about this product' url='#'}}</p>
                             <h4>Source Code</h4>
                             <ul class="list-1">
-                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/button-1.handlebars">button-1.handlebars</a></li>
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/button-1.handlebars">button-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/button.handlebars">button.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_buttons.scss">_buttons.scss</a></li>
                             </ul>
                         </div>
@@ -110,6 +107,7 @@
                             </div>
                         </aside>
                     </div>
+                    <hr>
                     <div class="row">
                         <div class="small-12 columns">
                             <h2>Labels</h2>
@@ -122,7 +120,7 @@
                             <p>{{> toolkit/input-text-1 id='label-example-input' placeholder='first and last name' type='text'}}</p>
                             <h4>Source Code</h4>
                             <ul class="list-1">
-                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/label-1.handlebars">label-1.handlebars</a></li>
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/label-1.handlebars">label-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/label.handlebars">label.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_labels.scss">_labels.scss</a></li>
                             </ul>
                         </div>
@@ -136,6 +134,33 @@
                             </div>
                         </aside>
                     </div>
+                    <hr>
+                    <div class="row">
+                        <div class="small-12 columns">
+                            <h2>Legends</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-8 columns">
+                            <h3>legend-1</h3>
+                            <p>{{> toolkit/legend-1 title='Shipping Information'}}</p>
+                            <h4>Source Code</h4>
+                            <ul class="list-1">
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/legend-1.handlebars">legend-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/legend.handlebars">legend.handlebars</a></li>
+                                <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_legends.scss">_legends.scss</a></li>
+                            </ul>
+                        </div>
+                        <aside class="small-12 medium-4 columns">
+                            <h3>Accessibility with Legends</h3>
+                            <h4>Gherkin</h4>
+                            <div class="gherkin">
+                                <p>GIVEN I am a screen reader user<br>
+                                WHEN I navigate to a legend with the keyboard<br>
+                                THEN I hear the legend text read aloud</p>
+                            </div>
+                        </aside>
+                    </div>
+                    <hr>
                     <div class="row">
                         <div class="small-12 columns">
                             <h2>Lists</h2>
@@ -147,7 +172,7 @@
                             {{> toolkit/list-1 elements.list-1}}
                             <h4>Source Code</h4>
                             <ul class="list-1">
-                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/list-1.handlebars">list-1.handlebars</a></li>
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/list-1.handlebars">list-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/ul.handlebars">ul.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_lists.scss">_lists.scss</a></li>
                             </ul>
                         </div>
@@ -168,6 +193,7 @@
                             </div>
                         </aside>
                     </div>
+                    <hr>
                     <div class="row">
                         <div class="small-12 columns">
                             <h2>Input Checkboxes</h2>
@@ -180,7 +206,7 @@
                             <p>{{> toolkit/input-checkbox-1 id='input-checkbox-1-example' name='checkbox-example' checked=true}}</p>
                             <h4>Source Code</h4>
                             <ul class="list-1">
-                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/input-checkbox-1.handlebars">input-checkbox-1.handlebars</a></li>
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/input-checkbox-1.handlebars">input-checkbox-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/input.handlebars">input.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_inputs.scss">_inputs.scss</a></li>
                             </ul>
                         </div>
@@ -204,6 +230,7 @@
                             </div>
                         </aside>
                     </div>
+                    <hr>
                     <div class="row">
                         <div class="small-12 columns">
                             <h2>Input Radio Buttons</h2>
@@ -219,7 +246,7 @@
                             <p>{{> toolkit/input-radio-1 id='input-radio-1-example-2' name='radio-example' labelledby='radio-group-label'}}</p>
                             <h4>Source Code</h4>
                             <ul class="list-1">
-                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/input-radio-1.handlebars">input-radio-1.handlebars</a></li>
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/input-radio-1.handlebars">input-radio-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/input.handlebars">input.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_inputs.scss">_inputs.scss</a></li>
                             </ul>
                         </div>
@@ -243,6 +270,7 @@
                             </div>
                         </aside>
                     </div>
+                    <hr>
                     <div class="row">
                         <div class="small-12 columns">
                             <h2>Input Text Boxes</h2>
@@ -255,7 +283,7 @@
                             <p>{{> toolkit/input-text-1 id='input-text-1-example' placeholder='first and last name' type='text'}}</p>
                             <h4>Source Code</h4>
                             <ul class="list-1">
-                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/input-text-1.handlebars">input-text-1.handlebars</a></li>
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/input-text-1.handlebars">input-text-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/input.handlebars">input.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_inputs.scss">_inputs.scss</a></li>
                             </ul>
                         </div>
@@ -276,6 +304,7 @@
                             </div>
                         </aside>
                     </div>
+                    <hr>
                     <div class="row">
                         <div class="small-12 columns">
                             <h2>Textareas</h2>
@@ -288,7 +317,7 @@
                             <p>{{> toolkit/textarea-1 id='textarea-1-example' placeholder='please be detailed'}}</p>
                             <h4>Source Code</h4>
                             <ul class="list-1">
-                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/textarea-1.handlebars">textarea-1.handlebars</a></li>
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/textarea-1.handlebars">textarea-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/textarea.handlebars">textarea.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_inputs.scss">_inputs.scss</a></li>
                             </ul>
                         </div>
@@ -309,6 +338,7 @@
                             </div>
                         </aside>
                     </div>
+                    <hr>
                     <div class="row">
                         <div class="small-12 columns">
                             <h2>Select Menus</h2>
@@ -321,7 +351,7 @@
                             <p>{{> toolkit/select-1 elements.select-1 id='select-1-example'}}</p>
                             <h4>Source Code</h4>
                             <ul class="list-1">
-                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/select-1.handlebars">select-1.handlebars</a></li>
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/select-1.handlebars">select-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/select.handlebars">select.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_inputs.scss">_inputs.scss</a></li>
                             </ul>
                         </div>
@@ -351,6 +381,7 @@
                             </div>
                         </aside>
                     </div>
+                    <hr>
                     <div class="row">
                         <div class="small-12 columns">
                             <h2>Tables</h2>
@@ -362,7 +393,7 @@
                             {{> toolkit/table-1 elements.table-1}}
                             <h4>Source Code</h4>
                             <ul class="text-1">
-                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/table-1.handlebars">table-1.handlebars</a></li>
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/table-1.handlebars">table-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/table.handlebars">table.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_tables.scss">_tables.scss</a></li>
                             </ul>
                         </div>
@@ -380,6 +411,7 @@
                             </div>
                         </aside>
                     </div>
+                    <hr>
                     <div class="row">
                         <div class="small-12 columns">
                             <h2>Pictures</h2>
@@ -399,7 +431,7 @@
                             }}</p>
                             <h4>Source Code</h4>
                             <ul class="list-1">
-                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/picture-1.handlebars">picture-1.handlebars</a></li>
+                                <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/picture-1.handlebars">picture-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/picture.handlebars">picture.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_images.scss">_images.scss</a></li>
                             </ul>
                         </div>
@@ -435,6 +467,8 @@
                     </div>
                 </section>
             </main>
+
+            <hr>
 
             {{>toolkit/footer-1}}
 
