@@ -71,7 +71,7 @@
                     eventAction: 'close',
                     eventLabel: 'main menu mobile'
                 });
-            } else if (e.target.tagName === 'BUTTON') {
+            } else if (e && e.target.tagName === 'BUTTON') {
                 $menuToggle
                     .attr('aria-expanded', true);
                 $menu

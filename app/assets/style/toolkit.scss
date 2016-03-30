@@ -4,261 +4,326 @@
 
 @import 'base/toolkit';
 
-// styles only for the toolkit section of the site.
-h1,
-h2,
-h3,
-h4 {
-    text-transform: uppercase;
-}
+.toolkit {
 
-h1 {
-
-    background-color: $grey-2;
-    color: $white-1;
-    margin: 0 0 rem-calc(60);
-    padding: rem-calc(87) 0 rem-calc(40);
-    text-align: center;
-
-    @media #{$medium-up} {
-        background-color: $white-1;
-        padding: rem-calc(40) 0;
-        position: static;
-    }
-
-}
-
-h2 {
-    margin-bottom: rem-calc(60);
-    text-align: center;
-}
-
-h3 {
-    margin-bottom: rem-calc(20);
-    margin-top: rem-calc(60);
-}
-
-h4 {
-    margin-bottom: rem-calc(20);
-    margin-top: rem-calc(40);
-}
-
-hr {
-    margin: rem-calc(60) 0;
-}
-
-header {
-
-    background-color: $black-1;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 5;
-
-    @media #{$medium-up} {
-        background-color: $white-1;
-        position: static;
-    }
-
-    > button {
-
-        @extend %graphic-menu;
-
-        position: absolute;
-
-        &:active,
-        &:focus,
-        &:hover {
-            background-color: $grey-2;
-        }
-
-        @media #{$medium-up} {
-            display: none;
-        }
-
-    }
-
-    a {
-        color: $white-1;
-        display: block;
-        font-size: rem-calc(18);
-        font-weight: 700;
-        line-height: rem-calc(52);
-        text-align: center;
-        text-decoration: none;
+    // styles only for the toolkit section of the site.
+    &-heading-1,
+    &-heading-2,
+    &-heading-3,
+    &-heading-4 {
         text-transform: uppercase;
+    }
 
-        &:hover,
-        &:focus {
-            color: $grey-5;
-        }
+    &-heading-1 {
+
+        background-color: $grey-2;
+        color: $white-1;
+        margin: 0 0 rem-calc(60);
+        padding: rem-calc(87) 0 rem-calc(40);
+        text-align: center;
 
         @media #{$medium-up} {
-            color: $black-1;
-            font-size: rem-calc(30);
-            line-height: rem-calc(30);
-            margin: rem-calc(52) 0;
+            padding: rem-calc(40) 0;
+            position: static;
+        }
+
+    }
+
+    &-heading-2 {
+        margin-bottom: rem-calc(60);
+        text-align: center;
+    }
+
+    &-heading-3 {
+        margin-bottom: rem-calc(20);
+        margin-top: rem-calc(60);
+    }
+
+    &-heading-4 {
+        margin-bottom: rem-calc(20);
+        margin-top: rem-calc(40);
+    }
+
+    &-rule-1 {
+        margin: rem-calc(60) 0;
+    }
+
+    &-header-1 {
+
+        background-color: $black-1;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 5;
+
+        @media #{$medium-up} {
+            background-color: $white-1;
+            position: static;
+        }
+
+        > button {
+
+            @extend %graphic-menu;
+
+            position: absolute;
+
+            &:active,
+            &:focus,
+            &:hover {
+                background-color: $grey-2;
+            }
+
+            @media #{$medium-up} {
+                display: none;
+            }
+
+        }
+
+        a {
+            color: $white-1;
+            display: block;
+            font-size: rem-calc(18);
+            font-weight: 700;
+            line-height: rem-calc(52);
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
 
             &:hover,
             &:focus {
-                color: $grey-2;
+                color: $grey-5;
+            }
+
+            @media #{$medium-up} {
+                color: $black-1;
+                font-size: rem-calc(30);
+                line-height: rem-calc(30);
+                margin: rem-calc(52) 0;
+
+                &:hover,
+                &:focus {
+                    color: $grey-2;
+                }
+
             }
 
         }
 
     }
 
-}
-
-nav {
-
-    background-color: $black-1;
-    border-bottom: rem-calc(1) solid $black-1;
-    border-top: rem-calc(1) solid $black-1;
-    color: $white-1;
-    display: none;
-    height: 100%;
-    position: fixed;
-    text-align: center;
-    width: 100%;
-    z-index: 5;
-
-    @media #{$small-only} {
-
-        &.mobile-show-menu {
-            bottom: 0;
-            display: block;
-            left: 0;
-            right: 0;
-            top: rem-calc(50);
-        }
-
-    }
-
-    @media #{$medium-up} {
-        display: block;
-        height: rem-calc(47);
-        position: static;
-    }
-
-    a {
+    &-nav-1 {
 
         background-color: $black-1;
+        border-bottom: rem-calc(1) solid $black-1;
+        border-top: rem-calc(1) solid $black-1;
         color: $white-1;
-        display: inline-block;
-        line-height: rem-calc(45);
-        padding: 0 rem-calc(15);
-        text-decoration: none;
-        text-transform: uppercase;
+        display: none;
+        height: 100%;
+        position: fixed;
+        text-align: center;
         width: 100%;
+        z-index: 5;
 
-        &.selected,
-        &:hover,
-        &:focus {
-            background-color: $white-1;
-            color: $black-1;
+        @media #{$small-only} {
+
+            &.mobile-show-menu {
+                bottom: 0;
+                display: block;
+                left: 0;
+                right: 0;
+                top: rem-calc(50);
+            }
+
         }
 
         @media #{$medium-up} {
-            font-size: rem-calc(13);
-            margin-left: rem-calc(-3);
-            margin-right: rem-calc(-3);
-            width: auto;
+            display: block;
+            height: rem-calc(47);
+            position: static;
         }
 
-        @media #{$large-up} {
-            font-size: rem-calc(16);
-            width: auto;
+        a {
+
+            background-color: $black-1;
+            color: $white-1;
+            display: inline-block;
+            line-height: rem-calc(45);
+            padding: 0 rem-calc(15);
+            text-decoration: none;
+            text-transform: uppercase;
+            width: 100%;
+
+            &.selected,
+            &:hover,
+            &:focus {
+                background-color: $white-1;
+                color: $black-1;
+            }
+
+            @media #{$medium-up} {
+                font-size: rem-calc(13);
+                margin-left: rem-calc(-3);
+                margin-right: rem-calc(-3);
+                width: auto;
+            }
+
+            @media #{$large-up} {
+                font-size: rem-calc(16);
+                width: auto;
+            }
+
+            &[aria-selected=true] {
+                background-color: $white-1;
+                color: $black-1;
+            }
+
         }
 
-        &[aria-selected=true] {
+    }
+
+    &-gherkin-1 {
+        font-style: italic;
+    }
+
+    &-swatch-1 {
+
+        display: block;
+        height: rem-calc(125);
+
+        &.black-1 {
+            background-color: $black-1;
+        }
+
+        &.grey-1 {
+            background-color: $grey-1;
+        }
+
+        &.grey-2 {
+            background-color: $grey-2;
+        }
+
+        &.grey-3 {
+            background-color: $grey-3;
+        }
+
+        &.grey-4 {
+            background-color: $grey-4;
+        }
+
+        &.grey-5 {
+            background-color: $grey-5;
+        }
+
+        &.grey-6 {
+            background-color: $grey-6;
+        }
+
+        &.white-1 {
             background-color: $white-1;
-            color: $black-1;
+        }
+
+        &.red-1 {
+            background-color: $red-1;
         }
 
     }
 
-}
+    &-grid-1 {
 
-.gherkin {
-    font-style: italic;
-}
+        overflow: auto;
 
-.swatch {
+        .row {
+            background-color: $grey-6;
+        }
 
-    display: block;
-    height: rem-calc(125);
+        .columns {
+            border: rem-calc(2) $black-1 solid;
+            padding: rem-calc(10);
+        }
 
-    &.black-1 {
-        background-color: $black-1;
     }
 
-    &.grey-1 {
-        background-color: $grey-1;
+    &-arial-1 {
+        @extend %arial-1;
     }
 
-    &.grey-2 {
-        background-color: $grey-2;
+    &-open-sans-1 {
+        @extend %open-sans-1;
     }
 
-    &.grey-3 {
-        background-color: $grey-3;
+    &-graphic-css3-1 {
+        @extend %graphic-css3;
     }
 
-    &.grey-4 {
-        background-color: $grey-4;
+    &-graphic-html5-1 {
+        @extend %graphic-html5;
     }
 
-    &.grey-5 {
-        background-color: $grey-5;
+    &-panels-1 {
+
+        > .panel {
+
+            @extend %heading-1;
+
+            > .panel-content {
+
+                color: $white-1;
+                padding-top: 50vh;
+                text-align: center;
+                text-transform: uppercase;
+
+            }
+
+            &.panel-1 {
+
+                > .panel-content {
+                    background-image: url('../image/demo/panel-1.jpg');
+                }
+
+            }
+
+            &.panel-2 {
+
+                > .panel-content {
+                    background-image: url('../image/demo/panel-2.jpg');
+                }
+
+            }
+
+            &.panel-3 {
+
+                > .panel-content {
+                    background-image: url('../image/demo/panel-3.jpg');
+                }
+
+            }
+
+            &.panel-4 {
+
+                > .panel-content {
+                    background-image: url('../image/demo/panel-4.jpg');
+                }
+
+            }
+
+            &.panel-5 {
+
+                > .panel-content {
+                    background-image: url('../image/demo/panel-5.jpg');
+                }
+
+            }
+
+            &.panel-6 {
+
+                > .panel-content {
+                    background-image: url('../image/demo/panel-6.jpg');
+                }
+
+            }
+
+        }
+
     }
 
-    &.grey-6 {
-        background-color: $grey-6;
-    }
-
-    &.white-1 {
-        background-color: $white-1;
-    }
-
-    &.red-1 {
-        background-color: $red-1;
-    }
-
-}
-
-.grid {
-
-    overflow: auto;
-
-    .row {
-        background-color: $grey-6;
-    }
-
-    .columns {
-        border: rem-calc(2) $black-1 solid;
-        padding: rem-calc(10);
-    }
-
-}
-
-.arial-1 {
-    @extend %arial-1;
-}
-
-.open-sans-1 {
-    @extend %open-sans-1;
-}
-
-.graphic-css3 {
-    @extend %graphic-css3;
-}
-
-.graphic-html5 {
-    @extend %graphic-html5;
-}
-
-footer {
-    padding-bottom: rem-calc(40);
-    text-align: center;
 }

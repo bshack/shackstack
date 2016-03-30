@@ -27,6 +27,7 @@
 @import 'elements/buttons';
 @import 'elements/fieldsets';
 @import 'elements/labels';
+@import 'elements/landmarks';
 @import 'elements/legends';
 @import 'elements/lists';
 @import 'elements/inputs';
@@ -36,11 +37,11 @@
 // ## layouts
 
 @import 'layouts/staggered-1';
+@import 'layouts/panels-1';
 
 // ## components
 
 @import 'components/modal-1';
-@import 'components/panels-1';
 @import 'components/sticky-1';
 @import 'components/tabpanel-base-1';
 @import 'components/tabpanel-1';

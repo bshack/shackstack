@@ -7,7 +7,7 @@
 
             {{>toolkit/accessibility-skip-to-element-1 id='skip-to-content' url='#main' title='skip to content'}}
 
-            <header>
+            <header class="toolkit-header-1">
                 <button aria-expanded="false">main menu toggle</button>
                 <div class="row">
                     <div class="small-12 columns">
@@ -18,7 +18,7 @@
 
             <div class="sticky-1">
                 <div class="sticky-1-wrapper">
-                    <nav tabindex="-1">
+                    <nav class="toolkit-nav-1" tabindex="-1">
                         <a href="{{www}}toolkit">Home</a>
                         <a href="{{www}}toolkit/layouts.html">Layouts</a>
                         <a href="{{www}}toolkit/colors.html">Colors</a>
@@ -32,33 +32,33 @@
 
             <main id="main" tabindex="-1">
                 <section>
-                    <h1>Elements</h1>
+                    <h1 class="toolkit-heading-1">Elements</h1>
                     <div class="row">
                         <div class="small-12 columns">
-                            <h2>Anchors</h2>
+                            <h2 class="toolkit-heading-2">Anchors</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="small-12 medium-8 columns">
-                            <h3>anchor-1</h3>
+                            <h3 class="toolkit-heading-3">anchor-1</h3>
                             <p>{{> toolkit/anchor-1 id='anchor-1' title='detailed information about this product' url='#'}}</p>
                             <p>example of helper text only for screen readers:</p>
                             <p>{{> toolkit/anchor-1 id='anchor-1-aria' title='click here' accessible-title='detailed information about this product' url='#'}}</p>
-                            <h4>Source Code</h4>
+                            <h4 class="toolkit-heading-4">Source Code</h4>
                             <ul class="list-1">
                                 <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/anchor-1.handlebars">anchor-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/a.handlebars">a.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_anchors.scss">_anchors.scss</a></li>
                             </ul>
                         </div>
                         <aside class="small-12 medium-4 columns">
-                            <h3>Accessibility with Anchors</h3>
-                            <h4>Usage</h4>
+                            <h3 class="toolkit-heading-3">Accessibility with Anchors</h3>
+                            <h4 class="toolkit-heading-4">Usage</h4>
                             <ul class="list-1">
                                 <li>Anchors should be used when a click takes the user to a new page or location on the current page.</li>
                                 <li>The anchor should provide enough helper text to give the user an indication of the content they will be taken to.</li>
                             </ul>
-                            <h4>Gherkin</h4>
-                            <div class="gherkin">
+                            <h4 class="toolkit-heading-4">Gherkin</h4>
+                            <div class="toolkit-gherkin-1">
                                 <p>GIVEN I am a screen reader user<br>
                                 WHEN I navigate to an anchor with the tab key<br>
                                 THEN I hear the anchor text read aloud<br>
@@ -70,33 +70,33 @@
                             </div>
                         </aside>
                     </div>
-                    <hr>
+                    <hr class="toolkit-rule-1">
                     <div class="row">
                         <div class="small-12 columns">
-                            <h2>Buttons</h2>
+                            <h2 class="toolkit-heading-2">Buttons</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="small-12 medium-8 columns">
-                            <h3>button-1</h3>
+                            <h3 class="toolkit-heading-3">button-1</h3>
                             <p>{{> toolkit/button-1 id='button-1' title='detailed information about this product'}}</p>
                             <p>example of helper text only for screen readers:</p>
                             <p>{{> toolkit/button-1 id='button-1-aria' title='click here' accessible-title='detailed information about this product' url='#'}}</p>
-                            <h4>Source Code</h4>
+                            <h4 class="toolkit-heading-4">Source Code</h4>
                             <ul class="list-1">
                                 <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/button-1.handlebars">button-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/button.handlebars">button.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_buttons.scss">_buttons.scss</a></li>
                             </ul>
                         </div>
                         <aside class="small-12 medium-4 columns">
-                            <h3>Accessibility with Buttons</h3>
-                            <h4>Usage</h4>
+                            <h3 class="toolkit-heading-3">Accessibility with Buttons</h3>
+                            <h4 class="toolkit-heading-4">Usage</h4>
                             <ul class="list-1">
                                 <li>Buttons should be used when a click changes the view by opening a modal or modifying the DOM and does not take the user to a new location.</li>
                                 <li>The button should provide enough helper text to give the user an indication of the action that will be taken.</li>
                             </ul>
-                            <h4>Gherkin</h4>
-                            <div class="gherkin">
+                            <h4 class="toolkit-heading-4">Gherkin</h4>
+                            <div class="toolkit-gherkin-1">
                                 <p>GIVEN I am a screen reader user<br>
                                 WHEN I navigate to a button with the tab key<br>
                                 THEN I will hear element identified as a button<br>
@@ -107,79 +107,79 @@
                             </div>
                         </aside>
                     </div>
-                    <hr>
+                    <hr class="toolkit-rule-1">
                     <div class="row">
                         <div class="small-12 columns">
-                            <h2>Labels</h2>
+                            <h2 class="toolkit-heading-2">Labels</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="small-12 medium-8 columns">
-                            <h3>label-1</h3>
+                            <h3 class="toolkit-heading-3">label-1</h3>
                             <p>{{> toolkit/label-1 id='label-1' title='Name' for='label-example-input'}}</p>
                             <p>{{> toolkit/input-text-1 id='label-example-input' placeholder='first and last name' type='text'}}</p>
-                            <h4>Source Code</h4>
+                            <h4 class="toolkit-heading-4">Source Code</h4>
                             <ul class="list-1">
                                 <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/label-1.handlebars">label-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/label.handlebars">label.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_labels.scss">_labels.scss</a></li>
                             </ul>
                         </div>
                         <aside class="small-12 medium-4 columns">
-                            <h3>Accessibility with Labels</h3>
-                            <h4>Gherkin</h4>
-                            <div class="gherkin">
+                            <h3 class="toolkit-heading-3">Accessibility with Labels</h3>
+                            <h4 class="toolkit-heading-4">Gherkin</h4>
+                            <div class="toolkit-gherkin-1">
                                 <p>GIVEN I am a screen reader user<br>
                                 WHEN I select a form element label using the keyboard<br>
                                 THEN I will hear the label read aloud</p>
                             </div>
                         </aside>
                     </div>
-                    <hr>
+                    <hr class="toolkit-rule-1">
                     <div class="row">
                         <div class="small-12 columns">
-                            <h2>Legends</h2>
+                            <h2 class="toolkit-heading-2">Legends</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="small-12 medium-8 columns">
-                            <h3>legend-1</h3>
+                            <h3 class="toolkit-heading-3">legend-1</h3>
                             <p>{{> toolkit/legend-1 title='Shipping Information'}}</p>
-                            <h4>Source Code</h4>
+                            <h4 class="toolkit-heading-4">Source Code</h4>
                             <ul class="list-1">
                                 <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/legend-1.handlebars">legend-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/legend.handlebars">legend.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_legends.scss">_legends.scss</a></li>
                             </ul>
                         </div>
                         <aside class="small-12 medium-4 columns">
-                            <h3>Accessibility with Legends</h3>
-                            <h4>Gherkin</h4>
-                            <div class="gherkin">
+                            <h3 class="toolkit-heading-3">Accessibility with Legends</h3>
+                            <h4 class="toolkit-heading-4">Gherkin</h4>
+                            <div class="toolkit-gherkin-1">
                                 <p>GIVEN I am a screen reader user<br>
                                 WHEN I navigate to a legend with the keyboard<br>
                                 THEN I hear the legend text read aloud</p>
                             </div>
                         </aside>
                     </div>
-                    <hr>
+                    <hr class="toolkit-rule-1">
                     <div class="row">
                         <div class="small-12 columns">
-                            <h2>Lists</h2>
+                            <h2 class="toolkit-heading-2">Lists</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="small-12 medium-8 columns">
-                            <h3>list-1</h3>
+                            <h3 class="toolkit-heading-3">list-1</h3>
                             {{> toolkit/list-1 elements.list-1}}
-                            <h4>Source Code</h4>
+                            <h4 class="toolkit-heading-4">Source Code</h4>
                             <ul class="list-1">
                                 <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/list-1.handlebars">list-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/ul.handlebars">ul.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_lists.scss">_lists.scss</a></li>
                             </ul>
                         </div>
                         <aside class="small-12 medium-4 columns">
-                            <h3>Accessibility with Lists</h3>
-                            <h4>Gherkin</h4>
-                            <div class="gherkin">
+                            <h3 class="toolkit-heading-3">Accessibility with Lists</h3>
+                            <h4 class="toolkit-heading-4">Gherkin</h4>
+                            <div class="toolkit-gherkin-1">
                                 <p>GIVEN I am a screen reader user<br>
                                 WHEN I select the list using the keyboard<br>
                                 THEN I hear element identified as a list<br>
@@ -193,27 +193,27 @@
                             </div>
                         </aside>
                     </div>
-                    <hr>
+                    <hr class="toolkit-rule-1">
                     <div class="row">
                         <div class="small-12 columns">
-                            <h2>Input Checkboxes</h2>
+                            <h2 class="toolkit-heading-2">Input Checkboxes</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="small-12 medium-8 columns">
-                            <h3>input-checkbox-1</h3>
+                            <h3 class="toolkit-heading-3">input-checkbox-1</h3>
                             <p>{{> toolkit/label-1 title='Opt me in' for='input-checkbox-1-example'}}</p>
                             <p>{{> toolkit/input-checkbox-1 id='input-checkbox-1-example' name='checkbox-example' checked=true}}</p>
-                            <h4>Source Code</h4>
+                            <h4 class="toolkit-heading-4">Source Code</h4>
                             <ul class="list-1">
                                 <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/input-checkbox-1.handlebars">input-checkbox-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/input.handlebars">input.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_inputs.scss">_inputs.scss</a></li>
                             </ul>
                         </div>
                         <aside class="small-12 medium-4 columns">
-                            <h3>Accessibility with Checkboxes</h3>
-                            <h4>Gherkin</h4>
-                            <div class="gherkin">
+                            <h3 class="toolkit-heading-3">Accessibility with Checkboxes</h3>
+                            <h4 class="toolkit-heading-4">Gherkin</h4>
+                            <div class="toolkit-gherkin-1">
                                 <p>GIVEN I am a screen reader user<br>
                                 WHEN I navigate to a checkbox with the tab key<br>
                                 THEN I will hear the element identified as a checkbox<br>
@@ -230,30 +230,30 @@
                             </div>
                         </aside>
                     </div>
-                    <hr>
+                    <hr class="toolkit-rule-1">
                     <div class="row">
                         <div class="small-12 columns">
-                            <h2>Input Radio Buttons</h2>
+                            <h2 class="toolkit-heading-2">Input Radio Buttons</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="small-12 medium-8 columns">
-                            <h3>input-radio-1</h3>
+                            <h3 class="toolkit-heading-3">input-radio-1</h3>
                             <p id="radio-group-label">What color do you want?</p>
                             <p>{{> toolkit/label-1 title='red' for='input-radio-1-example-1'}}</p>
                             <p>{{> toolkit/input-radio-1 id='input-radio-1-example-1' name='radio-example' checked=true  labelledby='radio-group-label'}}</p>
                             <p>{{> toolkit/label-1 title='blue' for='input-radio-1-example-2'}}</p>
                             <p>{{> toolkit/input-radio-1 id='input-radio-1-example-2' name='radio-example' labelledby='radio-group-label'}}</p>
-                            <h4>Source Code</h4>
+                            <h4 class="toolkit-heading-4">Source Code</h4>
                             <ul class="list-1">
                                 <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/input-radio-1.handlebars">input-radio-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/input.handlebars">input.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_inputs.scss">_inputs.scss</a></li>
                             </ul>
                         </div>
                         <aside class="small-12 medium-4 columns">
-                            <h3>Accessibility with Radio Buttons</h3>
-                            <h4>Gherkin</h4>
-                            <div class="gherkin">
+                            <h3 class="toolkit-heading-3">Accessibility with Radio Buttons</h3>
+                            <h4 class="toolkit-heading-4">Gherkin</h4>
+                            <div class="toolkit-gherkin-1">
                                 <p>GIVEN I am a screen reader user<br>
                                 WHEN I navigate to a radio button with the tab key<br>
                                 THEN I will hear the element identified as a radio button<br>
@@ -270,27 +270,27 @@
                             </div>
                         </aside>
                     </div>
-                    <hr>
+                    <hr class="toolkit-rule-1">
                     <div class="row">
                         <div class="small-12 columns">
-                            <h2>Input Text Boxes</h2>
+                            <h2 class="toolkit-heading-2">Input Text Boxes</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="small-12 medium-8 columns">
-                            <h3>input-text-1</h3>
+                            <h3 class="toolkit-heading-3">input-text-1</h3>
                             <p>{{> toolkit/label-1 title='Name' for='input-text-1-example'}}</p>
                             <p>{{> toolkit/input-text-1 id='input-text-1-example' placeholder='first and last name' type='text'}}</p>
-                            <h4>Source Code</h4>
+                            <h4 class="toolkit-heading-4">Source Code</h4>
                             <ul class="list-1">
                                 <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/input-text-1.handlebars">input-text-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/input.handlebars">input.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_inputs.scss">_inputs.scss</a></li>
                             </ul>
                         </div>
                         <aside class="small-12 medium-4 columns">
-                            <h3>Accessibility with Text Boxes</h3>
-                            <h4>Gherkin</h4>
-                            <div class="gherkin">
+                            <h3 class="toolkit-heading-3">Accessibility with Text Boxes</h3>
+                            <h4 class="toolkit-heading-4">Gherkin</h4>
+                            <div class="toolkit-gherkin-1">
                                 <p>GIVEN I am a screen reader user<br>
                                 WHEN I navigate to a text input with the tab key<br>
                                 THEN I will hear the element identified as an input<br>
@@ -304,27 +304,27 @@
                             </div>
                         </aside>
                     </div>
-                    <hr>
+                    <hr class="toolkit-rule-1">
                     <div class="row">
                         <div class="small-12 columns">
-                            <h2>Textareas</h2>
+                            <h2 class="toolkit-heading-2">Textareas</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="small-12 medium-8 columns">
-                            <h3>textarea-1</h3>
+                            <h3 class="toolkit-heading-3">textarea-1</h3>
                             <p>{{> toolkit/label-1 title='additonal comments:' for='textarea-1-example'}}</p>
                             <p>{{> toolkit/textarea-1 id='textarea-1-example' placeholder='please be detailed'}}</p>
-                            <h4>Source Code</h4>
+                            <h4 class="toolkit-heading-4">Source Code</h4>
                             <ul class="list-1">
                                 <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/textarea-1.handlebars">textarea-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/textarea.handlebars">textarea.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_inputs.scss">_inputs.scss</a></li>
                             </ul>
                         </div>
                         <aside class="small-12 medium-4 columns">
-                            <h3>Accessibility</h3>
-                            <h4>Gherkin</h4>
-                            <div class="gherkin">
+                            <h3 class="toolkit-heading-3">Accessibility</h3>
+                            <h4 class="toolkit-heading-4">Gherkin</h4>
+                            <div class="toolkit-gherkin-1">
                                 <p>GIVEN I am a screen reader user<br>
                                 WHEN I navigate to a textarea with the tab key<br>
                                 THEN I will hear the element identified as an input<br>
@@ -338,27 +338,27 @@
                             </div>
                         </aside>
                     </div>
-                    <hr>
+                    <hr class="toolkit-rule-1">
                     <div class="row">
                         <div class="small-12 columns">
-                            <h2>Select Menus</h2>
+                            <h2 class="toolkit-heading-2">Select Menus</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="small-12 medium-8 columns">
-                            <h3>select-1</h3>
+                            <h3 class="toolkit-heading-3">select-1</h3>
                             <p>{{> toolkit/label-1 title='what type of vehicle do you drive?' for='select-1-example'}}</p>
                             <p>{{> toolkit/select-1 elements.select-1 id='select-1-example'}}</p>
-                            <h4>Source Code</h4>
+                            <h4 class="toolkit-heading-4">Source Code</h4>
                             <ul class="list-1">
                                 <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/select-1.handlebars">select-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/select.handlebars">select.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_inputs.scss">_inputs.scss</a></li>
                             </ul>
                         </div>
                         <aside class="small-12 medium-4 columns">
-                            <h3>Accessibility</h3>
-                            <h4>Gherkin</h4>
-                            <div class="gherkin">
+                            <h3 class="toolkit-heading-3">Accessibility</h3>
+                            <h4 class="toolkit-heading-4">Gherkin</h4>
+                            <div class="toolkit-gherkin-1">
                                 <p>GIVEN I am a screen reader user<br>
                                 WHEN I navigate to a dropdown menu with the tab key<br>
                                 THEN I will hear the element identified as an dropdown menu<br>
@@ -381,26 +381,26 @@
                             </div>
                         </aside>
                     </div>
-                    <hr>
+                    <hr class="toolkit-rule-1">
                     <div class="row">
                         <div class="small-12 columns">
-                            <h2>Tables</h2>
+                            <h2 class="toolkit-heading-2">Tables</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="small-12 medium-8 columns">
-                            <h3>table-1</h3>
+                            <h3 class="toolkit-heading-3">table-1</h3>
                             {{> toolkit/table-1 elements.table-1}}
-                            <h4>Source Code</h4>
+                            <h4 class="toolkit-heading-4">Source Code</h4>
                             <ul class="text-1">
                                 <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/table-1.handlebars">table-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/table.handlebars">table.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_tables.scss">_tables.scss</a></li>
                             </ul>
                         </div>
                         <aside class="small-12 medium-4 columns">
-                            <h3>Accessibility</h3>
-                            <h4>Gherkin</h4>
-                            <div class="gherkin">
+                            <h3 class="toolkit-heading-3">Accessibility</h3>
+                            <h4 class="toolkit-heading-4">Gherkin</h4>
+                            <div class="toolkit-gherkin-1">
                                 <p>GIVEN I am a screen reader user<br>
                                 WHEN I navigate to a table with the tab key<br>
                                 THEN I will hear table caption<br>
@@ -411,15 +411,15 @@
                             </div>
                         </aside>
                     </div>
-                    <hr>
+                    <hr class="toolkit-rule-1">
                     <div class="row">
                         <div class="small-12 columns">
-                            <h2>Pictures</h2>
+                            <h2 class="toolkit-heading-2">Pictures</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="small-12 medium-8 columns">
-                            <h3>picture-1</h3>
+                            <h3 class="toolkit-heading-3">picture-1</h3>
                             <p>{{> toolkit/picture-1
                                 imageFallback='assets/image/demo/fallback.jpg'
                                 imageSmall='assets/image/demo/small.jpg'
@@ -429,35 +429,35 @@
                                 imageXXLarge='assets/image/demo/xxlarge.jpg'
                                 alt='image example alternative text'
                             }}</p>
-                            <h4>Source Code</h4>
+                            <h4 class="toolkit-heading-4">Source Code</h4>
                             <ul class="list-1">
                                 <li>markup: <a href="{{webRepo}}app/assets/markup/toolkit/picture-1.handlebars">picture-1.handlebars</a>, <a href="{{webRepo}}app/assets/markup/tags/picture.handlebars">picture.handlebars</a></li>
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/elements/_images.scss">_images.scss</a></li>
                             </ul>
                         </div>
                         <aside class="small-12 medium-4 columns">
-                            <h3>Accessibility</h3>
-                            <h4>Gherkin</h4>
+                            <h3 class="toolkit-heading-3">Accessibility</h3>
+                            <h4 class="toolkit-heading-4">Gherkin</h4>
                             <p><strong>active/actionable pictures:</strong></p>
-                            <div class="gherkin">
+                            <div class="toolkit-gherkin-1">
                                 <p>GIVEN I am a screen reader user<br>
                                 WHEN a picture receives keyboard focus,<br>
                                 THEN I will hear the destination or function of that picture.</p>
                             </div>
                             <p><strong>informative pictures:</strong></p>
-                            <div class="gherkin">
+                            <div class="toolkit-gherkin-1">
                                 <p>GIVEN I am a screen reader user<br>
                                 WHEN I come across a picture that presents useful information,<br>
                                 THEN I should hear a description that provides equivalent information.</p>
                             </div>
                             <p><strong>decorative pictures:</strong></p>
-                            <div class="gherkin">
+                            <div class="toolkit-gherkin-1">
                                 <p>GIVEN I am a screen reader user<br>
                                 WHEN I come across a picture that is decorative or redundant,<br>
                                 THEN I should not hear anything for that picture.</p>
                             </div>
                             <p><strong>complex pictures:</strong></p>
-                            <div class="gherkin">
+                            <div class="toolkit-gherkin-1">
                                 <p>GIVEN I am a screen reader user<br>
                                 WHEN I come across a picture that presents complex information,<br>
                                 THEN I should hear a detailed description of that picture,<br>
@@ -468,7 +468,7 @@
                 </section>
             </main>
 
-            <hr>
+            <hr class="toolkit-rule-1">
 
             {{>toolkit/footer-1}}
 

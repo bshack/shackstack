@@ -1,7 +1,5 @@
 %panel-base-1 {
 
-    @extend %heading-1;
-
     backface-visibility: hidden;
     height: 100vh;
     position: relative;
@@ -11,12 +9,8 @@
         backface-visibility: hidden;
         background-position: center center;
         background-size: cover;
-        color: $white-1;
         height: 100vh;
-        padding-top: 50vh;
         position: relative;
-        text-align: center;
-        text-transform: uppercase;
         transform: translate3d(0, 0, 0);
 
     }
@@ -65,54 +59,6 @@
                 position: fixed;
                 right: 0;
                 top: 0;
-            }
-
-        }
-
-        &.panel-1 {
-
-            > .panel-content {
-                background-image: url('../image/demo/panel-1.jpg');
-            }
-
-        }
-
-        &.panel-2 {
-
-            > .panel-content {
-                background-image: url('../image/demo/panel-2.jpg');
-            }
-
-        }
-
-        &.panel-3 {
-
-            > .panel-content {
-                background-image: url('../image/demo/panel-3.jpg');
-            }
-
-        }
-
-        &.panel-4 {
-
-            > .panel-content {
-                background-image: url('../image/demo/panel-4.jpg');
-            }
-
-        }
-
-        &.panel-5 {
-
-            > .panel-content {
-                background-image: url('../image/demo/panel-5.jpg');
-            }
-
-        }
-
-        &.panel-6 {
-
-            > .panel-content {
-                background-image: url('../image/demo/panel-6.jpg');
             }
 
         }

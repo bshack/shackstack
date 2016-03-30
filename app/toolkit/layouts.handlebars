@@ -7,7 +7,7 @@
 
             {{>toolkit/accessibility-skip-to-element-1 id='skip-to-content' url='#main' title='skip to content'}}
 
-            <header>
+            <header class="toolkit-header-1">
                 <button aria-expanded="false">main menu toggle</button>
                 <div class="row">
                     <div class="small-12 columns">
@@ -18,7 +18,7 @@
 
             <div class="sticky-1">
                 <div class="sticky-1-wrapper">
-                    <nav tabindex="-1">
+                    <nav class="toolkit-nav-1" tabindex="-1">
                         <a href="{{www}}toolkit">Home</a>
                         <a class="selected" href="{{www}}toolkit/layouts.html">Layouts</a>
                         <a href="{{www}}toolkit/colors.html">Colors</a>
@@ -32,24 +32,24 @@
 
             <main id="main" tabindex="-1">
                 <section>
-                    <h1>Layouts</h1>
+                    <h1 class="toolkit-heading-1">Layouts</h1>
                     <div class="row">
                         <div class="small-12 columns">
-                            <h2>Grids</h2>
-                            <h3>row</h3>
+                            <h2 class="toolkit-heading-2">Grids</h2>
+                            <h3 class="toolkit-heading-3">row</h3>
                         </div>
                     </div>
-                    <div class="grid">
+                    <div class="toolkit-grid-1">
                         <div class="row">
                             .row
                         </div>
                     </div>
                     <div class="row">
                         <div class="small-12 columns">
-                            <h3>Small</h3>
+                            <h3 class="toolkit-heading-3">Small</h3>
                         </div>
                     </div>
-                    <div class="grid">
+                    <div class="toolkit-grid-1">
                         <div class="row">
                             <div class="small-2 columns">.small-2</div>
                             <div class="small-10 columns">.small-10.columns</div>
@@ -115,10 +115,10 @@
                     </div>
                     <div class="row">
                         <div class="small-12 columns">
-                            <h3>Medium</h3>
+                            <h3 class="toolkit-heading-3">Medium</h3>
                         </div>
                     </div>
-                    <div class="grid">
+                    <div class="toolkit-grid-1">
                         <div class="row">
                             <div class="small-12 medium-2 columns">.medium-2</div>
                             <div class="small-12 medium-10 columns">.medium-10.columns</div>
@@ -184,10 +184,10 @@
                     </div>
                     <div class="row">
                         <div class="small-12 columns">
-                            <h3>Large</h3>
+                            <h3 class="toolkit-heading-3">Large</h3>
                         </div>
                     </div>
-                    <div class="grid">
+                    <div class="toolkit-grid-1">
                         <div class="row">
                             <div class="small-12 medium-12 large-2 columns">.large-2</div>
                             <div class="small-12 medium-12 large-10 columns">.large-10.columns</div>
@@ -253,10 +253,10 @@
                     </div>
                     <div class="row">
                         <div class="small-12 columns">
-                            <h3>staggered-1</h3>
+                            <h3 class="toolkit-heading-3">staggered-1</h3>
                         </div>
                     </div>
-                    <div class="grid">
+                    <div class="toolkit-grid-1">
                         <div class="staggered-1 row">
                             <div>
                                 <div>
@@ -336,20 +336,20 @@
                     </div>
                     <div class="row">
                         <div class="small-12 columns">
-                            <h4>Source Code</h4>
+                            <h4 class="toolkit-heading-4">Source Code</h4>
                             <ul class="list-1">
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/layouts/_staggered-1.scss">_staggered-1.scss</a></li>
                             </ul>
                         </div>
                     </div>
-                    <hr>
+                    <hr class="toolkit-rule-1">
                     <div class="row">
                         <div class="small-12 columns">
-                            <h2>Panels</h2>
-                            <h3>panels-1</h3>
+                            <h2 class="toolkit-heading-2">Panels</h2>
+                            <h3 class="toolkit-heading-3">panels-1</h3>
                         </div>
                     </div>
-                    <div class="panels-1">
+                    <div class="panels-1 toolkit-panels-1">
                         <section class="panel panel-1 panel-scrollable">
                             <div class="panel-content">
                                 panel 1
@@ -383,7 +383,7 @@
                     </div>
                     <div class="row">
                         <div class="small-12 columns">
-                            <h4>Source Code</h4>
+                            <h4 class="toolkit-heading-4">Source Code</h4>
                             <ul class="list-1">
                                 <li>style: <a href="{{webRepo}}app/assets/style/base/components/_panels-1.scss">_panels-1.scss</a></li>
                                 <li>script: <a href="{{webRepo}}app/assets/script/view/toolkit/components/panels-1.js">panels-1.js</a></li>
@@ -393,7 +393,7 @@
                 </section>
             </main>
 
-            <hr>
+            <hr class="toolkit-rule-1">
 
             {{>toolkit/footer-1}}
 
